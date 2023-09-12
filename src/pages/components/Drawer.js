@@ -2,7 +2,7 @@ import { ArrowIcon } from "@/pages/icons";
 import { useState, useEffect } from "react";
 
 const Drawer = ({ children }) => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(true);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const handleClose = (e) => {
     console.log(e.target.id);

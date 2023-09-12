@@ -7,7 +7,17 @@ En el caso de que se quiera cambiar el nombre de la propiedad, se cambia en un s
 
 */
 
-const RGB = "rgb";
-const NCS = "ncs";
-const PANTONE = "pantone";
-export { RGB, NCS, PANTONE };
+const OBJETO = 1;
+const EXPEDICION = 2;
+
+const R = 34;
+const G = 35;
+const B = 36;
+
+const RGB = {
+  R,
+  G,
+  B,
+};
+
+export { OBJETO, EXPEDICION, RGB };
