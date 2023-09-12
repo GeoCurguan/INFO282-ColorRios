@@ -4,7 +4,7 @@ import Color from "./Color";
 const Colors = ({ colors }) => {
   return (
     <>
-      {colors.map((color, index) => (
+      {colors?.map((color, index) => (
         <Color key={index} color={color} />
       ))}
     </>

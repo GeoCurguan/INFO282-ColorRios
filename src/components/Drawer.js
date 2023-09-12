@@ -1,4 +1,4 @@
-import { ArrowIcon } from "@/pages/icons";
+import { ArrowIcon } from "@/icons";
 import { useState, useEffect } from "react";
 
 const Drawer = ({ children }) => {
