@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { RGB } from "@/constants/properties";
 import { colorRGB } from "@/utils";
 
-const Color = ({ color }) => {
+const Color = ({ color, setCurrentColor }) => {
+    const handleCurrentColor = () =>{
+        setCurrentColor(color);
+    }
+
     const styleBG = colorRGB(color[RGB.R], color[RGB.G], color[RGB.B]);
 
     //Funciones asociadas a la modal
@@ -22,7 +26,7 @@ const Color = ({ color }) => {
             <div
                 className="bg-white p-20 shadow-lg transition-transform transform hover:scale-110 cursor-pointer aspect-square"
                 style={styleBG}
-                onClick={handleColorClick}
+                onClick={handleCurrentColor}
             ></div>
 
             {/*---Modal---*/}
