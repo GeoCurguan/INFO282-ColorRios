@@ -5,8 +5,7 @@ const Drawer = ({ children }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const handleClose = (e) => {
-    console.log(e.target.id);
-    if (e.target.id === "drawer-overlay" || e.target.id === "drawer-close") {
+    if (e.target.id === "drawer-overlay") {
       setIsDrawerOpen(false);
     }
   };
@@ -25,11 +24,13 @@ const Drawer = ({ children }) => {
             {/* ----- Close button ----- */}
 
             <div className="p-4 bg-gray-900/50 flex items-center justify-end h-10 text-white">
-              <ArrowIcon
-                id="drawer-close"
-                className="w-6 h-6 text-white transform  cursor-pointer"
-                onClick={handleClose}
-              />
+              <button
+                onClick={() => {
+                  setIsDrawerOpen(false);
+                }}
+              >
+                <ArrowIcon className="w-6 h-6 text-white transform  cursor-pointer" />
+              </button>
             </div>
             {/* ----- Drawer Content ----- */}
 
