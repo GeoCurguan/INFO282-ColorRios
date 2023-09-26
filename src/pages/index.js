@@ -24,22 +24,24 @@ export async function getServerSideProps() {
 
 export default function Home({ colors }) {
     const [currentColor, setCurrentColor] = useState(null);
-    const [widthColors, setWidthColors] = useState('colors-inactive');
+    const [widthColors, setWidthColors] = useState("colors-inactive");
 
-    const [detailTransition, setDetailTransition] = useState('test-transition-off');
+    const [detailTransition, setDetailTransition] = useState(
+        "test-transition-off"
+    );
 
     useEffect(() => {
-        if(currentColor){
-            setWidthColors('colors-active');
-            setDetailTransition('detail-active');
+        if (currentColor) {
+            setWidthColors("colors-active");
+            setDetailTransition("detail-active");
             console.log(currentColor[34]);
-        }else{
-            setWidthColors('colors-inactive')
-            setDetailTransition('detail-inactive');
+        } else {
+            setWidthColors("colors-inactive");
+            setDetailTransition("detail-inactive");
             console.log("Color cerrado");
         }
-    }
-    ),[currentColor];
+    }),
+        [currentColor];
 
     return (
         <>
@@ -55,14 +57,24 @@ export default function Home({ colors }) {
                     </div>
                 </Drawer>
                 <div className={`flex min-h-screen w-full`}>
-                    <div className={`flex flex-wrap justify-center ${widthColors} items-center transition-all`}>
-                        <Colors colors={colors} setCurrentColor={setCurrentColor}/>
+                    <div
+                        className={`flex flex-wrap justify-center ${widthColors} items-center transition-all`}
+                    >
+                        <Colors
+                            colors={colors}
+                            setCurrentColor={setCurrentColor}
+                        />
                     </div>
-                    <div className={`flex ${detailTransition} top-0 right-0 h-128 transition ease-in-out delay-150 `}>
-                        <ColorDetail color={currentColor} setCurrentColor={setCurrentColor}/>
+                    <div
+                        className={`flex ${detailTransition} top-0 right-0 h-128 transition ease-in-out delay-150 `}
+                    >
+                        <ColorDetail
+                            color={currentColor}
+                            setCurrentColor={setCurrentColor}
+                        />
                     </div>
                 </div>
-            </main>       
+            </main>
         </>
     );
 }

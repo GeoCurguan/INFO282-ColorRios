@@ -1,4 +1,36 @@
-.ColorDetail{
+/* ColorDetail.module.css */
+
+/* Estilos para el contenedor principal */
+.ColorDetail {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
     background-color: #fff;
-    z-index: 999;
+    box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.ColorDetail span {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el botón de CERRAR */
+.ColorDetail button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.ColorDetail button:hover {
+    background-color: #ff4444;
 }

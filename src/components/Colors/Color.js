@@ -3,9 +3,18 @@ import { RGB } from "@/constants/properties";
 import { colorRGB } from "@/utils";
 
 const Color = ({ color, setCurrentColor }) => {
-    const handleCurrentColor = () =>{
-        setCurrentColor(color);
+    // Comprueba si R, G o B son undefined y si es así, no renderiza el cuadrito
+    if (
+        color[RGB.R] === undefined ||
+        color[RGB.G] === undefined ||
+        color[RGB.B] === undefined
+    ) {
+        return null;
     }
+
+    const handleCurrentColor = () => {
+        setCurrentColor(color);
+    };
 
     const styleBG = colorRGB(color[RGB.R], color[RGB.G], color[RGB.B]);
 
@@ -21,7 +30,7 @@ const Color = ({ color, setCurrentColor }) => {
     };
 
     return (
-        <div className="w-1/5 ">
+        <div className="hover:z-[1] w-1/5 ">
             {/*---Color---*/}
             <div
                 className="bg-white p-20 shadow-lg transition-transform transform hover:scale-110 cursor-pointer aspect-square"

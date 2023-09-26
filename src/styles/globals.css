@@ -7,23 +7,23 @@
     background-color: rgb(124, 124, 124);
 }
 
-.detail-active{
+.detail-active {
     width: 20%;
-    background-color: blue;
+    background-color: rgb(124, 124, 124);
     transition: width 1s;
 }
 
-.detail-inactive{
+.detail-inactive {
     width: 0%;
-    background-color: green;
+    background-color: rgb(124, 124, 124);
     transition: width 1s;
 }
 
-.colors-active{
+.colors-active {
     width: 80%;
     transition: width 1s;
 }
-.colors-inactive{
+.colors-inactive {
     width: 100%;
     transition: width 1s;
 }

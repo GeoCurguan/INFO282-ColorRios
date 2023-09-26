@@ -15,9 +15,16 @@ const G = 35;
 const B = 36;
 
 const RGB = {
-  R,
-  G,
-  B,
+    R,
+    G,
+    B,
 };
 
-export { OBJETO, EXPEDICION, RGB };
+const COLORINFO = {
+    objeto: 1,
+    imageUrl: 16,
+    description: 7,
+    comuna: 3,
+};
+
+export { OBJETO, EXPEDICION, RGB, COLORINFO };
