@@ -1,7 +1,8 @@
 import { ArrowIcon } from "@/icons";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import DrawerForm from "./DrawerForm";
 
-const Drawer = ({ children }) => {
+const Drawer = ({ filters, setFilters }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const handleClose = (e) => {
@@ -17,7 +18,7 @@ const Drawer = ({ children }) => {
         <div
           onClick={handleClose}
           id="drawer-overlay"
-          className="hidden md:block md:fixed top-0 left-0 w-full h-full bg-gray-900/10 z-10  backdrop-filter backdrop-blur-[2px]"
+          className="hidden md:block md:fixed top-0 left-0 w-full h-full  z-10  backdrop-filter"
         >
           {/* ----- Drawer ----- */}
           <div className="hidden md:flex md:flex-col md:fixed absolute top-0 left-0 w-64 h-full bg-gray-900/50">
@@ -35,7 +36,10 @@ const Drawer = ({ children }) => {
             {/* ----- Drawer Content ----- */}
 
             <div className="flex-1 overflow-y-auto">
-              <div className="p-4 flex flex-col items-center">{children}</div>
+              <div className="p-4 flex flex-col items-center">
+                {/* ----- Drawer Form ----- */}
+                <DrawerForm filters={filters} setFilters={setFilters} />
+              </div>
             </div>
           </div>
         </div>
