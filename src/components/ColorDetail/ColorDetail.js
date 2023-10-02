@@ -115,6 +115,10 @@ const ColorDetail = ({ color, setCurrentColor }) => {
                             <p className="text-sm">&nbsp;&nbsp;&nbsp;{color.hex}</p>
                             <p className="text-sm font-bold">NCS: {}</p>
                             <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
+                            <p className="text-sm font-bold">CMYK: {}</p>
+                            <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
+                            <p className="text-sm font-bold">Ceresita: {}</p>
+                            <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
                             <p className="text-sm font-bold">Pantone: {}</p>
                             <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
 
