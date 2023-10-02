@@ -72,7 +72,7 @@ const ColorDetail = ({ color, setCurrentColor }) => {
                             className="pb-2 text-center font-extrabold"
                             style={titleStyle}
                         >
-                            {color[COLORINFO.objeto]}
+                            Nombre
                         </p>
 
                         <div className="h-32 rounded-xl" style={styleBG}></div>
@@ -91,17 +91,33 @@ const ColorDetail = ({ color, setCurrentColor }) => {
                         <div className="justify-left h-16 pb-5"></div>
 
                         <div className="justify-left max-h-64 overflow-y-scroll">
+
                             <p className="py-2 text-center text-xl font-bold">
                                 Detalles de la Muestra
                             </p>
-                            <p>Comuna : {color[COLORINFO.comuna]}</p>
-                            <p>{color[COLORINFO.description]}</p>
-                            <p>Códigos del Color</p>
-                            <p>
-                                RGB: {color[RGB.R]}, {color[RGB.G]},{" "}
-                                {color[RGB.B]}
+                            <p className="text-sm font-bold">Objeto/Atmosfera</p>
+                            <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.objeto]}</p>
+                            <p className="text-sm font-bold">Muestra</p>
+                            <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
+                            <p className="text-sm font-bold">Comuna</p>
+                            <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.comuna]}</p>
+                            <p className="text-sm font-bold">Expedición</p>
+                            <p className="text-sm ">&nbsp;&nbsp;&nbsp;{color[COLORINFO.description]}</p>
+                            <p className="text-sm font-bold">Estación:</p>
+                            <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
+
+                            <p className="py-2 text-center text-xl font-bold">
+                                Códigos del Color
                             </p>
-                            <p>HEX: {color.hex}</p>
+                            <p className="text-sm font-bold">RGB</p>
+                            <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[RGB.R]}, {color[RGB.G]}, {color[RGB.B]}</p>
+                            <p className="text-sm font-bold">HEX</p>
+                            <p className="text-sm">&nbsp;&nbsp;&nbsp;{color.hex}</p>
+                            <p className="text-sm font-bold">NCS: {}</p>
+                            <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
+                            <p className="text-sm font-bold">Pantone: {}</p>
+                            <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
+
                         </div>
 
                         <button
