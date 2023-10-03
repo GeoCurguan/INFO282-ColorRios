@@ -15,7 +15,7 @@ jobs:
       
     - name: Crear file.txt de prueba
       run: echo "$USER" | cat >> file.txt
-
+      
     - name: Crear contenedor desde bash
       run: ./scripts/build_container.sh
 
