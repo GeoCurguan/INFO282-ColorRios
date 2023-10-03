@@ -1,49 +1,38 @@
 import React, { useState } from "react";
 import { RGB } from "@/constants/properties";
 import { colorRGB } from "@/utils";
+import styles from "./styles/Color.module.css";
 
-const Color = ({ color }) => {
-  const styleBG = colorRGB(color[RGB.R], color[RGB.G], color[RGB.B]);
+const Color = ({ color, setCurrentColor, isSelected }) => {
+    // Comprueba si R, G o B son undefined y si es así, no renderiza el cuadrito
+    if (
+        color[RGB.R] === undefined ||
+        color[RGB.G] === undefined ||
+        color[RGB.B] === undefined
+    ) {
+        return null;
+    }
 
-  //Funciones asociadas a la modal
-  const [isModalOpen, setIsModalOpen] = useState(false);
+    const handleCurrentColor = () => {
+        setCurrentColor(color);
+    };
 
-  const handleColorClick = () => {
-    setIsModalOpen(true);
-  };
+    const styleBG = colorRGB(color[RGB.R], color[RGB.G], color[RGB.B]);
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
-  return (
-    <>
-      {/*---Color---*/}
-      <div
-        className="bg-white p-9 rounded-lg shadow-lg m-2 transition-transform transform hover:scale-110 cursor-pointer"
-        style={styleBG}
-        onClick={handleColorClick}
-      ></div>
-
-      {/*---Modal---*/}
-      {isModalOpen && (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-500 bg-opacity-50 z-50">
-          <div className="bg-white p-6 rounded-lg">
-            <h2 className="text-lg font-semibold">Código RGB:</h2>
-            <p>
-              {color[RGB.R]}, {color[RGB.G]}, {color[RGB.B]}
-            </p>
-            <button
-              className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 mt-4 rounded"
-              onClick={handleCloseModal}
-            >
-              Cerrar
-            </button>
-          </div>
+    return (
+        <div
+            className={`hover:z-[1] w-1/5 ${
+                isSelected ? styles["selected-color-border"] : ""
+            }`}
+        >
+            {/*---Color---*/}
+            <div
+                className="fade-in transition-all duration-1000 bg-white p-20 shadow-lg  transform hover:scale-110 cursor-pointer aspect-square"
+                style={styleBG}
+                onClick={handleCurrentColor}
+            ></div>
         </div>
-      )}
-    </>
-  );
+    );
 };
 
 export default Color;

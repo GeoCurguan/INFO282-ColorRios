@@ -8,21 +8,7 @@ const ChangeBG = () => {
         document.body.classList.add(_color);
     };
 
-    const grayshades = [
-        "bg-zinc-200",
-        "bg-zinc-300",
-        "bg-zinc-400",
-        "bg-neutral-200",
-        "bg-neutral-300",
-        "bg-neutral-400",
-        "bg-neutral-500",
-        "bg-neutral-600",
-        "bg-stone-200",
-        "bg-stone-300",
-        "bg-stone-400",
-        "bg-stone-500",
-        "bg-stone-600",
-    ];
+    const grayshades = ["bg-zinc-200", "bg-neutral-200", "bg-stone-200"];
 
     return (
         <div className="flex flex-col items-center justify-center w-full h-full bg-gray-700 rounded-lg">

@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*---styles.css---*/
+.custom-bg {
+  background-color: rgb(124, 124, 124);
+}
+
+.detail-active {
+  width: 20%;
+  background-color: rgb(124, 124, 124);
+  transition: width 1s;
+}
+
+.detail-inactive {
+  width: 0%;
+  background-color: rgb(124, 124, 124);
+  transition: width 1s;
+}
+
+.colors-active {
+  width: 80%;
+  transition: width 1s;
+}
+.colors-inactive {
+  width: 100%;
+  transition: width 1s;
+}
+
+/*---animations---*/
+
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

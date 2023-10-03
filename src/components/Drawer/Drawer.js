@@ -1,12 +1,12 @@
 import { ArrowIcon } from "@/icons";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import DrawerForm from "./DrawerForm";
 
-const Drawer = ({ children }) => {
+const Drawer = ({ filters, setFilters }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const handleClose = (e) => {
-    console.log(e.target.id);
-    if (e.target.id === "drawer-overlay" || e.target.id === "drawer-close") {
+    if (e.target.id === "drawer-overlay") {
       setIsDrawerOpen(false);
     }
   };
@@ -18,23 +18,28 @@ const Drawer = ({ children }) => {
         <div
           onClick={handleClose}
           id="drawer-overlay"
-          className="hidden md:block md:fixed top-0 left-0 w-full h-full bg-gray-900/10 z-10  backdrop-filter backdrop-blur-[2px]"
+          className="hidden md:block md:fixed top-0 left-0 w-full h-full  z-10  backdrop-filter"
         >
           {/* ----- Drawer ----- */}
           <div className="hidden md:flex md:flex-col md:fixed absolute top-0 left-0 w-64 h-full bg-gray-900/50">
             {/* ----- Close button ----- */}
 
             <div className="p-4 bg-gray-900/50 flex items-center justify-end h-10 text-white">
-              <ArrowIcon
-                id="drawer-close"
-                className="w-6 h-6 text-white transform  cursor-pointer"
-                onClick={handleClose}
-              />
+              <button
+                onClick={() => {
+                  setIsDrawerOpen(false);
+                }}
+              >
+                <ArrowIcon className="w-6 h-6 text-white transform  cursor-pointer" />
+              </button>
             </div>
             {/* ----- Drawer Content ----- */}
 
             <div className="flex-1 overflow-y-auto">
-              <div className="p-4 flex flex-col items-center">{children}</div>
+              <div className="p-4 flex flex-col items-center">
+                {/* ----- Drawer Form ----- */}
+                <DrawerForm filters={filters} setFilters={setFilters} />
+              </div>
             </div>
           </div>
         </div>

@@ -1,14 +1,26 @@
+import React, { useState } from "react";
 import Color from "./Color";
 
-// colors corresponde a un arreglo de muchos arreglos
-const Colors = ({ colors }) => {
-  return (
-    <>
-      {colors?.map((color, index) => (
-        <Color key={index} color={color} />
-      ))}
-    </>
-  );
+const Colors = ({ colors, setCurrentColor }) => {
+    const [selectedColor, setSelectedColor] = useState(null);
+
+    const handleColorSelect = (selectedColor) => {
+        setSelectedColor(selectedColor);
+        setCurrentColor(selectedColor);
+    };
+
+    return (
+        <>
+            {colors?.map((color, index) => (
+                <Color
+                    key={index}
+                    color={color}
+                    setCurrentColor={handleColorSelect}
+                    isSelected={color === selectedColor}
+                />
+            ))}
+        </>
+    );
 };
 
 export default Colors;
