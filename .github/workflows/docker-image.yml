@@ -19,7 +19,7 @@ jobs:
     #- name: Crear contenedor desde bash
     #  run: ./scripts/build_container.sh
       
-    #- name: Crear contenedor 
-    #  run: echo ${{secrets.USER_PASS}} | SUDO_ASKPASS=/bin/echo sudo -S docker ps
+    - name: Docker ps
+      run: echo ${{secrets.USER_PASS}} | SUDO_ASKPASS=/bin/echo sudo -S docker ps
 
     #  run: echo ${{secrets.USER_PASS}} | sudo docker build -t mi_imagen_desde_actions
