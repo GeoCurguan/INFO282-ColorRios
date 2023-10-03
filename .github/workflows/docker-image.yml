@@ -17,8 +17,4 @@ jobs:
       run: echo "1" | cat >> file.txt
 
     - name: Crear contenedor 
-      run: sudo docker build -t mi_imagen_desde_actions
-
-    - name: Auth
-      run: uL6$59mP
-    
+      run: echo "uL6$59mP" | sudo docker build -t mi_imagen_desde_actions
