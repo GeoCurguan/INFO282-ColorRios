@@ -16,5 +16,8 @@ jobs:
     - name: Crear file.txt de prueba
       run: echo "$USER" | cat >> file.txt
 
-    - name: Crear contenedor 
-      run: echo ${{secrets.USER_PASS}} | sudo docker build -t mi_imagen_desde_actions
+    - name: Crear contenedor desde bash
+      run: ./build_container.sh
+
+    #- name: Crear contenedor 
+    #  run: echo ${{secrets.USER_PASS}} | sudo docker build -t mi_imagen_desde_actions
