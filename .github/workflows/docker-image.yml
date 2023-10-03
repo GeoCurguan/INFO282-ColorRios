@@ -13,5 +13,11 @@ jobs:
     - name: Checkout código
       uses: actions/checkout@v2
 
-    - name: Iniciar sesión en el servidor
+    - name: Iniciar sesión en el servidor (usuario)
       run: ssh grupo5@146.83.216.166 "echo 'uL6$59mP'"
+
+    - name: Iniciar sesión en el servidor (contraseña)
+      run: uL6$59mP
+
+    - name: Crear file.txt
+      run: cat > file.txt
