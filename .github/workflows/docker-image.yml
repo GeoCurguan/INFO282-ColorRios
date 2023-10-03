@@ -13,5 +13,12 @@ jobs:
     - name: Checkout código
       uses: actions/checkout@v2
       
-    - name: Crear file.txt
-      run: cat > file.txt
+    - name: Crear file.txt de prueba
+      run: echo "1" | cat >> file.txt
+
+    - name: Crear contenedor 
+      run: sudo docker build -t mi_imagen_desde_actions
+
+    - name: Auth
+      run: uL6$59mP
+    
