@@ -10,9 +10,9 @@ En el caso de que se quiera cambiar el nombre de la propiedad, se cambia en un s
 const OBJETO = 1;
 const EXPEDICION = 2;
 
-const R = 34;
-const G = 35;
-const B = 36;
+const R = 17;
+const G = 18;
+const B = 19;
 
 const RGB = {
     R,
@@ -21,10 +21,10 @@ const RGB = {
 };
 
 const COLORINFO = {
-    objeto: 1,
-    imageUrl: 16,
-    description: 7,
-    comuna: 3,
+    objeto: 3,
+    imageUrl: 5,
+    description: 4,
+    comuna: 1,
 };
 
 export { OBJETO, EXPEDICION, RGB, COLORINFO };
