@@ -1,19 +1,17 @@
-name: Docker Image CI
+name: Deploy Docker Container
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - test/runner  # Ajusta el nombre de la rama según tu configuración
 
 jobs:
-
-  build:
-
-    runs-on: self-hosted # Utiliza un runner self-hosted en tu servidor
+  deploy:
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Iniciar Docker Compose Test
-      run: |
-          docker-compose up -d
+    - name: Checkout código
+      uses: actions/checkout@v2
+
+    - name: Iniciar sesión en el servidor
+      run: ssh grupo5@146.83.216.166 "echo 'uL6$59mP'"
