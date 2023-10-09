@@ -5,10 +5,6 @@ import styles from "./styles/ColorDetail.module.css";
 import { CloseIcon } from "@/icons";
 
 const ColorDetail = ({ color, setCurrentColor }) => {
-  const handleCloseDetail = () => {
-    setCurrentColor(null);
-  };
-
   //Estados de la barra
   const [isDrawerOpen, setIsDrawerOpen] = useState(true);
 
@@ -79,11 +75,12 @@ const ColorDetail = ({ color, setCurrentColor }) => {
       {color ? (
         <div
           className={`align-center relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-400 ${styles.ColorDetail}`}
+          data-testid="color-detail"
           style={styleBG}
         >
           <div className={`h-full w-full max-w-xl p-5 ${isDrawerOpen ? "" : ""}`} style={divStyle}>
             <div className="flex justify-end p-2">
-              <CloseIcon className="w-8 h-8" onClick={toggleDrawer}></CloseIcon>
+              <CloseIcon className="w-8 h-8" onClick={toggleDrawer} data-testid="color-detail-close"></CloseIcon>
             </div>
             <section className="flex justify-center items-center h-10">
               <h2 id="colorTitle" className="w-full leading-none text-center font-extrabold" style={titleStyle}>

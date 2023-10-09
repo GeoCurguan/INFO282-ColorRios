@@ -35,7 +35,10 @@ export default function Home({ colors }) {
       <main className={`flex min-h-screen flex-wrap justify-center items-center p-12 ${poppins.className} custom-bg`}>
         <Drawer filters={filters} setFilters={setFilters} />
         <div className={`flex min-h-screen w-full`}>
-          <div className={`flex flex-wrap justify-center ${widthColors} items-center transition-all content-start `}>
+          <div
+            className={`flex flex-wrap justify-center ${widthColors} items-center transition-all content-start `}
+            data-testid="colors"
+          >
             <Colors colors={filteredColors} setCurrentColor={setCurrentColor} />
           </div>
           <div className={`flex ${detailTransition} top-0 right-0 h-128 transition ease-in-out delay-150 `}>
