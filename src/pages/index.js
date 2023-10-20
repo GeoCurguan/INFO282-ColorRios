@@ -26,22 +26,32 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ colors }) {
-  const { widthColors, detailTransition, currentColor, setCurrentColor } = useSideBar();
+  const { classNameObject, openFilters, toggleFilters, widthColors, detailTransition, currentColor, setCurrentColor } =
+    useSideBar();
   const { filters, filterColors, setFilters } = useFilters();
   const filteredColors = filterColors(colors);
 
   return (
     <>
       <main className={`flex min-h-screen flex-wrap justify-center items-center p-12 ${poppins.className} custom-bg`}>
-        <Drawer filters={filters} setFilters={setFilters} />
         <div className={`flex min-h-screen w-full`}>
+          {/* -- ColorDetail -- */}
+          <div
+            className={`flex ${classNameObject.filtersDrawer.detailTransition} top-0 right-0 h-128 transition ease-in-out delay-150 `}
+          >
+            <Drawer openFilters={openFilters} toggleFilters={toggleFilters} filters={filters} setFilters={setFilters} />
+          </div>
           <div
             className={`flex flex-wrap justify-center ${widthColors} items-center transition-all content-start `}
             data-testid="colors"
           >
             <Colors colors={filteredColors} setCurrentColor={setCurrentColor} />
           </div>
-          <div className={`flex ${detailTransition} top-0 right-0 h-128 transition ease-in-out delay-150 `}>
+
+          {/* -- ColorDetail -- */}
+          <div
+            className={`flex ${classNameObject.colorDetail.detailTransition} top-0 right-0 h-128 transition ease-in-out delay-150 `}
+          >
             <ColorDetail color={currentColor} setCurrentColor={setCurrentColor} />
           </div>
         </div>
