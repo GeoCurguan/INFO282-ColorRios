@@ -3,6 +3,7 @@ import { RGB, COLORINFO } from "@/constants/properties";
 import { colorRGB } from "@/utils";
 import styles from "./styles/ColorDetail.module.css";
 import { CloseIcon } from "@/icons";
+import Image from "next/image";
 
 const ColorDetail = ({ color, setCurrentColor }) => {
   //Estados de la barra
@@ -98,11 +99,12 @@ const ColorDetail = ({ color, setCurrentColor }) => {
                   style={{
                     borderRadius: "50%",
                     border: `4px solid ${titleStyle.color}`,
+                    backgroundColor: BGColor,
                   }}
                 />
               </div>
             </div>
-            <div className="justify-left h-16 pb-5"></div>
+            <div className="justify-left h-16 mb-2"></div>
 
             <div className="justify-left max-h-64 overflow-y-scroll" style={divStyle}>
               <p className="py-2 text-center text-xl font-bold">Detalles de la Muestra</p>
@@ -134,7 +136,7 @@ const ColorDetail = ({ color, setCurrentColor }) => {
               <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
             </div>
 
-            <button className="w-full text-white font-bold text-lg p-2 rounded-lg mt-2" style={buttonStyle}>
+            <button className="w-full text-white font-bold text-lg p-2 rounded-lg mt-4" style={buttonStyle}>
               Añadir a mi paleta
             </button>
           </div>

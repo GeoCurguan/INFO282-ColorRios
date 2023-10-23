@@ -1,3 +1,5 @@
+import { OBJETO, COMUNA } from "@/constants/properties";
+
 const colorRGBExist = (R, G, B) => {
   // ¿No existe alguno de los colores? Devuelve transparente
   if (R === undefined || G === undefined || B === undefined) return false;
@@ -14,4 +16,24 @@ const colorRGB = (R, G, B) => {
   // Color que corresponde
   return { backgroundColor: `rgb(${R}, ${G}, ${B})` };
 };
-export { colorRGB, colorRGBExist };
+
+const uniqueValuesFilters = (colors) => {
+  // Recuperamos los objetos únicos
+  // Recuepramos las comunas únicas
+
+  const objetos = [...new Set(colors.map((color) => color[OBJETO].toLowerCase()))];
+  const comunas = [...new Set(colors.map((color) => color[COMUNA].toLowerCase()))];
+  if (objetos.includes("")) {
+    objetos.splice(objetos.indexOf(""), 1);
+  }
+  if (comunas.includes("")) {
+    comunas.splice(comunas.indexOf(""), 1);
+  }
+  const uniqueValuesFilters = {
+    objetos,
+    comunas,
+  };
+  return uniqueValuesFilters;
+};
+
+export { uniqueValuesFilters, colorRGB, colorRGBExist };

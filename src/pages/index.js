@@ -1,9 +1,10 @@
 import { Poppins } from "next/font/google";
 // Hooks
-import { useState, useEffect } from "react";
 import useSideBar from "@/hooks/useSideBar";
 import useFilters from "@/hooks/useFilters";
+
 // Components
+import Header from "@/components/Header";
 import Drawer from "@/components/Drawer/Drawer";
 import Colors from "@/components/Colors/Colors";
 import ColorDetail from "@/components/ColorDetail/ColorDetail";
@@ -39,12 +40,19 @@ export default function Home({ colors }) {
           <div
             className={`flex ${classNameObject.filtersDrawer.detailTransition} top-0 right-0 h-128 transition ease-in-out delay-150 `}
           >
-            <Drawer openFilters={openFilters} toggleFilters={toggleFilters} filters={filters} setFilters={setFilters} />
+            <Drawer
+              colors={colors}
+              openFilters={openFilters}
+              toggleFilters={toggleFilters}
+              filters={filters}
+              setFilters={setFilters}
+            />
           </div>
           <div
             className={`flex flex-wrap justify-center ${widthColors} items-center transition-all content-start `}
             data-testid="colors"
           >
+            <Header filteredColorsLength={filteredColors.length} colorsLength={colors.length} />
             <Colors colors={filteredColors} setCurrentColor={setCurrentColor} />
           </div>
 
