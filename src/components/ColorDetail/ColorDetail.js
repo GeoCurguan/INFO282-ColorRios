@@ -5,7 +5,12 @@ import styles from "./styles/ColorDetail.module.css";
 import { CloseIcon } from "@/icons";
 import Image from "next/image";
 
-const ColorDetail = ({ color, setCurrentColor }) => {
+function rgbToHex(red, green, blue) {
+  const rgb = (red << 16) | (green << 8) | (blue << 0);
+  return '#' + (0x1000000 + rgb).toString(16).slice(1);
+}
+
+const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   //Estados de la barra
   const [isDrawerOpen, setIsDrawerOpen] = useState(true);
 
@@ -43,6 +48,11 @@ const ColorDetail = ({ color, setCurrentColor }) => {
   const toggleDrawer = () => {
     setCurrentColor(null);
   };
+
+  function addColorToPalette(hexColor){
+    //console.log(hexColor)
+    setColorToPalette(hexColor)
+  }
 
   //Función updateFontSize para el título (tamaño) adaptable al espacio que tiene
   useEffect(() => {
@@ -125,7 +135,7 @@ const ColorDetail = ({ color, setCurrentColor }) => {
                 &nbsp;&nbsp;&nbsp;{color[RGB.R]}, {color[RGB.G]}, {color[RGB.B]}
               </p>
               <p className="text-sm font-bold">HEX</p>
-              <p className="text-sm">&nbsp;&nbsp;&nbsp;{color.hex}</p>
+              <p className="text-sm">&nbsp;&nbsp;&nbsp;{rgbToHex(color[RGB.R], color[RGB.G], color[RGB.B])}</p>
               <p className="text-sm font-bold">NCS: {}</p>
               <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
               <p className="text-sm font-bold">CMYK: {}</p>
@@ -136,7 +146,7 @@ const ColorDetail = ({ color, setCurrentColor }) => {
               <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
             </div>
 
-            <button className="w-full text-white font-bold text-lg p-2 rounded-lg mt-4" style={buttonStyle}>
+            <button className="w-full text-white font-bold text-lg p-2 rounded-lg mt-4" style={buttonStyle} onClick={() => addColorToPalette(rgbToHex(color[RGB.R], color[RGB.G], color[RGB.B]))}>
               Añadir a mi paleta
             </button>
           </div>

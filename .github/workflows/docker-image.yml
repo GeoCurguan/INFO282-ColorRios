@@ -1,0 +1,19 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: self-hosted # Utiliza un runner self-hosted en tu servidor
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Iniciar Docker Compose Test
+      run: |
+          docker-compose up -d
