@@ -1,24 +1,49 @@
 import { useState, useEffect } from "react";
 const useSideBar = () => {
   const [currentColor, setCurrentColor] = useState(null);
+  const [openFilters, setOpenFilters] = useState(false);
+  const [classNameObject, setClassNameObject] = useState({
+    colorDetail: { detailTransition: "detail-inactive" },
+    filtersDrawer: { detailTransition: "detail-inactive" },
+  });
   const [widthColors, setWidthColors] = useState("colors-inactive");
-  const [detailTransition, setDetailTransition] = useState("test-transition-off");
 
   useEffect(() => {
     if (currentColor) {
+      setClassNameObject({ ...classNameObject, colorDetail: { detailTransition: "detail-active" } });
       setWidthColors("colors-active");
-      setDetailTransition("detail-active");
-      console.log(currentColor[34]);
     } else {
+      setClassNameObject({ ...classNameObject, colorDetail: { detailTransition: "detail-inactive" } });
       setWidthColors("colors-inactive");
-      setDetailTransition("detail-inactive");
-      console.log("Color cerrado");
+      console.log("CURRENT_COLOR: Color cerrado");
     }
   }, [currentColor]);
 
+  const toggleFilters = async () => {
+    const newStateOpenFilters = !openFilters;
+    if (newStateOpenFilters) {
+      setCurrentColor(null);
+      setClassNameObject({ ...classNameObject, colorDetail: { detailTransition: "detail-inactive" } });
+    }
+    setOpenFilters(newStateOpenFilters);
+  };
+
+  useEffect(() => {
+    if (openFilters) {
+      setClassNameObject({ ...classNameObject, filtersDrawer: { detailTransition: "detail-active" } });
+      setWidthColors("colors-active");
+    } else {
+      setWidthColors("colors-inactive");
+      setClassNameObject({ ...classNameObject, filtersDrawer: { detailTransition: "detail-inactive" } });
+      console.log("OPEN_FILTERS: Color cerrado");
+    }
+  }, [openFilters]);
+
   return {
+    classNameObject,
+    openFilters,
+    toggleFilters,
     widthColors,
-    detailTransition,
     currentColor,
     setCurrentColor,
   };
