@@ -12,6 +12,129 @@ function rgbToHex(red, green, blue) {
 
 const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   //Estados de la barra
+
+  function name(color) {
+    if (color[COLORINFO.colorName]) {
+      return <h2 id="colorTitle" className="w-full leading-none text-center font-extrabold" style={titleStyle}>
+        {color[COLORINFO.colorName]}
+      </h2>
+    }
+  }
+
+  function category(color) {
+    if (["roca", "suelo", "vegetal"].includes(color[COLORINFO.category].toLowerCase())) {
+      return <div>
+        <p className="text-sm font-bold">Objeto:</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.category]}</p>
+      </div>
+    }
+    else if (["agua", "cielo", "vegetacion"].includes(color[COLORINFO.category].toLowerCase())) {
+      return <div>
+        <p className="text-sm font-bold">Atmosfera:</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.category]}</p>
+      </div>
+    }
+  }
+
+  function comuna(color) {
+    if (color[COLORINFO.comuna]) {
+      return <div>
+        <p className="text-sm font-bold">Comuna:</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.comuna]}</p>
+      </div>
+    }
+  }
+
+  function season(color) {
+    if (color[COLORINFO.season]) {
+      return <div>
+        <p className="text-sm font-bold">Estación:</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.season]}</p>
+      </div>
+    }
+  }
+
+  function sample(color) {
+    if (color[COLORINFO.sampleName]) {
+      return <div>
+        <p className="text-sm font-bold">Muestra:</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.sampleName]}</p>
+      </div>
+    }
+  }
+
+  function image(color) {
+    if (color[COLORINFO.image]) {
+      return <img
+        src={color[COLORINFO.image]}
+        alt={color[COLORINFO.sampleName]}
+        className="h-32 w-32 object-cover"
+        style={{
+          borderRadius: "50%",
+          border: `4px solid ${titleStyle.color}`,
+          backgroundColor: BGColor,
+        }}
+      />
+    }
+  }
+
+  function ncs(color) {
+    if (color[COLORINFO.ncsNuance] && color[COLORINFO.ncsHue]) {
+      return <div>
+        <p className="text-sm font-bold">Natural Color System:</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;NCS {color[COLORINFO.ncsNuance]}-{color[COLORINFO.ncsHue]}</p>
+      </div>
+    }
+  }
+
+  function munsell(color) {
+    if (color[COLORINFO.munsellPage] && color[COLORINFO.munsellHue] && color[COLORINFO.munsellValue] && color[COLORINFO.munsellChroma] && color[COLORINFO.munsellName]) {
+      return <div>
+        <p className="text-sm font-bold">Munsell:</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.munsellHue]} {color[COLORINFO.munsellHue]}/{color[COLORINFO.munsellChroma]}</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;Nombre: {color[COLORINFO.munsellName]}</p>
+      </div>
+    }
+  }
+
+  function cielab(color) {
+    if (color[COLORINFO.cielabL] && color[COLORINFO.cielabA] && color[COLORINFO.cielabB]){
+      return <div>
+        <p className="text-sm font-bold">CIELab:</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;L*: {color[COLORINFO.cielabL]}</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;a*: {color[COLORINFO.cielabA]}</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;b*: {color[COLORINFO.cielabB]}</p>
+      </div>
+    }
+  }
+
+  function rgb(color) {
+    if (color[COLORINFO.rgbR] && color[COLORINFO.rgbG] && color[COLORINFO.rgbB]) {
+      return <div>
+        <p className="text-sm font-bold">RGB:</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.rgbR]}, {color[COLORINFO.rgbG]}, {color[COLORINFO.rgbB]}</p>
+      </div>
+    }
+  }
+
+  function cmyk(color) {
+    if (color[COLORINFO.cmykC] && color[COLORINFO.cmykM] && color[COLORINFO.cmykY] && color[COLORINFO.cmykK]) {
+      return <div>
+        <p className="text-sm font-bold">CMYK:</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.cmykC]}C {color[COLORINFO.cmykM]}M {color[COLORINFO.cmykY]}Y {color[COLORINFO.cmykK]}K</p>
+      </div>
+    }
+  }
+
+  function ceresita(color) {
+    if (color[COLORINFO.ceresitaName]) {
+      return <div>
+        <p className="text-sm font-bold">Ceresita: { }</p>
+        <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.ceresitaName]}</p>
+      </div>
+    }
+  }
+
   const [isDrawerOpen, setIsDrawerOpen] = useState(true);
 
   const styleBG = colorRGB(color?.[RGB.R], color?.[RGB.G], color?.[RGB.B]);
@@ -94,56 +217,32 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
               <CloseIcon className="w-8 h-8" onClick={toggleDrawer} data-testid="color-detail-close"></CloseIcon>
             </div>
             <section className="flex justify-center items-center h-10">
-              <h2 id="colorTitle" className="w-full leading-none text-center font-extrabold" style={titleStyle}>
-                {color[COLORINFO.objeto]}
-              </h2>
+              {name(color)}
             </section>
 
             <div className="h-32 rounded-xl" style={styleBG}></div>
             <div className="relative">
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform h-32 w-32">
-                <img
-                  src={color[COLORINFO.imageUrl]}
-                  alt={color[COLORINFO.objeto]}
-                  className="h-32 w-32 object-cover"
-                  style={{
-                    borderRadius: "50%",
-                    border: `4px solid ${titleStyle.color}`,
-                    backgroundColor: BGColor,
-                  }}
-                />
+                {image(color)}
               </div>
             </div>
             <div className="justify-left h-16 mb-2"></div>
 
             <div className="justify-left max-h-64 overflow-y-scroll" style={divStyle}>
               <p className="py-2 text-center text-xl font-bold">Detalles de la Muestra</p>
-              <p className="text-sm font-bold">Objeto/Atmosfera</p>
-              <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.objeto]}</p>
-              <p className="text-sm font-bold">Muestra</p>
-              <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
-              <p className="text-sm font-bold">Comuna</p>
-              <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.comuna]}</p>
-              <p className="text-sm font-bold">Expedición</p>
-              <p className="text-sm ">&nbsp;&nbsp;&nbsp;{color[COLORINFO.description]}</p>
-              <p className="text-sm font-bold">Estación:</p>
-              <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
-
+              {category(color)}
+              {comuna(color)}
+              {season(color)}
+              {sample(color)}
               <p className="py-2 text-center text-xl font-bold">Códigos del Color</p>
-              <p className="text-sm font-bold">RGB</p>
-              <p className="text-sm">
-                &nbsp;&nbsp;&nbsp;{color[RGB.R]}, {color[RGB.G]}, {color[RGB.B]}
-              </p>
+              {ncs(color)}
+              {munsell(color)}
+              {cielab(color)}
+              {rgb(color)}
+              {cmyk(color)}
+              {ceresita(color)}
               <p className="text-sm font-bold">HEX</p>
-              <p className="text-sm">&nbsp;&nbsp;&nbsp;{rgbToHex(color[RGB.R], color[RGB.G], color[RGB.B])}</p>
-              <p className="text-sm font-bold">NCS: {}</p>
-              <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
-              <p className="text-sm font-bold">CMYK: {}</p>
-              <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
-              <p className="text-sm font-bold">Ceresita: {}</p>
-              <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
-              <p className="text-sm font-bold">Pantone: {}</p>
-              <p className="text-sm">&nbsp;&nbsp;&nbsp;Placeholder</p>
+              <p className="text-sm">&nbsp;&nbsp;&nbsp;{color.hex}</p>
             </div>
 
             <button className="w-full text-white font-bold text-lg p-2 rounded-lg mt-4" style={buttonStyle} onClick={() => addColorToPalette(rgbToHex(color[RGB.R], color[RGB.G], color[RGB.B]))}>
