@@ -3,12 +3,18 @@ import styles from "./styles/ColorsPalette.module.css";
 import { RGB, COLORINFO } from "@/constants/properties";
 import { colorRGB,rgbToHex } from "@/utils";
 
+import ColorPDF from "../ColorPDF/ColorPDF";
+
 const ColorsPalette = ({colorToPalette}) => {
     const [favoriteColors, setFavoriteColors] = useState([]);
 
     function removeColorToPalette(colorIdx){
         console.log(colorIdx)
         setFavoriteColors(prevColors => prevColors.filter((_, index) => index !== colorIdx));
+    }
+
+    function exportColor(){
+
     }
 
     useEffect(() => {
@@ -32,7 +38,7 @@ const ColorsPalette = ({colorToPalette}) => {
     return(
         <div className="flex flex-row items-center justify-around w-full bg-zinc-800">
             {Palette}
-            <buton className={`cursor-pointer`}onClick={() => exportColor()}>Exportar</buton>
+            <buton className={`cursor-pointer ${styles.exportButton}`}onClick={() => exportColor()}>Exportar</buton>
         </div>
     );
 }

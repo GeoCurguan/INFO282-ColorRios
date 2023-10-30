@@ -8,7 +8,16 @@ import Header from "@/components/Header";
 import Drawer from "@/components/Drawer/Drawer";
 import Colors from "@/components/Colors/Colors";
 import ColorDetail from "@/components/ColorDetail/ColorDetail";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import ColorPDF from "@/components/ColorPDF/ColorPDF";
+
+//PDF
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import { PDFDownloadLink, Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+
 
 const poppins = Poppins({
   weight: ["200", "300", "400", "500", "700"],
@@ -27,12 +36,52 @@ export async function getServerSideProps() {
   };
 }
 
+
+const styles = StyleSheet.create({
+  page: {
+    flexDirection: 'row',
+    backgroundColor: '#E4E4E4'
+  },
+  section: {
+    margin: 10,
+    padding: 10,
+    flexGrow: 1
+  }
+});
+
+const MyDoc = () => (
+  <Document>
+    <Page size="A4" style={styles.page}>
+      <View style={styles.section}>
+        <Text>Section #1</Text>
+      </View>
+      <View style={styles.section}>
+        <Text>Section #2</Text>
+      </View>
+    </Page>
+  </Document>
+);
+
+
 export default function Home({ colors }) {
   const { classNameObject, openFilters, toggleFilters, widthColors, detailTransition, currentColor, setCurrentColor } =
     useSideBar();
   const { filters, filterColors, setFilters } = useFilters();
   const filteredColors = filterColors(colors);
   const [colorToPalette, setColorToPalette] = useState(null)
+
+  const [pdf, setPdf] = useState('');
+
+  const downloadPDF = () => {
+    const pdf = PDFViewer.renderToString(<ColorPDF />);
+    setPdf(pdf);
+  };
+
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   return (
     <>
@@ -64,6 +113,16 @@ export default function Home({ colors }) {
           >
             <ColorDetail color={currentColor} setCurrentColor={setCurrentColor} setColorToPalette={setColorToPalette}/>
           </div>
+
+          {
+            isClient ?                 <div>
+            <PDFDownloadLink document={<MyDoc />} fileName="somename.pdf">
+        {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Download now!')}
+      </PDFDownloadLink>
+            </div> : null
+          }
+
+
         </div>
       </main>
     </>
