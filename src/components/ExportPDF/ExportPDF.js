@@ -47,7 +47,7 @@ const ExportPDF = () => {
         isClient ?
           <div>
           <PDFDownloadLink document={<PDFToExport />} fileName="somename.pdf">
-            {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Download now!')}
+            {({ blob, url, loading, error }) => (loading ? 'Cargando colores...' : 'Exportar colores')}
           </PDFDownloadLink>
           </div> : <></>
       }
