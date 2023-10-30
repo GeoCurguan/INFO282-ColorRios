@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import { useState, useEffect } from "react";
 import { Poppins } from "next/font/google";
 import Experience from "@/components/3d/Experience";
 import MouseInfo from "@/components/3d/MouseInfo";
@@ -25,13 +24,22 @@ export async function getServerSideProps() {
 
 const Home = ({ colors }) => {
   const [currentColor, setCurrentColor] = useState(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0, z: 0 });
+  const [controls, setControls] = useState();
+  useEffect(() => {
+    console.log("controls", controls);
+    if (!controls) return;
+  }, [controls]);
 
   return (
     <div className={`flex min-h-screen flex-wrap justify-center items-center ${poppins.className}`}>
-      <Canvas style={{ height: "100vh" }}>
-        <Experience setMousePosition={setMousePosition} setCurrentColor={setCurrentColor} colors={colors} />
-      </Canvas>
+      <button
+        onClick={() => {
+          controls.reset();
+        }}
+      >
+        Reset
+      </button>
+      <Experience setControls={setControls} setCurrentColor={setCurrentColor} colors={colors} />
       <MouseInfo />
       <CardInfo currentColor={currentColor} />
       <MouseTip />
