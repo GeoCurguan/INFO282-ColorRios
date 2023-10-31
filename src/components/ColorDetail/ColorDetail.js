@@ -241,8 +241,8 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   return (
     <>
       {color ? (
-        <div className="z-10 w-[300px] align-center fixed top-0 right-0 flex min-h-screen flex-col  overflow-hidden bg-gray-100 shadow-lgjustify-start">
-          <div className="h-1/5 w-full bg-gray-300 shadow-md">
+        <div className="z-10 w-[300px] overflow-y-scroll sm:overflow-y-hidden overflow-x-hidden align-center fixed top-0 bottom-0 right-0 flex min-h-screen flex-col  overflow-hidden bg-gray-100 shadow-lgjustify-start">
+          <div className=" w-full bg-gray-300 shadow-md">
             <button className="float-right m-2" onClick={toggleDrawer}>
               <CloseIcon className="w-6 h-6 text-gray-900" />
             </button>
@@ -270,7 +270,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
             </div>
           </div>
 
-          <div className="w-full flex h-1/5 justify-between px-4">
+          <div className="w-full flex  justify-between p-4">
             <button
               className="flex items-center rounded-md transition-colors duration-300 ease-in-out
                bg-pink-500 px-2 py-2 text-white hover:bg-pink-600"
