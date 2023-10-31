@@ -246,7 +246,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
           </div>
 
           <div class="flex h-1/5 justify-between p-4">
-            <button class="flex items-center rounded-md bg-pink-500 px-4 py-2 text-white" onClick={() => addColorToPalette(rgbToHex(color[RGB.R], color[RGB.G], color[RGB.B]))}>
+            <button class="flex items-center rounded-md bg-pink-500 px-4 py-2 text-white" onClick={() => addColorToPalette(color)}>
               <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke="currentColor" class="mr-2 h-6 w-6">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 14.36 2 11.23 2 7.5 2 4.42 4.42 2 7.5 2c1.74 0 3.41.81 4.5 2.09C13.09 2.81 14.76 2 16.5 2 19.58 2 22 4.42 22 7.5c0 3.73-3.4 6.86-8.55 12.54L12 21.35z"></path>
               </svg>
