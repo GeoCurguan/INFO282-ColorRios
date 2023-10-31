@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { RGB, COLORINFO } from "@/constants/properties";
-import { colorRGB } from "@/utils";
+import { colorRGB, rgbToHex } from "@/utils";
 import styles from "./styles/ColorDetail.module.css";
 import { CloseIcon } from "@/icons";
 import Image from "next/image";
 
-function rgbToHex(red, green, blue) {
-  const rgb = (red << 16) | (green << 8) | (blue << 0);
-  return '#' + (0x1000000 + rgb).toString(16).slice(1);
-}
 
 const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   //Estados de la barra
@@ -179,9 +175,9 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
     setCurrentColor(null);
   };
 
-  function addColorToPalette(hexColor) {
-    //console.log(hexColor)
-    setColorToPalette(hexColor)
+  function addColorToPalette(colorObject){
+    setColorToPalette(colorObject)
+
   }
 
   //Función updateFontSize para el título (tamaño) adaptable al espacio que tiene
@@ -285,7 +281,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
                 <section className="flex justify-center items-center h-10">
                   {name(color)}
                 </section>
-    
+
                 <div className="h-32 rounded-xl" style={styleBG}></div>
                 <div className="relative">
                   <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform h-32 w-32">
@@ -293,7 +289,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
                   </div>
                 </div>
                 <div className="justify-left h-16 mb-2"></div>
-    
+
                 <div className="justify-left max-h-64 overflow-y-scroll" style={divStyle}>
                   <p className="py-2 text-center text-xl font-bold">Detalles de la Muestra</p>
                   {category(color)}
@@ -310,7 +306,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
                   <p className="text-sm font-bold">HEX</p>
                   <p className="text-sm">&nbsp;&nbsp;&nbsp;{color.hex}</p>
                 </div>
-    
+
                 <button className="w-full text-white font-bold text-lg p-2 rounded-lg mt-4" style={buttonStyle} onClick={() => addColorToPalette(rgbToHex(color[RGB.R], color[RGB.G], color[RGB.B]))}>
                   Añadir a mi paleta
                 </button>
