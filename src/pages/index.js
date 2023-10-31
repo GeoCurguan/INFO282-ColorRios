@@ -8,7 +8,7 @@ import Header from "@/components/Header";
 import Drawer from "@/components/Drawer/Drawer";
 import Colors from "@/components/Colors/Colors";
 import ColorDetail from "@/components/ColorDetail/ColorDetail";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const poppins = Poppins({
   weight: ["200", "300", "400", "500", "700"],
@@ -26,6 +26,8 @@ export async function getServerSideProps() {
     },
   };
 }
+
+
 
 export default function Home({ colors }) {
   const { classNameObject, openFilters, toggleFilters, widthColors, detailTransition, currentColor, setCurrentColor } =
