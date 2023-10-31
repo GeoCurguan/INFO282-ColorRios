@@ -9,6 +9,7 @@ En el caso de que se quiera cambiar el nombre de la propiedad, se cambia en un s
 
 const OBJETO = 0;
 const COMUNA = 1;
+const ESTACION = 2;
 const EXPEDICION = 2;
 
 const R = 17;
@@ -47,7 +48,7 @@ const COLORINFO = {
   cmykM: 21,
   cmykY: 22,
   cmykK: 23,
-  ceresitaName: 24
+  ceresitaName: 24,
 };
 
-export { OBJETO, COMUNA, EXPEDICION, RGB, COLORINFO };
+export { OBJETO, ESTACION, COMUNA, EXPEDICION, RGB, COLORINFO };

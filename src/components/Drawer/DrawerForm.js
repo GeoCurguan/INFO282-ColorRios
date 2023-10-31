@@ -6,7 +6,7 @@ const DrawerForm = ({ colors, filters, setFilters }) => {
   const [valuesFilters, setValuesFilters] = useState({});
 
   useEffect(() => {
-    setValuesFilters(uniqueValuesFilters(colors));
+    setValuesFilters(uniqueValuesFilters(colors)); // unique values: { comunas: [], estaciones: [] }
     setMounted(true);
   }, []);
   if (!mounted) return null;
@@ -19,11 +19,15 @@ const DrawerForm = ({ colors, filters, setFilters }) => {
       <FilterObjeto valuesFilters={valuesFilters} filters={filters} setFilters={setFilters} />
       {/* Filtrar por comuna:  */}
       <FilterComuna valuesFilters={valuesFilters} filters={filters} setFilters={setFilters} />
+      {/* Filtrar por estación del año:  */}
+      <FilterEstacion valuesFilters={valuesFilters} filters={filters} setFilters={setFilters} />
     </form>
   );
 };
 
-const FilterObjeto = ({ valuesFilters, filters, setFilters }) => {
+// Los Filtros de Objeto son fijos
+// - Todos, Roca, Suelo, Planta, Vegetación, Agua, Cielo
+const FilterObjeto = ({ filters, setFilters }) => {
   return (
     <>
       <label htmlFor="objeto" className="text-white">
@@ -40,13 +44,17 @@ const FilterObjeto = ({ valuesFilters, filters, setFilters }) => {
       >
         <option value="todos">Todos</option>
         <option value="roca">Roca</option>
-        <option value="vegetal">Vegetal</option>
+        <option value="suelo">Suelo</option>
+        <option value="planta">Planta</option>
+        <option value="vegetal">Vegetación</option>
         <option value="agua">Agua</option>
+        <option value="cielo">Cielo</option>
       </select>
     </>
   );
 };
 
+// Los Filtros por comuna son dinámicos
 const FilterComuna = ({ valuesFilters, filters, setFilters }) => {
   return (
     <>
@@ -68,6 +76,33 @@ const FilterComuna = ({ valuesFilters, filters, setFilters }) => {
             {comuna}
           </option>
         ))}
+      </select>
+    </>
+  );
+};
+
+// Los Filtros por estación son fijos
+// - Todos, Primavera, Verano, Otoño, Invierno
+const FilterEstacion = ({ filters, setFilters }) => {
+  return (
+    <>
+      <label htmlFor="estacion" className="text-white mt-4">
+        Estación del año
+      </label>
+      <select
+        id="estacion"
+        className="w-full h-10 bg-gray-900/50 text-white"
+        name="estacion"
+        onChange={(e) => {
+          setFilters({ ...filters, [e.target.name]: e.target.value });
+        }}
+        value={filters.estacion}
+      >
+        <option value="todos">Todos</option>
+        <option value="primavera">Primavera</option>
+        <option value="verano">Verano</option>
+        <option value="otoño">Otoño</option>
+        <option value="invierno">Invierno</option>
       </select>
     </>
   );
