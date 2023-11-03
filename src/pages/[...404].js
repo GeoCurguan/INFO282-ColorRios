@@ -5,7 +5,7 @@ const CuatroCeroCuatro = () => {
     <div className="mt-20 flex flex-col items-center justify-center font-bold text-gray-800">
       <div className="relative">
         <Image
-          src="/404.png"
+          src="/images/404.png"
           alt="404"
           width={300}
           height={300}
