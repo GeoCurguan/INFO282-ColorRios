@@ -74,7 +74,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
           <img
             src={color[COLORINFO.image]}
             alt={color[COLORINFO.sampleName]}
-            className="h-32 w-32 translate-y-1/3 rounded-full border-4 border-blue-700 shadow-xl"
+            className="object-cover h-32 w-32 translate-y-1/3 rounded-full border-4 border-blue-700 shadow-xl"
             style={{
               border: `4px solid ${colorStyle.color}`,
             }}
@@ -241,7 +241,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   return (
     <>
       {color ? (
-        <div className="z-10 w-[300px] overflow-y-scroll sm:overflow-y-hidden overflow-x-hidden align-center fixed top-0 bottom-0 right-0 flex min-h-screen flex-col  overflow-hidden bg-gray-100 shadow-lgjustify-start">
+        <div className="z-10 w-[300px] overflow-y-scroll sm:overflow-y-hidden overflow-x-hidden align-center fixed top-0 bottom-0 right-0 flex min-h-screen flex-col overflow-hidden bg-gray-100 shadow-lg justify-between">
           <div className=" w-full bg-gray-300 shadow-md">
             <button className="float-right m-2" onClick={toggleDrawer}>
               <CloseIcon className="w-6 h-6 text-gray-900" />
@@ -252,9 +252,9 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
             </div>
           </div>
 
-          <div className="text-gray-900 w-full pl-4 pr-2 pt-4">
+          <div className="text-gray-900 w-full pl-4 pr-2 flex-1 overflow-y-auto sm:max-h-full sm:pr-0 pt-4">
             <div>{name(color)}</div>
-            <div className="justify-left h-96 overflow-y-scroll">
+            <div className="justify-left flex-1">
               <p className="py-4 text-center text-xl font-semibold">Información</p>
               {category(color)}
               {comuna(color)}
