@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 // Hooks
+import { useState } from "react";
 import useSideBar from "@/hooks/useSideBar";
 import useFilters from "@/hooks/useFilters";
 
@@ -8,7 +9,6 @@ import Header from "@/components/Header";
 import Drawer from "@/components/Drawer/Drawer";
 import Colors from "@/components/Colors/Colors";
 import ColorDetail from "@/components/ColorDetail/ColorDetail";
-import { useState, useEffect } from "react";
 
 const poppins = Poppins({
   weight: ["200", "300", "400", "500", "700"],
@@ -27,14 +27,12 @@ export async function getServerSideProps() {
   };
 }
 
-
-
 export default function Home({ colors }) {
   const { classNameObject, openFilters, toggleFilters, widthColors, detailTransition, currentColor, setCurrentColor } =
     useSideBar();
   const { filters, filterColors, setFilters } = useFilters();
   const filteredColors = filterColors(colors);
-  const [colorToPalette, setColorToPalette] = useState(null)
+  const [colorToPalette, setColorToPalette] = useState(null);
 
   return (
     <>
@@ -56,7 +54,11 @@ export default function Home({ colors }) {
             className={`flex flex-wrap justify-center ${widthColors} items-center transition-all content-start `}
             data-testid="colors"
           >
-            <Header filteredColorsLength={filteredColors.length} colorsLength={colors.length} colorToPalette={colorToPalette} />
+            <Header
+              filteredColorsLength={filteredColors.length}
+              colorsLength={colors.length}
+              colorToPalette={colorToPalette}
+            />
             <Colors colors={filteredColors} setCurrentColor={setCurrentColor} />
           </div>
 
@@ -64,7 +66,7 @@ export default function Home({ colors }) {
           <div
             className={`flex ${classNameObject.colorDetail.detailTransition} top-0 right-0 h-128 transition ease-in-out delay-150 `}
           >
-            <ColorDetail color={currentColor} setCurrentColor={setCurrentColor} setColorToPalette={setColorToPalette}/>
+            <ColorDetail color={currentColor} setCurrentColor={setCurrentColor} setColorToPalette={setColorToPalette} />
           </div>
         </div>
       </main>
