@@ -14,7 +14,7 @@ const Experience = ({ setControls, setCurrentColor, colors }) => {
 
   return (
     <Canvas
-      camera={{ position: [127, 127, 127], fov: 45 }}
+      camera={{ position: [0, -100, 75], fov: 50 }}
       gl={{ antialias: true, toneMapping: THREE.NoToneMapping }}
       style={{ background: "#f9f9fe", height: "100vh" }}
     >
