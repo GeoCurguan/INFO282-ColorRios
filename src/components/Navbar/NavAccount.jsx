@@ -22,7 +22,7 @@ const NavAccount = ({ isActive }) => {
             priority
             width={40}
             height={40}
-            src={session?.user?.image || "/placeholder/user-placeholder.png"}
+            src={session?.user?.image || "/images/placeholder/user-placeholder.png"}
             className="cursor-pointer object-cover w-10 h-10 rounded-full"
           />
         </Link>
