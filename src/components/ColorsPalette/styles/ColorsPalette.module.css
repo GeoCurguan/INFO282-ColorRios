@@ -10,7 +10,7 @@
 }
 
 .colorPalette:hover {
-  background-image: url("/equis.png");
+  background-image: url("/images/equis.png");
   background-size: 12px 12px;
   background-position: center center;
   background-repeat: no-repeat;

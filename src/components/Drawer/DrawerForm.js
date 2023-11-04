@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { uniqueValuesFilters } from "@/utils";
+import { colors } from "@/constants/colors";
 
 const DrawerForm = ({ colors, filters, setFilters }) => {
   const [mounted, setMounted] = useState(false);
@@ -16,11 +17,13 @@ const DrawerForm = ({ colors, filters, setFilters }) => {
   return (
     <form className="flex flex-col items-center justify-center">
       {/* Filtrar por objeto: Todos, Roca, Vegetal ... */}
-      <FilterObjeto valuesFilters={valuesFilters} filters={filters} setFilters={setFilters} />
+      <FilterObjeto filters={filters} setFilters={setFilters} />
       {/* Filtrar por comuna:  */}
       <FilterComuna valuesFilters={valuesFilters} filters={filters} setFilters={setFilters} />
       {/* Filtrar por estación del año:  */}
-      <FilterEstacion valuesFilters={valuesFilters} filters={filters} setFilters={setFilters} />
+      <FilterEstacion filters={filters} setFilters={setFilters} />
+      {/* Filtrar por color:  */}
+      <FilterColor filters={filters} setFilters={setFilters} />
     </form>
   );
 };
@@ -103,6 +106,35 @@ const FilterEstacion = ({ filters, setFilters }) => {
         <option value="verano">Verano</option>
         <option value="otoño">Otoño</option>
         <option value="invierno">Invierno</option>
+      </select>
+    </>
+  );
+};
+
+// Los filtros por color son fijos
+// constants/colors.js
+
+const FilterColor = ({ filters, setFilters }) => {
+  return (
+    <>
+      <label htmlFor="color" className="text-white mt-4">
+        Color
+      </label>
+      <select
+        id="color"
+        className="w-full h-10 bg-gray-900/50 text-white"
+        name="color"
+        onChange={(e) => {
+          setFilters({ ...filters, [e.target.name]: e.target.value });
+        }}
+        value={filters.color}
+      >
+        <option value="todos">Todos</option>
+        {colors.map((color) => (
+          <option className="capitalize" key={color} value={color}>
+            {color}
+          </option>
+        ))}
       </select>
     </>
   );
