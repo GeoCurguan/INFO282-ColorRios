@@ -9,6 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tremor/react": "^3.10.0",
+    "exceljs": "^4.3.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.7.0",
+    "react-csv": "^2.2.2",
+    "react-select": "^5.7.7",
+    "react-table": "^7.8.0",
     "@react-pdf/renderer": "^3.1.14",
     "@react-three/a11y": "^3.0.0",
     "@react-three/drei": "^9.88.7",
