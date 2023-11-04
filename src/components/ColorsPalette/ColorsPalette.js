@@ -13,10 +13,6 @@ const ColorsPalette = ({colorToPalette}) => {
         setFavoriteColors(prevColors => prevColors.filter((_, index) => index !== colorIdx));
     }
 
-    function exportColor(){
-
-    }
-
     useEffect(() => {
         if (colorToPalette && !favoriteColors.includes(colorToPalette)) {
           setFavoriteColors(prevColors => [...prevColors, colorToPalette]);
@@ -38,8 +34,9 @@ const ColorsPalette = ({colorToPalette}) => {
     return(
         <div className="flex flex-row items-center justify-around w-full bg-zinc-800">
             {Palette}
-            <ExportPDF />
-            
+
+            <ExportPDF favoriteColors={favoriteColors}/>
+
         </div>
     );
 }
