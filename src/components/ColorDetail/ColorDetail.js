@@ -17,14 +17,14 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   }
 
   function category(color) {
-    if (["roca", "suelo", "vegetal"].includes(color[COLORINFO.category].toLowerCase())) {
+    if (["roca", "suelo", "planta"].includes(color[COLORINFO.category].toLowerCase())) {
       return (
         <div>
           <p className="text-sm font-bold">Objeto:</p>
           <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.category]}</p>
         </div>
       );
-    } else if (["agua", "cielo", "vegetacion"].includes(color[COLORINFO.category].toLowerCase())) {
+    } else if (["agua", "cielo", "vegetal"].includes(color[COLORINFO.category].toLowerCase())) {
       return (
         <div>
           <p className="text-sm font-bold">Atmosfera:</p>
