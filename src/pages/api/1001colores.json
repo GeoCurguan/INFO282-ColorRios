@@ -3,7 +3,7 @@
     "majorDimension": "",
     "values": [
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -30,7 +30,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -57,7 +57,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -84,7 +84,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -111,7 +111,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -138,7 +138,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -165,7 +165,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -192,7 +192,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -219,7 +219,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -246,7 +246,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -273,7 +273,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -300,7 +300,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -327,7 +327,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -354,7 +354,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -381,7 +381,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -408,7 +408,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -435,7 +435,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -462,7 +462,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -489,7 +489,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -516,7 +516,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -543,7 +543,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -570,7 +570,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -597,7 +597,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -624,7 +624,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -651,7 +651,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -678,7 +678,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -705,7 +705,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -732,7 +732,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -759,7 +759,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -786,7 +786,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -813,7 +813,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -840,7 +840,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -867,7 +867,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -894,7 +894,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -921,7 +921,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -948,7 +948,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -975,7 +975,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -1002,7 +1002,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -1029,7 +1029,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -1056,7 +1056,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -1083,7 +1083,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -1110,7 +1110,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -1137,7 +1137,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -1164,7 +1164,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -1191,7 +1191,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -1218,7 +1218,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -1245,7 +1245,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -1272,7 +1272,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -1299,7 +1299,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -1326,7 +1326,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -1353,7 +1353,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -1380,7 +1380,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -1407,7 +1407,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -1434,7 +1434,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -1461,7 +1461,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -1488,7 +1488,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -1515,7 +1515,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -1542,7 +1542,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -1569,7 +1569,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -1596,7 +1596,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -1623,7 +1623,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -1650,7 +1650,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -1677,7 +1677,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -1704,7 +1704,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -1731,7 +1731,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -1758,7 +1758,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -1785,7 +1785,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -1812,7 +1812,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -1839,7 +1839,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -1866,7 +1866,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -1893,7 +1893,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -1920,7 +1920,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -1947,7 +1947,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -1974,7 +1974,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -2001,7 +2001,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -2028,7 +2028,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -2055,7 +2055,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -2082,7 +2082,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -2109,7 +2109,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -2136,7 +2136,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -2163,7 +2163,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -2190,7 +2190,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -2217,7 +2217,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -2244,7 +2244,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -2271,7 +2271,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -2298,7 +2298,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -2325,7 +2325,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -2352,7 +2352,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -2379,7 +2379,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -2406,7 +2406,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -2433,7 +2433,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -2460,7 +2460,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -2487,7 +2487,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -2514,7 +2514,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -2541,7 +2541,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -2568,7 +2568,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -2595,7 +2595,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -2622,7 +2622,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -2649,7 +2649,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -2676,7 +2676,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -2703,7 +2703,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -2730,7 +2730,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -2757,7 +2757,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -2784,7 +2784,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -2811,7 +2811,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -2838,7 +2838,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -2865,7 +2865,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -2892,7 +2892,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -2919,7 +2919,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -2946,7 +2946,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -2973,7 +2973,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -3000,7 +3000,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -3027,7 +3027,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -3054,7 +3054,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -3081,7 +3081,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -3108,7 +3108,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -3135,7 +3135,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -3162,7 +3162,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -3189,7 +3189,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -3216,7 +3216,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -3243,7 +3243,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -3270,7 +3270,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -3297,7 +3297,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -3324,7 +3324,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -3351,7 +3351,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -3378,7 +3378,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -3405,7 +3405,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -3432,7 +3432,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Verano",
         "Nombre Comun",
@@ -3459,7 +3459,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -3486,7 +3486,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -3513,7 +3513,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -3540,7 +3540,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -3567,7 +3567,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -3594,7 +3594,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -3621,7 +3621,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -3648,7 +3648,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -3675,7 +3675,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -3702,7 +3702,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -3729,7 +3729,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -3756,7 +3756,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -3783,7 +3783,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -3810,7 +3810,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -3837,7 +3837,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -3864,7 +3864,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -3891,7 +3891,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -3918,7 +3918,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -3945,7 +3945,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -3972,7 +3972,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -3999,7 +3999,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -4026,7 +4026,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -4053,7 +4053,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -4080,7 +4080,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -4107,7 +4107,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -4134,7 +4134,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -4161,7 +4161,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -4188,7 +4188,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -4215,7 +4215,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -4242,7 +4242,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -4269,7 +4269,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -4296,7 +4296,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -4323,7 +4323,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -4350,7 +4350,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -4377,7 +4377,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -4404,7 +4404,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -4431,7 +4431,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -4458,7 +4458,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -4485,7 +4485,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -4512,7 +4512,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -4539,7 +4539,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -4566,7 +4566,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -4593,7 +4593,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -4620,7 +4620,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -4647,7 +4647,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -4674,7 +4674,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -4701,7 +4701,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -4728,7 +4728,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -4755,7 +4755,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -4782,7 +4782,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -4809,7 +4809,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -4836,7 +4836,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -4863,7 +4863,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -4890,7 +4890,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -4917,7 +4917,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -4944,7 +4944,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -4971,7 +4971,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -4998,7 +4998,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -5025,7 +5025,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -5052,7 +5052,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -5079,7 +5079,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -5106,7 +5106,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -5133,7 +5133,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -5160,7 +5160,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -5187,7 +5187,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -5214,7 +5214,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Verano",
         "Nombre Comun",
@@ -5241,7 +5241,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -5268,7 +5268,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -5295,7 +5295,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -5322,7 +5322,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -5349,7 +5349,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -5376,7 +5376,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -5403,7 +5403,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -5430,7 +5430,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -5457,7 +5457,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -5484,7 +5484,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -5511,7 +5511,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -5538,7 +5538,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -5565,7 +5565,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -5592,7 +5592,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -5619,7 +5619,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -5646,7 +5646,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -5673,7 +5673,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -5700,7 +5700,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -5727,7 +5727,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Verano",
         "Nombre Comun",
@@ -5754,7 +5754,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -5781,7 +5781,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -5808,7 +5808,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -5835,7 +5835,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -5862,7 +5862,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -5889,7 +5889,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -5916,7 +5916,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -5943,7 +5943,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -5970,7 +5970,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -5997,7 +5997,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -6024,7 +6024,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -6051,7 +6051,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -6078,7 +6078,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -6105,7 +6105,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -6132,7 +6132,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -6159,7 +6159,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -6186,7 +6186,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -6213,7 +6213,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -6240,7 +6240,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -6267,7 +6267,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -6294,7 +6294,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -6321,7 +6321,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -6348,7 +6348,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -6375,7 +6375,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -6402,7 +6402,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -6429,7 +6429,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -6456,7 +6456,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Verano",
         "Nombre Comun",
@@ -6483,7 +6483,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -6510,7 +6510,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -6537,7 +6537,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -6564,7 +6564,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -6591,7 +6591,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -6618,7 +6618,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -6645,7 +6645,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -6672,7 +6672,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -6699,7 +6699,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -6726,7 +6726,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -6753,7 +6753,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -6780,7 +6780,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -6807,7 +6807,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -6834,7 +6834,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -6861,7 +6861,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -6888,7 +6888,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -6915,7 +6915,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -6942,7 +6942,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -6969,7 +6969,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -6996,7 +6996,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -7023,7 +7023,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -7050,7 +7050,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -7077,7 +7077,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -7104,7 +7104,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -7131,7 +7131,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -7158,7 +7158,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -7185,7 +7185,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -7212,7 +7212,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -7239,7 +7239,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -7266,7 +7266,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -7293,7 +7293,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -7320,7 +7320,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -7347,7 +7347,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -7374,7 +7374,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -7401,7 +7401,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -7428,7 +7428,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -7455,7 +7455,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -7482,7 +7482,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -7509,7 +7509,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -7536,7 +7536,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -7563,7 +7563,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -7590,7 +7590,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -7617,7 +7617,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -7644,7 +7644,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -7671,7 +7671,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -7698,7 +7698,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -7725,7 +7725,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -7752,7 +7752,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -7779,7 +7779,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -7806,7 +7806,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -7833,7 +7833,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -7860,7 +7860,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -7887,7 +7887,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -7914,7 +7914,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -7941,7 +7941,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -7968,7 +7968,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -7995,7 +7995,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -8022,7 +8022,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -8049,7 +8049,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -8076,7 +8076,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -8103,7 +8103,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -8130,7 +8130,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -8157,7 +8157,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -8184,7 +8184,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -8211,7 +8211,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -8238,7 +8238,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -8265,7 +8265,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -8292,7 +8292,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -8319,7 +8319,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -8346,7 +8346,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -8373,7 +8373,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -8400,7 +8400,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -8427,7 +8427,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -8454,7 +8454,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -8481,7 +8481,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -8508,7 +8508,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -8535,7 +8535,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -8562,7 +8562,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -8589,7 +8589,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -8616,7 +8616,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -8643,7 +8643,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -8670,7 +8670,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -8697,7 +8697,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -8724,7 +8724,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -8751,7 +8751,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -8778,7 +8778,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -8805,7 +8805,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -8832,7 +8832,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -8859,7 +8859,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -8886,7 +8886,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -8913,7 +8913,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -8940,7 +8940,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -8967,7 +8967,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -8994,7 +8994,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -9021,7 +9021,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -9048,7 +9048,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -9075,7 +9075,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -9102,7 +9102,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -9129,7 +9129,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -9156,7 +9156,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -9183,7 +9183,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -9210,7 +9210,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -9237,7 +9237,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -9264,7 +9264,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -9291,7 +9291,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -9318,7 +9318,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -9345,7 +9345,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -9372,7 +9372,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -9399,7 +9399,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -9426,7 +9426,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -9453,7 +9453,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -9480,7 +9480,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -9507,7 +9507,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -9534,7 +9534,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -9561,7 +9561,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -9588,7 +9588,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -9615,7 +9615,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -9642,7 +9642,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -9669,7 +9669,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -9696,7 +9696,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -9723,7 +9723,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -9750,7 +9750,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -9777,7 +9777,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -9804,7 +9804,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -9831,7 +9831,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -9858,7 +9858,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -9885,7 +9885,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -9912,7 +9912,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -9939,7 +9939,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -9966,7 +9966,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -9993,7 +9993,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Verano",
         "Nombre Comun",
@@ -10020,7 +10020,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -10047,7 +10047,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -10074,7 +10074,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -10101,7 +10101,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -10128,7 +10128,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -10155,7 +10155,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -10182,7 +10182,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -10209,7 +10209,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -10236,7 +10236,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -10263,7 +10263,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -10290,7 +10290,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -10317,7 +10317,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -10344,7 +10344,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -10371,7 +10371,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -10398,7 +10398,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -10425,7 +10425,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -10452,7 +10452,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -10479,7 +10479,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -10506,7 +10506,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -10533,7 +10533,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -10560,7 +10560,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -10587,7 +10587,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Verano",
         "Nombre Comun",
@@ -10614,7 +10614,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -10641,7 +10641,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -10668,7 +10668,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -10695,7 +10695,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -10722,7 +10722,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -10749,7 +10749,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -10776,7 +10776,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -10803,7 +10803,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -10830,7 +10830,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -10857,7 +10857,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -10884,7 +10884,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -10911,7 +10911,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -10938,7 +10938,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -10965,7 +10965,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -10992,7 +10992,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -11019,7 +11019,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11046,7 +11046,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -11073,7 +11073,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -11100,7 +11100,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -11127,7 +11127,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -11154,7 +11154,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -11181,7 +11181,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -11208,7 +11208,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -11235,7 +11235,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -11262,7 +11262,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -11289,7 +11289,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -11316,7 +11316,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11343,7 +11343,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11370,7 +11370,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -11397,7 +11397,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11424,7 +11424,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11451,7 +11451,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11478,7 +11478,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -11505,7 +11505,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11532,7 +11532,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11559,7 +11559,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11586,7 +11586,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -11613,7 +11613,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -11640,7 +11640,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -11667,7 +11667,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11694,7 +11694,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11721,7 +11721,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11748,7 +11748,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11775,7 +11775,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11802,7 +11802,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -11829,7 +11829,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -11856,7 +11856,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11883,7 +11883,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -11910,7 +11910,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -11937,7 +11937,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -11964,7 +11964,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -11991,7 +11991,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -12018,7 +12018,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12045,7 +12045,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -12072,7 +12072,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -12099,7 +12099,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -12126,7 +12126,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12153,7 +12153,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -12180,7 +12180,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -12207,7 +12207,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12234,7 +12234,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -12261,7 +12261,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -12288,7 +12288,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12315,7 +12315,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12342,7 +12342,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12369,7 +12369,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -12396,7 +12396,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12423,7 +12423,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12450,7 +12450,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -12477,7 +12477,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -12504,7 +12504,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12531,7 +12531,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -12558,7 +12558,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -12585,7 +12585,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -12612,7 +12612,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12639,7 +12639,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12666,7 +12666,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12693,7 +12693,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -12720,7 +12720,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12747,7 +12747,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -12774,7 +12774,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -12801,7 +12801,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -12828,7 +12828,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -12855,7 +12855,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -12882,7 +12882,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -12909,7 +12909,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -12936,7 +12936,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -12963,7 +12963,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -12990,7 +12990,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -13017,7 +13017,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -13044,7 +13044,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -13071,7 +13071,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -13098,7 +13098,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -13125,7 +13125,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -13152,7 +13152,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -13179,7 +13179,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -13206,7 +13206,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -13233,7 +13233,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -13260,7 +13260,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -13287,7 +13287,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -13314,7 +13314,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -13341,7 +13341,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -13368,7 +13368,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -13395,7 +13395,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -13422,7 +13422,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -13449,7 +13449,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -13476,7 +13476,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -13503,7 +13503,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -13530,7 +13530,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -13557,7 +13557,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -13584,7 +13584,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -13611,7 +13611,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -13638,7 +13638,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -13665,7 +13665,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -13692,7 +13692,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -13719,7 +13719,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -13746,7 +13746,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -13773,7 +13773,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -13800,7 +13800,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -13827,7 +13827,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -13854,7 +13854,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -13881,7 +13881,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -13908,7 +13908,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -13935,7 +13935,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -13962,7 +13962,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -13989,7 +13989,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -14016,7 +14016,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -14043,7 +14043,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -14070,7 +14070,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Verano",
         "Nombre Comun",
@@ -14097,7 +14097,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -14124,7 +14124,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -14151,7 +14151,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -14178,7 +14178,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -14205,7 +14205,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -14232,7 +14232,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -14259,7 +14259,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -14286,7 +14286,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -14313,7 +14313,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -14340,7 +14340,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -14367,7 +14367,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -14394,7 +14394,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -14421,7 +14421,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -14448,7 +14448,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -14475,7 +14475,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -14502,7 +14502,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -14529,7 +14529,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -14556,7 +14556,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -14583,7 +14583,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -14610,7 +14610,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -14637,7 +14637,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -14664,7 +14664,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -14691,7 +14691,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -14718,7 +14718,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -14745,7 +14745,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -14772,7 +14772,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -14799,7 +14799,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -14826,7 +14826,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -14853,7 +14853,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -14880,7 +14880,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -14907,7 +14907,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -14934,7 +14934,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -14961,7 +14961,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -14988,7 +14988,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -15015,7 +15015,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -15042,7 +15042,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -15069,7 +15069,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -15096,7 +15096,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -15123,7 +15123,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -15150,7 +15150,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -15177,7 +15177,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -15204,7 +15204,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -15231,7 +15231,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -15258,7 +15258,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -15285,7 +15285,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -15312,7 +15312,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -15339,7 +15339,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -15366,7 +15366,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -15393,7 +15393,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -15420,7 +15420,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -15447,7 +15447,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -15474,7 +15474,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -15501,7 +15501,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -15528,7 +15528,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -15555,7 +15555,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -15582,7 +15582,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -15609,7 +15609,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -15636,7 +15636,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -15663,7 +15663,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -15690,7 +15690,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -15717,7 +15717,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -15744,7 +15744,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -15771,7 +15771,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -15798,7 +15798,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -15825,7 +15825,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Verano",
         "Nombre Comun",
@@ -15852,7 +15852,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -15879,7 +15879,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -15906,7 +15906,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -15933,7 +15933,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -15960,7 +15960,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -15987,7 +15987,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -16014,7 +16014,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -16041,7 +16041,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -16068,7 +16068,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -16095,7 +16095,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -16122,7 +16122,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -16149,7 +16149,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -16176,7 +16176,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -16203,7 +16203,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -16230,7 +16230,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -16257,7 +16257,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -16284,7 +16284,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -16311,7 +16311,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -16338,7 +16338,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -16365,7 +16365,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -16392,7 +16392,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -16419,7 +16419,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Verano",
         "Nombre Comun",
@@ -16446,7 +16446,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -16473,7 +16473,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -16500,7 +16500,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -16527,7 +16527,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -16554,7 +16554,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -16581,7 +16581,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -16608,7 +16608,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -16635,7 +16635,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -16662,7 +16662,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -16689,7 +16689,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -16716,7 +16716,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -16743,7 +16743,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -16770,7 +16770,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -16797,7 +16797,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -16824,7 +16824,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -16851,7 +16851,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -16878,7 +16878,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -16905,7 +16905,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -16932,7 +16932,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -16959,7 +16959,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -16986,7 +16986,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -17013,7 +17013,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -17040,7 +17040,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -17067,7 +17067,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -17094,7 +17094,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -17121,7 +17121,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -17148,7 +17148,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -17175,7 +17175,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -17202,7 +17202,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -17229,7 +17229,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -17256,7 +17256,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -17283,7 +17283,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -17310,7 +17310,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -17337,7 +17337,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -17364,7 +17364,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -17391,7 +17391,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -17418,7 +17418,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -17445,7 +17445,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -17472,7 +17472,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -17499,7 +17499,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -17526,7 +17526,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -17553,7 +17553,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -17580,7 +17580,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -17607,7 +17607,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -17634,7 +17634,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -17661,7 +17661,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -17688,7 +17688,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -17715,7 +17715,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -17742,7 +17742,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -17769,7 +17769,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -17796,7 +17796,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -17823,7 +17823,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -17850,7 +17850,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -17877,7 +17877,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -17904,7 +17904,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -17931,7 +17931,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -17958,7 +17958,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -17985,7 +17985,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -18012,7 +18012,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -18039,7 +18039,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -18066,7 +18066,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -18093,7 +18093,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -18120,7 +18120,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -18147,7 +18147,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -18174,7 +18174,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -18201,7 +18201,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -18228,7 +18228,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -18255,7 +18255,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -18282,7 +18282,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -18309,7 +18309,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -18336,7 +18336,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -18363,7 +18363,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -18390,7 +18390,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -18417,7 +18417,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -18444,7 +18444,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -18471,7 +18471,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -18498,7 +18498,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -18525,7 +18525,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -18552,7 +18552,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -18579,7 +18579,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -18606,7 +18606,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -18633,7 +18633,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -18660,7 +18660,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -18687,7 +18687,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -18714,7 +18714,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -18741,7 +18741,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -18768,7 +18768,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -18795,7 +18795,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -18822,7 +18822,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -18849,7 +18849,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -18876,7 +18876,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -18903,7 +18903,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -18930,7 +18930,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -18957,7 +18957,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -18984,7 +18984,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -19011,7 +19011,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -19038,7 +19038,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -19065,7 +19065,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -19092,7 +19092,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -19119,7 +19119,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -19146,7 +19146,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -19173,7 +19173,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -19200,7 +19200,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -19227,7 +19227,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -19254,7 +19254,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -19281,7 +19281,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -19308,7 +19308,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -19335,7 +19335,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -19362,7 +19362,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -19389,7 +19389,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -19416,7 +19416,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -19443,7 +19443,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -19470,7 +19470,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -19497,7 +19497,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -19524,7 +19524,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -19551,7 +19551,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -19578,7 +19578,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -19605,7 +19605,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -19632,7 +19632,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -19659,7 +19659,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -19686,7 +19686,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -19713,7 +19713,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -19740,7 +19740,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -19767,7 +19767,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -19794,7 +19794,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -19821,7 +19821,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -19848,7 +19848,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -19875,7 +19875,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -19902,7 +19902,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -19929,7 +19929,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -19956,7 +19956,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -19983,7 +19983,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -20010,7 +20010,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -20037,7 +20037,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -20064,7 +20064,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -20091,7 +20091,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -20118,7 +20118,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -20145,7 +20145,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -20172,7 +20172,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -20199,7 +20199,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -20226,7 +20226,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -20253,7 +20253,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -20280,7 +20280,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -20307,7 +20307,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -20334,7 +20334,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -20361,7 +20361,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -20388,7 +20388,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -20415,7 +20415,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -20442,7 +20442,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -20469,7 +20469,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -20496,7 +20496,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -20523,7 +20523,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -20550,7 +20550,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -20577,7 +20577,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -20604,7 +20604,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -20631,7 +20631,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -20658,7 +20658,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -20685,7 +20685,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -20712,7 +20712,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -20739,7 +20739,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -20766,7 +20766,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -20793,7 +20793,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -20820,7 +20820,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -20847,7 +20847,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -20874,7 +20874,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -20901,7 +20901,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -20928,7 +20928,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -20955,7 +20955,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -20982,7 +20982,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -21009,7 +21009,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -21036,7 +21036,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -21063,7 +21063,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -21090,7 +21090,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -21117,7 +21117,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Verano",
         "Nombre Comun",
@@ -21144,7 +21144,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -21171,7 +21171,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -21198,7 +21198,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -21225,7 +21225,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -21252,7 +21252,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -21279,7 +21279,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -21306,7 +21306,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -21333,7 +21333,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -21360,7 +21360,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -21387,7 +21387,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -21414,7 +21414,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -21441,7 +21441,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -21468,7 +21468,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -21495,7 +21495,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -21522,7 +21522,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -21549,7 +21549,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -21576,7 +21576,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -21603,7 +21603,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -21630,7 +21630,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -21657,7 +21657,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -21684,7 +21684,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -21711,7 +21711,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -21738,7 +21738,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -21765,7 +21765,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -21792,7 +21792,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -21819,7 +21819,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -21846,7 +21846,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -21873,7 +21873,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -21900,7 +21900,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -21927,7 +21927,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -21954,7 +21954,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -21981,7 +21981,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -22008,7 +22008,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -22035,7 +22035,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -22062,7 +22062,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -22089,7 +22089,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -22116,7 +22116,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -22143,7 +22143,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -22170,7 +22170,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -22197,7 +22197,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -22224,7 +22224,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -22251,7 +22251,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -22278,7 +22278,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -22305,7 +22305,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -22332,7 +22332,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -22359,7 +22359,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -22386,7 +22386,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -22413,7 +22413,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -22440,7 +22440,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -22467,7 +22467,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -22494,7 +22494,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -22521,7 +22521,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -22548,7 +22548,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -22575,7 +22575,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -22602,7 +22602,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -22629,7 +22629,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Primavera",
         "Nombre Comun",
@@ -22656,7 +22656,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -22683,7 +22683,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -22710,7 +22710,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -22737,7 +22737,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -22764,7 +22764,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -22791,7 +22791,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -22818,7 +22818,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -22845,7 +22845,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -22872,7 +22872,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -22899,7 +22899,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -22926,7 +22926,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -22953,7 +22953,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -22980,7 +22980,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -23007,7 +23007,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -23034,7 +23034,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -23061,7 +23061,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -23088,7 +23088,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -23115,7 +23115,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -23142,7 +23142,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -23169,7 +23169,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -23196,7 +23196,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -23223,7 +23223,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -23250,7 +23250,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -23277,7 +23277,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -23304,7 +23304,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -23331,7 +23331,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -23358,7 +23358,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -23385,7 +23385,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -23412,7 +23412,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -23439,7 +23439,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -23466,7 +23466,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -23493,7 +23493,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -23520,7 +23520,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -23547,7 +23547,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -23574,7 +23574,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -23601,7 +23601,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -23628,7 +23628,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -23655,7 +23655,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -23682,7 +23682,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -23709,7 +23709,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
@@ -23736,7 +23736,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -23763,7 +23763,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -23790,7 +23790,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Primavera",
         "Nombre Comun",
@@ -23817,7 +23817,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -23844,7 +23844,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -23871,7 +23871,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -23898,7 +23898,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -23925,7 +23925,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -23952,7 +23952,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -23979,7 +23979,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -24006,7 +24006,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -24033,7 +24033,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -24060,7 +24060,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -24087,7 +24087,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -24114,7 +24114,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -24141,7 +24141,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -24168,7 +24168,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -24195,7 +24195,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Futrono",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -24222,7 +24222,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -24249,7 +24249,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -24276,7 +24276,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -24303,7 +24303,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -24330,7 +24330,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -24357,7 +24357,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mafil",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -24384,7 +24384,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -24411,7 +24411,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -24438,7 +24438,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -24465,7 +24465,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -24492,7 +24492,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -24519,7 +24519,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -24546,7 +24546,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -24573,7 +24573,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -24600,7 +24600,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -24627,7 +24627,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -24654,7 +24654,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -24681,7 +24681,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -24708,7 +24708,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -24735,7 +24735,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -24762,7 +24762,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "La Union",
         "Verano",
         "Nombre Comun",
@@ -24789,7 +24789,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -24816,7 +24816,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -24843,7 +24843,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -24870,7 +24870,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Primavera",
         "Nombre Comun",
@@ -24897,7 +24897,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Verano",
         "Nombre Comun",
@@ -24924,7 +24924,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -24951,7 +24951,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -24978,7 +24978,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -25005,7 +25005,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -25032,7 +25032,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mariquina",
         "Verano",
         "Nombre Comun",
@@ -25059,7 +25059,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -25086,7 +25086,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -25113,7 +25113,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -25140,7 +25140,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -25167,7 +25167,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Invierno",
         "Nombre Comun",
@@ -25194,7 +25194,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -25221,7 +25221,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Primavera",
         "Nombre Comun",
@@ -25248,7 +25248,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -25275,7 +25275,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Corral",
         "Verano",
         "Nombre Comun",
@@ -25302,7 +25302,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -25329,7 +25329,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -25356,7 +25356,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Verano",
         "Nombre Comun",
@@ -25383,7 +25383,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -25410,7 +25410,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Verano",
         "Nombre Comun",
@@ -25437,7 +25437,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -25464,7 +25464,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -25491,7 +25491,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lago Ranco",
         "Invierno",
         "Nombre Comun",
@@ -25518,7 +25518,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Invierno",
         "Nombre Comun",
@@ -25545,7 +25545,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -25572,7 +25572,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -25599,7 +25599,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -25626,7 +25626,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -25653,7 +25653,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -25680,7 +25680,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -25707,7 +25707,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Valdivia",
         "Primavera",
         "Nombre Comun",
@@ -25734,7 +25734,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Valdivia",
         "Verano",
         "Nombre Comun",
@@ -25761,7 +25761,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -25788,7 +25788,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -25815,7 +25815,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -25842,7 +25842,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Los Lagos",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -25869,7 +25869,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -25896,7 +25896,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -25923,7 +25923,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lago Ranco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -25950,7 +25950,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Paillaco",
         "Primavera",
         "Nombre Comun",
@@ -25977,7 +25977,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -26004,7 +26004,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -26031,7 +26031,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Los Lagos",
         "Invierno",
         "Nombre Comun",
@@ -26058,7 +26058,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -26085,7 +26085,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -26112,7 +26112,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -26139,7 +26139,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -26166,7 +26166,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Invierno",
         "Nombre Comun",
@@ -26193,7 +26193,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -26220,7 +26220,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Rio Bueno",
         "Invierno",
         "Nombre Comun",
@@ -26247,7 +26247,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Rio Bueno",
         "Verano",
         "Nombre Comun",
@@ -26274,7 +26274,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "La Union",
         "Invierno",
         "Nombre Comun",
@@ -26301,7 +26301,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -26328,7 +26328,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Valdivia",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -26355,7 +26355,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -26382,7 +26382,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mariquina",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -26409,7 +26409,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -26436,7 +26436,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lago Ranco",
         "Verano",
         "Nombre Comun",
@@ -26463,7 +26463,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -26490,7 +26490,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -26517,7 +26517,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Futrono",
         "Verano",
         "Nombre Comun",
@@ -26544,7 +26544,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Paillaco",
         "Verano",
         "Nombre Comun",
@@ -26571,7 +26571,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Mafil",
         "Verano",
         "Nombre Comun",
@@ -26598,7 +26598,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Mariquina",
         "Primavera",
         "Nombre Comun",
@@ -26625,7 +26625,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Lanco",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -26652,7 +26652,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Agua",
+        "Agua",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -26679,7 +26679,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Lanco",
         "Primavera",
         "Nombre Comun",
@@ -26706,7 +26706,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Futrono",
         "Invierno",
         "Nombre Comun",
@@ -26733,7 +26733,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Corral",
         "Primavera",
         "Nombre Comun",
@@ -26760,7 +26760,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Mafil",
         "Primavera",
         "Nombre Comun",
@@ -26787,7 +26787,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Verano",
         "Nombre Comun",
@@ -26814,7 +26814,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Panguipulli",
         "Invierno",
         "Nombre Comun",
@@ -26841,7 +26841,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Suelo",
+        "Suelo",
         "Corral",
         "Invierno",
         "Nombre Comun",
@@ -26868,7 +26868,7 @@
         "Ceresita"
       ],
       [
-        "ObjetoRoca",
+        "Roca",
         "Lanco",
         "Invierno",
         "Nombre Comun",
@@ -26895,7 +26895,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Cielo",
+        "Cielo",
         "Rio Bueno",
         "Primavera",
         "Nombre Comun",
@@ -26922,7 +26922,7 @@
         "Ceresita"
       ],
       [
-        "Atmosfera Vegetal",
+        "Vegetacion",
         "Futrono",
         "Primavera",
         "Nombre Comun",
@@ -26949,7 +26949,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Panguipulli",
         "Oto\u00c3\u00b1o",
         "Nombre Comun",
@@ -26976,7 +26976,7 @@
         "Ceresita"
       ],
       [
-        "Objeto Vegetal",
+        "Planta",
         "Mariquina",
         "Invierno",
         "Nombre Comun",
