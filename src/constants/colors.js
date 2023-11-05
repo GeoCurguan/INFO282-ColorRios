@@ -1,0 +1,63 @@
+// Color representado en el sistema NCS
+// Será una simplificación de un color en base al "hue": Y20R, Y, N, B, G, etc.
+// Amarillos, Naranjos, Rojos, Rosados, Morados, Azules, Verdes, Cafés, Grises, Blancos, Negros.
+
+const colors = [
+  "Amarillos",
+  "Naranjos",
+  "Rojos",
+  "Rosados",
+  "Morados",
+  "Azules",
+  "Verdes",
+  "Cafés",
+  "Grises",
+  "Blancos",
+  "Negros",
+];
+
+const colorsNCS = {
+  Y: "Amarillos",
+  Y10R: "Amarillos",
+  Y20R: "Amarillos",
+  Y30R: "Naranjos",
+  Y40R: "Naranjos",
+  Y50R: "Naranjos",
+  Y60R: "Naranjos",
+  Y70R: "Rojos",
+  Y80R: "Rojos",
+  Y90R: "Rojos",
+  R: "Rojos",
+  R10B: "Rojos",
+  R20B: "Rojos",
+  R30B: "Morados",
+  R40B: "Morados",
+  R50B: "Morados",
+  R60B: "Azules",
+  R70B: "Azules",
+  R80B: "Azules",
+  R90B: "Azules",
+  B: "Azules",
+  B10G: "Azules",
+  B20G: "Azules",
+  B30G: "Azules",
+  B40G: "Verdes",
+  B50G: "Verdes",
+  B60G: "Verdes",
+  B70G: "Verdes",
+  B80G: "Verdes",
+  B90G: "Verdes",
+  G: "Verdes",
+  G10Y: "Verdes",
+  G20Y: "Verdes",
+  G30Y: "Verdes",
+  G40Y: "Verdes",
+  G50Y: "Verdes",
+  G60Y: "Verdes",
+  G70Y: "Verdes",
+  G80Y: "Verdes",
+  G90Y: "Amarillos",
+  N: "Grises",
+};
+
+export { colors, colorsNCS };

@@ -46,7 +46,7 @@ const DrawerInfo = ({ colors, filters, setFilters, toggleFilters }) => {
 const DrawerOpen = ({ toggleFilters }) => {
   return (
     <div
-      className="hidden md:flex md:flex-col md:justify-center  md:fixed absolute top-1/2 left-0 w-8 h-10 bg-gray-900/50 transform -translate-y-1/2
+      className="flex flex-col justify-center  fixed  top-1/2 left-0 w-8 h-10 bg-gray-900/50 transform -translate-y-1/2
     hover:bg-gray-900/70 cursor-pointer"
     >
       <ArrowIcon
