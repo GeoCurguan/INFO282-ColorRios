@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import { RGB } from "@/constants/properties";
 import { PDFDownloadLink, Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
-import { rgbToHex } from '@/utils';
 
-// Create styles
+// Estilos para el pdf
 const styles = StyleSheet.create({
   page: {
     flexDirection: 'row',
@@ -114,17 +113,17 @@ const PDFToExport = ({favoriteColors}) => {
                             <View style={styles.colorLocationData}>
                               <View style={styles.dataContainer}>
                                 <Text style={styles.subTitles}>NCS</Text>
-                                <Text>xxx -xxx -xxx</Text>
+                                <Text>{color[6]}-{color[7]}</Text>
                               </View>
 
                               <View style={styles.dataContainer}>
                                 <Text style={styles.subTitles}>Cielab</Text>
-                                <Text>xxx -xxx -xxx</Text>
+                                <Text>L*: {color[13]} a*: {color[14]} b*: {color[15]}</Text>
                               </View>
 
                               <View style={styles.dataContainer}>
                                 <Text style={styles.subTitles}>Cmynk</Text>
-                                <Text>xxx -xxx -xxx</Text>
+                                <Text>{color[20]}C {color[21]}M {color[22]}Y {color[23]}K </Text>
                               </View>
                             </View>
                             <View style={styles.colorLocationData}>
@@ -135,7 +134,7 @@ const PDFToExport = ({favoriteColors}) => {
 
                               <View style={styles.dataContainer}>
                                 <Text style={styles.subTitles}>Munsell</Text>
-                                <Text>xxx -xxx -xxx</Text>
+                                <Text>{color[9] + '/' + color[11]}</Text>
                               </View>
 
 
@@ -170,9 +169,9 @@ const ExportPDF = ({favoriteColors}) => {
     <>
       {
         isClient ?
-          <div>
+          <div style={{color:'#fff', padding: '5px'}}>
           <PDFDownloadLink document={<PDFToExport favoriteColors={favoriteColors}/>} fileName="colores-favoritos.pdf">
-            {({ blob, url, loading, error }) => (loading ? 'Cargando colores...' : 'Exportar colores')}
+            {({ blob, url, loading, error }) => (loading ? 'Cargando colores...' : 'Exportar')}
           </PDFDownloadLink>
           </div> : <></>
       }
