@@ -1,9 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { signIn, useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
+import { useEffect, useState } from "react";
 
 const NavAccount = ({ isActive }) => {
+  const [mounted, setMounted] = useState(false);
   const { data: session } = useSession();
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
   console.log(session);
   const activeClassDark = "bg-[#434343] text-[#D9D9D9] rounded-full";
   return (
@@ -11,11 +16,8 @@ const NavAccount = ({ isActive }) => {
       <li className={`px-4 py-2 ${isActive("/social") && activeClassDark}`}>
         <Link href="/social">Social</Link>
       </li>
-      {session?.image ? (
-        <button className="px-4 py-2 rounded-full" onClick={() => signIn()}>
-          Login
-        </button>
-      ) : (
+      <button onClick={() => signOut()}>D</button>
+      {session?.user.image ? (
         <Link href="/perfil">
           <Image
             alt={session?.user?.name || "User Image"}
@@ -26,6 +28,10 @@ const NavAccount = ({ isActive }) => {
             className="cursor-pointer object-cover w-10 h-10 rounded-full"
           />
         </Link>
+      ) : (
+        <button className="px-4 py-2 rounded-full" onClick={() => signIn()}>
+          Login
+        </button>
       )}
     </ul>
   );
