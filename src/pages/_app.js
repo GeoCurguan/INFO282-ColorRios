@@ -1,13 +1,26 @@
-import "@/styles/globals.css";
-import { SessionProvider } from "next-auth/react";
-import NavbarLayout from "@/components/Navbar/NavbarLayout";
+import { Poppins } from "next/font/google";
 
-export default function App({ Component, pageProps: { session, ...pageProps } }) {
+import "@/styles/globals.css";
+import { AuthContext } from "@/context/AuthContext";
+import { Toaster } from "sonner";
+
+const poppins = Poppins({
+  weight: ["200", "300", "400", "500", "700"],
+  subsets: ["latin-ext"],
+});
+
+export default function App({ Component, pageProps }) {
   return (
-    <SessionProvider session={session}>
-      <NavbarLayout>
+    <>
+      <style jsx global>{`
+        html {
+          font-family: ${poppins.style.fontFamily};
+        }
+      `}</style>
+      <AuthContext>
+        <Toaster richColors />
         <Component {...pageProps} />
-      </NavbarLayout>
-    </SessionProvider>
+      </AuthContext>
+    </>
   );
 }

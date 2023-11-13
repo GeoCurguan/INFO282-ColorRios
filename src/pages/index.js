@@ -1,4 +1,3 @@
-import { Poppins } from "next/font/google";
 // Hooks
 import { useState } from "react";
 import useSideBar from "@/hooks/useSideBar";
@@ -9,14 +8,10 @@ import Header from "@/components/Header";
 import Drawer from "@/components/Drawer/Drawer";
 import Colors from "@/components/Colors/Colors";
 import ColorDetail from "@/components/ColorDetail/ColorDetail";
+import Nav from "@/components/Navbar/Nav";
 
 // Constants
 import { RGB } from "@/constants/properties";
-
-const poppins = Poppins({
-  weight: ["200", "300", "400", "500", "700"],
-  subsets: ["latin-ext"],
-});
 
 export async function getServerSideProps() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_IP}/api/colors`);
@@ -45,7 +40,8 @@ export default function Home({ colors }) {
 
   return (
     <>
-      <main className={`flex min-h-screen flex-wrap justify-center items-center p-12 ${poppins.className} custom-bg`}>
+      <Nav />
+      <main className="flex min-h-screen flex-wrap justify-center items-center p-12 custom-bg">
         <div className={`flex min-h-screen w-full`}>
           {/* -- ColorDetail -- */}
           <div

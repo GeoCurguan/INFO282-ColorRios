@@ -143,6 +143,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function getRoles(): array
     {
+        if ($this->permissions) {
+            return ['ROLE_USER','ROLE_ADMIN'];
+        }
         // Devuelve los roles de usuario (por ejemplo, ['ROLE_USER'])
         return ['ROLE_USER'];
     }
