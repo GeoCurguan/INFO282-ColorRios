@@ -10,9 +10,9 @@ const MapColors3d = ({ colors, setCurrentColor }) => {
         if (color[COLORINFO.cielabA] === "" || color[COLORINFO.cielabB] === "" || color[COLORINFO.cielabL] === "")
           return null;
 
-        const x = Number(color[COLORINFO.cielabA]);
-        const y = Number(color[COLORINFO.cielabB]);
-        const z = Number(color[COLORINFO.cielabL]);
+        const x = Number(color[COLORINFO.cielabA].trim().replace(",", "."));
+        const y = Number(color[COLORINFO.cielabB].trim().replace(",", "."));
+        const z = Number(color[COLORINFO.cielabL].trim().replace(",", "."));
 
         const _color = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
 
