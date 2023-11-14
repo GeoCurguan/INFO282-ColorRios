@@ -20,7 +20,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?bool $permissions = false;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(type: 'string', length: 255, nullable: false, unique: true)]
     private ?string $username = null;
 
     #[ORM\Column(length: 255, nullable: true)]
@@ -143,9 +143,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function getRoles(): array
     {
-        if ($this->permissions) {
-            return ['ROLE_USER','ROLE_ADMIN'];
-        }
         // Devuelve los roles de usuario (por ejemplo, ['ROLE_USER'])
         return ['ROLE_USER'];
     }
