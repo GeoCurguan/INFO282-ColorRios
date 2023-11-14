@@ -4,6 +4,7 @@ import MouseInfo from "@/components/3d/MouseInfo";
 import CardInfo from "@/components/3d/CardInfo";
 import MouseTip from "@/components/3d/MouseTip";
 import Nav from "@/components/Navbar/Nav";
+import ColorDetail from "@/components/ColorDetail/ColorDetail";
 
 export async function getServerSideProps() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_IP}/api/colors`);
@@ -25,21 +26,19 @@ const Home = ({ colors }) => {
     if (!controls) return;
   }, [controls]);
 
+  const handleReset = () => {
+    controls.reset();
+  };
+
   return (
     <>
       <Nav />
       <div className="flex min-h-screen flex-wrap justify-center items-center">
-        <button
-          onClick={() => {
-            controls.reset();
-          }}
-        >
-          Reset
-        </button>
         <Experience setControls={setControls} setCurrentColor={setCurrentColor} colors={colors} />
-        <MouseInfo />
+        {/* <MouseInfo /> */}
+        {/* <ColorDetail color={currentColor} setCurrentColor={setCurrentColor} /> */}
         <CardInfo currentColor={currentColor} />
-        <MouseTip />
+        <MouseTip handleReset={handleReset} />
       </div>
     </>
   );

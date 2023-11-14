@@ -1,8 +1,8 @@
 import { useState } from "react";
 import styles from "./styles/MouseTip.module.css";
-import { MouseIcon, CursorIcon, TopBottomArrowIcon, ZoomIcon, AllDirectionsArrowIcon, RotateArrowIcon } from "@/icons";
+import { MouseIcon, CursorIcon, ZoomIcon, AllDirectionsArrowIcon, RotateArrowIcon } from "@/icons";
 
-const MouseTip = () => {
+const MouseTip = ({ handleReset }) => {
   return (
     <div className="hidden sm:flex absolute bottom-0 right-0  flex-col justify-end p-4 text-gray-950">
       <h2 className="text-2xl font-bold">Navegación</h2>
@@ -11,6 +11,12 @@ const MouseTip = () => {
         <Rotate />
         <Move />
       </section>
+      <button
+        className="w-full px-4 py-2 mt-4 text-sm font-bold text-white bg-gray-900 rounded-full hover:bg-gray-800 "
+        onClick={handleReset}
+      >
+        Posición Inicial
+      </button>
     </div>
   );
 };
