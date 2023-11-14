@@ -10,10 +10,10 @@ const NavAccount = ({ isActive }) => {
 
   if (!mounted) return null;
   console.log(session);
-  const activeClassDark = "bg-[#434343] text-[#D9D9D9] rounded-full";
+  const activeClassLight = "bg-[#D9D9D9] text-[#434343] rounded-full";
   return (
     <ul className="py-4 px-8 gap-8 w-1/2 flex justify-evenly items-center">
-      <li className={`px-4 py-2 ${isActive("/social") && activeClassDark}`}>
+      <li className={`px-4 py-2 ${isActive("/social") && activeClassLight}`}>
         <Link href="/social">Social</Link>
       </li>
       <button onClick={() => signOut()}>D</button>

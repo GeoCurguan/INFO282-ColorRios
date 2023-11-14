@@ -10,7 +10,7 @@ const NavViews = ({ isActive }) => {
     },
     {
       href: "/3d",
-      label: "Puntos 3D",
+      label: "Espacio CieLab",
     },
   ];
   return (

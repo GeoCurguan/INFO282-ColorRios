@@ -28,3 +28,10 @@
     background-size: 12px 12px;
   }
 }
+.fixedPalette {
+  position: fixed;
+  top: 5;
+  width: 70vw; /* Establece un ancho inicial basado en el ancho de la ventana */
+  z-index: 1000;
+  transition: width 1s; /* Agrega una transición para suavizar los cambios */
+}
