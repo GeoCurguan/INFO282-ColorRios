@@ -13,3 +13,10 @@ user_login:
     path: /api/login
     controller: App\Controller\UserController::login
     methods: [POST]
+
+api_login_check:
+    path: /api/login_check
+
+api_testJWT:
+    path: /api/testJWT
+    controller: App\Controller\UserController::testJWT

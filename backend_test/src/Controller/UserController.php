@@ -66,4 +66,11 @@ class UserController extends AbstractController
 
         return new JsonResponse(['message' => 'Inicio de sesión exitoso'], Response::HTTP_OK);
     }
+
+    public function testJWT(): JsonResponse
+    {
+        return $this->json([
+            'message' => '¡Esta es una ruta protegida!'
+        ]);
+    }
 }

@@ -16,7 +16,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'integer')]
     private ?int $id;
 
-
     #[ORM\Column]
     private ?bool $permissions = false;
 
@@ -37,6 +36,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $gender = null;
+
+    #[ORM\Column]
+    private array $roles = [];
 
     public function getId(): ?int
     {
@@ -139,21 +141,25 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    // Implementa los métodos requeridos por las interfaces UserInterface y PasswordAuthenticatedUserInterface
-
     public function getRoles(): array
     {
-        // Devuelve los roles de usuario (por ejemplo, ['ROLE_USER'])
-        return ['ROLE_USER'];
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
     }
 
-    public function eraseCredentials()
+    public function setRoles(array $roles): static
     {
-        // Este método se llama después de usar las credenciales del usuario y se puede dejar en blanco.
+        $this->roles = $roles;
+
+        return $this;
     }
 
-    public function getSalt()
+    public function eraseCredentials(): void
     {
-        // Puedes dejar este método en blanco ya que Symfony no requiere usar una "sal" en las contraseñas.
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
     }
 }
