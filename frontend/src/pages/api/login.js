@@ -1,4 +1,5 @@
 export default async function handler(req, res) {
+  console.log(process.env.BACKEND_IP);
   // --- Validaciones ---
   // Debe ser método POST, debe tener body y debe tener username, password, job y regions
   if (req.method !== "POST") {
