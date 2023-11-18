@@ -16,9 +16,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'integer')]
     private ?int $id;
 
-    #[ORM\Column]
-    private ?bool $permissions = false;
-
     #[ORM\Column(type: 'string', length: 255, nullable: false, unique: true)]
     private ?string $username = null;
 
@@ -38,7 +35,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $gender = null;
 
     #[ORM\Column]
-    private array $roles = [];
+    private array $roles = ['ROLE_USER']; //Por defecto todos son usuarios
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $commune = null;
 
     public function getId(): ?int
     {
@@ -53,18 +53,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setId(int $id): static
     {
         $this->id = $id;
-
-        return $this;
-    }
-
-    public function isPermissions(): ?bool
-    {
-        return $this->permissions;
-    }
-
-    public function setPermissions(bool $permissions): static
-    {
-        $this->permissions = $permissions;
 
         return $this;
     }
@@ -143,16 +131,24 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function getRoles(): array
     {
-        $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
-
-        return array_unique($roles);
+        return array_unique($this->roles);
     }
 
     public function setRoles(array $roles): static
     {
         $this->roles = $roles;
+
+        return $this;
+    }
+
+    public function getCommune(): ?string
+    {
+        return $this->commune;
+    }
+
+    public function setCommune(?string $commune): static
+    {
+        $this->commune = $commune;
 
         return $this;
     }

@@ -57,7 +57,10 @@ const ComunasUsuarios = () => {
         <Grid numItems={1} className="gap-3">
             {" "}
             <Card>
-                <Title>Número de usuarios registrados por comuna</Title>
+                <Title>
+                    Número de usuarios registrados por comuna, Región de Los
+                    Ríos
+                </Title>
                 <Subtitle>
                     Basado en el total del número de usuarios registrados en la
                     plataforma que hayan ingresado su comuna de origen.
