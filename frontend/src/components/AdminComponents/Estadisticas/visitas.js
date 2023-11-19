@@ -10,32 +10,40 @@ import {
     Divider,
 } from "@tremor/react";
 
-const userVisits = [
-    { name: "/home", value: 652 },
-    { name: "/puntos3D", value: 84 },
-    { name: "/social", value: 542 },
-    { name: "/login", value: 234 },
-    { name: "/perfil", value: 142 },
-];
+const getGenderCount = (dataUsers) => {
+    const genderCount = { Femenino: 0, Masculino: 0, "Sin especificar": 0 };
 
-const genderUsers = [
-    { name: "Femenino", value: 754 },
-    { name: "Masculino", value: 478 },
-    { name: "Sin especificar", value: 233 },
-];
+    dataUsers.forEach((user) => {
+        const gender = user.gender || "Sin especificar";
+        genderCount[gender] += 1;
+    });
 
-const jobUsers = [
-    { name: "Diseñador/a", value: 625 },
-    { name: "Arquitecto/a", value: 42 },
-    { name: "Decorador/a de Interiores", value: 333 },
-    { name: "Artista", value: 291 },
-    { name: "Fotógrafo/a", value: 165 },
-];
+    return Object.entries(genderCount).map(([name, value]) => ({
+        name,
+        value,
+    }));
+};
 
-const visits = {
-    users: userVisits,
-    gender: genderUsers,
-    job: jobUsers,
+const getJobCount = (dataUsers) => {
+    const jobCount = {
+        Diseñador: 0,
+        Artista: 0,
+        Profesor: 0,
+        Estudiante: 0,
+        Otro: 0,
+    };
+
+    dataUsers.forEach((user) => {
+        const job = user.job ? user.job : "otro";
+
+        if (jobCount.hasOwnProperty(job)) {
+            jobCount[job] += 1;
+        } else {
+            jobCount["Otro"] += 1;
+        }
+    });
+
+    return Object.entries(jobCount).map(([name, value]) => ({ name, value }));
 };
 
 const sortData = (data) =>
@@ -45,25 +53,16 @@ const sortData = (data) =>
         return 0;
     });
 
-const Visitas = () => {
+const Visitas = ({ dataUsers }) => {
+    const genderData = getGenderCount(dataUsers);
+    const jobData = getJobCount(dataUsers);
+
     return (
         <Grid numItems={3} className="gap-3">
             <Card className="mx-auto" decoration="top" decorationColor="purple">
                 <Title>Visitas por página</Title>
                 <Divider></Divider>
-                <Flex className="mt-6">
-                    <Text>
-                        <Bold>Sitio</Bold>
-                    </Text>
-                    <Text>
-                        <Bold>Visitas</Bold>
-                    </Text>
-                </Flex>
-                <BarList
-                    data={sortData(visits.users)}
-                    showAnimation={false}
-                    className="mt-4"
-                />
+                {/*En construcción, se debería manejar con los logs*/}
             </Card>
             <Card className="mx-auto" decoration="top" decorationColor="amber">
                 <Title>Género de los usuarios Registrados</Title>
@@ -77,7 +76,7 @@ const Visitas = () => {
                     </Text>
                 </Flex>
                 <BarList
-                    data={sortData(visits.gender)}
+                    data={sortData(genderData)}
                     showAnimation={false}
                     className="mt-4"
                 />
@@ -94,7 +93,7 @@ const Visitas = () => {
                     </Text>
                 </Flex>
                 <BarList
-                    data={sortData(visits.job)}
+                    data={sortData(jobData)}
                     showAnimation={false}
                     className="mt-4"
                 />

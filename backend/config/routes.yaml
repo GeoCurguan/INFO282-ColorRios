@@ -14,6 +14,11 @@ user_login:
     controller: App\Controller\UserController::login
     methods: [POST]
 
+user_getUsers:
+    path: /api/getUsers
+    controller: App\Controller\UserController::getUsers
+    methods: [GET]
+
 api_login_check:
     path: /api/login_check
 
