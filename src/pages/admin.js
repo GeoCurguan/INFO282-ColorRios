@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { toast } from "sonner";
 import Planilla from "@/components/AdminComponents/planilla";
 import GraficoArea from "@/components/AdminComponents/Estadisticas/graficoArea";
 import GraficoBarra from "@/components/AdminComponents/Estadisticas/graficoBarra";
@@ -36,6 +38,37 @@ export async function getServerSideProps() {
 }
 
 const Admin = ({ data }) => {
+    const [users, setUsers] = useState([]);
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                //Obtenemos el token del localStorage
+                const token = localStorage.getItem("token");
+
+                const response = await fetch(
+                    "http://localhost:8000/api/getUsers",
+                    {
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                        },
+                    }
+                );
+                if (!response.ok) {
+                    console.log(response);
+                    throw new Error("Error al obtener usuarios");
+                }
+
+                const dataUsers = await response.json();
+                //console.log(dataUsers);
+                setUsers(dataUsers);
+            } catch (error) {
+                console.error("Error al obtener usuarios:", error.message);
+                toast.error("Error al obtener usuarios");
+            }
+        };
+        fetchUsers();
+    }, []);
+
     return (
         <div className="p-14 bg-[#F9FAFB]">
             <Title>Bienvenido al Dashboard Administrador</Title>
@@ -125,13 +158,13 @@ const Admin = ({ data }) => {
                     <TabPanel>
                         <Grid numItems={2} className="gap-3 mt-6">
                             <Col numColSpan={2}>
-                                <Usuarios />
+                                <Usuarios dataUsers={users} />
                             </Col>
                             <Col numColSpan={2}>
-                                <Visitas />
+                                <Visitas dataUsers={users} />
                             </Col>
                             <Col numColSpan={2}>
-                                <ComunasUsuarios />
+                                <ComunasUsuarios dataUsers={users} />
                             </Col>
                         </Grid>
                     </TabPanel>

@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
-
+use Lexik\Bundle\JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
 
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -20,12 +20,14 @@ use App\Entity\User;
 class UserController extends AbstractController
 {
     private $passwordHasher;
-    private EntityManagerInterface $entityManager;
+    private $entityManager;
+    private $jwtManager;
 
-    public function __construct(UserPasswordHasherInterface $passwordHasher, EntityManagerInterface $entityManager)
+    public function __construct(UserPasswordHasherInterface $passwordHasher, EntityManagerInterface $entityManager, JWTTokenManagerInterface $jwtManager)
     {
         $this->passwordHasher = $passwordHasher;
         $this->entityManager = $entityManager;
+        $this->jwtManager = $jwtManager;
     }
     public function register(Request $request): JsonResponse
     {
@@ -44,9 +46,10 @@ class UserController extends AbstractController
         $user->setUsername($userData['username']);
         $user->setPassword($userData['password']);
         $user->setJob($userData['job']);
-        $user->setImage($userData['image']);
+        $user->setImage($userData['image'] ?? null);
         $user->setRegion($userData['region']);
-        $user->setGender($userData['gender']);
+        $user->setGender($userData['gender'] ?? null);
+        $user->setCommune($userData['commune'] ?? null);
 
         //Cifrar la contraseña
         $password = $this->passwordHasher->hashPassword($user, $userData['password']);
@@ -60,7 +63,10 @@ class UserController extends AbstractController
         $this->entityManager->persist($user);
         $this->entityManager->flush();
 
-        return new JsonResponse(['message' => 'Usuario registrado correctamente'], Response::HTTP_CREATED);
+        //Generar el token
+        $token = $this->jwtManager->create($user);
+
+        return new JsonResponse(['token' => $token, 'message' => 'Usuario registrado correctamente'], Response::HTTP_CREATED);
     }
 
     public function login(Request $request): JsonResponse
@@ -73,12 +79,15 @@ class UserController extends AbstractController
 
         $user = $this->entityManager->getRepository(User::class)->findOneBy(['username' => $username]);
 
+        //Generar el token JWT
+        $token = $this->jwtManager->create($user);
+
         //Comprobar si el usuario es una instancia de la interfaz de User y si la contraseña es valida
         if (!$user instanceof PasswordAuthenticatedUserInterface || !$this->passwordHasher->isPasswordValid($user, $password)) {
             throw new AuthenticationException('Invalid credentials');
         }
 
-        return new JsonResponse(['message' => 'Inicio de sesión exitoso'], Response::HTTP_OK);
+        return new JsonResponse(['token' => $token, 'message' => 'Inicio de sesión exitoso'], Response::HTTP_OK);
     }
 
     public function testJWT(): JsonResponse

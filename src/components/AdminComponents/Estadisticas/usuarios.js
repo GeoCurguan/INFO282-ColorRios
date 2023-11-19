@@ -34,7 +34,9 @@ const categories = [
     },
 ];
 
-const Usuarios = () => {
+const Usuarios = ({ dataUsers }) => {
+    const userCount = dataUsers ? dataUsers.length : 0;
+
     return (
         <Grid numItems={2} className="gap-3">
             {categories.map((item) => (
@@ -45,7 +47,11 @@ const Usuarios = () => {
                         alignItems="baseline"
                         className="truncate space-x-3"
                     >
-                        <Metric>{item.metric}</Metric>
+                        <Metric>
+                            {item.title === "Usuarios Registrados"
+                                ? userCount
+                                : item.metric}
+                        </Metric>
                         <Text className="truncate">
                             de un total de {item.metricPrev}
                         </Text>

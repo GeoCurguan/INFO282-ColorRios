@@ -1,61 +1,52 @@
 import React from "react";
 import { BarChart, Card, Subtitle, Title, Grid } from "@tremor/react";
 
-const chartdata = [
-    {
-        comuna: "La Unión",
-        "Usuarios Registrados": 174,
-    },
-    {
-        comuna: "Río Bueno",
-        "Usuarios Registrados": 137,
-    },
-    {
-        comuna: "Lago Ranco",
-        "Usuarios Registrados": 74,
-    },
-    {
-        comuna: "Valdivia",
-        "Usuarios Registrados": 374,
-    },
-    {
-        comuna: "Panguipulli",
-        "Usuarios Registrados": 64,
-    },
-    {
-        comuna: "Futrono",
-        "Usuarios Registrados": 168,
-    },
-    {
-        comuna: "Corral",
-        "Usuarios Registrados": 5,
-    },
-    {
-        comuna: "Paillaco",
-        "Usuarios Registrados": 183,
-    },
-    {
-        comuna: "Máfil",
-        "Usuarios Registrados": 99,
-    },
-    {
-        comuna: "Lanco",
-        "Usuarios Registrados": 142,
-    },
-    {
-        comuna: "Mariquina",
-        "Usuarios Registrados": 6,
-    },
-    {
-        comuna: "Los Lagos",
-        "Usuarios Registrados": 30,
-    },
-];
+const getCommuneCount = (dataUsers) => {
+    const communeCount = {};
 
-const ComunasUsuarios = () => {
+    dataUsers.forEach((user) => {
+        if (user.region && user.region === "Los Ríos") {
+            const commune = user.commune ? user.commune : "Sin especificar";
+
+            if (communeCount.hasOwnProperty(commune)) {
+                communeCount[commune] += 1;
+            } else {
+                communeCount[commune] = 1;
+            }
+        }
+    });
+
+    const allComunas = [
+        "La Unión",
+        "Río Bueno",
+        "Lago Ranco",
+        "Valdivia",
+        "Panguipulli",
+        "Futrono",
+        "Corral",
+        "Paillaco",
+        "Máfil",
+        "Lanco",
+        "Mariquina",
+        "Los Lagos",
+    ];
+    allComunas.forEach((comuna) => {
+        if (!communeCount.hasOwnProperty(comuna)) {
+            communeCount[comuna] = 0;
+        }
+    });
+
+    return Object.entries(communeCount).map(([name, Usuarios]) => ({
+        name,
+        Usuarios,
+    }));
+};
+
+const ComunasUsuarios = ({ dataUsers }) => {
+    const communeData = getCommuneCount(dataUsers);
+
     return (
         <Grid numItems={1} className="gap-3">
-            {" "}
             <Card>
                 <Title>
                     Número de usuarios registrados por comuna, Región de Los
@@ -67,9 +58,9 @@ const ComunasUsuarios = () => {
                 </Subtitle>
                 <BarChart
                     className="mt-4"
-                    data={chartdata}
-                    index="comuna"
-                    categories={["Usuarios Registrados"]}
+                    data={communeData}
+                    index="name"
+                    categories={["Usuarios"]}
                     colors={["blue"]}
                     yAxisWidth={48}
                 />
@@ -77,4 +68,5 @@ const ComunasUsuarios = () => {
         </Grid>
     );
 };
+
 export default ComunasUsuarios;
