@@ -7,6 +7,7 @@ services:
       dockerfile: docker/php/Dockerfile
     volumes:
       - ./backend:/var/www/symfony
+    restart: always
     expose:
       - "9003"
     ports:
@@ -28,6 +29,7 @@ services:
       MYSQL_DATABASE: chromosV2
     volumes:
       - mysql-db-data:/var/lib/mysql
+    restart: always
     networks:
       - chromos
 
