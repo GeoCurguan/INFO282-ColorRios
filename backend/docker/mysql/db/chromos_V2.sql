@@ -1,12 +1,13 @@
 CREATE TABLE `user` (
   `id` int AUTO_INCREMENT PRIMARY KEY,
-  `username` varchar(255) UNIQUE,
-  `permissions` bool,
-  `job` varchar(255),
-  `password` varchar(255),
-  `image` varchar(255),
-  `region` varchar(255),
-  `gender` varchar(255)
+  `username` varchar(255) NOT NULL UNIQUE,
+  `job` varchar(255) DEFAULT NULL,
+  `password` varchar(255) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `region` varchar(255) DEFAULT NULL,
+  `gender` varchar(255) DEFAULT NULL,
+   roles longtext CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '(DC2Type:json)' CHECK (json_valid(roles)),
+  `commune` varchar(255) DEFAULT NULL
 );
 
 
@@ -16,6 +17,7 @@ CREATE TABLE `palette` (
   `cantidad_colores` varchar(255),
   `descargado` bool
 );
+
 
 CREATE TABLE `color` (
   `id` int(11) PRIMARY KEY AUTO_INCREMENT,
@@ -42,7 +44,6 @@ CREATE TABLE `color` (
   `cmykK` int,
   `ceresitaName` varchar(255)
 );
-
 CREATE TABLE `palette_Color` (
   `id` int(11) PRIMARY KEY AUTO_INCREMENT,
   `palette_id` int(11),
@@ -59,9 +60,11 @@ CREATE TABLE `colorStat` (
 );
 
 CREATE TABLE `tracking` (
-  `id` int(11) PRIMARY KEY AUTO_INCREMENT,
-  `registro` varchar(255)
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `registro` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL
 );
+
 
 ALTER TABLE `palette` ADD FOREIGN KEY (`id_usuario`) REFERENCES `user` (`id`);
 
@@ -72,5 +75,3 @@ ALTER TABLE `palette_Color` ADD FOREIGN KEY (`color_id`) REFERENCES `color` (`id
 ALTER TABLE `colorStat` ADD FOREIGN KEY (`id_color`) REFERENCES `color` (`id`);
 
 ALTER TABLE `colorStat` ADD FOREIGN KEY (`tracking_id`) REFERENCES `tracking` (`id`);
-
-ALTER TABLE user ADD COLUMN roles JSON DEFAULT NULL;
