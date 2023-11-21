@@ -26,20 +26,28 @@ export default async function handler(req, res) {
         gender: "",
     };
     // --- Realizar petición al Backend ---
-    const response = await fetch(`${process.env.BACKEND_IP}/api/register`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(messageBody),
-    });
-    const data = await response.json();
-    console.log("data", data);
 
-    // --- Responder al cliente ---
-    if (response.ok) {
-        res.status(201).json(data);
-    } else {
+    try {
+        const response = await fetch(`${process.env.BACKEND_IP}/api/register`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(messageBody),
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log("data", data);
+            res.status(201).json(data);
+        }
+
+        if (response.status !== 500) {
+            res.status(response.status).json({ message: response.statusText });
+        }
+    } catch {
         res.status(500).json({ message: "Algo inesperado ocurrió." });
     }
+
+    // --- Responder al cliente ---
 }

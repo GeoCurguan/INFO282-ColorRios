@@ -11,6 +11,7 @@ import CardsComunas from "@/components/AdminComponents/Estadisticas/cardsComunas
 import Usuarios from "@/components/AdminComponents/Estadisticas/usuarios";
 import Visitas from "@/components/AdminComponents/Estadisticas/visitas";
 import ComunasUsuarios from "@/components/AdminComponents/Estadisticas/comunasUsuarios";
+import SwitchDashboard from "@/components/AdminComponents/switchDashboard";
 import {
     Col,
     Card,
@@ -75,7 +76,10 @@ const Admin = ({ data }) => {
 
     return (
         <div className="bg-[#F9FAFB] dark:bg-dark-tremor-background-muted p-14">
-            <Title>Bienvenido al Dashboard Administrador</Title>
+            <div className="justify-between" style={{ display: "flex" }}>
+                <Title>Bienvenido al Dashboard Administrador</Title>
+                <SwitchDashboard />
+            </div>
             <div className="justify-between" style={{ display: "flex" }}>
                 <Text className="dark:text-dark-tremor-content-emphasis">
                     Aquí podrá observar las métricas asociadas al proyecto
