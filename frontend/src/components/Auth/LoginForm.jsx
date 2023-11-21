@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/router";
+import { useAuthContext } from "@/context/AuthContext";
 
 const LoginForm = () => {
+  const { handleLogin: handleLoginToken } = useAuthContext();
   const router = useRouter();
-  const [data, setData] = useState("");
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -34,7 +36,7 @@ const LoginForm = () => {
       }
       if (response.ok) {
         const data = await response.json();
-        localStorage.setItem("token", data.token);
+        handleLoginToken(data.token);
         toast.success(data.message);
         router.push("/");
         return;

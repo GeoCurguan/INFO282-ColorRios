@@ -3,8 +3,12 @@ import { regionesChile } from "@/constants/regionesChile";
 import { toast } from "sonner";
 import { useRouter } from "next/router";
 
+import { useAuthContext } from "@/context/AuthContext";
+
 const RegisterForm = () => {
+  const { handleLogin } = useAuthContext();
   const router = useRouter();
+
   const [username, setUsername] = useState("a");
   const [password, setPassword] = useState("1");
   const [confirmPassword, setConfirmPassword] = useState("1");
@@ -54,7 +58,7 @@ const RegisterForm = () => {
       }
       if (response.ok) {
         const data = await response.json();
-        localStorage.setItem("token", data.token);
+        handleLogin(data.token);
         toast.success(data.message);
         router.push("/");
         return;

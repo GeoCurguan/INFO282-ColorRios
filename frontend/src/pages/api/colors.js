@@ -1,4 +1,4 @@
-import bd_rios from "@/pages/api/BD-RIOS-2.json";
+import bd_rios from "@/pages/api/db/BD-RIOS-2.json";
 // import bd_rios from "@/pages/api/1001colores.json";
 
 export default function handler(req, res) {
