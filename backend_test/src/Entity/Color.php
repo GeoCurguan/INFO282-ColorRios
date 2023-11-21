@@ -14,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Color
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
+    #[ORM\GeneratedValue(strategy: 'AUTO')]
     #[ORM\Column]
     /**
      * @ORM\Id
@@ -23,74 +23,78 @@ class Color
      */
     private ?int $id = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(name:"category",length: 255, nullable: true)]
     private ?string $category = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(name:"commune",length: 255, nullable: true)]
     private ?string $commune = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(name:"seasons",length: 255, nullable: true)]
     private ?string $season = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    /**
-    * @ORM\Column(type="string")
-    */
+    #[ORM\Column(name:"colorName",length: 255, nullable: true)]
     private ?string $colorName = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(name:"image",length: 255, nullable: true)]
     private ?string $image = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(name:"ncsNuance",length: 255, nullable: true)]
     private ?string $ncsNuance = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(name:"ncsHue",length: 255, nullable: true)]
     private ?string $ncsHue = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+
+    #[ORM\Column(name:"munsellPage",length: 255, nullable: true)]
+    private ?string $munsellPage = null;
+
+    #[ORM\Column(name:"munsellHue",length: 255, nullable: true)]
     private ?string $munsellHue = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(name:"munsellValue",length: 255, nullable: true)]
     private ?string $munsellValue = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(name:"munsellChroma",length: 255, nullable: true)]
     private ?string $munsellChroma = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(name:"munsellName", length: 255, nullable: true)]
     private ?string $munsellName = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column(name:"cielabL",nullable: true)]
     private ?int $cielabL = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column(name:"cielabA",nullable: true)]
     private ?int $cielabA = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column(name:"cielabB",nullable: true)]
     private ?int $cielabB = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column(name:"rgbR",nullable: true)]
     private ?int $rgbR = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column(name:"rgbG",nullable: true)]
     private ?int $rgbG = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column(name:"rgbB",nullable: true)]
     private ?int $rgbB = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column(name:"cmykC",nullable: true)]
     private ?int $cmykC = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column(name:"cmykM",nullable: true)]
     private ?int $cmykM = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column(name:"cmykY",nullable: true)]
     private ?int $cmykY = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column(name:"cmykK",nullable: true)]
     private ?int $cmykK = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(name:"ceresitaName",length: 255, nullable: true)]
     private ?string $ceresitaName = null;
+
+    #[ORM\Column(name:"categoryName",length: 255, nullable: true)]
+    private ?string $categoryName = null;
 
     public function getId(): ?int
     {
@@ -364,6 +368,30 @@ class Color
     public function setCeresitaName(?string $ceresitaName): static
     {
         $this->ceresitaName = $ceresitaName;
+
+        return $this;
+    }
+
+    public function getCategoryName(): ?string
+    {
+        return $this->categoryName;
+    }
+
+    public function setCategoryName(?string $categoryName): static
+    {
+        $this->categoryName = $categoryName;
+
+        return $this;
+    }
+
+    public function getMunsellPage(): ?string
+    {
+        return $this->munsellPage;
+    }
+
+    public function setMunsellPage(?string $munsellPage): static
+    {
+        $this->munsellPage = $munsellPage;
 
         return $this;
     }
