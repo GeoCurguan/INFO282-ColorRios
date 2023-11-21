@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { regionesChile } from "@/constants/regionesChile";
 import { toast } from "sonner";
 import { useRouter } from "next/router";
@@ -12,10 +12,20 @@ const RegisterForm = () => {
   const [username, setUsername] = useState("a");
   const [password, setPassword] = useState("1");
   const [confirmPassword, setConfirmPassword] = useState("1");
-  const [job, setJob] = useState("");
-  const [image, setImage] = useState("");
-  const [region, setRegion] = useState("");
-  const [gender, setGender] = useState("");
+  const [job, setJob] = useState("Diseñador");
+  const [image, setImage] = useState(""); // TODO
+  const [region, setRegion] = useState(regionesChile[0]?.region);
+  const [commune, setCommune] = useState(""); // TODO
+  const [communesInRegion, setCommunesInRegion] = useState([]); // TODO
+  const [gender, setGender] = useState(""); // TODO
+
+  useEffect(() => {
+    const communesInRegion = regionesChile.filter((nregion) => {
+      return nregion.region === region;
+    });
+    setCommunesInRegion(communesInRegion[0]?.comunas);
+    setCommune(communesInRegion[0]?.comunas[0]);
+  }, [region]);
 
   const resetForm = () => {
     setUsername("");
@@ -25,6 +35,7 @@ const RegisterForm = () => {
     setImage("");
     setRegion("");
     setGender("");
+    setCommune("");
   };
 
   const handleRegister = async () => {
@@ -171,8 +182,32 @@ const RegisterForm = () => {
             className="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 "
           >
             {regionesChile.map((region) => (
-              <option key={region.id} value={region.nombre}>
-                {region.nombre}
+              <option key={region.id} value={region.region}>
+                {region.region}
+              </option>
+            ))}
+          </select>
+        </div>
+      </section>
+
+      {/* Comuna */}
+      <section>
+        <label htmlFor="comuna" className="block text-sm font-medium leading-6 text-gray-900">
+          Comuna
+        </label>
+        <div className="mt-2">
+          <select
+            id="comuna"
+            name="comuna"
+            autoComplete="comuna"
+            required
+            value={commune}
+            onChange={(e) => setCommune(e.target.value)}
+            className="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 "
+          >
+            {communesInRegion.map((commune) => (
+              <option key={commune} value={commune}>
+                {commune}
               </option>
             ))}
           </select>
