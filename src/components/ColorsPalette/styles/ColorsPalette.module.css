@@ -3,6 +3,7 @@
   height: 100px;
   border: 1px rgb(129, 129, 129) solid;
   transition: opacity 0.15s ease-in-out;
+
 }
 
 .exportButton {
@@ -28,10 +29,13 @@
     background-size: 12px 12px;
   }
 }
-.fixedPalette {
-  position: fixed;
-  top: 5;
-  width: 70vw; /* Establece un ancho inicial basado en el ancho de la ventana */
-  z-index: 1000;
-  transition: width 1s; /* Agrega una transición para suavizar los cambios */
+
+.sticky {
+position: fixed;
+top: 0;
+z-index: 5;
+width: 93vw; /* Verificar tamaño*/ 
+
 }
+
+

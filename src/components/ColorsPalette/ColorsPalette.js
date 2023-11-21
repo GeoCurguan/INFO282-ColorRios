@@ -7,6 +7,7 @@ import ExportPDF from "../ExportPDF/ExportPDF";
 
 const ColorsPalette = ({ colorToPalette }) => {
   const [favoriteColors, setFavoriteColors] = useState([]);
+  const [isSticky, setIsSticky] = useState(false);
 
   function removeColorToPalette(colorIdx) {
     setFavoriteColors((prevColors) =>
@@ -20,6 +21,18 @@ const ColorsPalette = ({ colorToPalette }) => {
       setFavoriteColors((prevColors) => [...prevColors, colorToPalette]);
     }
   }, [colorToPalette]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setIsSticky(offset > 132);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const Palette = [];
   for (let i = 0; i < 10; i++) {
@@ -45,7 +58,9 @@ const ColorsPalette = ({ colorToPalette }) => {
 
   return (
     <div
-      className={`flex flex-row items-center justify-around w-full bg-zinc-800 ${styles.fixedPalette}`}
+      className={`flex flex-row items-center justify-around w-full bg-zinc-800 ${
+        isSticky ? styles.sticky : ""
+      }`}
     >
       {Palette}
       {favoriteColors.length > 0 ? <ExportPDF favoriteColors={favoriteColors} /> : <></>}
@@ -54,3 +69,11 @@ const ColorsPalette = ({ colorToPalette }) => {
 };
 
 export default ColorsPalette;
+
+
+
+
+
+
+
+
