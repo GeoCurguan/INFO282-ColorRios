@@ -57,10 +57,14 @@ const RegisterForm = () => {
 
             const data = await response.json();
 
-            localStorage.setItem("token", data.token);
-            toast.success(data.message);
+            if (data.message === "El nombre de usuario ya está registrado") {
+                toast.error("El nombre de usuario ya está registrado");
+            } else {
+                localStorage.setItem("token", data.token);
+                toast.success(data.message);
 
-            router.push("/");
+                router.push("/");
+            }
         } catch (error) {
             toast.error("Error durante el registro");
         }
