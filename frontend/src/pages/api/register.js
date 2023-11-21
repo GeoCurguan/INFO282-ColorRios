@@ -19,29 +19,32 @@ export default async function handler(req, res) {
 
   const messageBody = {
     username,
-    permisssions: false,
     job,
     password,
     image: "",
     region,
     gender: "",
   };
-  console.log("messageBody", messageBody);
-  // --- Realizar petición al Backend ---
-  const response = await fetch(`${process.env.BACKEND_IP}/api/register`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(messageBody),
-  });
-  const data = await response.json();
-  console.log("data", data);
 
-  // --- Responder al cliente ---
-  if (response.ok) {
-    res.status(201).json({ message: "Usuario creado correctamente." });
-  } else {
+  // --- Realizar petición al Backend ---
+  try {
+    const response = await fetch(`${process.env.BACKEND_IP}/api/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(messageBody),
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      res.status(201).json(data);
+    }
+
+    if (response.status !== 500) {
+      res.status(response.status).json({ message: response.statusText });
+    }
+  } catch {
     res.status(500).json({ message: "Algo inesperado ocurrió." });
   }
 }

@@ -5,9 +5,9 @@ import { useRouter } from "next/router";
 
 const RegisterForm = () => {
   const router = useRouter();
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [username, setUsername] = useState("a");
+  const [password, setPassword] = useState("1");
+  const [confirmPassword, setConfirmPassword] = useState("1");
   const [job, setJob] = useState("");
   const [image, setImage] = useState("");
   const [region, setRegion] = useState("");
@@ -35,24 +35,30 @@ const RegisterForm = () => {
       return;
     }
     //console.log("Response Text:", await response.text());
-
     //Petición a la API
     toast.info("Registrando usuario...");
     try {
-      const response = await fetch("http://localhost:5003/api/register", {
+      const response = await fetch("/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ username, password, job, region }),
       });
-
-      const data = await response.json();
-
-      localStorage.setItem("token", data.token);
-      toast.success(data.message);
-
-      router.push("/");
+      console.log("Response:", response);
+      if (!response.ok) {
+        // Manejar el caso cuando response.ok es false (código de estado fuera del rango 200-299)
+        const errorMessage = await response.json();
+        toast.error(errorMessage.message);
+        return;
+      }
+      if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem("token", data.token);
+        toast.success(data.message);
+        router.push("/");
+        return;
+      }
     } catch (error) {
       toast.error("Error durante el registro");
     }
