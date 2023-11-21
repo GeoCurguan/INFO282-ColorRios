@@ -173,7 +173,6 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   const styleBG = colorRGB(color?.[RGB.R], color?.[RGB.G], color?.[RGB.B]);
 
   const getMaxColorValue = (R, G, B) => {
-    console.log("El valor mayor es:", Math.max(R, G, B));
     return Math.max(R, G, B);
   };
 
@@ -187,7 +186,6 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   }
 
   //Estilo para el título (cambia el color del texto según la selección)
-  console.log(`${color?.[COLORINFO.rgbR]}, ${color?.[COLORINFO.rgbG]}, ${color?.[COLORINFO.rgbB]}`);
   let colorStyle = {
     color: `rgb(${color?.[COLORINFO.rgbR]},${color?.[COLORINFO.rgbG]},${color?.[COLORINFO.rgbB]})`,
     backgroundColor: `rgb(${color?.[COLORINFO.rgbR]},${color?.[COLORINFO.rgbG]},${color?.[COLORINFO.rgbB]})`,
