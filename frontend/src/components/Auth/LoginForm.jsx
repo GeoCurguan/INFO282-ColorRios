@@ -17,9 +17,8 @@ const LoginForm = () => {
 
     // Petición a la API
     toast.info("Iniciando sesión...");
-
     try {
-      const response = await fetch("http://localhost:5003/api/login", {
+      const response = await fetch("/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,12 +26,19 @@ const LoginForm = () => {
         body: JSON.stringify({ username, password }),
       });
 
-      const data = await response.json();
-
-      localStorage.setItem("token", data.token);
-      toast.success(data.message);
-
-      router.push("/");
+      if (!response.ok) {
+        // Manejar el caso cuando response.ok es false (código de estado fuera del rango 200-299)
+        const errorMessage = await response.json();
+        toast.error(errorMessage.message);
+        return;
+      }
+      if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem("token", data.token);
+        toast.success(data.message);
+        router.push("/");
+        return;
+      }
     } catch (error) {
       toast.error("Error al iniciar sesión");
     }
