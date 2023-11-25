@@ -11,7 +11,13 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ColorController extends AbstractController
 {
-    public function insertarColor(Request $request, EntityManagerInterface $entityManager): Response
+    private $entityManager;
+
+    public function __construct(EntityManagerInterface $entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
+    public function insertarColor(Request $request): Response
     {
         $data = json_decode($request->getContent(), true);
 
@@ -37,7 +43,7 @@ class ColorController extends AbstractController
             $color->setCielabB(isset($colorData[34]) ? (int)$colorData[34] : null);
             $color->setRgbR(isset($colorData[36]) ? (int)$colorData[36] : null);
             $color->setRgbG(isset($colorData[37]) ? (int)$colorData[37] : null);
-            $color->setRgbB(isset($colorData[38]) ? (int)$colorData[38] : null);
+            $color->setRgbB(isset($colorData[37]) ? (int)$colorData[38] : null);
             $color->setCmykC(isset($colorData[39]) ? (int)$colorData[39] : null);
             $color->setCmykM(isset($colorData[40]) ? (int)$colorData[40] : null);
             $color->setCmykY(isset($colorData[41]) ? (int)$colorData[41] : null);
@@ -45,11 +51,50 @@ class ColorController extends AbstractController
             $color->setCeresitaName(isset($colorData[43]) ? $colorData[43] : null);
             $color->setCategoryName(isset($colorData[1]) ? $colorData[1] : null);
 
-            $entityManager->persist($color);
+            $this->entityManager->persist($color);
         }
 
-        $entityManager->flush();
+        $this->entityManager->flush();
 
         return new JsonResponse(['message' => 'Colores insertados'], Response::HTTP_OK);
+    }
+
+    public function getColors(): JsonResponse
+    {
+        //Falta validación role_admin!!11!!!1
+        $colorRepository = $this->entityManager->getRepository(Color::class);
+        $colores = $colorRepository->findAll();
+
+        $coloresArray = [];
+
+        foreach ($colores as $color) {
+            $coloresArray[] = [
+                'id' => $color->getId(),
+                'category' => $color->getCategory(),
+                'commune' => $color->getCommune(),
+                'season' => $color->getSeason(),
+                'colorName' => $color->getColorName(),
+                'NcsNuance' => $color->getNcsNuance(),
+                'NcsHue' => $color->getNcsHue(),
+                'MunsellPage' => $color->getMunsellPage(),
+                'MunsellHue' => $color->getMunsellHue(),
+                'MunsellValue' => $color->getMunsellValue(),
+                'MunsellChroma' => $color->getMunsellChroma(),
+                'MunsellName' => $color->getMunsellName(),
+                'L' => $color->getCielabL(),
+                'A' => $color->getCielabA(),
+                'B' => $color->getCielabB(),
+                'R' => $color->getRgbR(),
+                'G' => $color->getRgbG(),
+                'B' => $color->getRgbB(),
+                'C' => $color->getCmykC(),
+                'M' => $color->getCmykM(),
+                'Y' => $color->getCmykY(),
+                'K' => $color->getCmykK(),
+                'Ceresita' => $color->getCeresitaName(),
+            ];
+        }
+
+        return new JsonResponse(['colors' => $coloresArray], Response::HTTP_OK);
     }
 }

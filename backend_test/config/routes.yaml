@@ -26,7 +26,12 @@ api_testJWT:
     path: /api/testJWT
     controller: App\Controller\UserController::testJWT
 
-insertar-color:
+color_insert:
     path: /api/insertar_color
     controller: App\Controller\ColorController::insertarColor
     methods: [POST]
+
+color_get:
+    path: /api/getColors
+    controller: App\Controller\ColorController::getColors
+    methods: [GET]
