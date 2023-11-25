@@ -6,21 +6,12 @@ use App\Repository\ColorRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ColorRepository::class)]
-/**
- * @ORM\Entity
- * @ORM\Table(name="color")
- */
 
 class Color
 {
     #[ORM\Id]
     #[ORM\GeneratedValue(strategy: 'AUTO')]
     #[ORM\Column]
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     * @ORM\Column(type="integer")
-     */
     private ?int $id = null;
 
     #[ORM\Column(name: "category", length: 255, nullable: true)]
