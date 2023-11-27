@@ -28,6 +28,12 @@
   transition: width 1s;
 }
 
+input[type="radio"] {
+  outline: 0;
+  border: 0;
+  background-color: white;
+}
+
 /*---animations---*/
 
 .fade-in {

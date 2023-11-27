@@ -11,8 +11,8 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { username, password, job, region } = req.body;
-  if (!username || !password || !job || !region) {
+  const { username, password, job, region, commune, gender, image } = req.body;
+  if (!username || !password || !job || !region || !commune || !gender || !image) {
     res.status(422).json({ message: "Invalid body" });
     return;
   }
@@ -21,9 +21,10 @@ export default async function handler(req, res) {
     username,
     job,
     password,
-    image: "",
+    image,
     region,
-    gender: "",
+    commune,
+    gender,
   };
 
   // --- Realizar petición al Backend ---
@@ -44,7 +45,8 @@ export default async function handler(req, res) {
     if (response.status !== 500) {
       res.status(response.status).json({ message: response.statusText });
     }
-  } catch {
+  } catch (error) {
+    console.log("Error", error);
     res.status(500).json({ message: "Algo inesperado ocurrió." });
   }
 }

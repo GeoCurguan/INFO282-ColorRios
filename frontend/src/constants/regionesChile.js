@@ -341,7 +341,7 @@ const regionesChile = [
     id: 11,
     region: "Región Aisén del Gral. Carlos Ibáñez del Campo",
     comunas: [
-      "Coihaique",
+      "Coyhaique",
       "Lago Verde",
       "Aisén",
       "Cisnes",
