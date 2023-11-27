@@ -4,13 +4,10 @@ import { toast } from "sonner";
 import { useRouter } from "next/router";
 
 import { useAuthContext } from "@/context/AuthContext";
-import Spinner from "../spinner/Spinner";
 
-const RegisterForm = () => {
+const RegisterForm = ({ isLoading, setIsLoading }) => {
   const { handleLogin } = useAuthContext();
   const router = useRouter();
-
-  const [isLoading, setIsLoading] = useState(false);
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -36,7 +33,10 @@ const RegisterForm = () => {
     setConfirmPassword("");
   };
 
-  const handleRegister = async () => {
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    if (isLoading) return;
+
     // Validaciones
     if (
       username === "" ||
@@ -92,8 +92,7 @@ const RegisterForm = () => {
 
   return (
     <>
-      <Spinner isLoading={isLoading} />
-      <form className="mt-8 space-y-6" action="#" method="POST">
+      <form className="mt-8 space-y-6" onSubmit={handleRegister}>
         {/* Username */}
         <section>
           <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
@@ -251,8 +250,7 @@ const RegisterForm = () => {
 
         <div>
           <button
-            type="button"
-            onClick={handleRegister}
+            type="submit"
             className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Registrarme

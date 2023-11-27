@@ -3,14 +3,16 @@ import { toast } from "sonner";
 import { useRouter } from "next/router";
 import { useAuthContext } from "@/context/AuthContext";
 
-const LoginForm = () => {
+const LoginForm = ({ isLoading, setIsLoading }) => {
   const { handleLogin: handleLoginToken } = useAuthContext();
   const router = useRouter();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    if (isLoading) return;
     // Validaciones
     if (username === "" || password === "") {
       toast.warning("Debe completar todos los campos para iniciar sesión.");
@@ -19,6 +21,7 @@ const LoginForm = () => {
 
     // Petición a la API
     toast.info("Iniciando sesión...");
+    setIsLoading(true);
     try {
       const response = await fetch("/api/login", {
         method: "POST",
@@ -43,6 +46,8 @@ const LoginForm = () => {
       }
     } catch (error) {
       toast.error("Error al iniciar sesión");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -93,7 +98,7 @@ const LoginForm = () => {
 
       <div>
         <button
-          type="button"
+          type="submit"
           onClick={handleLogin}
           className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >

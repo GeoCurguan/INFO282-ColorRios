@@ -4,9 +4,11 @@ import Image from "next/image";
 import NavGoHome from "@/components/Navbar/NavGoHome";
 import LoginForm from "@/components/Auth/LoginForm";
 import RegisterForm from "@/components/Auth/RegisterForm";
+import Spinner from "@/components/spinner/Spinner";
 
 const Login = () => {
   const [isRegistering, setIsRegistering] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSwitchAction = () => {
     setIsRegistering(!isRegistering);
@@ -15,6 +17,7 @@ const Login = () => {
   return (
     <>
       <NavGoHome />
+      <Spinner isLoading={isLoading} />
       <div className="flex items-center justify-center">
         {/* Cascarón Login & Registro */}
         <div className="max-w-5xl flex flex-1 bg-white my-4 px-4">
@@ -26,7 +29,11 @@ const Login = () => {
               </h2>
             </div>
             {/* Main Content Login & Registro*/}
-            {isRegistering ? <RegisterForm /> : <LoginForm />}
+            {isRegistering ? (
+              <RegisterForm isLoading={isLoading} setIsLoading={setIsLoading} />
+            ) : (
+              <LoginForm isLoading={isLoading} setIsLoading={setIsLoading} />
+            )}
             {/* Register Switch*/}
             <RegisteringChanger isRegistering={isRegistering} handleSwitchAction={handleSwitchAction} />
           </div>
