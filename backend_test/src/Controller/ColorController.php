@@ -36,7 +36,7 @@ class ColorController extends AbstractController
         $service = new Google_Service_Sheets($client);
         $spreadsheetId="1mF6eQwX9fNXwv-FeZuGpHENDnlafEVRNtFcRgOViNA8";
     
-        $range =  "CHROMOS!B3:AU500";
+        $range =  "CHROMOS!A3:AU1000";
     
         $response = $service->spreadsheets_values->get($spreadsheetId, $range);
         $values = $response->getValues();
@@ -45,52 +45,79 @@ class ColorController extends AbstractController
             return new JsonResponse(['message' => 'Datos insuficientes en el JSON'], Response::HTTP_BAD_REQUEST);
         }
 
+        $colorRepository = $this->entityManager->getRepository(Color::class);
+
         foreach($values as $value){
             //Sólo insertamos datos con la data requerida
-            if(count($value) === 46){
+            if(count($value) === 47){
                 
-                $color = new Color();
-                $color->setCategory($value[0] ? $value[0] : null);
-                $color->setCommune($value[2] ? $value[2] : null);
-                $color->setSeason($value[3] ? $value[3] : null);
+                
+                $rowID = $value[0] ? $value[0] : null;
+                $get_color = $colorRepository->findOneBy(['rowID' => $rowID]);
 
-                $color->setNcsNuance($value[24] ? $value[24] : null);
-                $color->setNcsHue($value[25] ? $value[25] : null);
-                //Munsell
-                $color->setMunsellPage($value[26] ? $value[26] : null);
-                $color->setMunsellHue($value[27] ? $value[27] : null);
-                $color->setMunsellValue($value[28] ? $value[28] : null);
-                $color->setMunsellChroma($value[29] ? $value[29] : null);
-                $color->setMunsellName($value[30] ? $value[30] : null);
-                //CIELAB
-                $color->setCielabL($value[31] ? $value[31] : null);
-                $color->setCielabA($value[32] ? $value[32] : null);
-                $color->setCielabB($value[33] ? $value[33] : null);
-                //RGB
-                $color->setRgbR($value[35] ? $value[35] : null);
-                $color->setRgbG($value[36] ? $value[36] : null);
-                $color->setRgbB($value[37] ? $value[37] : null);
-                //CMYK
-                $color->setCmykC($value[38] ? $value[38] : null);
-                $color->setCmykM($value[39] ? $value[39] : null);
-                $color->setCmykY($value[40] ? $value[40] : null);
-                $color->setCmykK($value[41] ? $value[41] : null);
-                //FILTRO POR NOMBRE DE COLOR
-                $color->setCategoryName($value[45] ? $value[45] : null);
+                if($get_color === null){
+                    //Insert de color nuevo
+                    $color = new Color();
+                    
+                    $color->setRowID($value[0] ? $value[0] : null);
 
-                $this->entityManager->persist($color);
-
-                /*
-                $colorRepository = $this->entityManager->getRepository(Color::class);
-                $existingColor = $colorRepository->findOneBy($color);
-
-                if(!$existingColor){
-                    $this->entityManager->persist($color);
+                    $color->setCategory($value[1] ? $value[1] : null);
+                    $color->setCommune($value[3] ? $value[3] : null);
+                    $color->setSeason($value[4] ? $value[4] : null);
+    
+                    $color->setNcsNuance($value[25] ? $value[25] : null);
+                    $color->setNcsHue($value[26] ? $value[26] : null);
+                    //Munsell
+                    $color->setMunsellPage($value[27] ? $value[27] : null);
+                    $color->setMunsellHue($value[28] ? $value[28] : null);
+                    $color->setMunsellValue($value[29] ? $value[29] : null);
+                    $color->setMunsellChroma($value[30] ? $value[30] : null);
+                    $color->setMunsellName($value[31] ? $value[31] : null);
+                    //CIELAB
+                    $color->setCielabL($value[32] ? $value[32] : null);
+                    $color->setCielabA($value[33] ? $value[33] : null);
+                    $color->setCielabB($value[34] ? $value[34] : null);
+                    //RGB
+                    $color->setRgbR($value[36] ? $value[36] : null);
+                    $color->setRgbG($value[37] ? $value[37] : null);
+                    $color->setRgbB($value[38] ? $value[38] : null);
+                    //CMYK
+                    $color->setCmykC($value[39] ? $value[39] : null);
+                    $color->setCmykM($value[40] ? $value[40] : null);
+                    $color->setCmykY($value[41] ? $value[41] : null);
+                    $color->setCmykK($value[42] ? $value[42] : null);
+                    //FILTRO POR NOMBRE DE COLOR
+                    $color->setCategoryName($value[46] ? $value[46] : null);
+    
+                    $this->entityManager->persist($color);    
                 }else{
-                    print("Color existe");
+                    //Update
+                    $get_color->setCategory($value[1] ? $value[1] : null);
+                    $get_color->setCommune($value[3] ? $value[3] : null);
+                    $get_color->setNcsNuance($value[25] ? $value[25] : null);
+                    $get_color->setNcsHue($value[26] ? $value[26] : null);
+                    //Munsell
+                    $get_color->setMunsellPage($value[27] ? $value[27] : null);
+                    $get_color->setMunsellHue($value[28] ? $value[28] : null);
+                    $get_color->setMunsellValue($value[29] ? $value[29] : null);
+                    $get_color->setMunsellChroma($value[30] ? $value[30] : null);
+                    $get_color->setMunsellName($value[31] ? $value[31] : null);
+                    //CIELAB
+                    $get_color->setCielabL($value[32] ? $value[32] : null);
+                    $get_color->setCielabA($value[33] ? $value[33] : null);
+                    $get_color->setCielabB($value[34] ? $value[34] : null);
+                    //RGB
+                    $get_color->setRgbR($value[36] ? $value[36] : null);
+                    $get_color->setRgbG($value[37] ? $value[37] : null);
+                    $get_color->setRgbB($value[38] ? $value[38] : null);
+                    //CMYK
+                    $get_color->setCmykC($value[39] ? $value[39] : null);
+                    $get_color->setCmykM($value[40] ? $value[40] : null);
+                    $get_color->setCmykY($value[41] ? $value[41] : null);
+                    $get_color->setCmykK($value[42] ? $value[42] : null);
+                    //FILTRO POR NOMBRE DE COLOR
+                    $get_color->setCategoryName($value[46] ? $value[46] : null);
                 }
-                */
-                
             }
         }
 
