@@ -41,8 +41,6 @@ class ColorController extends AbstractController
         $response = $service->spreadsheets_values->get($spreadsheetId, $range);
         $values = $response->getValues();
 
-        //print_r($values);
-
         if (empty($values)) {
             return new JsonResponse(['message' => 'Datos insuficientes en el JSON'], Response::HTTP_BAD_REQUEST);
         }
@@ -80,6 +78,9 @@ class ColorController extends AbstractController
                 //FILTRO POR NOMBRE DE COLOR
                 $color->setCategoryName($value[45] ? $value[45] : null);
 
+                $this->entityManager->persist($color);
+
+                /*
                 $colorRepository = $this->entityManager->getRepository(Color::class);
                 $existingColor = $colorRepository->findOneBy($color);
 
@@ -88,7 +89,7 @@ class ColorController extends AbstractController
                 }else{
                     print("Color existe");
                 }
-
+                */
                 
             }
         }
