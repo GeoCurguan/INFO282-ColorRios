@@ -6,9 +6,8 @@ import { useAuthContext } from "@/context/AuthContext";
 const Nav = () => {
   const router = useRouter();
   const isActive = (pathname) => router.pathname === pathname;
-  //Obtenemos el token del localStorage
-  const { auth: token } = useAuthContext();
-  // const token = localStorage.getItem("token");
+  const { user } = useAuthContext();
+  const isAdmin = user?.roles?.includes("ROLE_ADMIN");
 
   return (
     <header
@@ -19,7 +18,7 @@ const Nav = () => {
     >
       <nav className="flex justify-between items-center">
         {/* Section #1: Color views: Home, 3D */}
-        <NavViews isActive={isActive} token={token} />
+        <NavViews isActive={isActive} isAdmin={isAdmin} />
         {/* Section #2: Account content: Login, Social */}
         <NavAccount isActive={isActive} />
       </nav>

@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect, useContext } from "react";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
+import { decodeToken } from "@/utils/auth";
 
 const MyAuthContext = createContext();
 
@@ -19,7 +20,9 @@ export const AuthContext = ({ children }) => {
   const handleLogin = async (token) => {
     setAuth(token);
     localStorage.setItem("token", token);
-
+    const decodedToken = decodeToken(token);
+    setUser(decodedToken);
+    console.log(decodedToken);
     // TODO:
     // Obtener los datos del usuario desde el servidor o bien desencriptar acá
   };
