@@ -34,7 +34,8 @@
 position: fixed;
 top: 0;
 z-index: 5;
-width: 93vw; /* Verificar tamaño*/ 
+width: 73vw; /* Verificar tamaño*/ 
+transition: width 1s;
 
 }
 
