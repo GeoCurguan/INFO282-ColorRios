@@ -41,7 +41,9 @@ const Usuarios = ({ dataUsers }) => {
         <Grid numItems={2} className="gap-3">
             {categories.map((item) => (
                 <Card key={item.title}>
-                    <Title color="stone">{item.title} </Title>
+                    <Title className="dark:text-dark-tremor-content-emphasis">
+                        {item.title}{" "}
+                    </Title>
                     <Flex
                         justifyContent="start"
                         alignItems="baseline"

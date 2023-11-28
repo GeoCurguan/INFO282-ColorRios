@@ -6,6 +6,15 @@ import {
     useGlobalFilter,
     useRowSelect,
 } from "react-table";
+import {
+    TextInput,
+    Table,
+    TableHead,
+    TableHeaderCell,
+    TableBody,
+    TableRow,
+    TableCell,
+} from "@tremor/react";
 import { CSVLink } from "react-csv";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
@@ -346,14 +355,12 @@ const Planilla = ({ data }) => {
     return (
         <div className="planilla-container p-4">
             <div className="flex justify-between mb-4">
-                <input
-                    type="text"
+                <TextInput
                     value={state.globalFilter || ""}
                     onChange={(e) => setGlobalFilter(e.target.value)}
                     placeholder="Filtrar datos..."
                     className="sm:w-1/4 md:w-1/3 lg:w-1/2 px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-300 shadow-md text-gray-700"
                 />
-
                 <div className="flex space-x-2">
                     <CSVLink
                         data={csvData}
@@ -420,23 +427,24 @@ const Planilla = ({ data }) => {
                     </button>
                 </div>
             </div>
-            <div className="max-h-[75vh] overflow-y-auto">
-                <table
-                    {...getTableProps()}
-                    className="w-full table bg-white shadow-md rounded-lg"
-                >
-                    <thead className="bg-gray-50 border-b">
+            <div className="max-h-[75vh] overflow-y-auto shadow-sm rounded-md">
+                <Table {...getTableProps()} className="w-full table">
+                    <TableHead
+                        style={{
+                            position: "sticky",
+                            top: 0,
+                            zIndex: 1,
+                        }}
+                        className="bg-[#F9FAFB] dark:bg-dark-tremor-background-subtle shadow-sm"
+                    >
                         {headerGroups.map((headerGroup) => (
-                            <tr
-                                {...headerGroup.getHeaderGroupProps()}
-                                className="table-header"
-                            >
+                            <TableRow {...headerGroup.getHeaderGroupProps()}>
                                 {headerGroup.headers.map((column) => (
-                                    <th
+                                    <TableHeaderCell
                                         {...column.getHeaderProps(
                                             column.getSortByToggleProps()
                                         )}
-                                        className="p-2 border-r cursor-pointer text-sm font-thin text-gray-500"
+                                        className="p-3"
                                     >
                                         <div className="flex items-center justify-center">
                                             {column.isSorted ? ( //Si la columna está ordenada
@@ -465,36 +473,31 @@ const Planilla = ({ data }) => {
                                                 column.render("Header")
                                             )}
                                         </div>
-                                    </th>
+                                    </TableHeaderCell>
                                 ))}
-                            </tr>
+                            </TableRow>
                         ))}
-                    </thead>
-                    <tbody>
+                    </TableHead>
+                    <TableBody>
                         {rows.map((row, i) => {
                             prepareRow(row);
                             return (
-                                <tr
-                                    {...row.getRowProps()}
-                                    className={`bg-gray-${
-                                        i % 2 === 0 ? "100" : "50"
-                                    } text-center border-b text-sm text-gray-600`}
-                                >
+                                <TableRow {...row.getRowProps()}>
                                     {row.cells.map((cell) => {
                                         return (
                                             <td
                                                 {...cell.getCellProps()}
-                                                className="p-2 border-r"
+                                                className="p-3"
                                             >
                                                 {cell.render("Cell")}
                                             </td>
                                         );
                                     })}
-                                </tr>
+                                </TableRow>
                             );
                         })}
-                    </tbody>
-                </table>
+                    </TableBody>
+                </Table>
             </div>
         </div>
     );

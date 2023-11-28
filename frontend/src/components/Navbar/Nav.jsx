@@ -1,10 +1,14 @@
 import { useRouter } from "next/router";
 import NavViews from "./NavViews";
 import NavAccount from "./NavAccount";
+import { useAuthContext } from "@/context/AuthContext";
 
 const Nav = () => {
   const router = useRouter();
   const isActive = (pathname) => router.pathname === pathname;
+  //Obtenemos el token del localStorage
+  const { auth: token } = useAuthContext();
+  // const token = localStorage.getItem("token");
 
   return (
     <header
@@ -15,7 +19,7 @@ const Nav = () => {
     >
       <nav className="flex justify-between items-center">
         {/* Section #1: Color views: Home, 3D */}
-        <NavViews isActive={isActive} />
+        <NavViews isActive={isActive} token={token} />
         {/* Section #2: Account content: Login, Social */}
         <NavAccount isActive={isActive} />
       </nav>

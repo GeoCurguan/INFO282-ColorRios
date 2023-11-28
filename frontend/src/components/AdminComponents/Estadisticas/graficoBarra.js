@@ -1,40 +1,51 @@
 import React from "react";
 import { BarChart, Card, Subtitle, Title } from "@tremor/react";
 
-const chartdata = [
-    {
-        estacion: "Verano ☀️",
-        Verano: 200,
-    },
-    {
-        estacion: "Otoño🍁",
-        Otoño: 300,
-    },
-    {
-        estacion: "Invierno ❄️",
-        Invierno: 550,
-    },
-    {
-        estacion: "Primavera 🌸",
-        Primavera: 100,
-    },
-];
+const capitalizeFirstLetter = (str) => {
+    if (str && typeof str === "string" && str.length > 0) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+    return str;
+};
 
-const valueFormatter = (number) =>
-    `${new Intl.NumberFormat("us").format(number).toString()}`;
+const GraficoBarra = ({ dataColors }) => {
+    if (!dataColors.colors || !Array.isArray(dataColors.colors)) {
+        return null;
+    }
 
-const GraficoBarra = () => (
-    <Card>
-        <Title>Colores por estación</Title>
-        <BarChart
-            className="mt-2"
-            data={chartdata}
-            index="estacion"
-            categories={["Verano", "Otoño", "Invierno", "Primavera"]}
-            colors={["amber", "teal", "blue", "rose"]}
-            valueFormatter={valueFormatter}
-            yAxisWidth={48}
-        />
-    </Card>
-);
+    const totalSeasons = {
+        Verano: 0,
+        Otoño: 0,
+        Invierno: 0,
+        Primavera: 0,
+    };
+
+    dataColors.colors.forEach((color) => {
+        const capitalizedSeason = capitalizeFirstLetter(color.season);
+
+        if (capitalizedSeason in totalSeasons) {
+            totalSeasons[capitalizedSeason]++;
+        }
+    });
+
+    const chartData = Object.keys(totalSeasons).map((estacion) => ({
+        estacion,
+        [estacion]: totalSeasons[estacion],
+    }));
+
+    return (
+        <Card>
+            <Title>Colores por estación</Title>
+            <BarChart
+                className="mt-2"
+                data={chartData}
+                index="estacion"
+                categories={Object.keys(totalSeasons)}
+                colors={["amber", "teal", "blue", "rose"]}
+                yAxisWidth={48}
+            />
+        </Card>
+    );
+};
+
 export default GraficoBarra;

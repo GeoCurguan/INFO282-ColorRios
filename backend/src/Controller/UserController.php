@@ -77,14 +77,20 @@ class UserController extends AbstractController
         $username = $userData['username'];
         $password = $userData['password'];
 
+        //Buscar al usuario por su nombre de usuario
         $user = $this->entityManager->getRepository(User::class)->findOneBy(['username' => $username]);
 
-        //Generar el token JWT
+        //Validación para cuando se quiera iniciar sesión y el usuario no está registrado
+        if (!$user) {
+            throw new AuthenticationException('Usuario no registrado');
+        }
+
+        //Generar el token JWT después de verificar las credenciales
         $token = $this->jwtManager->create($user);
 
-        //Comprobar si el usuario es una instancia de la interfaz de User y si la contraseña es valida
+        //Comprobar si el usuario es una instancia de la interfaz de User y si la contraseña es válida
         if (!$user instanceof PasswordAuthenticatedUserInterface || !$this->passwordHasher->isPasswordValid($user, $password)) {
-            throw new AuthenticationException('Invalid credentials');
+            throw new AuthenticationException('Credenciales invalidas');
         }
 
         return new JsonResponse(['token' => $token, 'message' => 'Inicio de sesión exitoso'], Response::HTTP_OK);

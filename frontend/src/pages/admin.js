@@ -138,16 +138,16 @@ const Admin = ({ data }) => {
           <TabPanel>
             <Grid numItems={5} className="gap-3 mt-6">
               <Col numColSpan={5}>
-                <Progress />
+                <Progress dataColors={data} />
               </Col>
               <Col numColSpan={2}>
-                <GraficoTorta data={data} />
+                <GraficoTorta dataColors={data} />
               </Col>
               <Col numColSpan={3}>
                 <CardsComunas />
               </Col>
               <Col numColSpan={2}>
-                <GraficoBarra />
+                <GraficoBarra dataColors={data} />
               </Col>
               <Col numColSpan={3}>
                 <GraficoArea />
