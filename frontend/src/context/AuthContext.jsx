@@ -21,7 +21,7 @@ export const AuthContext = ({ children }) => {
     localStorage.setItem("token", token);
 
     // TODO:
-    // Obtener los datos del usuario desde el servidor
+    // Obtener los datos del usuario desde el servidor o bien desencriptar acá
   };
 
   const handleLogout = () => {
