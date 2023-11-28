@@ -8,23 +8,18 @@ export const AuthContext = ({ children }) => {
   const [user, setUser] = useLocalStorage("user-data", {});
   const [auth, setAuth] = useLocalStorage("token", "");
   const [mounted, setMounted] = useState(false);
+  const isAdmin = user?.roles?.includes("ROLE_ADMIN") || false;
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem("user-data", JSON.stringify(user));
-  }, [user]);
-
   const handleLogin = async (token) => {
     setAuth(token);
     localStorage.setItem("token", token);
+    // Obtener los datos del usuario desde el servidor o bien desencriptar acá
     const decodedToken = decodeToken(token);
     setUser(decodedToken);
-    console.log(decodedToken);
-    // TODO:
-    // Obtener los datos del usuario desde el servidor o bien desencriptar acá
   };
 
   const handleLogout = () => {
@@ -38,6 +33,7 @@ export const AuthContext = ({ children }) => {
       value={{
         auth,
         user,
+        isAdmin,
         handleLogin,
         handleLogout,
       }}

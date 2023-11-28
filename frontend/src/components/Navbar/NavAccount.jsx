@@ -1,23 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useAuthContext } from "@/context/AuthContext";
 
-const NavAccount = ({ isActive }) => {
-  const { auth } = useAuthContext();
-
-  const [mounted, setMounted] = useState(false);
-  const [userData, setUserData] = useState({});
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
-
+const NavAccount = ({ isActive, user }) => {
+  console.log("user", user);
   const activeClassDark = "bg-[#434343] text-[#D9D9D9] rounded-full";
   return (
     <ul className="py-4 px-8 gap-8 w-1/2 flex justify-evenly items-center">
       <li className={`px-4 py-2 ${isActive("/social") && activeClassDark}`}>
         <Link href="/social">Social</Link>
       </li>
-      {auth ? (
+      {user ? (
         <Link href="/perfil">
           {/* <Image
             // alt={session?.user?.name || "User Image"}

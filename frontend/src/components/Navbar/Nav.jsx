@@ -6,8 +6,7 @@ import { useAuthContext } from "@/context/AuthContext";
 const Nav = () => {
   const router = useRouter();
   const isActive = (pathname) => router.pathname === pathname;
-  const { user } = useAuthContext();
-  const isAdmin = user?.roles?.includes("ROLE_ADMIN");
+  const { user, isAdmin } = useAuthContext();
 
   return (
     <header
@@ -20,7 +19,7 @@ const Nav = () => {
         {/* Section #1: Color views: Home, 3D */}
         <NavViews isActive={isActive} isAdmin={isAdmin} />
         {/* Section #2: Account content: Login, Social */}
-        <NavAccount isActive={isActive} />
+        <NavAccount isActive={isActive} user={user} />
       </nav>
     </header>
   );

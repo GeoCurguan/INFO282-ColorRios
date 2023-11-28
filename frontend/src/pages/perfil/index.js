@@ -1,4 +1,4 @@
-import ProtectedLogged from "@/components/Auth/protected/ProtectedLoggin";
+import ProtectedLogged from "@/components/Auth/protected/ProtectedLogged";
 import Nav from "@/components/Navbar/Nav";
 import { useAuthContext } from "@/context/AuthContext";
 
