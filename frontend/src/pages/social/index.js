@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import Nav from "@/components/Navbar/Nav";
+import TopColors from "@/components/Top/TopColors";
+import TopPalettes from "@/components/Top/TopPalettes";
 import ColorDetail from "@/components/ColorDetail/ColorDetail";
 
 // La pagina Social debe hacer lo siguiente:
@@ -19,8 +21,9 @@ const Social = () => {
 
             <div class="w-3/4 h-screen bg-gray-800 p-4 overflow-y-auto">
 
-                <div class="bg-red-500 h-20 mb-4"></div>
-                <div class="bg-red-500 h-20"></div>
+                <script>// En Social TopColors y TopPalettes no deberia tener argumentos. En Perfil si.</script>
+                <TopColors/>
+                <TopPalettes/>
                 
             </div>
 
