@@ -65,9 +65,15 @@ class UserController extends AbstractController
 
 
         // Añadir contenido al payload del token JWT; DEFAULT: username, roles, iat, exp
-        $payload = ['image' => $user->getImage()];
+        $payload = [
+            'image' => $user->getImage(),
+            'gender' => $user->getGender(),
+            'job' => $user->getJob(),
+            'region' => $user->getRegion(),
+        ];
+
         // Generar el token JWT después de verificar las credenciales
-        $token = $this->jwtManager->createFromPayload($user);
+        $token = $this->jwtManager->createFromPayload($user, $payload);
 
 
         return new JsonResponse(['token' => $token, 'message' => 'Usuario registrado correctamente'], Response::HTTP_CREATED);
@@ -90,9 +96,15 @@ class UserController extends AbstractController
         }
 
         // Añadir contenido al payload del token JWT; DEFAULT: username, roles, iat, exp
-        $payload = ['image' => $user->getImage()];
+        $payload = [
+            'image' => $user->getImage(),
+            'gender' => $user->getGender(),
+            'job' => $user->getJob(),
+            'region' => $user->getRegion(),
+        ];
+
         // Generar el token JWT después de verificar las credenciales
-        $token = $this->jwtManager->createFromPayload($user);
+        $token = $this->jwtManager->createFromPayload($user, $payload);
 
         //Comprobar si el usuario es una instancia de la interfaz de User y si la contraseña es válida
         if (!$user instanceof PasswordAuthenticatedUserInterface || !$this->passwordHasher->isPasswordValid($user, $password)) {

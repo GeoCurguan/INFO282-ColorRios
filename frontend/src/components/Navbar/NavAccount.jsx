@@ -9,7 +9,7 @@ const NavAccount = ({ isActive, user }) => {
       <li className={`px-4 py-2 ${isActive("/social") && activeClassDark}`}>
         <Link href="/social">Social</Link>
       </li>
-      {user ? (
+      {user?.username ? (
         <Link href="/perfil">
           {/* <Image
             // alt={session?.user?.name || "User Image"}
