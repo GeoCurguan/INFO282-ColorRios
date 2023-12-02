@@ -36,6 +36,14 @@ input[type="radio"] {
 
 /*---animations---*/
 
+.fade-in-down {
+  animation: fadeInDown ease 0.3s;
+  -webkit-animation: fadeInDown ease 0.3s;
+  -moz-animation: fadeInDown ease 0.3s;
+  -o-animation: fadeInDown ease 0.3s;
+  -ms-animation: fadeInDown ease 0.3s;
+}
+
 .fade-in {
   animation: fadeIn ease 1s;
   -webkit-animation: fadeIn ease 1s;
@@ -67,6 +75,17 @@ input[type="radio"] {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
