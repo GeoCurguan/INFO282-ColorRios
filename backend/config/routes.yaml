@@ -40,3 +40,23 @@ colorstat_insert:
     path: /api/createColorStat
     controller: App\Controller\ColorStatController::createColorStat
     methods: [POST]
+
+color_topbyclicks:
+  path: '/api/colors/topbyclicks'
+  controller: 'App\Controller\ColorController::getTopColorsByClicks'
+  methods: ['GET']
+
+color_topbypalettes:
+  path: '/api/colors/topbyclicks'
+  controller: 'App\Controller\ColorController::getTopColorsByPalettes'
+  methods: ['GET']
+
+color_topbyclicks_username:
+  path: '/api/colors/topbyclicks/{username}'
+  controller: 'App\Controller\ColorController::getTopColorsByClicksAndUsername'
+  methods: ['GET']
+
+color_topbypalettes_username:
+  path: '/api/colors/topbypalettes/{username}'
+  controller: 'App\Controller\ColorController::getTopColorsByPalettesAndUsername'
+  methods: ['GET']

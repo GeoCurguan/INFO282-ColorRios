@@ -21,6 +21,49 @@ class ColorRepository extends ServiceEntityRepository
         parent::__construct($registry, Color::class);
     }
 
+    public function findTopColorsByClicks(): array
+    {
+        $qb = $this->createQueryBuilder('c');
+        $qb->select('c', 'cs.id as colorStatId', 'cs.date', 'cs.clicks')
+           ->join('c.colorStats', 'cs')
+           ->where('cs.date = (SELECT MAX(date) FROM App\Entity\ColorStat subcs WHERE subcs.id_color = c.id)')
+           ->orderBy('cs.clicks', 'DESC')
+           ->setMaxResults(3);
+
+        return $qb->getQuery()->getResult();
+    }
+
+    public function findTopColorsByPalettes(): array
+    {
+        $qb = $this->createQueryBuilder('c');
+        $qb->select('c', 'cs.id as colorStatId', 'cs.date', 'cs.cant_paletas')
+           ->join('c.colorStats', 'cs')
+           ->where('cs.date = (SELECT MAX(date) FROM App\Entity\ColorStat subcs WHERE subcs.id_color = c.id)')
+           ->orderBy('cs.cant_paletas', 'DESC')
+           ->setMaxResults(3);
+
+        return $qb->getQuery()->getResult();
+    }
+
+    public function findTopColorsByClicksAndUsername(string $username): array
+    {}
+
+    public function findTopColorsByPalettesAndUsername(string $username): array
+    {
+        $qb = $this->createQueryBuilder('c');
+        $qb->select('c', 'COUNT(pc.palette_id) as paletteCount')
+        ->join('c.palettes', 'pc')
+        ->join('pc.palette', 'p')
+        ->join('p.user', 'u')
+        ->where('u.username = :username')
+        ->groupBy('c.id')
+        ->orderBy('paletteCount', 'DESC')
+        ->setMaxResults(3)
+        ->setParameter('username', $username);
+
+        return $qb->getQuery()->getResult();
+    }
+
     //    /**
     //     * @return Color[] Returns an array of Color objects
     //     */

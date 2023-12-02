@@ -65,7 +65,6 @@ CREATE TABLE `tracking` (
   `created_at` datetime NOT NULL
 );
 
-
 ALTER TABLE `palette` ADD FOREIGN KEY (`id_usuario`) REFERENCES `user` (`id`);
 
 ALTER TABLE `palette_Color` ADD FOREIGN KEY (`palette_id`) REFERENCES `palette` (`id`);
