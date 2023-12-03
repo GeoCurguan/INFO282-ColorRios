@@ -1,17 +1,14 @@
 <?php
+
 namespace App\Controller;
 
 use App\Entity\Color;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 use Google_Service_Sheets;
-
-use Symfony\Component\Dotenv\Dotenv;
-
 
 class ColorController extends AbstractController
 {
@@ -21,7 +18,7 @@ class ColorController extends AbstractController
     {
         $this->entityManager = $entityManager;
     }
-    public function insertarColor(Request $request): Response
+    public function insertarColor(): Response
     {
         $client = new \Google_Client();
         $client->setApplicationName('Sheets and php');
@@ -29,15 +26,15 @@ class ColorController extends AbstractController
 
         //$dotenv = new \Dotenv(__DIR__);
         //$dotenv->load();
-        
+
         //$CREDENTIALS = getenv('SHEET_AUTH');
 
         $client->setAuthConfig(__DIR__ . '/credentials.json'); #Pasar carga de variable a .env
         $service = new Google_Service_Sheets($client);
-        $spreadsheetId="1mF6eQwX9fNXwv-FeZuGpHENDnlafEVRNtFcRgOViNA8";
-    
+        $spreadsheetId = "1mF6eQwX9fNXwv-FeZuGpHENDnlafEVRNtFcRgOViNA8";
+
         $range =  "CHROMOS!A3:AU1000";
-    
+
         $response = $service->spreadsheets_values->get($spreadsheetId, $range);
         $values = $response->getValues();
 
@@ -47,24 +44,24 @@ class ColorController extends AbstractController
 
         $colorRepository = $this->entityManager->getRepository(Color::class);
 
-        foreach($values as $value){
+        foreach ($values as $value) {
             //Sólo insertamos datos con la data requerida
-            if(count($value) === 47){
-                
-                
+            if (count($value) === 47) {
+
+
                 $rowID = $value[0] ? $value[0] : null;
                 $get_color = $colorRepository->findOneBy(['rowID' => $rowID]);
 
-                if($get_color === null){
+                if ($get_color === null) {
                     //Insert de color nuevo
                     $color = new Color();
-                    
+
                     $color->setRowID($value[0] ? $value[0] : null);
 
                     $color->setCategory($value[1] ? $value[1] : null);
                     $color->setCommune($value[3] ? $value[3] : null);
                     $color->setSeason($value[4] ? $value[4] : null);
-    
+
                     $color->setNcsNuance($value[25] ? $value[25] : null);
                     $color->setNcsHue($value[26] ? $value[26] : null);
                     //Munsell
@@ -88,9 +85,9 @@ class ColorController extends AbstractController
                     $color->setCmykK($value[42] ? $value[42] : null);
                     //FILTRO POR NOMBRE DE COLOR
                     $color->setCategoryName($value[46] ? $value[46] : null);
-    
-                    $this->entityManager->persist($color);    
-                }else{
+
+                    $this->entityManager->persist($color);
+                } else {
                     //Update
                     $get_color->setCategory($value[1] ? $value[1] : null);
                     $get_color->setCommune($value[3] ? $value[3] : null);
@@ -138,9 +135,9 @@ class ColorController extends AbstractController
             $coloresArray[] = [
                 'id' => $color->getId(),
                 'category' => $color->getCategory(),
+                'categoryName' => $color->getCategoryName(),
                 'commune' => $color->getCommune(),
                 'season' => $color->getSeason(),
-                'colorName' => $color->getColorName(),
                 'NcsNuance' => $color->getNcsNuance(),
                 'NcsHue' => $color->getNcsHue(),
                 'MunsellPage' => $color->getMunsellPage(),
@@ -148,9 +145,9 @@ class ColorController extends AbstractController
                 'MunsellValue' => $color->getMunsellValue(),
                 'MunsellChroma' => $color->getMunsellChroma(),
                 'MunsellName' => $color->getMunsellName(),
-                'L' => $color->getCielabL(),
-                'A' => $color->getCielabA(),
-                'B' => $color->getCielabB(),
+                'L*' => $color->getCielabL(),
+                'A*' => $color->getCielabA(),
+                'B*' => $color->getCielabB(),
                 'R' => $color->getRgbR(),
                 'G' => $color->getRgbG(),
                 'B' => $color->getRgbB(),
