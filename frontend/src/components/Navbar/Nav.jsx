@@ -6,7 +6,7 @@ import { useAuthContext } from "@/context/AuthContext";
 const Nav = () => {
   const router = useRouter();
   const isActive = (pathname) => router.pathname === pathname;
-  const { user, isAdmin } = useAuthContext();
+  const { user, handleLogout, isAdmin } = useAuthContext();
 
   return (
     <header
@@ -19,7 +19,7 @@ const Nav = () => {
         {/* Section #1: Color views: Home, 3D */}
         <NavViews isActive={isActive} isAdmin={isAdmin} />
         {/* Section #2: Account content: Login, Social */}
-        <NavAccount isActive={isActive} user={user} />
+        <NavAccount isActive={isActive} user={user} handleLogout={handleLogout} />
       </nav>
     </header>
   );

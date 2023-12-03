@@ -22,7 +22,9 @@ const NavViews = ({ isActive, isAdmin }) => {
       {/* Mobile View */}
       <div className="lg:hidden flex flex-row justify-between items-center w-full px-8">
         <div className="flex flex-row justify-center items-center gap-4">
-          <MenuIcon className="w-8 h-8 cursor-pointer fill-[#D9D9D9]" onClick={() => setMenu(!menu)} />
+          <button onClick={() => setMenu(!menu)}>
+            <MenuIcon className="w-8 h-8 cursor-pointer fill-[#D9D9D9]" />
+          </button>
           {menu && (
             <ul className="fade-in-down absolute top-16 left-0 z-10 bg-[#434343] rounded-b-md text-[#D9D9D9] w-[200px] shadow-sm transition-all test ease-in-out">
               {links.map((link, index) => {

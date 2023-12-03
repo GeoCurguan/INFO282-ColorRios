@@ -1,10 +1,12 @@
 import { createContext, useState, useEffect, useContext } from "react";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { decodeToken } from "@/utils/auth";
+import { useRouter } from "next/router";
 
 const MyAuthContext = createContext();
 
 export const AuthContext = ({ children }) => {
+  const router = useRouter();
   const [user, setUser] = useLocalStorage("user-data", {});
   const [auth, setAuth] = useLocalStorage("token", "");
   const [mounted, setMounted] = useState(false);
@@ -26,6 +28,7 @@ export const AuthContext = ({ children }) => {
     setAuth("");
     localStorage.removeItem("token");
     localStorage.removeItem("user-data");
+    router.reload();
   };
 
   return mounted ? (
