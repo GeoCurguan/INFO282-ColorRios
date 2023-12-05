@@ -21,30 +21,33 @@ CREATE TABLE `palette` (
 
 CREATE TABLE `color` (
   `id` int(11) PRIMARY KEY AUTO_INCREMENT,
-  `category` varchar(255),
-  `categoryName` varchar(255),
-  `commune` varchar(255),
-  `season` varchar(255),
-  `colorName` varchar(255),
-  `image` varchar(255),
-  `ncsNuance` varchar(255),
-  `ncsHue` varchar(255),
-  `munsellHue` varchar(255),
-  `munsellValue` varchar(255),
-  `munsellChroma` varchar(255),
-  `munsellName` varchar(255),
-  `cielabL` int,
-  `cielabA` int,
-  `cielabB` int,
-  `rgbR` int,
-  `rgbG` int,
-  `rgbB` int,
-  `cmykC` int,
-  `cmykM` int,
-  `cmykY` int,
-  `cmykK` int,
-  `ceresitaName` varchar(255)
+  `category` varchar(255) DEFAULT NULL,
+  `commune` varchar(255) DEFAULT NULL,
+  `seasons` varchar(255) DEFAULT NULL,
+  `colorName` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `ncsNuance` varchar(255) DEFAULT NULL,
+  `ncsHue` varchar(255) DEFAULT NULL,
+  `munsellPage` varchar(255) DEFAULT NULL,
+  `munsellHue` varchar(255) DEFAULT NULL,
+  `munsellValue` varchar(255) DEFAULT NULL,
+  `munsellChroma` varchar(255)  DEFAULT NULL,
+  `munsellName` varchar(255) DEFAULT NULL,
+  `cielabL` int DEFAULT NULL,
+  `cielabA` int DEFAULT NULL,
+  `cielabB` int DEFAULT NULL,
+  `rgbR` int DEFAULT NULL,
+  `rgbG` int DEFAULT NULL,
+  `rgbB` int DEFAULT NULL,
+  `cmykC` int DEFAULT NULL,
+  `cmykM` int DEFAULT NULL,
+  `cmykY` int DEFAULT NULL,
+  `cmykK` int DEFAULT NULL,
+  `ceresitaName` varchar(255) DEFAULT NULL,
+  `categoryName` varchar(255) DEFAULT NULL,
+  `rowId` int NOT NULL
 );
+
 CREATE TABLE `palette_color` (
   `id` int(11) PRIMARY KEY AUTO_INCREMENT,
   `palette_id` int(11),
@@ -58,6 +61,12 @@ CREATE TABLE `color_stat` (
   `clicks` int,
   `cant_paletas` int,
   `tracking_id` int(11)
+);
+
+CREATE TABLE `visitas` (
+  `id` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `visits` varchar(255) DEFAULT NULL,
+  `page` varchar(255)
 );
 
 CREATE TABLE `tracking` (

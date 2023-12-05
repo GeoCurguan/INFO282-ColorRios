@@ -1,19 +1,19 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import ProtectedAdmin from "@/components/Auth/protected/ProtectedAdmin";
+import { useAuthContext } from "@/context/AuthContext";
 import { toast } from "sonner";
 import Planilla from "@/components/AdminComponents/planilla";
-import GraficoArea from "@/components/AdminComponents/Estadisticas/graficoArea";
-import GraficoBarra from "@/components/AdminComponents/Estadisticas/graficoBarra";
+import GraficoColoresMeses from "@/components/AdminComponents/Estadisticas/graficoColoresMeses";
+import GraficoEstaciones from "@/components/AdminComponents/Estadisticas/graficoEstaciones";
 import GraficoTorta from "@/components/AdminComponents/Estadisticas/graficoTorta";
 import Progress from "@/components/AdminComponents/Estadisticas/progressBar";
 import CardsComunas from "@/components/AdminComponents/Estadisticas/cardsComunas";
 import Usuarios from "@/components/AdminComponents/Estadisticas/usuarios";
 import Visitas from "@/components/AdminComponents/Estadisticas/visitas";
 import ComunasUsuarios from "@/components/AdminComponents/Estadisticas/comunasUsuarios";
+import SwitchDashboard from "@/components/AdminComponents/switchDashboard";
 import { Col, Card, Grid, Title, Text, Tab, TabList, TabGroup, TabPanel, TabPanels, Flex, Button } from "@tremor/react";
-import { useAuthContext } from "@/context/AuthContext";
+import ProtectedAdmin from "@/components/Auth/protected/ProtectedAdmin";
 
 export async function getServerSideProps() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_IP}/api/colors`);
@@ -29,8 +29,9 @@ export async function getServerSideProps() {
 
 const Admin = ({ data }) => {
   const [users, setUsers] = useState([]);
+  const [colors, setColors] = useState([]);
+  const [dates, setDates] = useState([]);
   const { auth: token, isAdmin } = useAuthContext();
-  const router = useRouter();
 
   const fetchUsers = async () => {
     try {
@@ -59,26 +60,89 @@ const Admin = ({ data }) => {
     }
   }, []);
 
+  const fetchColors = async () => {
+    try {
+      //Obtenemos el token del localStorage
+      const token = localStorage.getItem("token");
+
+      const response = await fetch("http://localhost:8000/api/getColors", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) {
+        console.log(response);
+        throw new Error("Error al obtener colores");
+      }
+
+      const dataColors = await response.json();
+      setColors(dataColors);
+    } catch (error) {
+      console.error("Error al obtener colores: ", error.message);
+      toast.error("Error al obtener colores");
+    }
+  };
+
+  const fetchDates = async () => {
+    try {
+      //Obtenemos el token del localStorage
+      const token = localStorage.getItem("token");
+
+      const response = await fetch("http://localhost:8000/api/getColorDates", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) {
+        console.log(response);
+        throw new Error("Error al obtener fechas de colores");
+      }
+
+      const fechasColores = await response.json();
+      setDates(fechasColores);
+    } catch (error) {
+      console.error("Error al obtener fechas de colores: ", error.message);
+      toast.error("Error al obtener fechas de colores");
+    }
+  };
+
+  useEffect(() => {
+    fetchUsers();
+    fetchColors();
+    fetchDates();
+  }, []);
   const handleRefreshClick = () => {
     fetchUsers();
+    fetchColors();
+    fetchDates();
   };
 
   return (
     <ProtectedAdmin>
-      <div className="p-14 bg-[#F9FAFB]">
-        <Title>Bienvenido al Dashboard Administrador</Title>
+      <div className="bg-[#F9FAFB] dark:bg-dark-tremor-background-muted p-14">
         <div className="justify-between" style={{ display: "flex" }}>
-          <Text>Aquí podrá observar las métricas asociadas al proyecto ColorRios</Text>
-          <Button onClick={handleRefreshClick} size="xs">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-              <path
-                fill-rule="evenodd"
-                d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </Button>
+          <div>
+            <Title>Bienvenido al Dashboard Administrador</Title>
+            <Text className="dark:text-dark-tremor-content-emphasis">
+              Aquí podrá observar las métricas asociadas al proyecto ColorRios
+            </Text>
+          </div>
+          <div className="justify-between space-x-6" style={{ display: "flex" }}>
+            <Button onClick={handleRefreshClick} size="xs">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+                <path
+                  fillRule="evenodd"
+                  d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </Button>
+            <SwitchDashboard />
+          </div>
         </div>
+
         <TabGroup className="mt-6">
           <TabList>
             <Tab>
@@ -143,19 +207,19 @@ const Admin = ({ data }) => {
             <TabPanel>
               <Grid numItems={5} className="gap-3 mt-6">
                 <Col numColSpan={5}>
-                  <Progress dataColors={data} />
+                  <Progress dataColors={colors} />
                 </Col>
                 <Col numColSpan={2}>
-                  <GraficoTorta dataColors={data} />
+                  <GraficoTorta dataColors={colors} />
                 </Col>
                 <Col numColSpan={3}>
-                  <CardsComunas />
+                  <CardsComunas dataColors={colors} dates={dates} />
                 </Col>
                 <Col numColSpan={2}>
-                  <GraficoBarra dataColors={data} />
+                  <GraficoEstaciones dataColors={colors} />
                 </Col>
                 <Col numColSpan={3}>
-                  <GraficoArea />
+                  <GraficoColoresMeses dataColors={colors} dates={dates} />
                 </Col>
               </Grid>
             </TabPanel>
