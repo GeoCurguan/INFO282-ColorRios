@@ -62,9 +62,6 @@ const Admin = ({ data }) => {
 
   const fetchColors = async () => {
     try {
-      //Obtenemos el token del localStorage
-      const token = localStorage.getItem("token");
-
       const response = await fetch("http://localhost:8000/api/getColors", {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -87,8 +84,6 @@ const Admin = ({ data }) => {
   const fetchDates = async () => {
     try {
       //Obtenemos el token del localStorage
-      const token = localStorage.getItem("token");
-
       const response = await fetch("http://localhost:8000/api/getColorDates", {
         headers: {
           Authorization: `Bearer ${token}`,

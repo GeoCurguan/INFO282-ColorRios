@@ -14,13 +14,13 @@ import Nav from "@/components/Navbar/Nav";
 import { RGB } from "@/constants/properties";
 
 export async function getServerSideProps() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_IP}/api/colors`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_IP}/api/getColors`);
   const colors = await res.json();
-  const values = colors.values;
+  // const values = colors.values;
 
   return {
     props: {
-      colors: values,
+      colors: colors.colors,
     },
   };
 }
@@ -34,8 +34,8 @@ const colorsLengthRGBDefined = (colors) => {
 export default function Home({ colors }) {
   const { classNameObject, openFilters, toggleFilters, widthColors, detailTransition, currentColor, setCurrentColor } =
     useSideBar();
-  const { filters, filterColors, setFilters } = useFilters();
-  const filteredColors = filterColors(colors);
+  // const { filters, filterColors, setFilters } = useFilters();
+  // const filteredColors = filterColors(colors);
   const [colorToPalette, setColorToPalette] = useState(null);
 
   return (
@@ -47,24 +47,24 @@ export default function Home({ colors }) {
           <div
             className={`flex ${classNameObject.filtersDrawer.detailTransition} top-0 right-0 h-128 transition ease-in-out delay-150 `}
           >
-            <Drawer
+            {/* <Drawer
               colors={colors}
               openFilters={openFilters}
               toggleFilters={toggleFilters}
               filters={filters}
               setFilters={setFilters}
-            />
+            /> */}
           </div>
           <div
             className={`flex flex-wrap justify-center ${widthColors} items-center transition-all content-start `}
             data-testid="colors"
           >
-            <Header
+            {/* <Header
               filteredColorsLength={colorsLengthRGBDefined(filteredColors)}
               colorsLength={colorsLengthRGBDefined(colors)}
               colorToPalette={colorToPalette}
-            />
-            <Colors colors={filteredColors} setCurrentColor={setCurrentColor} />
+            /> */}
+            <Colors colors={colors} setCurrentColor={setCurrentColor} />
           </div>
 
           {/* -- ColorDetail -- */}

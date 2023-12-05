@@ -6,13 +6,14 @@ const MapColors3d = ({ colors, setCurrentColor }) => {
     <>
       {colors.map((color, index) => {
         const rgb = [color[COLORINFO.rgbR], color[COLORINFO.rgbG], color[COLORINFO.rgbB]];
+        console.log(color);
         if (rgb[0] === "" || rgb[1] === "" || rgb[2] === "") return null;
         if (color[COLORINFO.cielabA] === "" || color[COLORINFO.cielabB] === "" || color[COLORINFO.cielabL] === "")
           return null;
 
-        const x = Number(color[COLORINFO.cielabA].trim().replace(",", "."));
-        const y = Number(color[COLORINFO.cielabB].trim().replace(",", "."));
-        const z = Number(color[COLORINFO.cielabL].trim().replace(",", "."));
+        const x = Number(color[COLORINFO.cielabA]);
+        const y = Number(color[COLORINFO.cielabB]);
+        const z = Number(color[COLORINFO.cielabL]);
 
         const _color = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
 

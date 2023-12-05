@@ -24,20 +24,20 @@ const RGB = {
 
 const COLORINFO = {
   //id: 0,
-  category: 0,        //Objeto o Atmosfera
-  expedition: 1,  
-  comuna: 2,      
-  season: 3,
+  category: "category", //Objeto o Atmosfera
+  expedition: 1,
+  comuna: 2,
+  season: "season",
   year: 4,
   month: 5,
   day: 6,
-  placeName: 7,       // Nombre del lugar
-  placeNumber: 8,     // Numero de Zona
-  object: 9,         // 
-  commonName: 10,     // Si es una planta, este es el nombre comun.
+  placeName: 7, // Nombre del lugar
+  placeNumber: 8, // Numero de Zona
+  object: 9, //
+  commonName: 10, // Si es una planta, este es el nombre comun.
   scientificName: 11, // Si es una planta, este es el nombre cientifico.
-  soilType: 12,       // Si es un suelo, este es el nombre cientifico.
-  latitude: 13,       // Grados + 
+  soilType: 12, // Si es un suelo, este es el nombre cientifico.
+  latitude: 13, // Grados +
   longitude: 14,
   altitude: 15,
   generalImage: 16,
@@ -48,28 +48,28 @@ const COLORINFO = {
   sampleNumber: 21,
   drySample: 22,
   wetSample: 23,
-  ncsNuance: 24,
-  ncsHue: 25,
-  munsellPage: 26,
-  munsellHue: 27,
-  munsellValue: 28,
-  munsellChroma: 29,
-  munsellName: 30,
-  cielabL: 31,
-  cielabA: 32,
-  cielabB: 33,
+  ncsNuance: "NcsNuance",
+  ncsHue: "NcsHue",
+  munsellPage: "MunsellPage",
+  munsellHue: "MunsellHue",
+  munsellValue: "MunsellValue",
+  munsellChroma: "MunsellChroma",
+  munsellName: "MunsellName",
+  cielabL: "L*",
+  cielabA: "A*",
+  cielabB: "B*",
   pantoneCode: 34,
-  rgbR: 35,
-  rgbG: 36,
-  rgbB: 37,
-  cmykC: 38,
-  cmykM: 39,
-  cmykY: 40,
-  cmykK: 41,
-  ceresitaName: 42,
+  rgbR: "R",
+  rgbG: "G",
+  rgbB: "B",
+  cmykC: "C",
+  cmykM: "M",
+  cmykY: "Y",
+  cmykK: "K",
+  ceresitaName: "Ceresita",
   hex: 43,
   colorName: 44,
-  colorFilter: 45
+  colorFilter: "categoryName",
 };
 
 export { OBJETO, ESTACION, COMUNA, EXPEDICION, RGB, COLORINFO };
