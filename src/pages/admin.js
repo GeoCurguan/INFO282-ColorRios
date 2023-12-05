@@ -1,10 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 import { toast } from "sonner";
 import Planilla from "@/components/AdminComponents/planilla";
-import GraficoArea from "@/components/AdminComponents/Estadisticas/graficoArea";
-import GraficoBarra from "@/components/AdminComponents/Estadisticas/graficoBarra";
+import GraficoColoresMeses from "@/components/AdminComponents/Estadisticas/graficoColoresMeses";
+import GraficoEstaciones from "@/components/AdminComponents/Estadisticas/graficoEstaciones";
 import GraficoTorta from "@/components/AdminComponents/Estadisticas/graficoTorta";
 import Progress from "@/components/AdminComponents/Estadisticas/progressBar";
 import CardsComunas from "@/components/AdminComponents/Estadisticas/cardsComunas";
@@ -42,6 +41,7 @@ export async function getServerSideProps() {
 const Admin = ({ data }) => {
     const [users, setUsers] = useState([]);
     const [colors, setColors] = useState([]);
+    const [dates, setDates] = useState([]);
 
     const fetchUsers = async () => {
         try {
@@ -88,10 +88,39 @@ const Admin = ({ data }) => {
 
             const dataColors = await response.json();
             setColors(dataColors);
-            //console.log("coloritos", dataColors.colors[0]);
         } catch (error) {
             console.error("Error al obtener colores: ", error.message);
             toast.error("Error al obtener colores");
+        }
+    };
+
+    const fetchDates = async () => {
+        try {
+            //Obtenemos el token del localStorage
+            const token = localStorage.getItem("token");
+
+            const response = await fetch(
+                "http://localhost:8000/api/getColorDates",
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+
+            if (!response.ok) {
+                console.log(response);
+                throw new Error("Error al obtener fechas de colores");
+            }
+
+            const fechasColores = await response.json();
+            setDates(fechasColores);
+        } catch (error) {
+            console.error(
+                "Error al obtener fechas de colores: ",
+                error.message
+            );
+            toast.error("Error al obtener fechas de colores");
         }
     };
 
@@ -103,9 +132,14 @@ const Admin = ({ data }) => {
         fetchColors();
     }, []);
 
+    useEffect(() => {
+        fetchDates();
+    }, []);
+
     const handleRefreshClick = () => {
         fetchUsers();
         fetchColors();
+        fetchDates();
     };
 
     return (
@@ -210,13 +244,19 @@ const Admin = ({ data }) => {
                                 <GraficoTorta dataColors={colors} />
                             </Col>
                             <Col numColSpan={3}>
-                                <CardsComunas dataColors={colors} />
+                                <CardsComunas
+                                    dataColors={colors}
+                                    dates={dates}
+                                />
                             </Col>
                             <Col numColSpan={2}>
-                                <GraficoBarra dataColors={colors} />
+                                <GraficoEstaciones dataColors={colors} />
                             </Col>
                             <Col numColSpan={3}>
-                                <GraficoArea />
+                                <GraficoColoresMeses
+                                    dataColors={colors}
+                                    dates={dates}
+                                />
                             </Col>
                         </Grid>
                     </TabPanel>

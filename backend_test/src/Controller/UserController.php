@@ -17,6 +17,8 @@ use Doctrine\ORM\EntityManagerInterface;
 
 use App\Entity\User;
 
+use App\Service\VisitCounter;
+
 class UserController extends AbstractController
 {
     private $passwordHasher;
@@ -69,7 +71,7 @@ class UserController extends AbstractController
         return new JsonResponse(['token' => $token, 'message' => 'Usuario registrado correctamente'], Response::HTTP_CREATED);
     }
 
-    public function login(Request $request): JsonResponse
+    public function login(Request $request, VisitCounter $visitCounter): JsonResponse
     {
         //Obtener los datos del formulario
         $userData = json_decode($request->getContent(), true);
@@ -92,6 +94,8 @@ class UserController extends AbstractController
         if (!$user instanceof PasswordAuthenticatedUserInterface || !$this->passwordHasher->isPasswordValid($user, $password)) {
             throw new AuthenticationException('Credenciales invalidas');
         }
+
+        $visitCounter->countVisit('/login');
 
         return new JsonResponse(['token' => $token, 'message' => 'Inicio de sesión exitoso'], Response::HTTP_OK);
     }

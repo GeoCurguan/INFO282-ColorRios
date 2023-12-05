@@ -10,6 +10,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
+use App\Service\VisitCounter;
+
 use Google_Service_Sheets;
 
 class ColorStatController extends AbstractController
@@ -29,7 +31,10 @@ class ColorStatController extends AbstractController
         $client->setApplicationName('Sheets and php');
         $client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
 
-        $client->setAuthConfig(__DIR__ . '/credentials.json');
+        //Acceder a la variable de entorno y decodificar el JSON
+        $googleAuthConfig = json_decode($_ENV['GOOGLE_AUTH_CONFIG'] ?? '{}', true);
+
+        $client->setAuthConfig($googleAuthConfig);
         $service = new Google_Service_Sheets($client);
         $spreadsheetId = "1mF6eQwX9fNXwv-FeZuGpHENDnlafEVRNtFcRgOViNA8";
 
@@ -109,5 +114,26 @@ class ColorStatController extends AbstractController
         }
 
         return $this->json(['message' => 'Estadísticas de color creadas.'], Response::HTTP_OK);
+    }
+
+    public function getColorDates(VisitCounter $visitCounter): JsonResponse
+    {
+        //Falta validación role_admin!!11!!!1
+        $colorRepository = $this->entityManager->getRepository(ColorStat::class);
+        $colores = $colorRepository->findAll();
+
+        $coloresArray = [];
+
+        foreach ($colores as $color) {
+            $coloresArray[] = [
+                'id' => $color->getId(),
+                'idColor' => $color->getIdColor(),
+                'fecha' => $color->getDate(),
+            ];
+        }
+
+        $visitCounter->countVisit('/admin');
+
+        return new JsonResponse(['colors' => $coloresArray], Response::HTTP_OK);
     }
 }

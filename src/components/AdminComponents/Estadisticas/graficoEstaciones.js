@@ -1,5 +1,5 @@
 import React from "react";
-import { BarChart, Card, Subtitle, Title } from "@tremor/react";
+import { BarChart, Card, Title } from "@tremor/react";
 
 const capitalizeFirstLetter = (str) => {
     if (str && typeof str === "string" && str.length > 0) {
@@ -8,7 +8,7 @@ const capitalizeFirstLetter = (str) => {
     return str;
 };
 
-const GraficoBarra = ({ dataColors }) => {
+const GraficoEstaciones = ({ dataColors }) => {
     if (!dataColors.colors || !Array.isArray(dataColors.colors)) {
         return null;
     }
@@ -48,4 +48,4 @@ const GraficoBarra = ({ dataColors }) => {
     );
 };
 
-export default GraficoBarra;
+export default GraficoEstaciones;

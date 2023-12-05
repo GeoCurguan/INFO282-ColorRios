@@ -40,3 +40,8 @@ colorstat_insert:
     path: /api/createColorStat
     controller: App\Controller\ColorStatController::createColorStat
     methods: [POST]
+
+colorstat_getDates:
+    path: /api/getColorDates
+    controller: App\Controller\ColorStatController::getColorDates
+    methods: [GET]
