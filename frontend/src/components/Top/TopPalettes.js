@@ -5,10 +5,11 @@ const TopPalettes = ({ username }) => {
 
   useEffect(() => {
 
+    // Usado en la pagina Social
     const fetchData = async () => {
-      // TopPalettes por Click
+      // Funcion que busca TopPalettes por ???.
       try {
-        const response = await fetch('/api/topPalettes');
+        const response = await fetch('/api/getPalettes/Top');
         if (!response.ok) {
           throw new Error('Error al obtener las paletas mas populares.');
         }
@@ -22,7 +23,7 @@ const TopPalettes = ({ username }) => {
 
     // Usado en la pagina Perfil
     const fetchDataUsername = async () => {
-      // Paletas por Usuario
+      // Funcion que busca Todas las Paletas de un Usuario
       try {
         const response = await fetch('/api/getPalettes/${username}');
         if (!response.ok) {

@@ -16,26 +16,25 @@ class PaletteRepository extends ServiceEntityRepository
     public function findTopPalettes(): array
     {
         // Muestra los colores de las paletas esten entre los Top 10 con mas LIKES?
+        // IMPORTANTE. HAY QUE ARREGLAR LA BASE DE DATOS PARA LOGRAR HACER ESTA CONSULTA!
         $qb = $this->createQueryBuilder('p');
         $qb->select('c', 'p.id')
            ->join('p.user', 'u')
-           ->join('p.user', 'u')
+           ->join('p.user', 'u');
+           //etc...
+        return $qb->GetQuery()->getResult();
     }
 
     public function findPalettesByUsername(string $username): array
     {
-        // Muestra los colores de todas las paletas de un usuario especifico.
-        $qb = $this->createQueryBuilder('p');
-        $qb->select('p.id', 'c')
-           ->join('p.user', 'u')
-           ->join('p.colors', 'c')
-           ->where('u.username = :username')
-           ->orderBy('p.id', 'DESC')
-           ->setParameter('username', $username);
-
+        $qb = $this->createQueryBuilder('p')
+            ->select('p.id as paletteId', 'c.id as colorId', 'c.category', 'c.commune', 'c.season', 'c.colorName', 'c.image', 'c.ncsNuance', 'c.ncsHue', 'c.munsellHue', 'c.munsellValue', 'c.munsellChroma', 'c.munsellName', 'c.cielabL', 'c.cielabA', 'c.cielabB', 'c.rgbR', 'c.rgbG', 'c.rgbB', 'c.cmykC', 'c.cmykM', 'c.cmykY', 'c.cmykK', 'c.ceresitaName')
+            ->join('p.palette_Color', 'pc')
+            ->join('pc.color', 'c')
+            ->join('p.user', 'u')
+            ->where('u.username = :username')
+            ->setParameter('username', $username);
         return $qb->getQuery()->getResult();
     }
-
-    // Puedes agregar más métodos de consulta personalizados según las necesidades de tu aplicación.
 
 }
