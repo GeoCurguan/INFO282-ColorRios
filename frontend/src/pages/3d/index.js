@@ -7,17 +7,16 @@ import Nav from "@/components/Navbar/Nav";
 import ColorDetail from "@/components/ColorDetail/ColorDetail";
 
 export async function getServerSideProps() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_IP}/api/colors`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_IP}/api/getColors`);
   const colors = await res.json();
-  const values = colors.values;
+  // const values = colors.values;
 
   return {
     props: {
-      colors: values,
+      colors: colors.colors,
     },
   };
 }
-
 const Home = ({ colors }) => {
   const [currentColor, setCurrentColor] = useState(null);
   const [controls, setControls] = useState();

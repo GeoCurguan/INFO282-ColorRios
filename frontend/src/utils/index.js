@@ -2,7 +2,7 @@ import { OBJETO, COMUNA } from "@/constants/properties";
 
 const colorRGBExist = (R, G, B) => {
   // ¿No existe alguno de los colores? Devuelve transparente
-  if (R === undefined || G === undefined || B === undefined) return false;
+  if (R === undefined || R === null || G === undefined || G === null || B === undefined || B === null) return false;
   if (R === "" || G === "" || B === "") return false;
 
   // Color que corresponde
@@ -38,7 +38,7 @@ const uniqueValuesFilters = (colors) => {
 
 function rgbToHex(red, green, blue) {
   const rgb = (red << 16) | (green << 8) | (blue << 0);
-  return '#' + (0x1000000 + rgb).toString(16).slice(1);
+  return "#" + (0x1000000 + rgb).toString(16).slice(1);
 }
 
-export { uniqueValuesFilters, colorRGB, colorRGBExist, rgbToHex};
+export { uniqueValuesFilters, colorRGB, colorRGBExist, rgbToHex };

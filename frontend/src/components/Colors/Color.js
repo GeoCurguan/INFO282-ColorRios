@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { RGB } from "@/constants/properties";
+import { RGB, COLORINFO } from "@/constants/properties";
 import { colorRGB, colorRGBExist } from "@/utils";
 import styles from "./styles/Color.module.css";
 
 const Color = ({ color, setCurrentColor, isSelected }) => {
   // Comprueba si R, G o B son undefined y si es así, no renderiza el cuadrito
-  if (!colorRGBExist(color[RGB.R], color[RGB.G], color[RGB.B])) {
+  if (!colorRGBExist(color[COLORINFO.rgbR], color[COLORINFO.rgbG], color[COLORINFO.rgbB])) {
     return null;
   }
 
@@ -13,7 +13,7 @@ const Color = ({ color, setCurrentColor, isSelected }) => {
     setCurrentColor(color);
   };
 
-  const styleBG = colorRGB(color[RGB.R], color[RGB.G], color[RGB.B]);
+  const styleBG = colorRGB(color[COLORINFO.rgbR], color[COLORINFO.rgbG], color[COLORINFO.rgbB]);
 
   return (
     <div className={`hover:z-[1] w-1/5 ${isSelected ? styles["selected-color-border"] : ""}`}>
