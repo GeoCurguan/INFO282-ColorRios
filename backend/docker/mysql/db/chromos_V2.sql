@@ -22,6 +22,7 @@ CREATE TABLE `palette` (
 CREATE TABLE `color` (
   `id` int(11) PRIMARY KEY AUTO_INCREMENT,
   `category` varchar(255),
+  `categoryName` varchar(255),
   `commune` varchar(255),
   `season` varchar(255),
   `colorName` varchar(255),
@@ -44,13 +45,13 @@ CREATE TABLE `color` (
   `cmykK` int,
   `ceresitaName` varchar(255)
 );
-CREATE TABLE `palette_Color` (
+CREATE TABLE `palette_color` (
   `id` int(11) PRIMARY KEY AUTO_INCREMENT,
   `palette_id` int(11),
   `color_id` int(11)
 );
 
-CREATE TABLE `colorStat` (
+CREATE TABLE `color_stat` (
   `id` int(11) PRIMARY KEY AUTO_INCREMENT,
   `id_color` int(11),
   `date` date,
@@ -67,10 +68,10 @@ CREATE TABLE `tracking` (
 
 ALTER TABLE `palette` ADD FOREIGN KEY (`id_usuario`) REFERENCES `user` (`id`);
 
-ALTER TABLE `palette_Color` ADD FOREIGN KEY (`palette_id`) REFERENCES `palette` (`id`);
+ALTER TABLE `palette_color` ADD FOREIGN KEY (`palette_id`) REFERENCES `palette` (`id`);
 
-ALTER TABLE `palette_Color` ADD FOREIGN KEY (`color_id`) REFERENCES `color` (`id`);
+ALTER TABLE `palette_color` ADD FOREIGN KEY (`color_id`) REFERENCES `color` (`id`);
 
-ALTER TABLE `colorStat` ADD FOREIGN KEY (`id_color`) REFERENCES `color` (`id`);
+ALTER TABLE `color_stat` ADD FOREIGN KEY (`id_color`) REFERENCES `color` (`id`);
 
-ALTER TABLE `colorStat` ADD FOREIGN KEY (`tracking_id`) REFERENCES `tracking` (`id`);
+ALTER TABLE `color_stat` ADD FOREIGN KEY (`tracking_id`) REFERENCES `tracking` (`id`);
