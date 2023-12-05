@@ -36,9 +36,9 @@ class ColorStatController extends AbstractController
 
         $client->setAuthConfig($googleAuthConfig);
         $service = new Google_Service_Sheets($client);
-        $spreadsheetId = "1mF6eQwX9fNXwv-FeZuGpHENDnlafEVRNtFcRgOViNA8";
+        $spreadsheetId = "1n2IdxzwSSO8mXaeZI8p7j2ZFZXObtBD_NPjjnUls6yU";
 
-        $range =  "CHROMOS!A3:AU1000";
+        $range =  "BASE_GENERAL!A3:AU500";
 
         $response = $service->spreadsheets_values->get($spreadsheetId, $range);
         $values = $response->getValues();

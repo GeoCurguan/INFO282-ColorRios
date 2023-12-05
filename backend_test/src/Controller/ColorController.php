@@ -8,6 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
+use App\Service\VisitCounter;
+
 use Google_Service_Sheets;
 
 class ColorController extends AbstractController
@@ -22,20 +24,17 @@ class ColorController extends AbstractController
     {
         $client = new \Google_Client();
         $client->setApplicationName('Sheets and php');
-        $client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
+        $client->setScopes([Google_Service_Sheets::SPREADSHEETS]);
 
-        #$dotenv = new \Dotenv();
-        #$dotenv->load(__DIR__.'/.env');
-        
-        #$CREDENTIALS = getenv('SHEET_AUTH');
+        //Acceder a la variable de entorno y decodificar el JSON
+        $googleAuthConfig = json_decode($_ENV['GOOGLE_AUTH_CONFIG'] ?? '{}', true);
 
-        $client->setAuthConfig(__DIR__ . '/credentials.json'); #Pasar carga de variable a .env
+        $client->setAuthConfig($googleAuthConfig);
         $service = new Google_Service_Sheets($client);
-        $spreadsheetId="1n2IdxzwSSO8mXaeZI8p7j2ZFZXObtBD_NPjjnUls6yU";
-        #$spreadsheetId="1mF6eQwX9fNXwv-FeZuGpHENDnlafEVRNtFcRgOViNA8";
-    
+        $spreadsheetId = "1n2IdxzwSSO8mXaeZI8p7j2ZFZXObtBD_NPjjnUls6yU";
+
         $range =  "BASE_GENERAL!A3:AU500";
-    
+
         $response = $service->spreadsheets_values->get($spreadsheetId, $range);
         $values = $response->getValues();
 
@@ -45,25 +44,25 @@ class ColorController extends AbstractController
 
         $colorRepository = $this->entityManager->getRepository(Color::class);
 
-        foreach($values as $value){
+        foreach ($values as $value) {
             //Sólo insertamos datos con la data requerida
-            if(count($value) === 47){
-                
-                
+            if (count($value) === 47) {
+
+
                 $rowID = $value[0] ? $value[0] : null;
 
                 $get_color = $colorRepository->findOneBy(['rowID' => $rowID]);
 
-                if($get_color === null && $rowID !== null){
+                if ($get_color === null && $rowID !== null) {
                     //Insert de color nuevo
                     $color = new Color();
-                    
+
                     $color->setRowID(isset($value[0]) ? intval($value[0]) : null);
 
                     $color->setCategory($value[1] ? $value[1] : null);
                     $color->setCommune($value[3] ? $value[3] : null);
                     $color->setSeason($value[4] ? $value[4] : null);
-    
+
                     $color->setNcsNuance($value[25] ? $value[25] : null);
                     $color->setNcsHue($value[26] ? $value[26] : null);
                     //Munsell
@@ -87,9 +86,9 @@ class ColorController extends AbstractController
                     $color->setCmykK($value[42] ? gettype($value[42]) !== 'integer' ? null : $value[42] : null);
                     //FILTRO POR NOMBRE DE COLOR
                     $color->setCategoryName(isset($value[46]) ? $value[46] : null);
-    
-                    $this->entityManager->persist($color);    
-                }else if($rowID !== null){
+
+                    $this->entityManager->persist($color);
+                } else if ($rowID !== null) {
                     //Update
                     $get_color->setCategory($value[1] ? $value[1] : null);
                     $get_color->setCommune($value[3] ? $value[3] : null);
@@ -125,7 +124,7 @@ class ColorController extends AbstractController
         return new JsonResponse(['message' => 'Colores insertados'], Response::HTTP_OK);
     }
 
-    public function getColors(): JsonResponse
+    public function getColors(VisitCounter $visitCounter): JsonResponse
     {
         //Falta validación role_admin!!11!!!1
         $colorRepository = $this->entityManager->getRepository(Color::class);
@@ -160,6 +159,8 @@ class ColorController extends AbstractController
                 'Ceresita' => $color->getCeresitaName(),
             ];
         }
+
+        $visitCounter->countVisit('/');
 
         return new JsonResponse(['colors' => $coloresArray], Response::HTTP_OK);
     }
