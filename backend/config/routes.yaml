@@ -59,9 +59,23 @@ color_topbyclicks_username:
 color_topbypalettes_username:
   path: "/api/colors/topbypalettes/{username}"
   controller: 'App\Controller\ColorController::getTopColorsByPalettesAndUsername'
+<<<<<<< Updated upstream
   methods: ["GET"]
 
 colorstat_getDates:
   path: /api/getColorDates
   controller: App\Controller\ColorStatController::getColorDates
   methods: [GET]
+=======
+  methods: ['GET']
+
+palette_gettop:
+  path: 'api/getPalettes/Top'
+  controller: 'App\Controller\PaletteController::getTopPalettes'
+  methods: ['GET']
+
+palette_getbyusername:
+  path: 'api/getPalettes/{username}'
+  controller: 'App\Controller\PaletteController::getPalettesByUsername'
+  methods: ['GET']
+>>>>>>> Stashed changes
