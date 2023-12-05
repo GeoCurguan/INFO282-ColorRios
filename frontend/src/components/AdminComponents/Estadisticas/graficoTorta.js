@@ -3,6 +3,7 @@ import { Card, DonutChart, Title, Divider } from "@tremor/react";
 
 const GraficoTorta = ({ dataColors }) => {
     const [value, setValue] = React.useState(null);
+    //console.log("asdasd2", dataColors.colors);
 
     const colorCounts = {};
 
@@ -23,7 +24,7 @@ const GraficoTorta = ({ dataColors }) => {
     }
 
     dataColors.colors.forEach((color) => {
-        const tonalidad = color.colorName;
+        const tonalidad = color.categoryName;
 
         if (tonalidad) {
             if (colorCounts[tonalidad]) {
