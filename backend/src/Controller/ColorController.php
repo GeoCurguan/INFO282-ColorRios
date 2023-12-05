@@ -27,9 +27,10 @@ class ColorController extends AbstractController
         $client->setScopes([Google_Service_Sheets::SPREADSHEETS]);
 
         //Acceder a la variable de entorno y decodificar el JSON
-        $googleAuthConfig = json_decode($_ENV['GOOGLE_AUTH_CONFIG'] ?? '{}', true);
+        // $googleAuthConfig = json_decode($_ENV['GOOGLE_AUTH_CONFIG'] ?? '{}', true);
+        // $client->setAuthConfig($googleAuthConfig);
+        $client -> setAuthConfig(__DIR__.'/credentials.json');        
 
-        $client->setAuthConfig($googleAuthConfig);
         $service = new Google_Service_Sheets($client);
         $spreadsheetId = "1n2IdxzwSSO8mXaeZI8p7j2ZFZXObtBD_NPjjnUls6yU";
 
