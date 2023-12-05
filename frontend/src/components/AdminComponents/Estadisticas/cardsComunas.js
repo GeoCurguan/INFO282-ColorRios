@@ -11,7 +11,7 @@ import {
     TabPanels,
 } from "@tremor/react";
 
-const CardsComunas = ({ dataColors }) => {
+const CardsComunas = ({ dataColors, dates }) => {
     const [selectedIndexValdivia, setSelectedIndexValdivia] = useState(0);
     const [selectedIndexRanco, setSelectedIndexRanco] = useState(0);
 
@@ -33,19 +33,32 @@ const CardsComunas = ({ dataColors }) => {
             (color) => color.commune === comuna
         );
 
+        const ultimaExpedicion = coloresComuna.reduce((maxDate, color) => {
+            const fechaColor = dates.colors.find(
+                (date) => date.idColor === color.id
+            )?.fecha;
+
+            if (fechaColor) {
+                const fechaExpedicion = new Date(fechaColor.date);
+                return fechaExpedicion > maxDate ? fechaExpedicion : maxDate;
+            } else {
+                return maxDate;
+            }
+        }, new Date(0));
+
         const totalColoresRescatados = coloresComuna.length;
 
-        //idea para cuando tenga las fechas
-        const ultimaExpedicion = coloresComuna.reduce((maxDate, color) => {
-            const fechaColor = new Date(color.fechaExpedicion);
-            return fechaColor > maxDate ? fechaColor : maxDate;
-        }, new Date(0));
+        const noHayExpediciones =
+            ultimaExpedicion.getTime() === new Date(0).getTime();
 
         return (
             <div className="mt-4">
                 <Title>Colores Rescatados: {totalColoresRescatados}</Title>
                 <Text>
-                    Última Expedición: {ultimaExpedicion.toLocaleDateString()}
+                    Última Expedición:{" "}
+                    {noHayExpediciones
+                        ? "No existen datos válidos"
+                        : ultimaExpedicion.toLocaleDateString()}
                 </Text>
             </div>
         );
