@@ -27,9 +27,12 @@ class ColorController extends AbstractController
         $client->setScopes([Google_Service_Sheets::SPREADSHEETS]);
 
         //Acceder a la variable de entorno y decodificar el JSON
+        /*
         $googleAuthConfig = json_decode($_ENV['GOOGLE_AUTH_CONFIG'] ?? '{}', true);
 
         $client->setAuthConfig($googleAuthConfig);
+        */
+        $client->setAuthConfig(__DIR__ . '/credentials.json'); #Pasar carga de variable a .env
         $service = new Google_Service_Sheets($client);
         $spreadsheetId = "1n2IdxzwSSO8mXaeZI8p7j2ZFZXObtBD_NPjjnUls6yU";
 
@@ -47,8 +50,6 @@ class ColorController extends AbstractController
         foreach ($values as $value) {
             //Sólo insertamos datos con la data requerida
             if (count($value) === 47) {
-
-
                 $rowID = $value[0] ? $value[0] : null;
 
                 $get_color = $colorRepository->findOneBy(['rowID' => $rowID]);

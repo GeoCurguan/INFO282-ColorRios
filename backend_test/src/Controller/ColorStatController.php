@@ -32,9 +32,12 @@ class ColorStatController extends AbstractController
         $client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
 
         //Acceder a la variable de entorno y decodificar el JSON
+        /*
         $googleAuthConfig = json_decode($_ENV['GOOGLE_AUTH_CONFIG'] ?? '{}', true);
 
         $client->setAuthConfig($googleAuthConfig);
+        */
+        $client->setAuthConfig(__DIR__ . '/credentials.json'); #Pasar carga de variable a .env
         $service = new Google_Service_Sheets($client);
         $spreadsheetId = "1n2IdxzwSSO8mXaeZI8p7j2ZFZXObtBD_NPjjnUls6yU";
 
@@ -53,7 +56,9 @@ class ColorStatController extends AbstractController
             //Sólo insertamos datos con la data requerida
             if (count($value) === 47) {
                 $rowID = $value[0] ? $value[0] : null;
-                if ($rowID === null) {
+
+                $color = $colorRepository->findOneBy(['rowID' => $rowID]);
+                if ($color === null && $rowID !== null) {
                     return $this->json(['error' => 'ID de fila no válido.'], Response::HTTP_BAD_REQUEST);
                 }
 
@@ -92,8 +97,6 @@ class ColorStatController extends AbstractController
                     } catch (\Exception $e) {
                         return $this->json(['error' => 'Error al crear el objeto DateTime.'], Response::HTTP_INTERNAL_SERVER_ERROR);
                     }
-
-                    $color = $this->colorRepository->findOneBy(['rowID' => $rowID]);
 
                     if (!$color) {
                         return $this->json(['error' => 'Color no encontrado.'], Response::HTTP_NOT_FOUND);
