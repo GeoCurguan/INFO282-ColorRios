@@ -19,6 +19,8 @@ export const AuthContext = ({ children }) => {
   const handleLogin = async (token) => {
     setAuth(token);
     localStorage.setItem("token", token);
+    console.log(token);
+    console.log(auth);
     // Obtener los datos del usuario desde el servidor o bien desencriptar acá
     const decodedToken = decodeToken(token);
     setUser(decodedToken);

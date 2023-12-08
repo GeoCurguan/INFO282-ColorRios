@@ -21,7 +21,7 @@ function useLocalStorage(key, defaultValue) {
 
   useEffect(() => {
     if (isMounted.current) {
-      window.localStorage.setItem(key, JSON.stringify(value));
+      window.localStorage.setItem(key, value);
     } else {
       isMounted.current = true;
     }
