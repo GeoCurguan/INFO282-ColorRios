@@ -1,4 +1,4 @@
-import { OBJETO, COMUNA } from "@/constants/properties";
+import { COLORINFO } from "@/constants/properties";
 
 const colorRGBExist = (R, G, B) => {
   // ¿No existe alguno de los colores? Devuelve transparente
@@ -18,20 +18,48 @@ const colorRGB = (R, G, B) => {
 };
 
 const uniqueValuesFilters = (colors) => {
-  // Recuperamos los objetos únicos
-  // Recuepramos las comunas únicas
+  const objetos = [
+    ...new Set(
+      colors.map((color) => {
+        if (color[COLORINFO.category] === undefined || color[COLORINFO.category] === null) return "";
+        return color[COLORINFO.category].toLowerCase();
+      })
+    ),
+  ];
 
-  const objetos = [...new Set(colors.map((color) => color[OBJETO].toLowerCase()))];
-  const comunas = [...new Set(colors.map((color) => color[COMUNA].toLowerCase()))];
+  const comunas = [
+    ...new Set(
+      colors.map((color) => {
+        if (color[COLORINFO.comuna] === undefined || color[COLORINFO.comuna] === null) return "";
+        return color[COLORINFO.comuna].toLowerCase();
+      })
+    ),
+  ];
+
+  const colores = [
+    ...new Set(
+      colors.map((color) => {
+        if (color[COLORINFO.colorFilter] === undefined || color[COLORINFO.colorFilter] === null) return "";
+        return color[COLORINFO.colorFilter].toLowerCase();
+      })
+    ),
+  ];
+
   if (objetos.includes("")) {
     objetos.splice(objetos.indexOf(""), 1);
   }
   if (comunas.includes("")) {
     comunas.splice(comunas.indexOf(""), 1);
   }
+
+  if (colores.includes("")) {
+    colores.splice(colores.indexOf(""), 1);
+  }
+
   const uniqueValuesFilters = {
     objetos,
     comunas,
+    colores,
   };
   return uniqueValuesFilters;
 };

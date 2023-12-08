@@ -26,7 +26,7 @@ const COLORINFO = {
   //id: 0,
   category: "category", //Objeto o Atmosfera
   expedition: 1,
-  comuna: 2,
+  comuna: "commune",
   season: "season",
   year: 4,
   month: 5,
