@@ -36,7 +36,7 @@ const FilterObjeto = ({ valuesFilters, filters, setFilters }) => {
       </label>
       <select
         id="objeto"
-        className="w-full h-10 bg-gray-900/50 text-white"
+        className="w-full h-10 bg-gray-900/50 text-white capitalize"
         name="objeto"
         onChange={(e) => {
           setFilters({ ...filters, [e.target.name]: e.target.value });
@@ -119,7 +119,7 @@ const FilterColor = ({ valuesFilters, filters, setFilters }) => {
       </label>
       <select
         id="color"
-        className="w-full h-10 bg-gray-900/50 text-white"
+        className="w-full h-10 bg-gray-900/50 text-white capitalize"
         name="color"
         onChange={(e) => {
           setFilters({ ...filters, [e.target.name]: e.target.value });

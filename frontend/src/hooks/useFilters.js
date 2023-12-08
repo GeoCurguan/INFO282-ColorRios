@@ -42,9 +42,9 @@ const useFilters = () => {
       const colorSeason = color[COLORINFO.season];
       const colorFilter = color[COLORINFO.colorFilter];
       if (
-        (filters.objeto === "todos" || (colorCategory && colorCategory.toLowerCase().includes(filters.objeto))) &&
-        (filters.comuna === "todos" || (colorComuna && colorComuna.toLowerCase().includes(filters.comuna))) &&
-        (filters.estacion === "todos" || (colorSeason && colorSeason.toLowerCase().includes(filters.estacion))) &&
+        (filters.objeto === "todos" || (colorCategory && colorCategory.toLowerCase() === filters.objeto)) &&
+        (filters.comuna === "todos" || (colorComuna && colorComuna.toLowerCase() === filters.comuna)) &&
+        (filters.estacion === "todos" || (colorSeason && colorSeason.toLowerCase() === filters.estacion)) &&
         (filters.color === "todos" || (colorFilter && colorFilter.toLowerCase() === filters.color))
       ) {
         return true;
