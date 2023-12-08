@@ -3,78 +3,104 @@
 namespace App\Entity;
 
 use App\Repository\PaletteRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: PaletteRepository::class)]
-/**
- * @ORM\Entity
- * @ORM\Table(name="palette")
- */
+#[ORM\Table(name: 'palette')]
 class Palette
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue(strategy: 'AUTO')]
+    #[ORM\GeneratedValue]
     #[ORM\Column]
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     * @ORM\Column(type="integer")
-     */
     private ?int $id = null;
 
-    #[ORM\Column(name: "id_usuario", type: "integer", nullable: true)]
-    private ?int $userId = null;
+    #[ORM\Column(length: 255)]
+    private ?string $nombre_propietario = null;
 
-    #[ORM\Column(name: "cantidad_colores", length: 255, nullable: true)]
-    private ?string $colorCount = null;
+    #[ORM\Column]
+    private ?bool $descargado = null;
 
-    #[ORM\Column(name: "descargado", type: "boolean", nullable: true)]
-    private ?bool $downloaded = null;
+    #[ORM\ManyToOne(targetEntity: User::class)]
+    #[ORM\JoinColumn(name: "nombre_propietario", referencedColumnName: "username")]
+    private $propietario;
+
+    #[ORM\OneToMany(mappedBy: 'palette', targetEntity: PaletteColor::class)]
+    private Collection $paletteColors;
+
+    public function __construct()
+    {
+        $this->paletteColors = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function setId(int $id): static
+    public function getNombrePropietario(): ?string
     {
-        $this->id = $id;
+        return $this->nombre_propietario;
+    }
+
+    public function setNombrePropietario(string $nombre_propietario): static
+    {
+        $this->nombre_propietario = $nombre_propietario;
 
         return $this;
     }
 
-    public function getUserId(): ?int
+    public function isDescargado(): ?bool
     {
-        return $this->userId;
+        return $this->descargado;
     }
 
-    public function setUserId(?int $userId): static
+    public function setDescargado(bool $descargado): static
     {
-        $this->userId = $userId;
+        $this->descargado = $descargado;
 
         return $this;
     }
 
-    public function getColorCount(): ?string
+    public function getPropietario(): ?User
     {
-        return $this->colorCount;
+        return $this->propietario;
     }
 
-    public function setColorCount(?string $colorCount): static
+    public function setPropietario(?User $propietario): self
     {
-        $this->colorCount = $colorCount;
+        $this->propietario = $propietario;
 
         return $this;
     }
 
-    public function getDownloaded(): ?bool
+    /**
+     * @return Collection<int, PaletteColor>
+     */
+    public function getPaletteColors(): Collection
     {
-        return $this->downloaded;
+        return $this->paletteColors;
     }
 
-    public function setDownloaded(?bool $downloaded): static
+    public function addPaletteColor(PaletteColor $paletteColor): static
     {
-        $this->downloaded = $downloaded;
+        if (!$this->paletteColors->contains($paletteColor)) {
+            $this->paletteColors->add($paletteColor);
+            $paletteColor->setPalette($this);
+        }
+
+        return $this;
+    }
+
+    public function removePaletteColor(PaletteColor $paletteColor): static
+    {
+        if ($this->paletteColors->removeElement($paletteColor)) {
+            // set the owning side to null (unless already changed)
+            if ($paletteColor->getPalette() === $this) {
+                $paletteColor->setPalette(null);
+            }
+        }
 
         return $this;
     }

@@ -29,7 +29,7 @@ class ColorController extends AbstractController
         //Acceder a la variable de entorno y decodificar el JSON
         // $googleAuthConfig = json_decode($_ENV['GOOGLE_AUTH_CONFIG'] ?? '{}', true);
         // $client->setAuthConfig($googleAuthConfig);
-        $client -> setAuthConfig(__DIR__.'/credentials.json');        
+        $client->setAuthConfig(__DIR__ . '/credentials.json');
 
         $service = new Google_Service_Sheets($client);
         $spreadsheetId = "1n2IdxzwSSO8mXaeZI8p7j2ZFZXObtBD_NPjjnUls6yU";
@@ -46,7 +46,7 @@ class ColorController extends AbstractController
         $colorRepository = $this->entityManager->getRepository(Color::class);
 
         foreach ($values as $value) {
-            //Sólo insertamos datos con la data requerida
+            //SÃ³lo insertamos datos con la data requerida
             if (count($value) === 47) {
 
 
@@ -127,7 +127,6 @@ class ColorController extends AbstractController
 
     public function getColors(VisitCounter $visitCounter): JsonResponse
     {
-        //Falta validación role_admin!!11!!!1
         $colorRepository = $this->entityManager->getRepository(Color::class);
         $colores = $colorRepository->findAll();
 
@@ -140,7 +139,6 @@ class ColorController extends AbstractController
                 'categoryName' => $color->getCategoryName(),
                 'commune' => $color->getCommune(),
                 'season' => $color->getSeason(),
-<<<<<<< Updated upstream
                 'NcsNuance' => $color->getNcsNuance(),
                 'NcsHue' => $color->getNcsHue(),
                 'MunsellPage' => $color->getMunsellPage(),
@@ -148,16 +146,6 @@ class ColorController extends AbstractController
                 'MunsellValue' => $color->getMunsellValue(),
                 'MunsellChroma' => $color->getMunsellChroma(),
                 'MunsellName' => $color->getMunsellName(),
-=======
-                'colorName' => $color->getColorName(),
-                'ncsNuance' => $color->getNcsNuance(),
-                'ncsHue' => $color->getNcsHue(),
-                'munsellPage' => $color->getMunsellPage(),
-                'munsellHue' => $color->getMunsellHue(),
-                'munsellValue' => $color->getMunsellValue(),
-                'munsellChroma' => $color->getMunsellChroma(),
-                'munsellName' => $color->getMunsellName(),
->>>>>>> Stashed changes
                 'L*' => $color->getCielabL(),
                 'A*' => $color->getCielabA(),
                 'B*' => $color->getCielabB(),
@@ -169,7 +157,6 @@ class ColorController extends AbstractController
                 'Y' => $color->getCmykY(),
                 'K' => $color->getCmykK(),
                 'Ceresita' => $color->getCeresitaName(),
-                'rowId' => $color->getRowID(),
             ];
         }
 
@@ -177,158 +164,4 @@ class ColorController extends AbstractController
 
         return new JsonResponse(['colors' => $coloresArray], Response::HTTP_OK);
     }
-
-
-
-    public function getTopColorsByClicks(ColorRepository $colorRepository): JsonResponse
-    {
-        // Consulta: Entrega los 3 colores con mas clicks.
-        $result = $colorRepository->findTopColorsByClicks();
-
-        // Formateo: Una lista de 3 colores.
-        $topColors = [];
-        foreach ($result as $row){
-            $topColors[] = [
-                'id' => $color->getId(),
-                'category' => $color->getCategory(),
-                'commune' => $color->getCommune(),
-                'season' => $color->getSeason(),
-                'colorName' => $color->getColorName(),
-                'NcsNuance' => $color->getNcsNuance(),
-                'NcsHue' => $color->getNcsHue(),
-                'MunsellPage' => $color->getMunsellPage(),
-                'MunsellHue' => $color->getMunsellHue(),
-                'MunsellValue' => $color->getMunsellValue(),
-                'MunsellChroma' => $color->getMunsellChroma(),
-                'MunsellName' => $color->getMunsellName(),
-                'L*' => $color->getCielabL(),
-                'A*' => $color->getCielabA(),
-                'B*' => $color->getCielabB(),
-                'R' => $color->getRgbR(),
-                'G' => $color->getRgbG(),
-                'B' => $color->getRgbB(),
-                'C' => $color->getCmykC(),
-                'M' => $color->getCmykM(),
-                'Y' => $color->getCmykY(),
-                'K' => $color->getCmykK(),
-                'Ceresita' => $color->getCeresitaName(),
-            ];
-        }
-
-        return new JsonResponse(['topColors' => $topColors], Response::HTTP_OK);
-    }
-
-    public function getTopColorsByPalettes(ColorRepository $colorRepository): JsonResponse
-    {
-        // Consulta: Entrega los 3 colores con mas apariciones en paletas.
-        $result = $colorRepository->findTopColorsByPalettes();
-
-        // Formateo: Una lista de 3 colores.
-        $topColors = [];
-        foreach ($result as $row){
-            $topColors[] = [
-                'id' => $row->getId(),
-                'category' => $row->getCategory(),
-                'commune' => $row->getCommune(),
-                'season' => $row->getSeason(),
-                'colorName' => $row->getColorName(),
-                'NcsNuance' => $row->getNcsNuance(),
-                'NcsHue' => $row->getNcsHue(),
-                'MunsellPage' => $row->getMunsellPage(),
-                'MunsellHue' => $row->getMunsellHue(),
-                'MunsellValue' => $row->getMunsellValue(),
-                'MunsellChroma' => $row->getMunsellChroma(),
-                'MunsellName' => $row->getMunsellName(),
-                'L*' => $row->getCielabL(),
-                'A*' => $row->getCielabA(),
-                'B*' => $row->getCielabB(),
-                'R' => $row->getRgbR(),
-                'G' => $row->getRgbG(),
-                'B' => $row->getRgbB(),
-                'C' => $row->getCmykC(),
-                'M' => $row->getCmykM(),
-                'Y' => $row->getCmykY(),
-                'K' => $row->getCmykK(),
-                'Ceresita' => $row->getCeresitaName(),
-            ];
-        }
-
-        return new JsonResponse(['topColors' => $topColors], Response::HTTP_OK);
-    }
-
-    public function getTopColorsByClicksAndUsername(ColorRepository $colorRepository, string $username): JsonResponse
-    {
-        // Consulta: Entrega los 3 colores mas clickeados por un usuario.
-        $result = $colorRepository->findTopColorsByClicksAndUsername($username);
-
-        // Formateo: Una lista de 3 colores.
-        $topColors = [];
-        foreach ($result as $row){
-            $topColors[] = [
-                'id' => $color->getId(),
-                'category' => $color->getCategory(),
-                'commune' => $color->getCommune(),
-                'season' => $color->getSeason(),
-                'colorName' => $color->getColorName(),
-                'NcsNuance' => $color->getNcsNuance(),
-                'NcsHue' => $color->getNcsHue(),
-                'MunsellPage' => $color->getMunsellPage(),
-                'MunsellHue' => $color->getMunsellHue(),
-                'MunsellValue' => $color->getMunsellValue(),
-                'MunsellChroma' => $color->getMunsellChroma(),
-                'MunsellName' => $color->getMunsellName(),
-                'L*' => $color->getCielabL(),
-                'A*' => $color->getCielabA(),
-                'B*' => $color->getCielabB(),
-                'R' => $color->getRgbR(),
-                'G' => $color->getRgbG(),
-                'B' => $color->getRgbB(),
-                'C' => $color->getCmykC(),
-                'M' => $color->getCmykM(),
-                'Y' => $color->getCmykY(),
-                'K' => $color->getCmykK(),
-                'Ceresita' => $color->getCeresitaName(),
-            ];
-        }
-
-        return new JsonResponse(['topColors' => $topColors], Response::HTTP_OK);
-    }
-
-    // public function getTopColorsByClicksAndUsername(ColorRepository $colorRepository, string $username): JsonResponse
-    // {
-    //     // Consulta: Entrega los 3 colores con mas apariciones en las paletas de un usuario.
-    //     $result = $colorRepository->findTopColorsByPalettesAndUsername($username);
-
-    //     // Formateo: Una lista de 3 colores.
-    //     $topColors = [];
-    //     foreach ($result as $row){
-    //         $topColors[] = [
-    //             'id' => $color->getId(),
-    //             'category' => $color->getCategory(),
-    //             'commune' => $color->getCommune(),
-    //             'season' => $color->getSeason(),
-    //             'colorName' => $color->getColorName(),
-    //             'NcsNuance' => $color->getNcsNuance(),
-    //             'NcsHue' => $color->getNcsHue(),
-    //             'MunsellPage' => $color->getMunsellPage(),
-    //             'MunsellHue' => $color->getMunsellHue(),
-    //             'MunsellValue' => $color->getMunsellValue(),
-    //             'MunsellChroma' => $color->getMunsellChroma(),
-    //             'MunsellName' => $color->getMunsellName(),
-    //             'L*' => $color->getCielabL(),
-    //             'A*' => $color->getCielabA(),
-    //             'B*' => $color->getCielabB(),
-    //             'R' => $color->getRgbR(),
-    //             'G' => $color->getRgbG(),
-    //             'B' => $color->getRgbB(),
-    //             'C' => $color->getCmykC(),
-    //             'M' => $color->getCmykM(),
-    //             'Y' => $color->getCmykY(),
-    //             'K' => $color->getCmykK(),
-    //             'Ceresita' => $color->getCeresitaName(),
-    //         ];
-    //     }
-
-    //     return new JsonResponse(['topColors' => $topColors], Response::HTTP_OK);
-    // }
 }

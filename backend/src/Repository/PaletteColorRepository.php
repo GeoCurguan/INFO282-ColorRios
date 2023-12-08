@@ -2,27 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\Palette;
+use App\Entity\PaletteColor;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Palette>
+ * @extends ServiceEntityRepository<PaletteColor>
  *
- * @method Palette|null find($id, $lockMode = null, $lockVersion = null)
- * @method Palette|null findOneBy(array $criteria, array $orderBy = null)
- * @method Palette[]    findAll()
- * @method Palette[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method PaletteColor|null find($id, $lockMode = null, $lockVersion = null)
+ * @method PaletteColor|null findOneBy(array $criteria, array $orderBy = null)
+ * @method PaletteColor[]    findAll()
+ * @method PaletteColor[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class PaletteRepository extends ServiceEntityRepository
+class PaletteColorRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Palette::class);
+        parent::__construct($registry, PaletteColor::class);
     }
 
 //    /**
-//     * @return Palette[] Returns an array of Palette objects
+//     * @return PaletteColor[] Returns an array of PaletteColor objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class PaletteRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Palette
+//    public function findOneBySomeField($value): ?PaletteColor
 //    {
 //        return $this->createQueryBuilder('p')
 //            ->andWhere('p.exampleField = :val')

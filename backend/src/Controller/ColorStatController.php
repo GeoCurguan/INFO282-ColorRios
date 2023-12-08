@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\ColorStat;
-use App\Entity\Color;
 use App\Repository\ColorRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -32,9 +31,12 @@ class ColorStatController extends AbstractController
         $client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
 
         //Acceder a la variable de entorno y decodificar el JSON
+        /*
         $googleAuthConfig = json_decode($_ENV['GOOGLE_AUTH_CONFIG'] ?? '{}', true);
 
         $client->setAuthConfig($googleAuthConfig);
+        */
+        $client->setAuthConfig(__DIR__ . '/credentials.json'); #Pasar carga de variable a .env
         $service = new Google_Service_Sheets($client);
         $spreadsheetId = "1n2IdxzwSSO8mXaeZI8p7j2ZFZXObtBD_NPjjnUls6yU";
 
@@ -53,7 +55,9 @@ class ColorStatController extends AbstractController
             //Sólo insertamos datos con la data requerida
             if (count($value) === 47) {
                 $rowID = $value[0] ? $value[0] : null;
-                if ($rowID === null) {
+
+                $color = $colorRepository->findOneBy(['rowID' => $rowID]);
+                if ($color === null && $rowID !== null) {
                     return $this->json(['error' => 'ID de fila no válido.'], Response::HTTP_BAD_REQUEST);
                 }
 
@@ -93,8 +97,6 @@ class ColorStatController extends AbstractController
                         return $this->json(['error' => 'Error al crear el objeto DateTime.'], Response::HTTP_INTERNAL_SERVER_ERROR);
                     }
 
-                    $color = $this->colorRepository->findOneBy(['rowID' => $rowID]);
-
                     if (!$color) {
                         return $this->json(['error' => 'Color no encontrado.'], Response::HTTP_NOT_FOUND);
                     }
@@ -118,7 +120,14 @@ class ColorStatController extends AbstractController
 
     public function getColorDates(VisitCounter $visitCounter): JsonResponse
     {
-        //Falta validación role_admin!!11!!!1
+        //Verificar si el usuario tiene el rol necesario (ROLE_ADMIN)
+        $security = $this->container->get('security.authorization_checker');
+
+        if (!$security->isGranted('ROLE_ADMIN')) {
+            //Si no tiene el rol necesario, se le deniega el acceso
+            return new JsonResponse(['message' => 'Acceso denegado'], Response::HTTP_FORBIDDEN);
+        }
+
         $colorRepository = $this->entityManager->getRepository(ColorStat::class);
         $colores = $colorRepository->findAll();
 
