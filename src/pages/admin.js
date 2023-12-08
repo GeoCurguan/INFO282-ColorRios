@@ -42,6 +42,7 @@ const Admin = ({ data }) => {
     const [users, setUsers] = useState([]);
     const [colors, setColors] = useState([]);
     const [dates, setDates] = useState([]);
+    const [visits, setVisits] = useState([]);
 
     const fetchUsers = async () => {
         try {
@@ -124,6 +125,36 @@ const Admin = ({ data }) => {
         }
     };
 
+    const fetchVisits = async () => {
+        try {
+            //Obtenemos el token del localStorage
+            const token = localStorage.getItem("token");
+
+            const response = await fetch(
+                "http://127.0.0.1:8000/api/getVisitas",
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+
+            if (!response.ok) {
+                console.log(response);
+                throw new Error("Error al obtener las visitas por página");
+            }
+
+            const visitasPagina = await response.json();
+            setVisits(visitasPagina);
+        } catch (error) {
+            console.error(
+                "Error al obtener las visitas por página: ",
+                error.message
+            );
+            toast.error("Error al obtener las visitas por página");
+        }
+    };
+
     useEffect(() => {
         fetchUsers();
     }, []);
@@ -134,12 +165,17 @@ const Admin = ({ data }) => {
 
     useEffect(() => {
         fetchDates();
+    }, []);
+
+    useEffect(() => {
+        fetchVisits();
     }, []);
 
     const handleRefreshClick = () => {
         fetchUsers();
         fetchColors();
         fetchDates();
+        fetchVisits();
     };
 
     return (
@@ -266,7 +302,10 @@ const Admin = ({ data }) => {
                                 <Usuarios dataUsers={users} />
                             </Col>
                             <Col numColSpan={2}>
-                                <Visitas dataUsers={users} />
+                                <Visitas
+                                    dataUsers={users}
+                                    dataVisits={visits}
+                                />
                             </Col>
                             <Col numColSpan={2}>
                                 <ComunasUsuarios dataUsers={users} />

@@ -32,6 +32,7 @@ class ColorController extends AbstractController
 
         $client->setAuthConfig($googleAuthConfig);
         */
+
         $client->setAuthConfig(__DIR__ . '/credentials.json'); #Pasar carga de variable a .env
         $service = new Google_Service_Sheets($client);
         $spreadsheetId = "1n2IdxzwSSO8mXaeZI8p7j2ZFZXObtBD_NPjjnUls6yU";
@@ -127,7 +128,6 @@ class ColorController extends AbstractController
 
     public function getColors(VisitCounter $visitCounter): JsonResponse
     {
-        //Falta validación role_admin!!11!!!1
         $colorRepository = $this->entityManager->getRepository(Color::class);
         $colores = $colorRepository->findAll();
 

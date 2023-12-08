@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\ColorStat;
-use App\Entity\Color;
 use App\Repository\ColorRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -121,7 +120,14 @@ class ColorStatController extends AbstractController
 
     public function getColorDates(VisitCounter $visitCounter): JsonResponse
     {
-        //Falta validación role_admin!!11!!!1
+        //Verificar si el usuario tiene el rol necesario (ROLE_ADMIN)
+        $security = $this->container->get('security.authorization_checker');
+
+        if (!$security->isGranted('ROLE_ADMIN')) {
+            //Si no tiene el rol necesario, se le deniega el acceso
+            return new JsonResponse(['message' => 'Acceso denegado'], Response::HTTP_FORBIDDEN);
+        }
+
         $colorRepository = $this->entityManager->getRepository(ColorStat::class);
         $colores = $colorRepository->findAll();
 

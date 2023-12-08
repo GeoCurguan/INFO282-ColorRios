@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
     Title,
     Text,
@@ -46,23 +46,52 @@ const getJobCount = (dataUsers) => {
     return Object.entries(jobCount).map(([name, value]) => ({ name, value }));
 };
 
-const sortData = (data) =>
-    data.sort((a, b) => {
+const getVisitsCount = (dataVisits) => {
+    if (dataVisits[0]) {
+        const visits = dataVisits[0].map((visit) => {
+            return { name: visit.page, value: visit.visits };
+        });
+        return visits;
+    }
+    return [];
+};
+
+const sortData = (data) => {
+    if (!data) return [{ name: 0, value: 0 }];
+    return data.sort((a, b) => {
         if (a.value < b.value) return 1;
         if (a.value > b.value) return -1;
         return 0;
     });
+};
 
-const Visitas = ({ dataUsers }) => {
+const Visitas = ({ dataUsers, dataVisits }) => {
+    const [dataVisitState, setDataVisitState] = useState([]);
     const genderData = getGenderCount(dataUsers);
     const jobData = getJobCount(dataUsers);
+
+    useEffect(() => {
+        setDataVisitState(getVisitsCount(dataVisits));
+    }, [dataVisits]);
 
     return (
         <Grid numItems={3} className="gap-3">
             <Card className="mx-auto" decoration="top" decorationColor="purple">
                 <Title>Visitas por página</Title>
                 <Divider></Divider>
-                {/*En construcción, se debería manejar con los logs*/}
+                <Flex className="mt-6">
+                    <Text>
+                        <Bold>Página</Bold>
+                    </Text>
+                    <Text>
+                        <Bold>Nº visitas</Bold>
+                    </Text>
+                </Flex>
+                <BarList
+                    data={sortData(dataVisitState)}
+                    showAnimation={true}
+                    className="mt-4"
+                />
             </Card>
             <Card className="mx-auto" decoration="top" decorationColor="amber">
                 <Title>Género de los usuarios Registrados</Title>
@@ -77,7 +106,7 @@ const Visitas = ({ dataUsers }) => {
                 </Flex>
                 <BarList
                     data={sortData(genderData)}
-                    showAnimation={false}
+                    showAnimation={true}
                     className="mt-4"
                 />
             </Card>
@@ -94,7 +123,7 @@ const Visitas = ({ dataUsers }) => {
                 </Flex>
                 <BarList
                     data={sortData(jobData)}
-                    showAnimation={false}
+                    showAnimation={true}
                     className="mt-4"
                 />
             </Card>

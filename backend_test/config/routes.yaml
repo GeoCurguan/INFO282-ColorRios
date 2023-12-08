@@ -45,3 +45,8 @@ colorstat_getDates:
     path: /api/getColorDates
     controller: App\Controller\ColorStatController::getColorDates
     methods: [GET]
+
+visitas_getVisitas:
+    path: /api/getVisitas
+    controller: App\Controller\VisitasController::getVisitas
+    methods: [GET]
