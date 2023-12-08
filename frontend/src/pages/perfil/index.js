@@ -3,6 +3,8 @@ import { useAuthContext } from "@/context/AuthContext";
 import ProtectedLogged from "@/components/Auth/protected/ProtectedLogged";
 import Nav from "@/components/Navbar/Nav";
 import ProfileCard from "@/components/profile/ProfileCard";
+import TopColors from "@/components/Top/TopColors";
+import TopPalettes from "@/components/Top/TopPalettes"; // ¿Donde colocamos los Colores mas importantes para el usuario? y Paletas del usuario.
 
 const Page = () => {
   // TOOD: PERFIL - RUTA PROTEGIDA
