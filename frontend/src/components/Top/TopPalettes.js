@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const TopPalettes = ({ username }) => {
-  const [Palettes, setPalettes] = useState([]);
+  const [palettes, setPalettes] = useState([]);
   let title = "";
 
   useEffect(() => {
@@ -91,7 +91,7 @@ const TopPalettes = ({ username }) => {
   }
 
   function likePalette(paletteID){
-
+    console.log("Intentaste darle like a la paleta con la ID: " + paletteID);
   }
 
   return (
