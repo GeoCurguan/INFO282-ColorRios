@@ -68,7 +68,7 @@ const COLORINFO = {
   cmykK: "K",
   ceresitaName: "Ceresita",
   hex: 43,
-  colorName: "category", // CAMBIAR ESTO CUANDO ESTE EL NOMBRE
+  colorName: "category", // CAMBIAR ESTO CUANDO ESTE EL NOMBRE DEL COLOR
   colorFilter: "categoryName",
 };
 

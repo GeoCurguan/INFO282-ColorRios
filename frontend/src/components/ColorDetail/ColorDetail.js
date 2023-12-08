@@ -57,11 +57,11 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   }
 
   function sample(color) {
-    if (color[COLORINFO.sampleName]) {
+    if (color[COLORINFO.colorName]) {
       return (
         <div>
           <p className="text-sm font-bold">Muestra:</p>
-          <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.sampleName]}</p>
+          <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.colorName]}</p>
         </div>
       );
     }
@@ -73,7 +73,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
         <div className="my-1/4 mx-auto h-32 w-32">
           <img
             src={color[COLORINFO.image]}
-            alt={color[COLORINFO.sampleName]}
+            alt={color[COLORINFO.colorName]}
             className="object-cover h-32 w-32 translate-y-1/3 rounded-full border-4 border-blue-700 shadow-xl"
             style={{
               border: `4px solid ${colorStyle.color}`,
@@ -218,7 +218,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
         //offsetWidth sirve para medir el espacio disponible (ancho - horizontal)
         const availableWidth = title.offsetWidth;
         //texto que corresponde a objeto de colorinfo
-        const text = color[COLORINFO.objeto];
+        const text = color[COLORINFO.category];
         //calcular el tamaño de la fuente
         const fontSize = availableWidth / text.length;
 

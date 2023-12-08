@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./styles/ColorsPalette.module.css";
 import { COLORINFO } from "@/constants/properties";
-import { colorRGB, rgbToHex } from "@/utils";
+import { rgbToHex } from "@/utils";
 
 import ExportPDF from "../ExportPDF/ExportPDF";
 
@@ -13,7 +13,6 @@ const ColorsPalette = ({ colorToPalette }) => {
   }
 
   useEffect(() => {
-    console.log(colorToPalette);
     if (colorToPalette && !favoriteColors.includes(colorToPalette)) {
       setFavoriteColors((prevColors) => [...prevColors, colorToPalette]);
     }
