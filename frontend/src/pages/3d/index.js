@@ -31,9 +31,8 @@ const Home = ({ colors }) => {
   return (
     <>
       <Nav />
-      <div className="flex min-h-screen flex-wrap justify-center items-center">
+      <div className="flex h-[calc(100vh-80px)] flex-wrap justify-center items-center">
         <Experience setControls={setControls} setCurrentColor={setCurrentColor} colors={colors} />
-        {/* <MouseInfo /> */}
         {/* <ColorDetail color={currentColor} setCurrentColor={setCurrentColor} /> */}
         <CardInfo currentColor={currentColor} />
         <MouseTip handleReset={handleReset} />

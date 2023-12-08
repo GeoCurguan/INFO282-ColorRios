@@ -7,7 +7,8 @@ const MapColors3d = ({ colors, setCurrentColor }) => {
       {colors.map((color, index) => {
         const rgb = [color[COLORINFO.rgbR], color[COLORINFO.rgbG], color[COLORINFO.rgbB]];
         console.log(color);
-        if (rgb[0] === "" || rgb[1] === "" || rgb[2] === "") return null;
+        if (rgb[0] === "" || rgb[0] === null || rgb[1] === "" || rgb[1] === null || rgb[2] === "" || rgb[2] === null)
+          return null;
         if (color[COLORINFO.cielabA] === "" || color[COLORINFO.cielabB] === "" || color[COLORINFO.cielabL] === "")
           return null;
 

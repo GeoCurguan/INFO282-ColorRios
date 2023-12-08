@@ -18,7 +18,7 @@ const Experience = ({ setControls, setCurrentColor, colors }) => {
     <Canvas
       camera={{ position: initialPosition, fov: 50 }}
       gl={{ antialias: true, toneMapping: THREE.NoToneMapping }}
-      style={{ background: "#f9f9fe", height: "100vh" }}
+      style={{ background: "#f9f9fe" }}
     >
       <PersonalOrbitControls setControls={setControls} />
       {/* Puntos de Colores */}
