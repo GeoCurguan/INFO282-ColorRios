@@ -36,9 +36,10 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify(messageBody),
     });
-    console.log("Response", messageBody);
+    console.log("Response", response);
     if (response.ok) {
       const data = await response.json();
+      console.log("Data", data);
       res.status(201).json(data);
     }
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
 import { regionesChile } from "@/constants/regionesChile";
 import { toast } from "sonner";
@@ -265,26 +266,26 @@ const ChooseImage = ({ setImage }) => {
   const inputRadioOptions = [
     {
       id: "0",
-      name: "color-gray",
-      image: "#6b7280",
-      className: "accent-gray-500",
+      name: "color-yellow",
+      image: "https://i.imgur.com/y7UEL1n.png",
+      className: "accent-yellow-500",
     },
     {
       id: "1",
       name: "color-red",
-      image: "#ef4444",
+      image: "https://i.imgur.com/4NkszxG.png",
       className: "accent-red-500",
     },
     {
       id: "2",
       name: "color-blue",
-      image: "#3b82f6",
+      image: "https://i.imgur.com/1DGOhu7.png",
       className: "accent-blue-500",
     },
     {
       id: "3",
       name: "color-green",
-      image: "#22c55e",
+      image: "https://i.imgur.com/ODgZhKd.png",
       className: "accent-green-500",
     },
   ];
@@ -292,22 +293,25 @@ const ChooseImage = ({ setImage }) => {
     <section>
       {/* input radio */}
       <legend htmlFor="opt-1" className="block text-sm font-medium leading-6 text-gray-900 mb-2">
-        Imagen
+        Imágen
       </legend>
       <div className="flex items-center gap-2">
         {inputRadioOptions.map((option) => (
           <Fragment key={option.id}>
-            <input
-              id={option.id}
-              name="image"
-              type="radio"
-              value={option.id}
-              onChange={(e) => setImage(option.image)}
-              className={`w-full h-8 ${option.className}`}
-            />
-            <label htmlFor={option.id} className="sr-only">
-              {option.name}
-            </label>
+            <div className="w-full items-center justify-center flex flex-col gap-2">
+              <Image className="select-none" src={option.image} alt={option.name} width={40} height={40} />
+              <input
+                id={option.id}
+                name="image"
+                type="radio"
+                value={option.id}
+                onChange={(e) => setImage(option.image)}
+                className={`w-full h-4 ${option.className}`}
+              />
+              <label htmlFor={option.id} className="sr-only">
+                {option.name}
+              </label>
+            </div>
           </Fragment>
         ))}
       </div>
