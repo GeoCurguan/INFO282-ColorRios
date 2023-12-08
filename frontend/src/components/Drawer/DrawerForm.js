@@ -12,25 +12,23 @@ const DrawerForm = ({ colors, filters, setFilters }) => {
   }, []);
   if (!mounted) return null;
 
-  console.log(valuesFilters);
-
   return (
     <form className="flex flex-col items-center justify-center">
       {/* Filtrar por objeto: Todos, Roca, Vegetal ... */}
-      <FilterObjeto filters={filters} setFilters={setFilters} />
+      <FilterObjeto valuesFilters={valuesFilters} filters={filters} setFilters={setFilters} />
       {/* Filtrar por comuna:  */}
       <FilterComuna valuesFilters={valuesFilters} filters={filters} setFilters={setFilters} />
       {/* Filtrar por estación del año:  */}
       <FilterEstacion filters={filters} setFilters={setFilters} />
       {/* Filtrar por color:  */}
-      <FilterColor filters={filters} setFilters={setFilters} />
+      <FilterColor valuesFilters={valuesFilters} filters={filters} setFilters={setFilters} />
     </form>
   );
 };
 
 // Los Filtros de Objeto son fijos
 // - Todos, Roca, Suelo, Planta, Vegetación, Agua, Cielo
-const FilterObjeto = ({ filters, setFilters }) => {
+const FilterObjeto = ({ valuesFilters, filters, setFilters }) => {
   return (
     <>
       <label htmlFor="objeto" className="text-white">
@@ -38,7 +36,7 @@ const FilterObjeto = ({ filters, setFilters }) => {
       </label>
       <select
         id="objeto"
-        className="w-full h-10 bg-gray-900/50 text-white"
+        className="w-full h-10 bg-gray-900/50 text-white capitalize"
         name="objeto"
         onChange={(e) => {
           setFilters({ ...filters, [e.target.name]: e.target.value });
@@ -46,12 +44,11 @@ const FilterObjeto = ({ filters, setFilters }) => {
         value={filters.objeto}
       >
         <option value="todos">Todos</option>
-        <option value="roca">Roca</option>
-        <option value="suelo">Suelo</option>
-        <option value="planta">Planta</option>
-        <option value="vegetal">Vegetación</option>
-        <option value="agua">Agua</option>
-        <option value="cielo">Cielo</option>
+        {valuesFilters.objetos.map((objeto) => (
+          <option className="capitalize" key={objeto} value={objeto}>
+            {objeto}
+          </option>
+        ))}
       </select>
     </>
   );
@@ -66,7 +63,7 @@ const FilterComuna = ({ valuesFilters, filters, setFilters }) => {
       </label>
       <select
         id="comuna"
-        className="w-full h-10 bg-gray-900/50 text-white"
+        className="w-full h-10 bg-gray-900/50 text-white capitalize"
         name="comuna"
         onChange={(e) => {
           setFilters({ ...filters, [e.target.name]: e.target.value });
@@ -114,7 +111,7 @@ const FilterEstacion = ({ filters, setFilters }) => {
 // Los filtros por color son fijos
 // constants/colors.js
 
-const FilterColor = ({ filters, setFilters }) => {
+const FilterColor = ({ valuesFilters, filters, setFilters }) => {
   return (
     <>
       <label htmlFor="color" className="text-white mt-4">
@@ -122,7 +119,7 @@ const FilterColor = ({ filters, setFilters }) => {
       </label>
       <select
         id="color"
-        className="w-full h-10 bg-gray-900/50 text-white"
+        className="w-full h-10 bg-gray-900/50 text-white capitalize"
         name="color"
         onChange={(e) => {
           setFilters({ ...filters, [e.target.name]: e.target.value });
@@ -130,7 +127,7 @@ const FilterColor = ({ filters, setFilters }) => {
         value={filters.color}
       >
         <option value="todos">Todos</option>
-        {colors.map((color) => (
+        {valuesFilters.colores.map((color) => (
           <option className="capitalize" key={color} value={color}>
             {color}
           </option>

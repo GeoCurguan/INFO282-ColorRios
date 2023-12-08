@@ -11,7 +11,7 @@ import ColorDetail from "@/components/ColorDetail/ColorDetail";
 import Nav from "@/components/Navbar/Nav";
 
 // Constants
-import { RGB } from "@/constants/properties";
+import { COLORINFO } from "@/constants/properties";
 
 export async function getServerSideProps() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_IP}/api/getColors`);
@@ -27,15 +27,17 @@ export async function getServerSideProps() {
 
 const colorsLengthRGBDefined = (colors) => {
   // Retorna el largo de los colores que tengan definido un RGB
-  const lengthColors = colors.filter((color) => color[RGB.R] && color[RGB.G] && color[RGB.B]);
+  const lengthColors = colors.filter(
+    (color) => color[COLORINFO.rgbR] && color[COLORINFO.rgbG] && color[COLORINFO.rgbB]
+  );
   return lengthColors.length;
 };
 
 export default function Home({ colors }) {
   const { classNameObject, openFilters, toggleFilters, widthColors, detailTransition, currentColor, setCurrentColor } =
     useSideBar();
-  // const { filters, filterColors, setFilters } = useFilters();
-  // const filteredColors = filterColors(colors);
+  const { filters, filterColors, setFilters } = useFilters();
+  const filteredColors = filterColors(colors);
   const [colorToPalette, setColorToPalette] = useState(null);
 
   return (
@@ -47,24 +49,24 @@ export default function Home({ colors }) {
           <div
             className={`flex ${classNameObject.filtersDrawer.detailTransition} top-0 right-0 h-128 transition ease-in-out delay-150 `}
           >
-            {/* <Drawer
+            <Drawer
               colors={colors}
               openFilters={openFilters}
               toggleFilters={toggleFilters}
               filters={filters}
               setFilters={setFilters}
-            /> */}
+            />
           </div>
           <div
             className={`flex flex-wrap justify-center ${widthColors} items-center transition-all content-start `}
             data-testid="colors"
           >
-            {/* <Header
+            <Header
               filteredColorsLength={colorsLengthRGBDefined(filteredColors)}
               colorsLength={colorsLengthRGBDefined(colors)}
               colorToPalette={colorToPalette}
-            /> */}
-            <Colors colors={colors} setCurrentColor={setCurrentColor} />
+            />
+            <Colors colors={filteredColors} setCurrentColor={setCurrentColor} />
           </div>
 
           {/* -- ColorDetail -- */}

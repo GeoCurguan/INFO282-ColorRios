@@ -1,4 +1,4 @@
-import { OBJETO, COMUNA, COLORINFO, ESTACION } from "../constants/properties";
+import { COLORINFO } from "../constants/properties";
 import { useState } from "react";
 import { colorsNCS } from "@/constants/colors";
 
@@ -37,11 +37,15 @@ const useFilters = () => {
 
   const filterColors = (colors) => {
     return colors.filter((color) => {
+      const colorCategory = color[COLORINFO.category];
+      const colorComuna = color[COLORINFO.comuna];
+      const colorSeason = color[COLORINFO.season];
+      const colorFilter = color[COLORINFO.colorFilter];
       if (
-        (filters.objeto === "todos" || color[OBJETO].toLowerCase().includes(filters.objeto)) &&
-        (filters.comuna === "todos" || color[COMUNA].toLowerCase().includes(filters.comuna)) &&
-        (filters.estacion === "todos" || color[ESTACION].toLowerCase().includes(filters.estacion)) &&
-        (filters.color === "todos" || ncsToColor(color[COLORINFO.ncsNuance], color[COLORINFO.ncsHue]) === filters.color)
+        (filters.objeto === "todos" || (colorCategory && colorCategory.toLowerCase() === filters.objeto)) &&
+        (filters.comuna === "todos" || (colorComuna && colorComuna.toLowerCase() === filters.comuna)) &&
+        (filters.estacion === "todos" || (colorSeason && colorSeason.toLowerCase() === filters.estacion)) &&
+        (filters.color === "todos" || (colorFilter && colorFilter.toLowerCase() === filters.color))
       ) {
         return true;
       }

@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect, useContext } from "react";
-import { useLocalStorage } from "@/hooks/useLocalStorage";
+import { useLocalStorage, useLocalStorageJSON } from "@/hooks/useLocalStorage";
 import { decodeToken } from "@/utils/auth";
 import { useRouter } from "next/router";
 
@@ -7,7 +7,7 @@ const MyAuthContext = createContext();
 
 export const AuthContext = ({ children }) => {
   const router = useRouter();
-  const [user, setUser] = useLocalStorage("user-data", {});
+  const [user, setUser] = useLocalStorageJSON("user-data", {});
   const [auth, setAuth] = useLocalStorage("token", "");
   const [mounted, setMounted] = useState(false);
   const isAdmin = user?.roles?.includes("ROLE_ADMIN") || false;
@@ -19,10 +19,9 @@ export const AuthContext = ({ children }) => {
   const handleLogin = async (token) => {
     setAuth(token);
     localStorage.setItem("token", token);
-    console.log(token);
-    console.log(auth);
     // Obtener los datos del usuario desde el servidor o bien desencriptar acá
     const decodedToken = decodeToken(token);
+    console.log(decodedToken);
     setUser(decodedToken);
   };
 

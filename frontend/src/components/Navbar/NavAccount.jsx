@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 const NavAccount = ({ isActive, user, handleLogout }) => {
   const [menu, setMenu] = useState(false);
   const activeClassDark = "bg-[#434343] text-[#D9D9D9] rounded-full";
-  console.log(user?.username);
   return (
     <ul
       className={`justify-center ${
