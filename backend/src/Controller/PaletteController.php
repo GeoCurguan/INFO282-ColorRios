@@ -139,9 +139,24 @@ class PaletteController extends AbstractController
                 'K' => $row['cmykK'],
                 'ceresita' => $row['ceresitaName'],
             ];
-            $palettesArray[$paletteId][] = $color;  // Guarda este color dentro de su paleta correspondiente.
+
+            // Verificar si la paleta ya existe en el array de paletas
+            $existingPalette = array_filter($palettesArray, function ($palette) use ($paletteId) {
+                return $palette['id'] == $paletteId;
+            });
+
+            // Si la paleta no existe, agregarla al array de paletas
+            if (empty($existingPalette)) {
+                $palettesArray[] = [
+                    'id' => $paletteId,
+                    'colors' => $color
+                ];
+            } else {    // Si la paleta existe, añade el color a su array de colores.
+                $existingPaletteKey = key($existingPalette);
+                $palettesArray[$existingPaletteKey]['colors'][] = $color;
+            }
         }
-        $palettesArray = array_values($palettesArray);  // Se supone que esto elimina espacios vacios dentro de la lista.
+        // Estructura final: Una lista de paletas. Cada paleta tiene id y colors. Colors es una lista de colores. Cada color tiene todo los datos.
         return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
     }
 }

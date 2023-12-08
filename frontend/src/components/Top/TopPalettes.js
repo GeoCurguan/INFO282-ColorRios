@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const TopPalettes = ({ username }) => {
   const [Palettes, setPalettes] = useState([]);
+  let title = "";
 
   useEffect(() => {
 
@@ -38,11 +39,11 @@ const TopPalettes = ({ username }) => {
     };
 
     if (username) { // Llama a una funcion dependiendo si existe usuario o no.
-      const title = "Tus Paletas"
-      fetchDataUsername();
+      title = "Tus Paletas"
+      fetchDataUsername(); // Busca la Data con un usuario especifico.
     } else {
-      const title = "Paletas Populares"
-      fetchData();
+      title = "Paletas Populares"
+      fetchData();  // Busca la Data general, sin usuario.
     }
 
   }, [username]); //Hook. Cuando estas variables cambien, se vuelve a ejecutar el useEffect.
@@ -56,8 +57,9 @@ const TopPalettes = ({ username }) => {
           <div key={index} class="w-full p-4">
             <h1>{`Paleta Numero ${index + 1}`}</h1>
             <div class="flex items-center space-x-1">
-              {showColors(palette)}
+              {showColors(palette["colors"])}
             </div>
+            <button class="mt-2 h-10 w-24 rounded-xl font-bold text-white bg-pink-400" onClick={() => likePalette(palette["id"])}> Me Gusta </button>
           </div>
         ))}
       </div>
@@ -69,7 +71,9 @@ const TopPalettes = ({ username }) => {
       // Si el array colors tiene solo un color
       const divColor = `rgb(${colors[0]["R"]}, ${colors[0]["G"]}, ${colors[0]["B"]})`;
       return (
-        <div style={{ backgroundColor: divColor }} className="h-14 w-full rounded"></div>
+        <>
+        <div style={{ backgroundColor: divColor }} class="h-14 w-full rounded"></div>
+        </>
       );
     } else {
       // Si el array colors tiene más de un color
@@ -79,11 +83,15 @@ const TopPalettes = ({ username }) => {
           <div
             key={index}
             style={{ backgroundColor: divColor }}
-            className={`h-14 w-full ${index === 0 ? 'rounded-l' : ''} ${index === colors.length - 1 ? 'rounded-r' : ''}`}
+            class={`h-14 w-full ${index === 0 ? 'rounded-l' : ''} ${index === colors.length - 1 ? 'rounded-r' : ''}`}
           ></div>
         );
       });
     }
+  }
+
+  function likePalette(paletteID){
+
   }
 
   return (
