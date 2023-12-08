@@ -170,7 +170,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(true);
 
-  const styleBG = colorRGB(color?.[RGB.R], color?.[RGB.G], color?.[RGB.B]);
+  const styleBG = colorRGB(color?.[COLORINFO.rgbR], color?.[COLORINFO.rgbG], color?.[COLORINFO.rgbB]);
 
   const getMaxColorValue = (R, G, B) => {
     return Math.max(R, G, B);
@@ -179,7 +179,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   // Asigna el color de fondo y de texto segun el color de la carta cromatica
   let BGColor = "rgb(235, 235, 235)"; // Fondo gris claro
   let FontColor = "rgb(0, 0, 0)"; // Texto negro
-  if (getMaxColorValue(color?.[RGB.R], color?.[RGB.G], color?.[RGB.B]) > 230) {
+  if (getMaxColorValue(color?.[COLORINFO.rgbR], color?.[COLORINFO.rgbG], color?.[COLORINFO.rgbB]) > 230) {
     // En caso de ser muy claro
     BGColor = "rgb(35, 35, 35)"; // Fondo gris oscuro
     FontColor = "rgb(255, 255, 255)"; // Texto blanco

@@ -4,12 +4,11 @@ import { useEffect, useRef, useState } from "react";
 function useLocalStorage(key, defaultValue) {
   const isMounted = useRef(false);
   const [value, setValue] = useState(defaultValue);
-
   useEffect(() => {
     try {
       const item = window.localStorage.getItem(key);
       if (item) {
-        setValue(JSON.parse(item));
+        setValue(item);
       }
     } catch (e) {
       console.log(e);
@@ -59,4 +58,4 @@ function useLocalStorageJSON(key, defaultValue) {
   return [value, setValue];
 }
 
-export { useLocalStorageJSON, useLocalStorage };
+export { useLocalStorage, useLocalStorageJSON };
