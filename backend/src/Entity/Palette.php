@@ -24,7 +24,7 @@ class Palette
 
     #[ORM\ManyToOne(targetEntity: User::class)]
     #[ORM\JoinColumn(name: "nombre_propietario", referencedColumnName: "username")]
-    private $propietario;
+    //private ?User $propietario = null;
 
     #[ORM\OneToMany(mappedBy: 'palette', targetEntity: PaletteColor::class)]
     private Collection $paletteColors;
@@ -37,6 +37,13 @@ class Palette
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function setId(int $id): static
+    {
+        $this->id = $id;
+
+        return $this;
     }
 
     public function getNombrePropietario(): ?string
@@ -63,18 +70,19 @@ class Palette
         return $this;
     }
 
+    /*
     public function getPropietario(): ?User
     {
         return $this->propietario;
     }
 
-    public function setPropietario(?User $propietario): self
+    public function setPropietario(?User $propietario): static
     {
         $this->propietario = $propietario;
 
         return $this;
     }
-
+*/
     /**
      * @return Collection<int, PaletteColor>
      */

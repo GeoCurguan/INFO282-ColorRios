@@ -50,3 +50,13 @@ visitas_getVisitas:
     path: /api/getVisitas
     controller: App\Controller\VisitasController::getVisitas
     methods: [GET]
+
+palettes_insertPalette:
+    path: /api/insert_palette
+    controller: App\Controller\PaletteController::insertPalette
+    methods: [POST]
+
+palettes_getPalettes:
+    path: /api/getPalettes
+    controller: App\Controller\PaletteController::getPalettes
+    methods: [GET]
