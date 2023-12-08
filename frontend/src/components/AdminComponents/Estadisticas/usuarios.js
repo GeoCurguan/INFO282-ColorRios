@@ -1,77 +1,46 @@
 import React from "react";
-import {
-    Card,
-    Metric,
-    Text,
-    Flex,
-    BadgeDelta,
-    Grid,
-    Title,
-} from "@tremor/react";
-
-const colors = {
-    increase: "emerald",
-    moderateIncrease: "emerald",
-    unchanged: "orange",
-    moderateDecrease: "rose",
-    decrease: "rose",
-};
-
-const categories = [
-    {
-        title: "Usuarios Registrados",
-        metric: "77",
-        metricPrev: "1.456",
-        delta: "34.3%",
-        deltaType: "moderateIncrease",
-    },
-    {
-        title: "Paletas Guardadas",
-        metric: "45",
-        metricPrev: "859",
-        delta: "-10.9%",
-        deltaType: "moderateDecrease",
-    },
-];
+import { Card, Metric, Text, Flex, Grid, Title } from "@tremor/react";
 
 const Usuarios = ({ dataUsers }) => {
-    const userCount = dataUsers ? dataUsers.length : 0;
+    const usersInLosRios = dataUsers
+        ? dataUsers.filter((user) => user.region === "Los Ríos")
+        : [];
+    const userCount = usersInLosRios.length;
+
+    const userTotal = dataUsers ? dataUsers.length : 0;
 
     return (
         <Grid numItems={2} className="gap-3">
-            {categories.map((item) => (
-                <Card key={item.title}>
-                    <Title className="dark:text-dark-tremor-content-emphasis">
-                        {item.title}{" "}
-                    </Title>
-                    <Flex
-                        justifyContent="start"
-                        alignItems="baseline"
-                        className="truncate space-x-3"
-                    >
-                        <Metric>
-                            {item.title === "Usuarios Registrados"
-                                ? userCount
-                                : item.metric}
-                        </Metric>
-                        <Text className="truncate">
-                            de un total de {item.metricPrev}
-                        </Text>
-                    </Flex>
-                    <Flex justifyContent="start" className="space-x-2 mt-4">
-                        <BadgeDelta deltaType={item.deltaType} />
-                        <Flex
-                            justifyContent="start"
-                            className="space-x-1 truncate"
-                        >
-                            <Text color={colors[item.deltaType]}>
-                                {item.delta}
-                            </Text>
-                            <Text className="truncate">que el mes pasado</Text>
-                        </Flex>
-                    </Flex>
-                </Card>
-            ))}
+            <Card decoration="top" decorationColor="fuchsia">
+                <Title className="dark:text-dark-tremor-content-emphasis">
+                    Usuarios Registrados de la Región de Los Ríos
+                </Title>
+                <Flex
+                    justifyContent="start"
+                    alignItems="baseline"
+                    className="truncate space-x-3"
+                >
+                    <Metric>{userCount}</Metric>
+                    <Text className="truncate">
+                        de un total de {userTotal} usuarios
+                    </Text>
+                </Flex>
+            </Card>
+            <Card decoration="top" decorationColor="fuchsia">
+                <Title className="dark:text-dark-tremor-content-emphasis">
+                    Paletas Guardadas por usuarios de la Región de Los Ríos
+                </Title>
+                <Flex
+                    justifyContent="start"
+                    alignItems="baseline"
+                    className="truncate space-x-3"
+                >
+                    <Metric>{userCount}</Metric>
+                    <Text className="truncate">
+                        de un total de {userTotal} paletas
+                    </Text>
+                </Flex>
+            </Card>
         </Grid>
     );
 };

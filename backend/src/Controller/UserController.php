@@ -118,13 +118,6 @@ class UserController extends AbstractController
         return new JsonResponse(['token' => $token, 'message' => 'Inicio de sesión exitoso'], Response::HTTP_OK);
     }
 
-    public function testJWT(): JsonResponse
-    {
-        return $this->json([
-            'message' => '¡Esta es una ruta protegida!'
-        ]);
-    }
-
     public function getUsers(): JsonResponse
     {
         //Verificar si el usuario tiene el rol necesario (ROLE_ADMIN)

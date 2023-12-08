@@ -3,6 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Palette;
+use App\Entity\User;
+use App\Repository\PaletteRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -12,49 +15,76 @@ use Symfony\Component\HttpFoundation\Response;
 class PaletteController extends AbstractController
 {
     private $entityManager;
+    private UserRepository $userRepository;
+    private PaletteRepository $paletteRepository;
 
-    public function __construct(EntityManagerInterface $entityManager)
+    public function __construct(EntityManagerInterface $entityManager, UserRepository $userRepository, PaletteRepository $paletteRepository)
     {
         $this->entityManager = $entityManager;
+        $this->userRepository = $userRepository;
+        $this->paletteRepository = $paletteRepository;
     }
 
     public function insertPalette(Request $request): Response
     {
-        // Assuming you have the necessary data in the request, adapt as needed
         $data = json_decode($request->getContent(), true);
 
+        if (!isset($data['nombre_propietario']) || !isset($data['descargado'])) {
+            return new JsonResponse(['error' => 'Faltan datos requeridos.'], Response::HTTP_BAD_REQUEST);
+        }
+
+        $nombrePropietario = $data['nombre_propietario'];
+        $descargado = $data['descargado'];
+
+        $userRepository = $this->entityManager->getRepository(User::class);
+
+        // Buscar el propietario en los usuarios
+        $propietario = $userRepository->findOneBy(['username' => $nombrePropietario]);
+
+        if (!$propietario) {
+            return new JsonResponse(['error' => 'Usuario no encontrado.'], Response::HTTP_NOT_FOUND);
+        }
+
+        // Verifica si $propietario realmente tiene el método getUsername
+        if (!method_exists($propietario, 'getUsername')) {
+            return new JsonResponse(['error' => 'El objeto de usuario no tiene el método getUsername.'], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+
         $palette = new Palette();
-        $palette->setUserId($data['id_usuario']);
-        $palette->setColorCount($data['cantidad_colores']);
-        $palette->setDownloaded($data['descargado']);
+        $palette->setNombrePropietario($propietario->getUsername());
+        $palette->setDescargado($descargado);
+        //$palette->setPropietario($propietario);
 
-        $this->entityManager->persist($palette);
-        $this->entityManager->flush();
+        try {
+            $this->entityManager->persist($palette);
+            $this->entityManager->flush();
+        } catch (\Exception $e) {
+            return new JsonResponse(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
 
-        return new JsonResponse(['message' => 'Palette inserted successfully'], Response::HTTP_OK);
+
+        return new JsonResponse(['message' => 'Paleta creada con éxito.'], Response::HTTP_CREATED);
     }
 
-    public function getPalettes(): JsonResponse
+
+
+    public function getPalettes(): Response
     {
-        $paletteRepository = $this->entityManager->getRepository(Palette::class);
-        $palettes = $paletteRepository->findAll();
+        $palettes = $this->paletteRepository->findAll();
 
         $palettesArray = [];
-
         foreach ($palettes as $palette) {
             $palettesArray[] = [
                 'id' => $palette->getId(),
-                'id_usuario' => $palette->getUserId(),
-                'cantidad_colores' => $palette->getColorCount(),
-                'descargado' => $palette->getDownloaded(),
+                'nombre_propietario' => $palette->getNombrePropietario(),
+                'descargado' => $palette->isDescargado(),
             ];
         }
 
         return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
     }
 
-    // Add other methods as needed for specific functionalities related to the Palette entity
-
+    /*
     public function getTopPalettes(): JsonResponse
     {
         // Busca el repositorio
@@ -97,10 +127,6 @@ class PaletteController extends AbstractController
         $palettesArray = array_values($palettesArray);  // Se supone que esto elimina espacios vacios dentro de la lista.
         return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
     }
-
-
-
-
 
     public function getPalettesByUsername(string $username): JsonResponse
     {
@@ -159,4 +185,5 @@ class PaletteController extends AbstractController
         // Estructura final: Una lista de paletas. Cada paleta tiene id y colors. Colors es una lista de colores. Cada color tiene todo los datos.
         return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
     }
+    */
 }

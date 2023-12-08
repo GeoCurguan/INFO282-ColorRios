@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Color;
 use App\Entity\ColorStat;
 use App\Repository\ColorRepository;
 use Doctrine\ORM\EntityManagerInterface;

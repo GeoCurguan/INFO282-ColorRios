@@ -55,6 +55,7 @@ const GraficoTorta = ({ dataColors }) => {
         Blanco: "zinc",
         Negro: "neutral",
         Café: "stone",
+        Celeste: "cyan",
     };
 
     const coloresGrafico = colores.map((item) => ({

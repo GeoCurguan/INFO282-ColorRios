@@ -11,10 +11,10 @@ import {
 } from "@tremor/react";
 
 const getGenderCount = (dataUsers) => {
-    const genderCount = { Femenino: 0, Masculino: 0, "Sin especificar": 0 };
+    const genderCount = { Femenino: 0, Masculino: 0, Otro: 0 };
 
     dataUsers.forEach((user) => {
-        const gender = user.gender || "Sin especificar";
+        const gender = user.gender || "Otro";
         genderCount[gender] += 1;
     });
 
