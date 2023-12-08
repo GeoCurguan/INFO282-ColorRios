@@ -1,4 +1,5 @@
 import ResolveGenderIcon from "../ResolveGenderIcon";
+import Image from "next/image";
 
 const ProfileCard = ({ user }) => {
   return (
@@ -17,11 +18,11 @@ const ProfileHeader = ({ user }) => {
     <section className="mb-4 max-w-full w-full flex flex-row items-center pt-4 px-4 justify-between">
       {/* Icon/Image */}
       <div className="w-1/3">
-        <div className="w-16 h-16 rounded-full bg-gradient-to-t from-red-500 to-yellow-500 border-2 border-[#D9D9D9]"></div>
+        <Image src={user.image} alt={username} width={100} height={100} className="rounded-full" />
       </div>
       {/* Username && Gender */}
       <div className="w-2/3 px-4 max-w-full flex-col flex justify-center items-center">
-        <div className="flex flex-row justify-center items-center gap-2">
+        <div className="flex flex-row justify-start items-center gap-2">
           <h1
             title={username}
             className="max-w-[80%] text-2xl font-bold text-center overflow-hidden overflow-ellipsis whitespace-nowrap"

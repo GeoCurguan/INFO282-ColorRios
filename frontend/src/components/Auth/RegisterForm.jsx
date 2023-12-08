@@ -266,27 +266,33 @@ const ChooseImage = ({ setImage }) => {
   const inputRadioOptions = [
     {
       id: "0",
-      name: "color-yellow",
-      image: "https://i.imgur.com/y7UEL1n.png",
+      name: "pincel-y-paleta",
+      image: "https://i.imgur.com/wun5fsI.png",
       className: "accent-yellow-500",
     },
     {
       id: "1",
-      name: "color-red",
-      image: "https://i.imgur.com/4NkszxG.png",
+      name: "brocha-y-rodillo",
+      image: "https://i.imgur.com/mXeGq6J.png",
       className: "accent-red-500",
     },
     {
       id: "2",
-      name: "color-blue",
-      image: "https://i.imgur.com/1DGOhu7.png",
+      name: "caballete",
+      image: "https://i.imgur.com/ExeatB8.png",
       className: "accent-blue-500",
     },
     {
       id: "3",
-      name: "color-green",
-      image: "https://i.imgur.com/ODgZhKd.png",
+      name: "balde-pintura",
+      image: "https://i.imgur.com/5TDGezl.png",
       className: "accent-green-500",
+    },
+    {
+      id: "4",
+      name: "pince-y-lapiz",
+      image: "https://i.imgur.com/fpGnrz4.png",
+      className: "accent-purple-500",
     },
   ];
   return (

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Experience from "@/components/3d/Experience";
-import MouseInfo from "@/components/3d/MouseInfo";
 import CardInfo from "@/components/3d/CardInfo";
 import MouseTip from "@/components/3d/MouseTip";
 import Nav from "@/components/Navbar/Nav";
