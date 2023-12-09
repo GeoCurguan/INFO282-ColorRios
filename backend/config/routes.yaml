@@ -60,3 +60,8 @@ palettes_getPalettes:
     path: /api/getPalettes
     controller: App\Controller\PaletteController::getPalettes
     methods: [GET]
+
+palettes_getPalettesLR:
+    path: /api/getPalettesLR
+    controller: App\Controller\PaletteController::getPalettesLR
+    methods: [GET]

@@ -38,14 +38,13 @@ class PaletteController extends AbstractController
 
         $userRepository = $this->entityManager->getRepository(User::class);
 
-        // Buscar el propietario en los usuarios
         $propietario = $userRepository->findOneBy(['username' => $nombrePropietario]);
 
         if (!$propietario) {
             return new JsonResponse(['error' => 'Usuario no encontrado.'], Response::HTTP_NOT_FOUND);
         }
 
-        // Verifica si $propietario realmente tiene el método getUsername
+        //Verificar si $propietario realmente tiene el método getUsername
         if (!method_exists($propietario, 'getUsername')) {
             return new JsonResponse(['error' => 'El objeto de usuario no tiene el método getUsername.'], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
@@ -55,6 +54,7 @@ class PaletteController extends AbstractController
         $palette->setDescargado($descargado);
         //$palette->setPropietario($propietario);
 
+        //Bloque para depurar
         try {
             $this->entityManager->persist($palette);
             $this->entityManager->flush();
@@ -62,11 +62,8 @@ class PaletteController extends AbstractController
             return new JsonResponse(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
 
-
         return new JsonResponse(['message' => 'Paleta creada con éxito.'], Response::HTTP_CREATED);
     }
-
-
 
     public function getPalettes(): Response
     {
@@ -81,7 +78,30 @@ class PaletteController extends AbstractController
             ];
         }
 
-        return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
+        return new JsonResponse($palettesArray, Response::HTTP_OK);
+    }
+
+    public function getPalettesLR(): Response
+    {
+        //Buscar primero a los usuarios de Los ríos
+        $usersInLosRios = $this->userRepository->findBy(['region' => 'Los Ríos']);
+
+        $palettesArray = [];
+
+        foreach ($usersInLosRios as $user) {
+            //Paletas del usuario
+            $palettes = $this->paletteRepository->findBy(['nombre_propietario' => $user->getUsername()]);
+
+            foreach ($palettes as $palette) {
+                $palettesArray[] = [
+                    'id' => $palette->getId(),
+                    'nombre_propietario' => $palette->getNombrePropietario(),
+                    'descargado' => $palette->isDescargado(),
+                ];
+            }
+        }
+
+        return new JsonResponse($palettesArray, Response::HTTP_OK);
     }
 
     /*

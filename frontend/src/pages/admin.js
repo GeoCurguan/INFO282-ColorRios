@@ -27,22 +27,25 @@ import {
 } from "@tremor/react";
 
 export async function getServerSideProps() {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_IP}/api/colors`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_IP}/api/getColors`);
     const data = await res.json();
-    const values = data.values;
+    // const values = data.values;
 
     return {
         props: {
-            data: values,
+            data: data.colors || [],
         },
     };
 }
 
 const Admin = ({ data }) => {
+    console.log("colores", data[0][0]);
     const [users, setUsers] = useState([]);
     const [colors, setColors] = useState([]);
     const [dates, setDates] = useState([]);
     const [visits, setVisits] = useState([]);
+    const [palettes, setPalettes] = useState([]);
+    const [palettesLR, setPalettesLR] = useState([]);
 
     const fetchUsers = async () => {
         try {
@@ -156,6 +159,68 @@ const Admin = ({ data }) => {
         }
     };
 
+    const fetchPalettes = async () => {
+        try {
+            //Obtenemos el token del localStorage
+            const token = localStorage.getItem("token");
+
+            const response = await fetch(
+                "http://127.0.0.1:8000/api/getPalettes",
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+
+            if (!response.ok) {
+                console.log(response);
+                throw new Error("Error al obtener las paletas de usuarios");
+            }
+
+            const palettesTotales = await response.json();
+            setPalettes(palettesTotales);
+        } catch (error) {
+            console.error(
+                "Error al obtener las paletas de usuariosError al obtener las paletas de usuarios: ",
+                error.message
+            );
+            toast.error(
+                "Error al obtener las paletas de usuariosError al obtener las paletas de usuarios"
+            );
+        }
+    };
+
+    const fetchPalettesLR = async () => {
+        try {
+            //Obtenemos el token del localStorage
+            const token = localStorage.getItem("token");
+
+            const response = await fetch(
+                "http://127.0.0.1:8000/api/getPalettesLR",
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+
+            if (!response.ok) {
+                console.log(response);
+                throw new Error("Error al obtener las paletas de usuarios");
+            }
+
+            const palettesTotalesLR = await response.json();
+            setPalettesLR(palettesTotalesLR);
+        } catch (error) {
+            console.error(
+                "Error al obtener las paletas de usuarios: ",
+                error.message
+            );
+            toast.error("Error al obtener las paletas de usuarios");
+        }
+    };
+
     useEffect(() => {
         fetchUsers();
     }, []);
@@ -170,6 +235,14 @@ const Admin = ({ data }) => {
 
     useEffect(() => {
         fetchVisits();
+    }, []);
+
+    useEffect(() => {
+        fetchPalettes();
+    }, []);
+
+    useEffect(() => {
+        fetchPalettesLR();
     }, []);
 
     const handleRefreshClick = () => {
@@ -177,6 +250,8 @@ const Admin = ({ data }) => {
         fetchColors();
         fetchDates();
         fetchVisits();
+        fetchPalettes();
+        fetchPalettesLR();
     };
 
     return (
@@ -300,7 +375,11 @@ const Admin = ({ data }) => {
                     <TabPanel>
                         <Grid numItems={2} className="gap-3 mt-6">
                             <Col numColSpan={2}>
-                                <Usuarios dataUsers={users} />
+                                <Usuarios
+                                    dataUsers={users}
+                                    dataPalettes={palettes}
+                                    dataPalettesLR={palettesLR}
+                                />
                             </Col>
                             <Col numColSpan={2}>
                                 <Visitas

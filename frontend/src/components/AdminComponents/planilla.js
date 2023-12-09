@@ -24,39 +24,31 @@ const Planilla = ({ data }) => {
     const columns = React.useMemo(
         () => [
             {
-                Header: "Objeto o atmósfera",
-                accessor: "0",
+                Header: "Categoría",
+                accessor: "category",
             },
             {
                 Header: "Comuna",
-                accessor: "1",
+                accessor: "commune",
             },
             {
                 Header: "Estación del año",
-                accessor: "2",
+                accessor: "season",
             },
             {
-                Header: "nombre común",
-                accessor: "3",
-            },
-            {
-                Header: "Nombre científico",
-                accessor: "4",
-            },
-            {
-                Header: "Imagen CHROMOS",
-                accessor: "5",
+                Header: "Tonalidad",
+                accessor: "categoryName",
             },
             {
                 Header: "NCS",
                 columns: [
                     {
                         Header: "Nuance",
-                        accessor: "6",
+                        accessor: "NcsNuance",
                     },
                     {
                         Header: "Hue",
-                        accessor: "7",
+                        accessor: "NcsHue",
                     },
                 ],
             },
@@ -65,23 +57,23 @@ const Planilla = ({ data }) => {
                 columns: [
                     {
                         Header: "Munsell page",
-                        accessor: "8",
+                        accessor: "MunsellPage",
                     },
                     {
-                        Header: "Hue", // Duplicado
-                        accessor: "9",
+                        Header: "Hue", //Duplicado
+                        accessor: "MunsellHue",
                     },
                     {
                         Header: "Value",
-                        accessor: "10",
+                        accessor: "MunsellValue",
                     },
                     {
                         Header: "Chroma",
-                        accessor: "11",
+                        accessor: "MunsellChroma",
                     },
                     {
                         Header: "Nombre código Munsell",
-                        accessor: "12",
+                        accessor: "MunsellName",
                     },
                 ],
             },
@@ -90,24 +82,15 @@ const Planilla = ({ data }) => {
                 columns: [
                     {
                         Header: "L*",
-                        accessor: "13",
+                        accessor: "L*",
                     },
                     {
                         Header: "a*",
-                        accessor: "14",
+                        accessor: "A*",
                     },
                     {
                         Header: "b*",
-                        accessor: "15",
-                    },
-                ],
-            },
-            {
-                Header: "PANTONE",
-                columns: [
-                    {
-                        Header: "Código Pantone",
-                        accessor: "16",
+                        accessor: "B*",
                     },
                 ],
             },
@@ -116,15 +99,15 @@ const Planilla = ({ data }) => {
                 columns: [
                     {
                         Header: "R",
-                        accessor: "17",
+                        accessor: "R",
                     },
                     {
                         Header: "G",
-                        accessor: "18",
+                        accessor: "G",
                     },
                     {
                         Header: "B",
-                        accessor: "19",
+                        accessor: "B",
                     },
                 ],
             },
@@ -133,25 +116,25 @@ const Planilla = ({ data }) => {
                 columns: [
                     {
                         Header: "C",
-                        accessor: "20",
+                        accessor: "C",
                     },
                     {
                         Header: "M",
-                        accessor: "21",
+                        accessor: "M",
                     },
                     {
                         Header: "Y",
-                        accessor: "22",
+                        accessor: "Y",
                     },
                     {
                         Header: "K",
-                        accessor: "23",
+                        accessor: "K",
                     },
                 ],
             },
             {
                 Header: "Código PINTURA",
-                accessor: "24",
+                accessor: "Ceresita",
             },
         ],
         []
