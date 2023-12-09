@@ -118,6 +118,31 @@ class UserController extends AbstractController
         return new JsonResponse(['token' => $token, 'message' => 'Inicio de sesión exitoso'], Response::HTTP_OK);
     }
 
+    public function getOneUser(int $id): JsonResponse
+    {
+        try{
+            $user = $this->entityManager->getRepository(User::class)->findOneBy(['id' => $id]);
+        }
+        catch(\Exception $e){
+            return new JsonResponse(['message' => 'Usuario no encontrado'], Response::HTTP_NOT_FOUND);
+        }
+
+        if (!$user) {
+            return new JsonResponse(['message' => 'Usuario no encontrado'], Response::HTTP_NOT_FOUND);
+        }
+
+        // Retornar los datos del usuario: username, job, image, gender, region
+        $userInfo = [
+            'username' => $user->getUsername(),
+            'job' => $user->getJob(),
+            'image' => $user->getImage(),
+            'gender' => $user->getGender(),
+            'region' => $user->getRegion(),
+        ];
+
+        return new JsonResponse($userInfo, Response::HTTP_OK);
+    }
+
     public function getUsers(): JsonResponse
     {
         //Verificar si el usuario tiene el rol necesario (ROLE_ADMIN)

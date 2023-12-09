@@ -14,7 +14,6 @@ CREATE TABLE `user` (
 CREATE TABLE `palette` (
   `id` int(11) PRIMARY KEY AUTO_INCREMENT,
   `id_usuario` int(11),
-  `nombre_propietario` varchar(255),
   `cantidad_colores` varchar(255),
   `descargado` bool
 );
@@ -55,12 +54,12 @@ CREATE TABLE `palette_color` (
   `color_id` int(11)
 );
 
-CREATE TABLE `colorstat` (
+CREATE TABLE `color_stat` (
   `id` int(11) PRIMARY KEY AUTO_INCREMENT,
   `id_color` int(11),
   `date` date,
   `clicks` int,
-  `cant_palettes` int,
+  `cant_paletas` int,
   `tracking_id` int(11)
 );
 
@@ -82,6 +81,6 @@ ALTER TABLE `palette_color` ADD FOREIGN KEY (`palette_id`) REFERENCES `palette` 
 
 ALTER TABLE `palette_color` ADD FOREIGN KEY (`color_id`) REFERENCES `color` (`id`);
 
-ALTER TABLE `colorstat` ADD FOREIGN KEY (`id_color`) REFERENCES `color` (`id`);
+ALTER TABLE `color_stat` ADD FOREIGN KEY (`id_color`) REFERENCES `color` (`id`);
 
-ALTER TABLE `colorstat` ADD FOREIGN KEY (`tracking_id`) REFERENCES `tracking` (`id`);
+ALTER TABLE `color_stat` ADD FOREIGN KEY (`tracking_id`) REFERENCES `tracking` (`id`);
