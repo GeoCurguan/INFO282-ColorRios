@@ -9,7 +9,7 @@ const NavAccount = ({ isActive, user, handleLogout }) => {
     <ul
       className={`justify-center ${
         user?.username ? "justify-end" : "w-full"
-      } py-4 px-8 gap-2 md:gap-8 lg:w-1/2 flex items-center lg:justify-evenly`}
+      } px-4 py-4 sm:px-8 gap-2 md:gap-8 lg:w-1/2 flex items-center lg:justify-evenly`}
     >
       <li className={`${user?.username ? "hidden" : ""} lg:block px-4 py-2 ${isActive("/social") && activeClassDark}`}>
         <Link href="/social">Social</Link>

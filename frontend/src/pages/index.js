@@ -20,7 +20,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      colors: colors.colors,
+      colors: colors.colors || [],
     },
   };
 }

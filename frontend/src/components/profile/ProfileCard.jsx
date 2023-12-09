@@ -22,7 +22,7 @@ const ProfileHeader = ({ user }) => {
       </div>
       {/* Username && Gender */}
       <div className="w-2/3 px-4 max-w-full flex-col flex justify-center items-center">
-        <div className="flex flex-row justify-start items-center gap-2">
+        <div className="w-full flex flex-row justify-start items-center gap-2">
           <h1
             title={username}
             className="max-w-[80%] text-2xl font-bold text-center overflow-hidden overflow-ellipsis whitespace-nowrap"
