@@ -147,14 +147,14 @@ class PaletteController extends AbstractController
         $palettesArray = array_values($palettesArray);  // Se supone que esto elimina espacios vacios dentro de la lista.
         return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
     }
-
-    public function getPalettesByUsername(string $username): JsonResponse
+    */
+    public function getPalettesByUserId(string $userId): JsonResponse
     {
         // Busca el repositorio
         $paletteRepository = $this->entityManager->getRepository(Palette::class);
 
         // Hace la consulta: Entrega hasta 10 paletas con mas ???.
-        $result = $paletteRepository->findPalettesByUsername($username);
+        $result = $paletteRepository->findPalettesByUsername($userId);
 
         $palettesArray = [];
         foreach ($result as $row) {
@@ -205,5 +205,5 @@ class PaletteController extends AbstractController
         // Estructura final: Una lista de paletas. Cada paleta tiene id y colors. Colors es una lista de colores. Cada color tiene todo los datos.
         return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
     }
-    */
+
 }

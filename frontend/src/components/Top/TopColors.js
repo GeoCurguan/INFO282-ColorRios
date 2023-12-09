@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const TopColors = ({ username }) => {
+const TopColors = ({ userId }) => {
     const [topColorsClicks, setTopColorsClicks] = useState([]);
     const [topColorsPalettes, setTopColorsPalettes] = useState([]);
 
@@ -33,10 +33,10 @@ const TopColors = ({ username }) => {
             }
         };
 
-        const fetchDataUsername = async () => {
+        const fetchDataUserId = async () => {
             // TopColors por Click + Usuario
             try {
-                const response = await fetch('/api/colors/topbyclicks/${username}');
+                const response = await fetch('/api/colors/topbyclicks/${userId}');
                 if (!response.ok) {
                     throw new Error('Error al obtener los colores populares por clicks de ese usuario');
                 }
@@ -48,7 +48,7 @@ const TopColors = ({ username }) => {
             }
             // Top Colors por NPaletas + Usuario
             try {
-                const response = await fetch('/api/colors/topbypalettes/${username}');
+                const response = await fetch('/api/colors/topbypalettes/${userId}');
                 if (!response.ok) {
                     throw new Error('Error al obtener los colores populares por paletas de ese usuario');
                 }
@@ -60,13 +60,13 @@ const TopColors = ({ username }) => {
             }
         };
 
-        if (username) { // Si fue entregado un username ocurre lo siguiente.
-            fetchDataUsername();
+        if (userId) { // Si fue entregado un username ocurre lo siguiente.
+            fetchDataUserId();
         } else {
             fetchData();
         }
 
-    }, [username]); //Hook. Cuando estas variables cambien, se vuelve a ejecutar el useEffect.
+    }, [userId]); //Hook. Cuando estas variables cambien, se vuelve a ejecutar el useEffect.
 
     function threeColors(colorsArray) {
         let color0 = "rgb(255, 255, 255)";
