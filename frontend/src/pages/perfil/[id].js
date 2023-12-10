@@ -76,16 +76,21 @@ const PerfilID = () => {
 
   return (
     <ProtectedLogged>
-      <Nav />
+      <div className="custom-bg min-h-screen">
+        <Nav />
 
-      <div className="mt-8 flex flex-col flex-wrap justify-center items-center">
-        {loading && <Spinner isLoading={loading} />}
-        {error && <p className="mb-8 text-gray-800 text-xl">{error}</p>}
-        {userNotEmpty && !error && <ProfileCard user={user} />}
-        {errorPalettes && <p className="mb-8 text-gray-800 text-xl">{errorPalettes}</p>}
-        {Object.keys(palettesColors).length > 0 && !errorPalettes && (
-          <PalettesColor palettesColors={palettesColors.palettes} />
-        )}
+        <div className="mt-8 flex flex-col flex-wrap justify-center items-center">
+          {loading && <Spinner isLoading={loading} />}
+          {error && <p className="mb-8 text-gray-800 text-xl">{error}</p>}
+          {userNotEmpty && !error && <ProfileCard user={user} />}
+          {errorPalettes && <p className="mb-8 text-gray-800 text-xl">{errorPalettes}</p>}
+          {Object.keys(palettesColors).length > 0 && !errorPalettes && (
+            <>
+              <h2 className="text-2xl text-gray-200 font-bold mt-4 mb-2">Paletas de colores</h2>
+              <PalettesColor palettesColors={palettesColors.palettes} />
+            </>
+          )}
+        </div>
       </div>
     </ProtectedLogged>
   );
