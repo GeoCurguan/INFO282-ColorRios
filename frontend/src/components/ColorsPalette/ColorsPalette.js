@@ -103,7 +103,7 @@ const ColorsPalette = ({ colorToPalette }) => {
   }
 
   return (
-    <div className="flex flex-row items-center justify-around w-full bg-zinc-800">
+    <div className={`flex flex-row items-center justify-around w-full bg-zinc-800 ${isSticky ? styles.sticky  : ''}`}>
       {Palette}
       {favoriteColors.length > 0 ? (
         <div className="px-1 sm:px-2 flex flex-col items-center justify-center">
