@@ -195,7 +195,7 @@ class PaletteController extends AbstractController
     */
     public function getPalettesByUsername(string $username): JsonResponse
     {
-         // Expected: /api/getPalettesByUsername/{username}
+        // Expected: /api/getPalettesByUsername/{username}
         // Bearer token: required
         // Method: GET
 

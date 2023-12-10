@@ -33,6 +33,7 @@ class PaletteRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+
     public function findTopPalettes()
     {
         return $this->createQueryBuilder('p')

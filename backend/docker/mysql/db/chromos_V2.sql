@@ -62,7 +62,7 @@ CREATE TABLE `colorstat` (
   `date` date,
   `clicks` int,
   `cant_palettes` int,
-  `tracking_id` int(11)
+  -- `tracking_id` int(11)
 );
 
 CREATE TABLE `visitas` (
@@ -71,11 +71,11 @@ CREATE TABLE `visitas` (
   `page` varchar(255)
 );
 
-CREATE TABLE `tracking` (
-  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `registro` varchar(255) NOT NULL,
-  `created_at` datetime NOT NULL
-);
+-- CREATE TABLE `tracking` (
+--   `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+--   `registro` varchar(255) NOT NULL,
+--   `created_at` datetime NOT NULL
+-- );
 
 ALTER TABLE `palette` ADD FOREIGN KEY (`id_usuario`) REFERENCES `user` (`id`);
 
@@ -85,4 +85,4 @@ ALTER TABLE `palette_color` ADD FOREIGN KEY (`color_id`) REFERENCES `color` (`id
 
 ALTER TABLE `colorstat` ADD FOREIGN KEY (`id_color`) REFERENCES `color` (`id`);
 
-ALTER TABLE `colorstat` ADD FOREIGN KEY (`tracking_id`) REFERENCES `tracking` (`id`);
+-- ALTER TABLE `colorstat` ADD FOREIGN KEY (`tracking_id`) REFERENCES `tracking` (`id`);

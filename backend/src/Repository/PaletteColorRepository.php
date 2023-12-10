@@ -21,6 +21,7 @@ class PaletteColorRepository extends ServiceEntityRepository
         parent::__construct($registry, PaletteColor::class);
     }
 
+    
 //    /**
 //     * @return PaletteColor[] Returns an array of PaletteColor objects
 //     */

@@ -90,3 +90,8 @@ color_stat_update_palettes_count:
   path: /api/color_stat/update_palettes_count/{colorId}
   controller: App\Controller\ColorStatController::updatePalettesCount
   methods: [GET]
+
+palette_getPalettesColor:
+  path: /api/palette_color/getPalettesColor
+  controller: App\Controller\PaletteColorController::getPalettesColor
+  methods: [GET]
