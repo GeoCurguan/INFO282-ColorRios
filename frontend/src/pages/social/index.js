@@ -40,18 +40,24 @@ const Social = () => {
     getPalettes();
   }, []);
 
+  const [selectedColor, setSelectedColor] = useState(null);
+
+  const handleColorClick = (color) => {
+    // Actualizar la variable cuando se hace clic en un elemento en TopColors o TopPalettes
+    setSelectedColor(color);
+  };
+
   return (
     <>
       <Nav />
 
       <div className="flex">
-        <div className="w-3/4 h-screen bg-gray-800 p-4 overflow-y-auto">
-          {/* <script>// En Social TopColors y TopPalettes no deberia tener argumentos. En Perfil si.</script> */}
-          {/* <TopColors /> */}
-          {/* <TopPalettes /> */}
+        <div className="w-4/5 h-screen bg-gray-800 p-4 overflow-y-auto space-y-4">
+          {/* <TopColors onColorClick={handleColorClick} /> // Necesita ser arreglado sus consultas... */}
+          <TopPalettes onColorClick={handleColorClick} />
         </div>
 
-        <ColorDetail />
+        <ColorDetail color={selectedColor} />
       </div>
     </>
   );

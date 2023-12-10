@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-const TopPalettes = ({ username }) => {
+const TopPalettes = ({ username, onColorClick }) => {
   const [palettes, setPalettes] = useState([]);
   let title = "";
+
+  const handleColorClick = (color) => {
+    onColorClick(color);
+  }
 
   useEffect(() => {
 
@@ -78,7 +82,11 @@ const TopPalettes = ({ username }) => {
       const divColor = `rgb(${colors[0]["R"]}, ${colors[0]["G"]}, ${colors[0]["B"]})`;
       return (
         <>
-          <div style={{ backgroundColor: divColor }} class="h-14 w-full rounded"></div>
+          <div
+            style={{ backgroundColor: divColor }}
+            class="h-14 w-full rounded"
+            onClick={() => handleColorClick(colors[0])}>
+          </div>
         </>
       );
     } else {
@@ -90,6 +98,7 @@ const TopPalettes = ({ username }) => {
             key={index}
             style={{ backgroundColor: divColor }}
             class={`h-14 w-full ${index === 0 ? 'rounded-l' : ''} ${index === colors.length - 1 ? 'rounded-r' : ''}`}
+            onClick={() => handleColorClick(color)}
           ></div>
         );
       });

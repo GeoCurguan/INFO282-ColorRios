@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-const TopColors = ({ userId }) => {
+const TopColors = ({ username, onColorClick }) => {
     const [topColorsClicks, setTopColorsClicks] = useState([]);
     const [topColorsPalettes, setTopColorsPalettes] = useState([]);
+
+    const handleColorClick = (color) => {
+        onColorClick(color);
+    }
 
     useEffect(() => {
 
@@ -33,10 +37,10 @@ const TopColors = ({ userId }) => {
             }
         };
 
-        const fetchDataUserId = async () => {
+        const fetchDataUsername = async () => {
             // TopColors por Click + Usuario
             try {
-                const response = await fetch('/api/colors/topbyclicks/${userId}');
+                const response = await fetch('/api/colors/topbyclicks/${username}');
                 if (!response.ok) {
                     throw new Error('Error al obtener los colores populares por clicks de ese usuario');
                 }
@@ -48,7 +52,7 @@ const TopColors = ({ userId }) => {
             }
             // Top Colors por NPaletas + Usuario
             try {
-                const response = await fetch('/api/colors/topbypalettes/${userId}');
+                const response = await fetch('/api/colors/topbypalettes/${username}');
                 if (!response.ok) {
                     throw new Error('Error al obtener los colores populares por paletas de ese usuario');
                 }
@@ -60,13 +64,13 @@ const TopColors = ({ userId }) => {
             }
         };
 
-        if (userId) { // Si fue entregado un username ocurre lo siguiente.
-            fetchDataUserId();
+        if (username) { // Si fue entregado un username ocurre lo siguiente.
+            fetchDataUsername();
         } else {
             fetchData();
         }
 
-    }, [userId]); //Hook. Cuando estas variables cambien, se vuelve a ejecutar el useEffect.
+    }, [username]); //Hook. Cuando estas variables cambien, se vuelve a ejecutar el useEffect.
 
     function threeColors(colorsArray) {
         let color0 = "rgb(255, 255, 255)";
@@ -82,10 +86,10 @@ const TopColors = ({ userId }) => {
             color2 = "rgb(" + colorsArray[2]["R"] + ", " + colorsArray[0]["G"] + ", " + colorsArray[2]["B"] + ")"
         }
         return <>
-            <div class="h-32 w-32 rounded" style={color0}></div>
+            <div class="h-32 w-32 rounded" style={color0} onClick={() => handleColorClick(colorsArray[0])}></div>
             <div class="flex flex-row space-x-2 p-2">
-                <div class="h-14 w-14 rounded" style={color1}></div>
-                <div class="h-14 w-14 rounded" style={color2}></div>
+                <div class="h-14 w-14 rounded" style={color1} onClick={() => handleColorClick(colorsArray[1])}></div>
+                <div class="h-14 w-14 rounded" style={color2} onClick={() => handleColorClick(colorsArray[2])}></div>
             </div>
         </>
     }
@@ -98,21 +102,11 @@ const TopColors = ({ userId }) => {
                 <div class="flex w-full flex-col items-center justify-center">
                     <h1 class="truncate text-center text-xl font-bold py-2">Mas Clickeados</h1>
                     {threeColors(topColorsClicks)}
-                    <div class="h-32 w-32 rounded bg-red-500"></div>
-                    <div class="flex flex-row space-x-2 p-2">
-                        <div class="h-14 w-14 rounded bg-red-500"></div>
-                        <div class="h-14 w-14 rounded bg-red-500"></div>
-                    </div>
                 </div>
 
                 <div class="flex w-full flex-col items-center justify-center">
                     <h1 class="truncate text-center text-xl font-bold py-2">En mas paletas</h1>
                     {threeColors(topColorsPalettes)}
-                    <div class="h-32 w-32 rounded bg-red-500"></div>
-                    <div class="flex flex-row space-x-2 p-2">
-                        <div class="h-14 w-14 rounded bg-red-500"></div>
-                        <div class="h-14 w-14 rounded bg-red-500"></div>
-                    </div>
                 </div>
             </div>
         </div>
