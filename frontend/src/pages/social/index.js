@@ -24,8 +24,8 @@ const Social = () => {
       <Nav />
 
       <div className="flex">
-        <div className="w-3/4 h-screen bg-gray-800 p-4 overflow-y-auto">
-          {/* <TopColors onColorClick={handleColorClick} /> */}
+        <div className="w-4/5 h-screen bg-gray-800 p-4 overflow-y-auto space-y-4">
+          {/* <TopColors onColorClick={handleColorClick} /> // Necesita ser arreglado sus consultas... */}
           <TopPalettes onColorClick={handleColorClick} />
         </div>
 

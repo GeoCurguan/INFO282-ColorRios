@@ -102,21 +102,11 @@ const TopColors = ({ username, onColorClick }) => {
                 <div class="flex w-full flex-col items-center justify-center">
                     <h1 class="truncate text-center text-xl font-bold py-2">Mas Clickeados</h1>
                     {threeColors(topColorsClicks)}
-                    <div class="h-32 w-32 rounded bg-red-500"></div>
-                    <div class="flex flex-row space-x-2 p-2">
-                        <div class="h-14 w-14 rounded bg-red-500"></div>
-                        <div class="h-14 w-14 rounded bg-red-500"></div>
-                    </div>
                 </div>
 
                 <div class="flex w-full flex-col items-center justify-center">
                     <h1 class="truncate text-center text-xl font-bold py-2">En mas paletas</h1>
                     {threeColors(topColorsPalettes)}
-                    <div class="h-32 w-32 rounded bg-red-500"></div>
-                    <div class="flex flex-row space-x-2 p-2">
-                        <div class="h-14 w-14 rounded bg-red-500"></div>
-                        <div class="h-14 w-14 rounded bg-red-500"></div>
-                    </div>
                 </div>
             </div>
         </div>
