@@ -99,6 +99,7 @@ class UserController extends AbstractController
 
         // Añadir contenido al payload del token JWT; DEFAULT: username, roles, iat, exp
         $payload = [
+            'id' => $user->getId(),
             'image' => $user->getImage(),
             'gender' => $user->getGender(),
             'job' => $user->getJob(),
@@ -164,7 +165,6 @@ class UserController extends AbstractController
         //Recorrer cada usuario
         foreach ($users as $user) {
             $usersData[] = [
-                'id' => $user->getId(),
                 'username' => $user->getUsername(),
                 'job' => $user->getJob(),
                 'gender' => $user->getGender(),

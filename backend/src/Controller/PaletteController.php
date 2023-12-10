@@ -3,9 +3,14 @@
 namespace App\Controller;
 
 use App\Entity\Palette;
+use App\Entity\PaletteColor;
 use App\Entity\User;
+use App\Entity\Color;
+
 use App\Repository\PaletteRepository;
 use App\Repository\UserRepository;
+use App\Repository\ColorRepository;
+
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -18,43 +23,61 @@ class PaletteController extends AbstractController
     private UserRepository $userRepository;
     private PaletteRepository $paletteRepository;
 
-    public function __construct(EntityManagerInterface $entityManager, UserRepository $userRepository, PaletteRepository $paletteRepository)
+    public function __construct(EntityManagerInterface $entityManager, UserRepository $userRepository, PaletteRepository $paletteRepository, ColorRepository $colorRepository)
     {
         $this->entityManager = $entityManager;
         $this->userRepository = $userRepository;
         $this->paletteRepository = $paletteRepository;
+        $this->colorRepository = $colorRepository;
     }
 
     public function insertPalette(Request $request): Response
     {
+        // Expected: /api/insertPalette
+        // Bearer token: required
+        // JSON: { "nombre_propietario": "nombre", "descargado": true, "colors": [1, 2, 3]}
+        // Method: POST
         $data = json_decode($request->getContent(), true);
 
-        if (!isset($data['nombre_propietario']) || !isset($data['descargado'])) {
+        // 0. Verificar que el JSON tenga los datos requeridos
+        if (!isset($data['nombre_propietario']) || !isset($data['descargado']) || !isset($data['colors'])) {
             return new JsonResponse(['error' => 'Faltan datos requeridos.'], Response::HTTP_BAD_REQUEST);
         }
 
         $nombrePropietario = $data['nombre_propietario'];
         $descargado = $data['descargado'];
+        $coloresIDS = $data['colors'];
 
+        // 0. Verificar que los colores existen
+        foreach ($coloresIDS as $colorID) {
+            $colorRepository = $this->entityManager->getRepository(Color::class);
+            $color = $colorRepository->findOneBy(['id' => $colorID]);
+            if (!$color) {
+                return new JsonResponse(['error' => 'Color no encontrado.'], Response::HTTP_NOT_FOUND);
+            }
+        }
+
+        // 1. Verificar que el usuario exista
         $userRepository = $this->entityManager->getRepository(User::class);
-
         $propietario = $userRepository->findOneBy(['username' => $nombrePropietario]);
 
         if (!$propietario) {
             return new JsonResponse(['error' => 'Usuario no encontrado.'], Response::HTTP_NOT_FOUND);
         }
 
-        //Verificar si $propietario realmente tiene el método getUsername
+        // 2. Verificar si $propietario realmente tiene el método getUsername
         if (!method_exists($propietario, 'getUsername')) {
             return new JsonResponse(['error' => 'El objeto de usuario no tiene el método getUsername.'], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
 
+        // 3. Crear la paleta
         $palette = new Palette();
         $palette->setNombrePropietario($propietario->getUsername());
         $palette->setDescargado($descargado);
+        $paletteID = $palette->getId();
         //$palette->setPropietario($propietario);
 
-        //Bloque para depurar
+        // 4. Bloque para depurar
         try {
             $this->entityManager->persist($palette);
             $this->entityManager->flush();
@@ -62,9 +85,28 @@ class PaletteController extends AbstractController
             return new JsonResponse(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
 
+        
+        // Como ya se creó la paleta, se puede crear la relación entre la paleta y el usuario
+        // 5. Crear la relación entre la paleta y el usuario
+
+        foreach ($coloresIDS as $colorID) {
+            // 5.1. Verificar que el color exista
+            $colorRepository = $this->entityManager->getRepository(Color::class);
+            $color = $colorRepository->findOneBy(['id' => $colorID]);
+
+            // 5.2. Crear la relación guardando los IDs (En symfony no se puede guardar el valor directamente)
+            $paletteColor = new PaletteColor();
+            $paletteColor->setPalette($palette);
+            $paletteColor->setColor($color);
+
+            // 5.3. Guardar la relación
+            $this->entityManager->persist($paletteColor);
+            $this->entityManager->flush();
+        }
+        
         return new JsonResponse(['message' => 'Paleta creada con éxito.'], Response::HTTP_CREATED);
     }
-
+        
     public function getPalettes(): Response
     {
         $palettes = $this->paletteRepository->findAll();
