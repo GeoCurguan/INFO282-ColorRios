@@ -123,3 +123,4 @@ const ColorsPalette = ({ colorToPalette }) => {
 
 
 export default ColorsPalette;
+
