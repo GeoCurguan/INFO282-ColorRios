@@ -12,6 +12,34 @@ import ColorDetail from "@/components/ColorDetail/ColorDetail";
 // 5) Al hacer click en un color aparece en la derecha los detalles.
 
 const Social = () => {
+  const [palettes, setPalettes] = useState([]);
+  const [errorPalettes, setErrorPalettes] = useState(false);
+
+  useEffect(() => {
+    const getPalettes = async () => {
+      try {
+        const response = await fetch(`/api/palette_color/getPalettesColor`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          setPalettes(data);
+          console.log(data);
+        } else {
+          setErrorPalettes(true);
+        }
+      } catch (error) {
+        console.log(error);
+        setErrorPalettes(true);
+      }
+    };
+    getPalettes();
+  }, []);
+
   return (
     <>
       <Nav />
@@ -19,8 +47,8 @@ const Social = () => {
       <div className="flex">
         <div className="w-3/4 h-screen bg-gray-800 p-4 overflow-y-auto">
           {/* <script>// En Social TopColors y TopPalettes no deberia tener argumentos. En Perfil si.</script> */}
-          {/* <TopColors />
-          <TopPalettes /> */}
+          {/* <TopColors /> */}
+          {/* <TopPalettes /> */}
         </div>
 
         <ColorDetail />
