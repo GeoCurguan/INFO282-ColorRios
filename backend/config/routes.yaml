@@ -1,92 +1,92 @@
 controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+  resource:
+    path: ../src/Controller/
+    namespace: App\Controller
+  type: attribute
 
 user_register:
-    path: /api/register
-    controller: App\Controller\UserController::register
-    methods: [POST]
+  path: /api/register
+  controller: App\Controller\UserController::register
+  methods: [POST]
 
 user_login:
-    path: /api/login
-    controller: App\Controller\UserController::login
-    methods: [POST]
+  path: /api/login
+  controller: App\Controller\UserController::login
+  methods: [POST]
 
 user_getUser:
-    path: /api/getUser/{id}
-    controller: App\Controller\UserController::getOneUser
-    methods: [GET]
+  path: /api/getUser/{id}
+  controller: App\Controller\UserController::getOneUser
+  methods: [GET]
 
 user_getUsers:
-    path: /api/getUsers
-    controller: App\Controller\UserController::getUsers
-    methods: [GET]
+  path: /api/getUsers
+  controller: App\Controller\UserController::getUsers
+  methods: [GET]
 
 api_login_check:
-    path: /api/login_check
+  path: /api/login_check
 
 api_testJWT:
-    path: /api/testJWT
-    controller: App\Controller\UserController::testJWT
+  path: /api/testJWT
+  controller: App\Controller\UserController::testJWT
 
 color_insert:
-    path: /api/insertar_color
-    controller: App\Controller\ColorController::insertarColor
-    methods: [POST]
+  path: /api/insertar_color
+  controller: App\Controller\ColorController::insertarColor
+  methods: [POST]
 
 color_get:
-    path: /api/getColors
-    controller: App\Controller\ColorController::getColors
-    methods: [GET]
+  path: /api/getColors
+  controller: App\Controller\ColorController::getColors
+  methods: [GET]
 
 colorstat_insert:
-    path: /api/createColorStat
-    controller: App\Controller\ColorStatController::createColorStat
-    methods: [POST]
+  path: /api/createColorStat
+  controller: App\Controller\ColorStatController::createColorStat
+  methods: [POST]
 
 colorstat_getDates:
-    path: /api/getColorDates
-    controller: App\Controller\ColorStatController::getColorDates
-    methods: [GET]
+  path: /api/getColorDates
+  controller: App\Controller\ColorStatController::getColorDates
+  methods: [GET]
 
 visitas_getVisitas:
-    path: /api/getVisitas
-    controller: App\Controller\VisitasController::getVisitas
-    methods: [GET]
+  path: /api/getVisitas
+  controller: App\Controller\VisitasController::getVisitas
+  methods: [GET]
 
 palettes_insertPalette:
-    path: /api/insert_palette
-    controller: App\Controller\PaletteController::insertPalette
-    methods: [POST]
+  path: /api/insert_palette
+  controller: App\Controller\PaletteController::insertPalette
+  methods: [POST]
 
 palettes_getPalettes:
-    path: /api/getPalettes
-    controller: App\Controller\PaletteController::getPalettes
-    methods: [GET]
+  path: /api/getPalettes
+  controller: App\Controller\PaletteController::getPalettes
+  methods: [GET]
 
 palettes_getPalettesLR:
-    path: /api/getPalettesLR
-    controller: App\Controller\PaletteController::getPalettesLR
-    methods: [GET]
+  path: /api/getPalettesLR
+  controller: App\Controller\PaletteController::getPalettesLR
+  methods: [GET]
 
-palettesColor_getPalettesColorByUserId:
-    path: /api/getPalettesColorByUserId/{userId}
-    controller: App\Controller\PaletteController::getPalettesColorByUserId
-    methods: [GET]
+palettesColor_getPalettesByUsername:
+  path: /api/getPalettesByUsername/{username}
+  controller: App\Controller\PaletteController::getPalettesByUsername
+  methods: [GET]
 
 color_click:
-    path: /api/color_click/{colorId}
-    controller: App\Controller\ColorStatController::clickColor
-    methods: [GET]
+  path: /api/color_click/{colorId}
+  controller: App\Controller\ColorStatController::clickColor
+  methods: [GET]
 
 palette_color_count_palettes:
-    path: /api/palette_color/count_palettes/{colorId}
-    controller: App\Controller\PaletteColorController::countPalettes
-    methods: [GET]
+  path: /api/palette_color/count_palettes/{colorId}
+  controller: App\Controller\PaletteColorController::countPalettes
+  methods: [GET]
 
 color_stat_update_palettes_count:
-    path: /api/color_stat/update_palettes_count/{colorId}
-    controller: App\Controller\ColorStatController::updatePalettesCount
-    methods: [GET]
+  path: /api/color_stat/update_palettes_count/{colorId}
+  controller: App\Controller\ColorStatController::updatePalettesCount
+  methods: [GET]
