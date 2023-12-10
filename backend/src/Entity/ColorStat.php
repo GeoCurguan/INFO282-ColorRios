@@ -10,6 +10,10 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Table(name: 'colorStat')]
 class ColorStat
 {
+    public function __construct()
+    {
+        $this->clicks = 0;
+    }
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -26,10 +30,6 @@ class ColorStat
 
     #[ORM\Column]
     private ?int $cantPalettes = null;
-
-    #[ORM\ManyToOne(targetEntity: Tracking::class)]
-    #[ORM\JoinColumn(name: "tracking_id", referencedColumnName: "id", nullable: false)]
-    private ?Tracking $tracking = null;
 
     #[ORM\ManyToOne(targetEntity: Color::class)]
     #[ORM\JoinColumn(name: "id_color", referencedColumnName: "id", nullable: false)]
@@ -95,18 +95,6 @@ class ColorStat
         return $this;
     }
 
-    public function getTracking(): ?Tracking
-    {
-        return $this->tracking;
-    }
-
-    public function setTracking(?Tracking $tracking): static
-    {
-        $this->tracking = $tracking;
-
-        return $this;
-    }
-
     public function getColor(): ?Color
     {
         return $this->color;
@@ -117,5 +105,10 @@ class ColorStat
         $this->color = $color;
 
         return $this;
+    }
+
+    public function incrementClicks(): void
+    {
+        $this->clicks++;
     }
 }

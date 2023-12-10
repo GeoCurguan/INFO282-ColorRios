@@ -108,7 +108,6 @@ class ColorStatController extends AbstractController
                     $colorStat->setColor($color);
                     $colorStat->setClicks(0);
                     $colorStat->setCantPalettes(0);
-                    $colorStat->setTracking(null);
 
                     $this->entityManager->persist($colorStat);
                     $this->entityManager->flush();
@@ -145,5 +144,54 @@ class ColorStatController extends AbstractController
         $visitCounter->countVisit('/admin');
 
         return new JsonResponse(['colors' => $coloresArray], Response::HTTP_OK);
+    }
+
+    public function clickColor(int $colorId): JsonResponse
+    {
+        $colorRepository = $this->entityManager->getRepository(Color::class);
+        $color = $colorRepository->find($colorId);
+
+        if (!$color) {
+            return new JsonResponse(['message' => 'Color not found'], Response::HTTP_NOT_FOUND);
+        }
+
+        $colorStatRepository = $this->entityManager->getRepository(ColorStat::class);
+        $colorStat = $colorStatRepository->findOneBy(['color' => $color]);
+
+        if ($colorStat) {
+            $colorStat->incrementClicks();
+        } else {
+            //En el caso de que no exista una entrada para el color hay que crearla
+            $colorStat = new ColorStat();
+            $colorStat->setClicks(1);
+            $colorStat->setColor($color);
+            $colorStat->setDate(new \DateTime());
+
+            $this->entityManager->persist($colorStat);
+        }
+
+        $this->entityManager->flush();
+
+        return new JsonResponse(['message' => 'Color clickeado'], Response::HTTP_OK);
+    }
+
+    public function updatePalettesCount($colorId, PaletteColorController $paletteColorController): JsonResponse
+    {
+        //Llamamos a la función countPalettes del PaletteColorController
+        $response = $paletteColorController->countPalettes($colorId);
+        $data = json_decode($response->getContent(), true);
+
+        //Se Actualiza
+        $colorStatRepository = $this->entityManager->getRepository(ColorStat::class);
+        $colorStat = $colorStatRepository->findOneBy(['color' => $colorId]);
+
+        if ($colorStat) {
+            $colorStat->setCantPalettes($data['palettesCount']);
+            $this->entityManager->flush();
+
+            return $this->json(['message' => 'Cantidad de paletas actualizada'], Response::HTTP_OK);
+        }
+
+        return $this->json(['message' => 'ColorStat no encontrado'], Response::HTTP_NOT_FOUND);
     }
 }
