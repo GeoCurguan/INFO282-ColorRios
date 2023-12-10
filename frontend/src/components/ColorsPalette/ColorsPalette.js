@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import ExportPDF from "../ExportPDF/ExportPDF";
 
 const ColorsPalette = ({ colorToPalette }) => {
+  const [isSticky, setIsSticky] = useState(false);
   const [favoriteColors, setFavoriteColors] = useState([]);
   const [downloaded, setDownloaded] = useState(false);
   const { user, auth: token } = useAuthContext();
@@ -67,6 +68,18 @@ const ColorsPalette = ({ colorToPalette }) => {
     }
   }, [colorToPalette]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setIsSticky(offset > 132);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const Palette = [];
   for (let i = 0; i < 10; i++) {
     Palette.push(
@@ -112,4 +125,7 @@ const ColorsPalette = ({ colorToPalette }) => {
   );
 };
 
+
+
 export default ColorsPalette;
+
