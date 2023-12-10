@@ -12,25 +12,21 @@ import ColorDetail from "@/components/ColorDetail/ColorDetail";
 // 5) Al hacer click en un color aparece en la derecha los detalles.
 
 const Social = () => {
+  return (
+    <>
+      <Nav />
 
-    return (
-        <>
-        <Nav/>
-
-        <div class="flex">
-
-            <div class="w-3/4 h-screen bg-gray-800 p-4 overflow-y-auto">
-
-                <script>// En Social TopColors y TopPalettes no deberia tener argumentos. En Perfil si.</script>
-                <TopColors/>
-                <TopPalettes/>
-                
-            </div>
-
-            <ColorDetail/>
+      <div className="flex">
+        <div className="w-3/4 h-screen bg-gray-800 p-4 overflow-y-auto">
+          {/* <script>// En Social TopColors y TopPalettes no deberia tener argumentos. En Perfil si.</script> */}
+          {/* <TopColors />
+          <TopPalettes /> */}
         </div>
-        </>
-    );
+
+        <ColorDetail />
+      </div>
+    </>
+  );
 };
 
 export default Social;

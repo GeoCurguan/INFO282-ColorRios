@@ -179,7 +179,7 @@ const PDFToExport = ({ favoriteColors }) => {
 };
 
 //Componente del boton de el export
-const ExportPDF = ({ favoriteColors }) => {
+const ExportPDF = ({ setDownloaded, favoriteColors }) => {
   //Boleando para controlar el renderizado del pdf con next
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
@@ -189,8 +189,14 @@ const ExportPDF = ({ favoriteColors }) => {
   return (
     <>
       {isClient ? (
-        <div style={{ color: "#fff", padding: "5px" }}>
-          <PDFDownloadLink document={<PDFToExport favoriteColors={favoriteColors} />} fileName="colores-favoritos.pdf">
+        <div className="text-white">
+          <PDFDownloadLink
+            onClick={() => {
+              setDownloaded(true);
+            }}
+            document={<PDFToExport favoriteColors={favoriteColors} />}
+            fileName="colores-favoritos.pdf"
+          >
             {({ blob, url, loading, error }) => (loading ? "Cargando colores..." : "Exportar")}
           </PDFDownloadLink>
         </div>

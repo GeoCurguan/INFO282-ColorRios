@@ -8,9 +8,7 @@ export default async function handler(req, res) {
   // --- Realizar petición al Backend ---
   try {
     // --- Extraer token de la petición ---
-    console.log(req.headers.authorization);
     const token = req.headers.authorization.split(" ")[1];
-    console.log(token);
     const response = await fetch(`${process.env.BACKEND_IP}/api/getUsers`, {
       headers: {
         Authorization: `Bearer ${token}`,
