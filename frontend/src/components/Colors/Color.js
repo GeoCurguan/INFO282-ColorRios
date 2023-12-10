@@ -9,8 +9,21 @@ const Color = ({ color, setCurrentColor, isSelected }) => {
     return null;
   }
 
+  const sendData = async () => {
+    // Manda el /colorId al backend para registrar clicks
+    try {
+      const colorId = color.id;
+      const response = await fetch(`/api/getClickColorId/${colorId}`);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleCurrentColor = () => {
     setCurrentColor(color);
+    console.log(color);
+    sendData();
   };
 
   const styleBG = colorRGB(color[COLORINFO.rgbR], color[COLORINFO.rgbG], color[COLORINFO.rgbB]);
