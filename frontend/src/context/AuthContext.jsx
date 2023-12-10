@@ -13,6 +13,16 @@ export const AuthContext = ({ children }) => {
   const isAdmin = user?.roles?.includes("ROLE_ADMIN") || false;
 
   useEffect(() => {
+    if (Object.keys(user).length > 0) {
+      // Si el usuario tiene datos, entonces ya está logueado
+      // Revisamos la integridad de del token (si expiró): "exp"
+      console.log(user);
+      if (user.exp < Date.now() / 1000) {
+        // El token expiró
+        console.log("El token expiró");
+        handleLogout();
+      }
+    }
     setMounted(true);
   }, []);
 
@@ -27,6 +37,7 @@ export const AuthContext = ({ children }) => {
 
   const handleLogout = () => {
     setAuth("");
+    setUser({});
     localStorage.removeItem("token");
     localStorage.removeItem("user-data");
     router.reload();
