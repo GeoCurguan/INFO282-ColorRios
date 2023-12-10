@@ -7,7 +7,7 @@ import { toast } from "sonner";
 
 import ExportPDF from "../ExportPDF/ExportPDF";
 
-const ColorsPalette = ({ colorToPalette }) => {
+const ColorsPalette = ({ colorToPalette, setCurrentColor}) => {
   const [isSticky, setIsSticky] = useState(false);
   const [favoriteColors, setFavoriteColors] = useState([]);
   const [downloaded, setDownloaded] = useState(false);
@@ -62,6 +62,11 @@ const ColorsPalette = ({ colorToPalette }) => {
     setFavoriteColors((prevColors) => prevColors.filter((_, index) => index !== colorIdx));
   }
 
+  function viewColorDetail(colorDetail){
+    console.log(colorDetail);
+    setCurrentColor(colorDetail);
+  }
+
   useEffect(() => {
     if (colorToPalette && !favoriteColors.includes(colorToPalette)) {
       setFavoriteColors((prevColors) => [...prevColors, colorToPalette]);
@@ -85,7 +90,7 @@ const ColorsPalette = ({ colorToPalette }) => {
     Palette.push(
       <div
         key={i}
-        className={`bg-zinc-200 cursor-pointer ${styles.colorPalette}`}
+        className={`bg-zinc-200 cursor-pointer flex flex-column ${styles.colorPalette}`}
         style={
           favoriteColors[i]
             ? {
@@ -97,8 +102,19 @@ const ColorsPalette = ({ colorToPalette }) => {
               }
             : {}
         }
-        onClick={() => removeColorToPalette(i)}
-      ></div>
+      >
+        <div
+          className={`${ favoriteColors[i] ? styles.removeColor : ''}`}
+          onClick={() => removeColorToPalette(i)}
+        >
+        </div>
+        <div
+          className={`${favoriteColors[i] ? styles.viewColor : ''}`}
+          onClick={() => viewColorDetail(favoriteColors[i])}
+        >
+
+        </div>
+      </div>
     );
   }
 

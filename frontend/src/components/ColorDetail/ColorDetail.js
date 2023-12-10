@@ -7,7 +7,6 @@ import Image from "next/image";
 
 const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   //Estados de la barra
-
   function name(color) {
     if (color[COLORINFO.colorName]) {
       return <h1 className="truncate text-center text-3xl font-bold">{color[COLORINFO.colorName]}</h1>;
@@ -253,6 +252,11 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
 
           <div className="text-gray-900 w-full pl-4 pr-2 flex-1 overflow-y-auto sm:max-h-full sm:pr-0 pt-4">
             <div>{name(color)}</div>
+            <div className="flex items-center justify-center">
+              <div className="rounded mt-4 mb-4" style={{backgroundColor: `rgb(${color[COLORINFO.rgbR]},${color[COLORINFO.rgbG]}, ${color[COLORINFO.rgbB]})`, width: '150px', height:'100px'}}>
+              </div>
+            </div>
+
             <div className="justify-left flex-1">
               <p className="py-4 text-center text-xl font-semibold">Información</p>
               {category(color)}
