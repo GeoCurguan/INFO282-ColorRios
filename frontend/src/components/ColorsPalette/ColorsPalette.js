@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import ExportPDF from "../ExportPDF/ExportPDF";
 
 const ColorsPalette = ({ colorToPalette }) => {
+  const [isSticky, setIsSticky] = useState(false);
   const [favoriteColors, setFavoriteColors] = useState([]);
   const [downloaded, setDownloaded] = useState(false);
   const { user, auth: token } = useAuthContext();
