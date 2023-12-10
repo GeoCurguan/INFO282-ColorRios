@@ -12,7 +12,7 @@ const Nav = () => {
     <header
       className="bg-[#434343] text-2xl"
       style={{
-        background: "linear-gradient(145deg, #434343 49.5%, #D9D9D9 50%)",
+        background: "linear-gradient(145deg, #434343 100%)",
       }}
     >
       <nav className="flex justify-between items-center">
