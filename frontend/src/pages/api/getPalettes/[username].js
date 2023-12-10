@@ -9,10 +9,10 @@ export default async function handler(req, res) {
   try {
     // --- Extraer token de la petición ---
     // Read /:{id}
-    const userId = req.query.username;
-    console.log(userId);
+    const username = req.query.username;
+    console.log(username);
     const token = req.headers.authorization && req.headers.authorization.split(" ")[1];
-    const response = await fetch(`${process.env.BACKEND_IP}/api/getPalettesColorByUserId/${userId}`, {
+    const response = await fetch(`${process.env.BACKEND_IP}/api/getPalettesByUsername/${username}`, {
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",

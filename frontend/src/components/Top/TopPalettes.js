@@ -28,7 +28,7 @@ const TopPalettes = ({ username }) => {
       try {
         const response = await fetch('/api/getPalettes/${username}');
         if (!response.ok) {
-          throw new Error('Error al obtener las paletas del usuario ${username}.');
+          throw new Error('Error al obtener las paletas del usuario con la Id: ${username}.');
         }
 
         const data = await response.json();
@@ -55,11 +55,17 @@ const TopPalettes = ({ username }) => {
       <div>
         {palettes.map((palette, index) => (
           <div key={index} class="w-full p-4">
-            <h1>{`Paleta Numero ${index + 1}`}</h1>
+            <div class="flex items-center space-x-1 mb-2">
+              <p class="text-black font-bold">{palette["nombre_palette"]}</p>
+              <h2 class="text-gray-500">por {palette["username"]}</h2>
+            </div>
             <div class="flex items-center space-x-1">
               {showColors(palette["colors"])}
             </div>
-            <button class="mt-2 h-10 w-24 rounded-xl font-bold text-white bg-pink-400" onClick={() => likePalette(palette["id"])}> Me Gusta </button>
+            <div class="mt-2 flex items-center space-x-1">
+              <button class="h-8 w-24 rounded-xl bg-pink-400 font-bold text-white" onClick={() => likePalette(palette["id"])}> Me Gusta </button>
+              <button class="h-8 w-24 rounded-xl bg-blue-400 font-bold text-white" onClick={() => downloadPalette(palette["id"])}> Descargar </button>
+            </div>
           </div>
         ))}
       </div>
@@ -72,7 +78,7 @@ const TopPalettes = ({ username }) => {
       const divColor = `rgb(${colors[0]["R"]}, ${colors[0]["G"]}, ${colors[0]["B"]})`;
       return (
         <>
-        <div style={{ backgroundColor: divColor }} class="h-14 w-full rounded"></div>
+          <div style={{ backgroundColor: divColor }} class="h-14 w-full rounded"></div>
         </>
       );
     } else {
@@ -90,8 +96,12 @@ const TopPalettes = ({ username }) => {
     }
   }
 
-  function likePalette(paletteID){
-    console.log("Intentaste darle like a la paleta con la ID: " + paletteID);
+  function likePalette(paletteId){
+    console.log("Intentaste darle like a la paleta con la ID: " + paletteId);
+  }
+
+  function downloadPalette(paletteId){
+    console.log("Intentaste descargar la paleta con la ID: " + paletteId);
   }
 
   return (

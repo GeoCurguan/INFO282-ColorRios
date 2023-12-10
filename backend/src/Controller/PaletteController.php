@@ -193,9 +193,9 @@ class PaletteController extends AbstractController
         return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
     }
     */
-    public function getPalettesColorByUserId(string $userId): JsonResponse
+    public function getPalettesByUsername(string $username): JsonResponse
     {
-         // Expected: /api/getPalettesColorByUserId/{username}
+         // Expected: /api/getPalettesByUsername/{username}
         // Bearer token: required
         // Method: GET
 
@@ -203,11 +203,12 @@ class PaletteController extends AbstractController
         $paletteRepository = $this->entityManager->getRepository(Palette::class);
 
         // Hace la consulta: Entrega hasta 10 paletas con mas ???.
-        $result = $paletteRepository->findByUserIdPalettesColor($userId);
+        $result = $paletteRepository->findPalettesByUsername($username);
 
         $palettesArray = [];
         foreach ($result as $row) {
             $paletteId = $row['paletteId']; // Estos nombres son definidos en la consulta del repository.
+            $paletteName = $row['nombre_palette'];
             $color = [
                 'id' => $row['colorId'],    // Estos nombres son definidos en la consulta del repository.
                 'category' => $row['category'],
@@ -233,6 +234,8 @@ class PaletteController extends AbstractController
                 'Y' => $row['cmykY'],
                 'K' => $row['cmykK'],
                 'ceresita' => $row['ceresitaName'],
+                'categoryName' => $row['categoryName'],
+                'rowId' => $row['rowId']
             ];
 
             // Verificar si la paleta ya existe en el array de paletas
@@ -244,7 +247,8 @@ class PaletteController extends AbstractController
             if (empty($existingPalette)) {
                 $palettesArray[] = [
                     'id' => $paletteId,
-                    "nombre_palette" => $row['nombre_palette'],
+                    'nombre_palette' => $paletteName,
+                    'username' => $username,
                     'colors' => [$color] // Asegurar que el array de colores sea una lista de colores. [{color}, {color}, {color}}]
                 ];
             } else {    // Si la paleta existe, añade el color a su array de colores.
@@ -252,7 +256,6 @@ class PaletteController extends AbstractController
                 $palettesArray[$existingPaletteKey]['colors'][] = $color;
             }
         }
-        // Estructura final: Una lista de paletas. Cada paleta tiene id y colors. Colors es una lista de colores. Cada color tiene todo los datos.
         return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
     }
 }
