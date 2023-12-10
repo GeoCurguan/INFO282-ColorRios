@@ -65,6 +65,7 @@ export default function Home({ colors }) {
               filteredColorsLength={colorsLengthRGBDefined(filteredColors)}
               colorsLength={colorsLengthRGBDefined(colors)}
               colorToPalette={colorToPalette}
+              setCurrentColor={setCurrentColor}
             />
             <Colors colors={filteredColors} setCurrentColor={setCurrentColor} />
           </div>
