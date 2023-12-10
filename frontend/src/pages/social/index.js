@@ -12,6 +12,13 @@ import ColorDetail from "@/components/ColorDetail/ColorDetail";
 // 5) Al hacer click en un color aparece en la derecha los detalles.
 
 const Social = () => {
+  const [selectedColor, setSelectedColor] = useState(null);
+
+  const handleColorClick = (color) => {
+    // Actualizar la variable cuando se hace clic en un elemento en TopColors o TopPalettes
+    setSelectedColor(color);
+  };
+
   return (
     <>
       <Nav />
@@ -19,11 +26,11 @@ const Social = () => {
       <div className="flex">
         <div className="w-3/4 h-screen bg-gray-800 p-4 overflow-y-auto">
           {/* <script>// En Social TopColors y TopPalettes no deberia tener argumentos. En Perfil si.</script> */}
-          {/* <TopColors />
-          <TopPalettes /> */}
+          {/* <TopColors onColorClick={handleColorClick} />
+          <TopPalettes onColorClick={handleColorClick} /> */}
         </div>
 
-        <ColorDetail />
+        <ColorDetail color={selectedColor}/>
       </div>
     </>
   );

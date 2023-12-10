@@ -149,7 +149,6 @@ class PaletteController extends AbstractController
         return new JsonResponse($palettesArray, Response::HTTP_OK);
     }
 
-    /*
     public function getTopPalettes(): JsonResponse
     {
         // Busca el repositorio
@@ -161,6 +160,8 @@ class PaletteController extends AbstractController
         $palettesArray = [];
         foreach ($result as $row) {
             $paletteId = $row['paletteId']; // Estos nombres son definidos en la consulta del repository.
+            $paletteName = $row['nombre_palette'];
+            $username = $row['username'];
             $color = [
                 'id' => $row['colorId'],    // Estos nombres son definidos en la consulta del repository.
                 'category' => $row['category'],
@@ -186,13 +187,31 @@ class PaletteController extends AbstractController
                 'Y' => $row['cmykY'],
                 'K' => $row['cmykK'],
                 'ceresita' => $row['ceresitaName'],
+                'categoryName' => $row['categoryName'],
+                'rowId' => $row['rowId']
             ];
-            $palettesArray[$paletteId][] = $color;  // Guarda este color dentro de su paleta correspondiente.
+
+            // Verificar si la paleta ya existe en el array de paletas
+            $existingPalette = array_filter($palettesArray, function ($palette) use ($paletteId) {
+                return $palette['id'] == $paletteId;
+            });
+
+            // Si la paleta no existe, agregarla al array de paletas
+            if (empty($existingPalette)) {
+                $palettesArray[] = [
+                    'id' => $paletteId,
+                    'nombre_palette' => $paletteName,
+                    'username' => $username,
+                    'colors' => [$color] // Asegurar que el array de colores sea una lista de colores. [{color}, {color}, {color}}]
+                ];
+            } else {    // Si la paleta existe, añade el color a su array de colores.
+                $existingPaletteKey = key($existingPalette);
+                $palettesArray[$existingPaletteKey]['colors'][] = $color;
+            }
         }
-        $palettesArray = array_values($palettesArray);  // Se supone que esto elimina espacios vacios dentro de la lista.
         return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
     }
-    */
+
     public function getPalettesByUsername(string $username): JsonResponse
     {
          // Expected: /api/getPalettesByUsername/{username}
@@ -235,7 +254,7 @@ class PaletteController extends AbstractController
                 'K' => $row['cmykK'],
                 'ceresita' => $row['ceresitaName'],
                 'categoryName' => $row['categoryName'],
-                'rowId' => $row['rowID']
+                'rowId' => $row['rowId']
             ];
 
             // Verificar si la paleta ya existe en el array de paletas
