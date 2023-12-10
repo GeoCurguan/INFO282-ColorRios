@@ -25,9 +25,8 @@ const Social = () => {
 
       <div className="flex">
         <div className="w-3/4 h-screen bg-gray-800 p-4 overflow-y-auto">
-          {/* <script>// En Social TopColors y TopPalettes no deberia tener argumentos. En Perfil si.</script> */}
-          {/* <TopColors onColorClick={handleColorClick} />
-          <TopPalettes onColorClick={handleColorClick} /> */}
+          {/* <TopColors onColorClick={handleColorClick} /> */}
+          <TopPalettes onColorClick={handleColorClick} />
         </div>
 
         <ColorDetail color={selectedColor}/>
