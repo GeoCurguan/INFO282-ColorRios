@@ -205,7 +205,8 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   };
 
   function addColorToPalette(colorObject) {
-    setColorToPalette(colorObject);
+    // check if setColorToPalette exists
+    if (setColorToPalette) setColorToPalette(colorObject);
   }
 
   //Función updateFontSize para el título (tamaño) adaptable al espacio que tiene
@@ -273,21 +274,15 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
           </div>
 
           <div className="w-full flex  justify-between p-4">
-            <button
-              className="flex items-center rounded-md transition-colors duration-300 ease-in-out
+            {setColorToPalette && (
+              <button
+                className="flex items-center rounded-md transition-colors duration-300 ease-in-out
                bg-pink-500 px-2 py-2 text-white hover:bg-pink-600"
-              onClick={() => addColorToPalette(color)}
-            >
-              <HeartIcon className="w-6 h-6" fill="white" />
-            </button>
-
-            <button className="flex items-center rounded-md transition-colors duration-300 ease-in-out bg-green-500 px-2 py-2 text-white hover:bg-green-600">
-              <InformationIcon className="w-6 h-6" fill="white" />
-            </button>
-
-            <button className="flex items-center rounded-md transition-colors duration-300 ease-in-out bg-green-500 hover:bg-green-600 px-2 py-2 text-white">
-              <InformationIcon className="w-6 h-6" fill="white" />
-            </button>
+                onClick={() => addColorToPalette(color)}
+              >
+                <HeartIcon className="w-6 h-6" fill="white" />
+              </button>
+            )}
           </div>
         </div>
       ) : (

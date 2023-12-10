@@ -4,14 +4,14 @@ import { useState, useEffect } from "react";
 
 const NavAccount = ({ isActive, user, handleLogout }) => {
   const [menu, setMenu] = useState(false);
-  const activeClassDark = "bg-[#434343] text-[#D9D9D9] rounded-full";
+  const activeClassLight = "bg-[#D9D9D9] text-[#434343] rounded-full";
   return (
     <ul
       className={`justify-center ${
         user?.username ? "justify-end" : "w-full"
-      } px-4 py-4 sm:px-8 gap-2 md:gap-8 lg:w-1/2 flex items-center lg:justify-evenly`}
+      } text-[#D9D9D9] px-4 py-4 sm:px-8 gap-2 md:gap-8 lg:w-1/2 flex items-center lg:justify-evenly`}
     >
-      <li className={`${user?.username ? "hidden" : ""} lg:block px-4 py-2 ${isActive("/social") && activeClassDark}`}>
+      <li className={`${user?.username ? "hidden" : ""} lg:block px-4 py-2 ${isActive("/social") && activeClassLight}`}>
         <Link href="/social">Social</Link>
       </li>
       {user?.username ? (
