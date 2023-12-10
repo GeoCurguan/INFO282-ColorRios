@@ -3,6 +3,7 @@ import Nav from "@/components/Navbar/Nav";
 import TopColors from "@/components/Top/TopColors";
 import TopPalettes from "@/components/Top/TopPalettes";
 import ColorDetail from "@/components/ColorDetail/ColorDetail";
+import PalettesColor from "@/components/Top/PalettesColors";
 
 // La pagina Social debe hacer lo siguiente:
 // 1) Barra de Navegacion para moverse entre paginas.
@@ -54,10 +55,19 @@ const Social = () => {
       <div className="flex">
         <div className="w-4/5 h-screen bg-gray-800 p-4 overflow-y-auto space-y-4">
           {/* <TopColors onColorClick={handleColorClick} /> // Necesita ser arreglado sus consultas... */}
-          <TopPalettes onColorClick={handleColorClick} />
+
+          {/* <TopPalettes onColorClick={handleColorClick} /> */}
+          <h2 className="text-2xl text-center text-gray-200 font-bold mb-4">Paletas de colores</h2>
+          {errorPalettes ? (
+            <p className="text-white text-center">No se pudo cargar la información.</p>
+          ) : (
+            palettes.map((palette) => (
+              <PalettesColor setSelectedColor={setSelectedColor} key={palette.id} palette={palette} />
+            ))
+          )}
         </div>
 
-        <ColorDetail color={selectedColor} />
+        <ColorDetail color={selectedColor} setCurrentColor={setSelectedColor} />
       </div>
     </>
   );

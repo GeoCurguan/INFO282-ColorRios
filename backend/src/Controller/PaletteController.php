@@ -254,7 +254,7 @@ class PaletteController extends AbstractController
                 'K' => $row['cmykK'],
                 'ceresita' => $row['ceresitaName'],
                 'categoryName' => $row['categoryName'],
-                'rowId' => $row['rowId']
+                'rowId' => $row['rowID'] // Si se pone en minuscula no funciona; seguramnete porque viene del ORM (Color Entity).
             ];
 
             // Verificar si la paleta ya existe en el array de paletas

@@ -2,6 +2,7 @@ import ColorDetail from "../ColorDetail/ColorDetail";
 import { useState } from "react";
 
 const PalettesColors = ({ palettesColors }) => {
+  console.log(palettesColors);
   const [color, setCurrentColor] = useState(null);
   return (
     <div className="mt-4 flex flex-col items-center justify-center w-full gap-4">
