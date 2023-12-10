@@ -22,6 +22,7 @@ class PaletteController extends AbstractController
     private $entityManager;
     private UserRepository $userRepository;
     private PaletteRepository $paletteRepository;
+    private ColorRepository $colorRepository;
 
     public function __construct(EntityManagerInterface $entityManager, UserRepository $userRepository, PaletteRepository $paletteRepository, ColorRepository $colorRepository)
     {
@@ -85,7 +86,7 @@ class PaletteController extends AbstractController
             return new JsonResponse(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
 
-        
+
         // Como ya se creó la paleta, se puede crear la relación entre la paleta y el usuario
         // 5. Crear la relación entre la paleta y el usuario
 
@@ -103,10 +104,10 @@ class PaletteController extends AbstractController
             $this->entityManager->persist($paletteColor);
             $this->entityManager->flush();
         }
-        
+
         return new JsonResponse(['message' => 'Paleta creada con éxito.'], Response::HTTP_CREATED);
     }
-        
+
     public function getPalettes(): Response
     {
         $palettes = $this->paletteRepository->findAll();
@@ -247,5 +248,4 @@ class PaletteController extends AbstractController
         // Estructura final: Una lista de paletas. Cada paleta tiene id y colors. Colors es una lista de colores. Cada color tiene todo los datos.
         return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
     }
-
 }
