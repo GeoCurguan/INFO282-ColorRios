@@ -18,7 +18,7 @@ const CardsComunas = ({ dataColors, dates }) => {
     const coloresComuna = dataColors.colors.filter((color) => color.commune === comuna);
 
     const ultimaExpedicion = coloresComuna.reduce((maxDate, color) => {
-      const fechaColor = dates.colors.find((date) => date.idColor === color.id)?.fecha;
+      const fechaColor = dates.colors?.find((date) => date.idColor === color.id)?.fecha;
 
       if (fechaColor) {
         const fechaExpedicion = new Date(fechaColor.date);
