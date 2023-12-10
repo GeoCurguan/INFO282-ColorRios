@@ -13,9 +13,10 @@ CREATE TABLE `user` (
 
 CREATE TABLE `palette` (
   `id` int(11) PRIMARY KEY AUTO_INCREMENT,
-  `id_usuario` int(11),
   `nombre_propietario` varchar(255),
-  `cantidad_colores` varchar(255),
+  `nombre_palette` varchar(255),
+  -- `id_usuario` int(11),
+  -- `cantidad_colores` varchar(255),
   `descargado` bool
 );
 

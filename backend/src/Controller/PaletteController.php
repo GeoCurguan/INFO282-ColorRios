@@ -41,11 +41,12 @@ class PaletteController extends AbstractController
         $data = json_decode($request->getContent(), true);
 
         // 0. Verificar que el JSON tenga los datos requeridos
-        if (!isset($data['nombre_propietario']) || !isset($data['descargado']) || !isset($data['colors'])) {
+        if (!isset($data['nombre_propietario']) || !isset($data['descargado']) || !isset($data['colors']) || !isset($data['nombre_palette'])) {
             return new JsonResponse(['error' => 'Faltan datos requeridos.'], Response::HTTP_BAD_REQUEST);
         }
 
         $nombrePropietario = $data['nombre_propietario'];
+        $nombrePalette = $data['nombre_palette'];
         $descargado = $data['descargado'];
         $coloresIDS = $data['colors'];
 
@@ -75,6 +76,7 @@ class PaletteController extends AbstractController
         $palette = new Palette();
         $palette->setNombrePropietario($propietario->getUsername());
         $palette->setDescargado($descargado);
+        $palette->setNombrePalette($nombrePalette);
         $paletteID = $palette->getId();
         //$palette->setPropietario($propietario);
 
@@ -191,13 +193,17 @@ class PaletteController extends AbstractController
         return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
     }
     */
-    public function getPalettesByUserId(string $userId): JsonResponse
+    public function getPalettesColorByUserId(string $userId): JsonResponse
     {
+         // Expected: /api/getPalettesColorByUserId/{username}
+        // Bearer token: required
+        // Method: GET
+
         // Busca el repositorio
         $paletteRepository = $this->entityManager->getRepository(Palette::class);
 
         // Hace la consulta: Entrega hasta 10 paletas con mas ???.
-        $result = $paletteRepository->findPalettesByUsername($userId);
+        $result = $paletteRepository->findByUserIdPalettesColor($userId);
 
         $palettesArray = [];
         foreach ($result as $row) {
@@ -238,7 +244,8 @@ class PaletteController extends AbstractController
             if (empty($existingPalette)) {
                 $palettesArray[] = [
                     'id' => $paletteId,
-                    'colors' => $color
+                    "nombre_palette" => $row['nombre_palette'],
+                    'colors' => [$color] // Asegurar que el array de colores sea una lista de colores. [{color}, {color}, {color}}]
                 ];
             } else {    // Si la paleta existe, añade el color a su array de colores.
                 $existingPaletteKey = key($existingPalette);

@@ -70,3 +70,8 @@ palettes_getPalettesLR:
   path: /api/getPalettesLR
   controller: App\Controller\PaletteController::getPalettesLR
   methods: [GET]
+
+palettesColor_getPalettesColorByUserId:
+  path: /api/getPalettesColorByUserId/{userId}
+  controller: App\Controller\PaletteController::getPalettesColorByUserId
+  methods: [GET]

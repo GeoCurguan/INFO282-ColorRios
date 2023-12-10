@@ -19,6 +19,8 @@ const ColorsPalette = ({ colorToPalette }) => {
       const confirm = window.confirm("¿Desea guardar la paleta?");
       if (!confirm) return;
 
+      const nombre_palette = window.prompt("Ingrese el nombre de la paleta");
+
       // 1. Obtener los ids de los colores
       const colorsIDS = favoriteColors.map((color) => color.id);
 
@@ -33,7 +35,12 @@ const ColorsPalette = ({ colorToPalette }) => {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ nombre_propietario: username, colors: colorsIDS, descargado: downloaded }),
+          body: JSON.stringify({
+            nombre_palette: nombre_palette,
+            nombre_propietario: username,
+            colors: colorsIDS,
+            descargado: downloaded,
+          }),
         });
         console.log(response);
         if (!response.ok) throw new Error("Error al guardar la paleta");

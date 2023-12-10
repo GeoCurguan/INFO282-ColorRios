@@ -21,17 +21,19 @@ class PaletteRepository extends ServiceEntityRepository
         parent::__construct($registry, Palette::class);
     }
 
-    public function findPalettesByUserId($userId)
+    public function findByUserIdPalettesColor($userId)
     {
         return $this->createQueryBuilder('p')
-            ->select('p.id AS paletteId, c.id AS colorId, c.category, c.commune, c.seasons, c.colorName, c.image, c.ncsNuance, c.ncsHue, c.munsellPage, c.munsellHue, c.munsellValue, c.munsellChroma, c.munsellName, c.cielabL, c.cielabA, c.cielabB, c.rgbR, c.rgbG, c.rgbB, c.cmykC, c.cmykM, c.cmykY, c.cmykK, c.ceresitaName, c.categoryName, c.rowId')
+            ->select('p.id AS paletteId, p.nombre_palette, c.id AS colorId, c.category, c.commune, c.season, c.colorName, c.image, c.ncsNuance, c.ncsHue, c.munsellPage, c.munsellHue, c.munsellValue, c.munsellChroma, c.munsellName, c.cielabL, c.cielabA, c.cielabB, c.rgbR, c.rgbG, c.rgbB, c.cmykC, c.cmykM, c.cmykY, c.cmykK, c.ceresitaName, c.categoryName, c.rowID')
             ->innerJoin('p.paletteColors', 'pc')
             ->innerJoin('pc.color', 'c')
-            ->where('p.id_usuario = :userId')
+            ->where('p.nombre_propietario = :userId')
             ->setParameter('userId', $userId)
             ->getQuery()
             ->getResult();
     }
+
+
 
 //    /**
 //     * @return Palette[] Returns an array of Palette objects

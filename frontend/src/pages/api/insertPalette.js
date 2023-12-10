@@ -11,13 +11,19 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { nombre_propietario, colors, descargado } = req.body;
-  if (nombre_propietario === undefined || colors === undefined || descargado === undefined) {
+  const { nombre_palette, nombre_propietario, colors, descargado } = req.body;
+  if (
+    nombre_palette === undefined ||
+    nombre_propietario === undefined ||
+    colors === undefined ||
+    descargado === undefined
+  ) {
     res.status(422).json({ message: "Invalid body" });
     return;
   }
 
   const messageBody = {
+    nombre_palette,
     nombre_propietario,
     colors,
     descargado,

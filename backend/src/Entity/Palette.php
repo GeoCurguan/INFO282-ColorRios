@@ -22,6 +22,9 @@ class Palette
     #[ORM\Column]
     private ?bool $descargado = null;
 
+    #[ORM\Column]
+    private ?string $nombre_palette = null;
+
     #[ORM\ManyToOne(targetEntity: User::class)]
     #[ORM\JoinColumn(name: "nombre_propietario", referencedColumnName: "username")]
     //private ?User $propietario = null;
@@ -69,6 +72,19 @@ class Palette
 
         return $this;
     }
+
+    public function getNombrePalette(): ?string
+    {
+        return $this->nombre_palette;
+    }
+
+    public function setNombrePalette(string $nombre_palette): static
+    {
+        $this->nombre_palette = $nombre_palette;
+
+        return $this;
+    }
+
 
     /*
     public function getPropietario(): ?User
