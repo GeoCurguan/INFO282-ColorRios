@@ -67,6 +67,18 @@ const ColorsPalette = ({ colorToPalette }) => {
     }
   }, [colorToPalette]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setIsSticky(offset > 132);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const Palette = [];
   for (let i = 0; i < 10; i++) {
     Palette.push(
@@ -107,5 +119,7 @@ const ColorsPalette = ({ colorToPalette }) => {
     </div>
   );
 };
+
+
 
 export default ColorsPalette;
