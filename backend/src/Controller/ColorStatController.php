@@ -118,6 +118,21 @@ class ColorStatController extends AbstractController
         return $this->json(['message' => 'Estadísticas de color creadas.'], Response::HTTP_OK);
     }
 
+    public function findTopClicksPC(int $limit = 10): JsonResponse
+    {
+        $colorStatRepository = $this->entityManager->getRepository(ColorStat::class);
+
+        $topClicks = $colorStatRepository->findBy([], ['clicks' => 'DESC'], $limit);
+
+        $topClicksArray = [];
+
+        foreach ($topClicks as $colorStat) {
+            $topClicksArray[$colorStat->getIdColor()] = $colorStat->getClicks();
+        }
+
+        return new JsonResponse(['topClicks' => $topClicksArray], Response::HTTP_OK);
+    }
+
     public function getColorDates(VisitCounter $visitCounter): JsonResponse
     {
         //Verificar si el usuario tiene el rol necesario (ROLE_ADMIN)

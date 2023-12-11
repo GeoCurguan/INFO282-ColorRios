@@ -89,10 +89,10 @@ const TopColors = ({ setSelectedColor }) => {
           <ThreeColors setSelectedColor={setSelectedColor} colorsArray={topColorsClicks} />
         </div>
 
-        <div className="flex w-full flex-col items-center justify-center">
+        {/* <div className="flex w-full flex-col items-center justify-center">
           <h2 className="truncate text-center text-xl font-bold py-2">En mas paletas</h2>
-          {/* {threeColors(topColorsPalettes)} */}
-        </div>
+          {threeColors(topColorsPalettes)}
+        </div> */}
       </div>
     </div>
   );

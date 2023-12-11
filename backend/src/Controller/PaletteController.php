@@ -126,6 +126,92 @@ class PaletteController extends AbstractController
         return new JsonResponse($palettesArray, Response::HTTP_OK);
     }
 
+        //Función privada para usar aquí dentro del controlador nomás
+        private function countTopColorsInPalette(Palette $palette, array $topColors): int
+        {
+            $count = 0;
+    
+            foreach ($palette->getPaletteColors() as $paletteColor) {
+                $colorId = $paletteColor->getColor()->getId();
+                if (array_key_exists($colorId, $topColors)) {
+                    $count += $topColors[$colorId];
+                }
+            }
+    
+            return $count;
+        }
+
+        public function getTopPalettes(): JsonResponse
+    {
+        //Llamar la función de top clicks
+        $response = $this->forward(ColorStatController::class . '::findTopClicksPC');
+        $topColors = json_decode($response->getContent(), true)['topClicks'];
+
+        //Acá se obtienen las paletas con los colores más clickeados
+        $palettes = $this->paletteRepository->findBy(['id' => array_keys($topColors)]);
+
+        usort($palettes, function (Palette $a, Palette $b) use ($topColors) {
+            $countA = $this->countTopColorsInPalette($a, $topColors);
+            $countB = $this->countTopColorsInPalette($b, $topColors);
+
+            return $countB <=> $countA;
+        });
+
+        $palettes = array_slice($palettes, 0, 3);
+
+        $palettesArray = [];
+
+        foreach ($palettes as $palette) {
+            $paletteId = $palette->getId();
+            $paletteName = $palette->getNombrePalette();
+            $username = $palette->getNombrePropietario();
+
+            $colors = [];
+
+            foreach ($palette->getPaletteColors() as $paletteColor) {
+                $color = [
+                    'id' => $paletteColor->getColor()->getId(),
+                    'category' => $paletteColor->getColor()->getCategory(),
+                    'commune' => $paletteColor->getColor()->getCommune(),
+                    'season' => $paletteColor->getColor()->getSeason(),
+                    'colorName' => $paletteColor->getColor()->getColorName(),
+                    'image' => $paletteColor->getColor()->getImage(),
+                    'ncsNuance' => $paletteColor->getColor()->getNcsNuance(),
+                    'ncsHue' => $paletteColor->getColor()->getNcsHue(),
+                    'munsellPage' => $paletteColor->getColor()->getMunsellPage(),
+                    'munsellHue' => $paletteColor->getColor()->getMunsellHue(),
+                    'munsellValue' => $paletteColor->getColor()->getMunsellValue(),
+                    'munsellChroma' => $paletteColor->getColor()->getMunsellChroma(),
+                    'munsellName' => $paletteColor->getColor()->getMunsellName(),
+                    'L*' => $paletteColor->getColor()->getCielabL(),
+                    'A*' => $paletteColor->getColor()->getCielabA(),
+                    'B*' => $paletteColor->getColor()->getCielabB(),
+                    'R' => $paletteColor->getColor()->getRgbR(),
+                    'G' => $paletteColor->getColor()->getRgbG(),
+                    'B' => $paletteColor->getColor()->getRgbB(),
+                    'C' => $paletteColor->getColor()->getCmykC(),
+                    'M' => $paletteColor->getColor()->getCmykM(),
+                    'Y' => $paletteColor->getColor()->getCmykY(),
+                    'K' => $paletteColor->getColor()->getCmykK(),
+                    'ceresita' => $paletteColor->getColor()->getCeresitaName(),
+                    'categoryName' => $paletteColor->getColor()->getCategoryName(),
+                    'rowId' => $paletteColor->getColor()->getRowID(),
+                ];
+
+                $colors[] = $color;
+            }
+
+            $palettesArray[] = [
+                'id' => $paletteId,
+                'nombre_palette' => $paletteName,
+                'username' => $username,
+                'colors' => $colors,
+            ];
+        }
+
+        return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
+    }
+
     public function getPalettesLR(): Response
     {
         //Buscar primero a los usuarios de Los ríos
@@ -149,68 +235,68 @@ class PaletteController extends AbstractController
         return new JsonResponse($palettesArray, Response::HTTP_OK);
     }
 
-    public function getTopPalettes(): JsonResponse
-    {
-        // Busca el repositorio
-        $paletteRepository = $this->entityManager->getRepository(Palette::class);
+    // public function getTopPalettes(): JsonResponse
+    // {
+    //     // Busca el repositorio
+    //     $paletteRepository = $this->entityManager->getRepository(Palette::class);
 
-        // Hace la consulta: Entrega los colores de las paletas con mas ???.
-        $result = $paletteRepository->findTopPalettes();
+    //     // Hace la consulta: Entrega los colores de las paletas con mas ???.
+    //     $result = $paletteRepository->findTopPalettes();
 
-        $palettesArray = [];
-        foreach ($result as $row) {
-            $paletteId = $row['paletteId']; // Estos nombres son definidos en la consulta del repository.
-            $paletteName = $row['nombre_palette'];
-            $username = $row['username'];
-            $color = [
-                'id' => $row['colorId'],    // Estos nombres son definidos en la consulta del repository.
-                'category' => $row['category'],
-                'commune' => $row['commune'],
-                'season' => $row['season'],
-                'colorName' => $row['colorName'],
-                'image' => $row['image'],
-                'ncsNuance' => $row['ncsNuance'],   // Si algo no funciona es porque le quite la primera mayuscula a NCS, Munsell y Ceresita.
-                'ncsHue' => $row['ncsHue'],
-                'munsellPage' => $row['munsellPage'],
-                'munsellHue' => $row['munsellHue'],
-                'munsellValue' => $row['munsellValue'],
-                'munsellChroma' => $row['munsellChroma'],
-                'munsellName' => $row['munsellName'],
-                'L*' => $row['cielabL'],
-                'A*' => $row['cielabA'],
-                'B*' => $row['cielabB'],
-                'R' => $row['rgbR'],
-                'G' => $row['rgbG'],
-                'B' => $row['rgbB'],
-                'C' => $row['cmykC'],
-                'M' => $row['cmykM'],
-                'Y' => $row['cmykY'],
-                'K' => $row['cmykK'],
-                'ceresita' => $row['ceresitaName'],
-                'categoryName' => $row['categoryName'],
-                'rowId' => $row['rowID']
-            ];
+    //     $palettesArray = [];
+    //     foreach ($result as $row) {
+    //         $paletteId = $row['paletteId']; // Estos nombres son definidos en la consulta del repository.
+    //         $paletteName = $row['nombre_palette'];
+    //         $username = $row['username'];
+    //         $color = [
+    //             'id' => $row['colorId'],    // Estos nombres son definidos en la consulta del repository.
+    //             'category' => $row['category'],
+    //             'commune' => $row['commune'],
+    //             'season' => $row['season'],
+    //             'colorName' => $row['colorName'],
+    //             'image' => $row['image'],
+    //             'ncsNuance' => $row['ncsNuance'],   // Si algo no funciona es porque le quite la primera mayuscula a NCS, Munsell y Ceresita.
+    //             'ncsHue' => $row['ncsHue'],
+    //             'munsellPage' => $row['munsellPage'],
+    //             'munsellHue' => $row['munsellHue'],
+    //             'munsellValue' => $row['munsellValue'],
+    //             'munsellChroma' => $row['munsellChroma'],
+    //             'munsellName' => $row['munsellName'],
+    //             'L*' => $row['cielabL'],
+    //             'A*' => $row['cielabA'],
+    //             'B*' => $row['cielabB'],
+    //             'R' => $row['rgbR'],
+    //             'G' => $row['rgbG'],
+    //             'B' => $row['rgbB'],
+    //             'C' => $row['cmykC'],
+    //             'M' => $row['cmykM'],
+    //             'Y' => $row['cmykY'],
+    //             'K' => $row['cmykK'],
+    //             'ceresita' => $row['ceresitaName'],
+    //             'categoryName' => $row['categoryName'],
+    //             'rowId' => $row['rowID']
+    //         ];
 
-            // Verificar si la paleta ya existe en el array de paletas
-            $existingPalette = array_filter($palettesArray, function ($palette) use ($paletteId) {
-                return $palette['id'] == $paletteId;
-            });
+    //         // Verificar si la paleta ya existe en el array de paletas
+    //         $existingPalette = array_filter($palettesArray, function ($palette) use ($paletteId) {
+    //             return $palette['id'] == $paletteId;
+    //         });
 
-            // Si la paleta no existe, agregarla al array de paletas
-            if (empty($existingPalette)) {
-                $palettesArray[] = [
-                    'id' => $paletteId,
-                    'nombre_palette' => $paletteName,
-                    'username' => $username,
-                    'colors' => [$color] // Asegurar que el array de colores sea una lista de colores. [{color}, {color}, {color}}]
-                ];
-            } else {    // Si la paleta existe, añade el color a su array de colores.
-                $existingPaletteKey = key($existingPalette);
-                $palettesArray[$existingPaletteKey]['colors'][] = $color;
-            }
-        }
-        return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
-    }
+    //         // Si la paleta no existe, agregarla al array de paletas
+    //         if (empty($existingPalette)) {
+    //             $palettesArray[] = [
+    //                 'id' => $paletteId,
+    //                 'nombre_palette' => $paletteName,
+    //                 'username' => $username,
+    //                 'colors' => [$color] // Asegurar que el array de colores sea una lista de colores. [{color}, {color}, {color}}]
+    //             ];
+    //         } else {    // Si la paleta existe, añade el color a su array de colores.
+    //             $existingPaletteKey = key($existingPalette);
+    //             $palettesArray[$existingPaletteKey]['colors'][] = $color;
+    //         }
+    //     }
+    //     return new JsonResponse(['palettes' => $palettesArray], Response::HTTP_OK);
+    // }
 
     public function getPalettesByUsername(string $username): JsonResponse
     {

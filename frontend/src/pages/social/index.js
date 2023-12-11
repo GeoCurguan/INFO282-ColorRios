@@ -51,8 +51,8 @@ const Social = () => {
       <div className="flex">
         <div className="w-4/5 h-screen bg-gray-800 p-4 overflow-y-auto space-y-4">
           <TopColors setSelectedColor={setSelectedColor} />
+          <TopPalettes setSelectedColor={setSelectedColor} />
 
-          {/* <TopPalettes username={username} onColorClick={handleColorClick} /> */}
           <h2 className="text-2xl text-center text-gray-200 font-bold mb-4">Paletas de colores</h2>
           {errorPalettes ? (
             <p className="text-white text-center">No se pudo cargar la información.</p>
