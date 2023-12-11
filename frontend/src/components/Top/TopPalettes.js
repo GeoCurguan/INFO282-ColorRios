@@ -65,12 +65,12 @@ const TopPalettes = ({ setSelectedColor }) => {
         {title}
       </div>
 
-      <ShowPalettes palettes={palettes} />
+      <ShowPalettes setSelectedColor={setSelectedColor} palettes={palettes} />
     </div>
   );
 };
 
-const ShowPalettes = ({ palettes }) => {
+const ShowPalettes = ({ setSelectedColor, palettes }) => {
   return (
     <div>
       {palettes.map((palette, index) => (
@@ -80,7 +80,7 @@ const ShowPalettes = ({ palettes }) => {
             <h2 className="text-gray-500">por {palette["username"]}</h2>
           </div>
           <div className="flex items-center space-x-1">
-            <ShowColors colors={palette["colors"]} />
+            <ShowColors setSelectedColor={setSelectedColor} colors={palette["colors"]} />
           </div>
           <div className="mt-2 flex items-center space-x-1">
             <button
@@ -104,7 +104,7 @@ const ShowPalettes = ({ palettes }) => {
   );
 };
 
-const ShowColors = ({ colors }) => {
+const ShowColors = ({ setSelectedColor, colors }) => {
   if (colors.length === 1) {
     // Si el array colors tiene solo un color
     const divColor = `rgb(${colors[0]["R"]}, ${colors[0]["G"]}, ${colors[0]["B"]})`;
@@ -112,8 +112,8 @@ const ShowColors = ({ colors }) => {
       <>
         <div
           style={{ backgroundColor: divColor }}
-          className="h-14 w-full rounded"
-          onClick={() => handleColorClick(colors[0])}
+          className="cursor-pointer  h-14 w-full rounded"
+          onClick={() => setSelectedColor(colors[0])}
         ></div>
       </>
     );
@@ -125,8 +125,10 @@ const ShowColors = ({ colors }) => {
         <div
           key={index}
           style={{ backgroundColor: divColor }}
-          className={`h-14 w-full ${index === 0 ? "rounded-l" : ""} ${index === colors.length - 1 ? "rounded-r" : ""}`}
-          onClick={() => handleColorClick(color)}
+          className={`cursor-pointer h-14 w-full ${index === 0 ? "rounded-l" : ""} ${
+            index === colors.length - 1 ? "rounded-r" : ""
+          }`}
+          onClick={() => setSelectedColor(color)}
         ></div>
       );
     });
