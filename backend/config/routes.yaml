@@ -95,3 +95,17 @@ palette_getPalettesColor:
   path: /api/palette_color/getPalettesColor
   controller: App\Controller\PaletteColorController::getPalettesColor
   methods: [GET]
+
+colorstat_topClicks:
+  path: /api/topClicks
+  controller: App\Controller\ColorStatController::topClicks
+  methods: [GET]
+
+palettes_getTopPalettes:
+  path: /api/getTopPalettes
+  controller: App\Controller\PaletteController::getTopPalettes
+  methods: [GET]
+# /api/getColors/topByClicks
+# /api/colors/topbypalettes
+# /api/colors/topbyclicks/${username}
+# /api/colors/topbypalettes/${username}

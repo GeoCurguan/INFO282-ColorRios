@@ -21,6 +21,26 @@ class ColorStatRepository extends ServiceEntityRepository
         parent::__construct($registry, ColorStat::class);
     }
 
+    public function findTopClicks()
+    {
+
+        // SELECT c.*, cs.clicks
+        // FROM ColorStat cs
+        // JOIN Color c ON cs.id_color = c.id
+        // ORDER BY cs.clicks DESC;
+
+        return $this->createQueryBuilder('cs')
+            ->select('c.id AS colorId, c.category, c.commune, c.season, c.colorName, c.image, c.ncsNuance, c.ncsHue, c.munsellPage, c.munsellHue, c.munsellValue, c.munsellChroma, c.munsellName, c.cielabL, c.cielabA, c.cielabB, c.rgbR, c.rgbG, c.rgbB, c.cmykC, c.cmykM, c.cmykY, c.cmykK, c.ceresitaName, c.categoryName, c.rowID, cs.clicks')
+            ->innerJoin('cs.color', 'c')
+            ->orderBy('cs.clicks', 'DESC')
+            ->setMaxResults(3)
+            ->getQuery()
+            ->getResult();
+            // ->innerJoin('c.color', 'color') // Join ColorStat (id_color) with Color (id)
+    }
+
+
+
 //    /**
 //     * @return ColorStat[] Returns an array of ColorStat objects
 //     */

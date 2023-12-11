@@ -175,6 +175,53 @@ class ColorStatController extends AbstractController
         return new JsonResponse(['message' => 'Color clickeado'], Response::HTTP_OK);
     }
 
+    public function topClicks(): JsonResponse
+    {
+        // 1. Busca el repositorio
+        $colorStatRepository = $this->entityManager->getRepository(ColorStat::class);
+        
+        // 2. Hace la consulta: Entrega los colores de las paletas con mas clicks
+        $result = $colorStatRepository->findTopClicks();
+
+        // 3. Transforma el resultado en un arreglo
+        $colors = [];
+        foreach ($result as $row) {
+            $colors[] = [
+                'id' => $row['colorId'],   
+                'category' => $row['category'],
+                'commune' => $row['commune'],
+                'season' => $row['season'],
+                'colorName' => $row['colorName'],
+                'image' => $row['image'],
+                'ncsNuance' => $row['ncsNuance'],   
+                'ncsHue' => $row['ncsHue'],
+                'munsellPage' => $row['munsellPage'],
+                'munsellHue' => $row['munsellHue'],
+                'munsellValue' => $row['munsellValue'],
+                'munsellChroma' => $row['munsellChroma'],
+                'munsellName' => $row['munsellName'],
+                'L*' => $row['cielabL'],
+                'A*' => $row['cielabA'],
+                'B*' => $row['cielabB'],
+                'R' => $row['rgbR'],
+                'G' => $row['rgbG'],
+                'B' => $row['rgbB'],
+                'C' => $row['cmykC'],
+                'M' => $row['cmykM'],
+                'Y' => $row['cmykY'],
+                'K' => $row['cmykK'],
+                'ceresita' => $row['ceresitaName'],
+                'categoryName' => $row['categoryName'],
+                'rowId' => $row['rowID'],
+                "clicks" => $row['clicks']
+            ];
+        }
+
+        // 4. Retorna el arreglo como JSON
+        return $this->json(['colors' => $colors], Response::HTTP_OK);
+
+    }
+
     public function updatePalettesCount($colorId, PaletteColorController $paletteColorController): JsonResponse
     {
         //Llamamos a la función countPalettes del PaletteColorController
