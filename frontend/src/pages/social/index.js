@@ -4,6 +4,7 @@ import TopColors from "@/components/Top/TopColors";
 import TopPalettes from "@/components/Top/TopPalettes";
 import ColorDetail from "@/components/ColorDetail/ColorDetail";
 import PalettesColor from "@/components/Top/PalettesColors";
+import { useAuthContext } from "@/context/AuthContext";
 
 // La pagina Social debe hacer lo siguiente:
 // 1) Barra de Navegacion para moverse entre paginas.
@@ -13,6 +14,7 @@ import PalettesColor from "@/components/Top/PalettesColors";
 // 5) Al hacer click en un color aparece en la derecha los detalles.
 
 const Social = () => {
+  const { username, auth: token } = useAuthContext();
   const [palettes, setPalettes] = useState([]);
   const [errorPalettes, setErrorPalettes] = useState(false);
 
@@ -21,7 +23,7 @@ const Social = () => {
       try {
         const response = await fetch(`/api/palette_color/getPalettesColor`, {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
           },
         });
@@ -43,20 +45,14 @@ const Social = () => {
 
   const [selectedColor, setSelectedColor] = useState(null);
 
-  const handleColorClick = (color) => {
-    // Actualizar la variable cuando se hace clic en un elemento en TopColors o TopPalettes
-    setSelectedColor(color);
-  };
-
   return (
     <>
       <Nav />
-
       <div className="flex">
         <div className="w-4/5 h-screen bg-gray-800 p-4 overflow-y-auto space-y-4">
-          {/* <TopColors onColorClick={handleColorClick} /> // Necesita ser arreglado sus consultas... */}
+          <TopColors setSelectedColor={setSelectedColor} />
 
-          {/* <TopPalettes onColorClick={handleColorClick} /> */}
+          {/* <TopPalettes username={username} onColorClick={handleColorClick} /> */}
           <h2 className="text-2xl text-center text-gray-200 font-bold mb-4">Paletas de colores</h2>
           {errorPalettes ? (
             <p className="text-white text-center">No se pudo cargar la información.</p>

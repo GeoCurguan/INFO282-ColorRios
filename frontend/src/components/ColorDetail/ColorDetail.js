@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { HeartIcon, InformationIcon, CloseIcon } from "@/icons";
-import { RGB, COLORINFO } from "@/constants/properties";
+import { HeartIcon, CloseIcon } from "@/icons";
+import { COLORINFO } from "@/constants/properties";
 import { colorRGB, rgbToHex } from "@/utils";
-import styles from "./styles/ColorDetail.module.css";
-import Image from "next/image";
 
 const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
-  console.log(color);
   //Estados de la barra
   function name(color) {
     if (color[COLORINFO.colorName]) {

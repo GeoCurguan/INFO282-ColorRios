@@ -1,6 +1,4 @@
 // Cree otro pq ya envié mal el formato
-import { useState } from "react";
-import ColorDetail from "../ColorDetail/ColorDetail";
 import { COLORINFO } from "@/constants/properties";
 
 const PalettesColors = ({ palette, setSelectedColor }) => {
