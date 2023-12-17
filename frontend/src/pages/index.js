@@ -10,9 +10,6 @@ import Colors from "@/components/Colors/Colors";
 import ColorDetail from "@/components/ColorDetail/ColorDetail";
 import Nav from "@/components/Navbar/Nav";
 
-// Constants
-import { COLORINFO } from "@/constants/properties";
-
 export async function getServerSideProps() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_IP}/api/getColors`);
   const colors = await res.json();
@@ -25,17 +22,8 @@ export async function getServerSideProps() {
   };
 }
 
-const colorsLengthRGBDefined = (colors) => {
-  // Retorna el largo de los colores que tengan definido un RGB
-  const lengthColors = colors.filter(
-    (color) => color[COLORINFO.rgbR] && color[COLORINFO.rgbG] && color[COLORINFO.rgbB]
-  );
-  return lengthColors.length;
-};
-
 export default function Home({ colors }) {
-  const { classNameObject, openFilters, toggleFilters, widthColors, detailTransition, currentColor, setCurrentColor } =
-    useSideBar();
+  const { classNameObject, openFilters, toggleFilters, widthColors, currentColor, setCurrentColor } = useSideBar();
   const { filters, filterColors, setFilters } = useFilters();
   const filteredColors = filterColors(colors);
   const [colorToPalette, setColorToPalette] = useState(null);
@@ -62,8 +50,8 @@ export default function Home({ colors }) {
             data-testid="colors"
           >
             <Header
-              filteredColorsLength={colorsLengthRGBDefined(filteredColors)}
-              colorsLength={colorsLengthRGBDefined(colors)}
+              filteredColorsLength={filteredColors.length}
+              colorsLength={colors.length}
               colorToPalette={colorToPalette}
               setCurrentColor={setCurrentColor}
             />

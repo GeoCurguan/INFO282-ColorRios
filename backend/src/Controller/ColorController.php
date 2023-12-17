@@ -73,18 +73,21 @@ class ColorController extends AbstractController
                     $color->setMunsellChroma($value[30] ? $value[30] : null);
                     $color->setMunsellName($value[31] ? $value[31] : null);
                     //CIELAB
-                    $color->setCielabL($value[32] ? gettype($value[32]) !== 'integer' ? intval($value[32])  : $value[32] : null);
-                    $color->setCielabA($value[33] ? gettype($value[33]) !== 'integer' ? intval($value[33])  : $value[33] : null);
-                    $color->setCielabB($value[34] ? gettype($value[34]) !== 'integer' ? intval($value[34])  : $value[34] : null);
-                    //RGB
-                    $color->setRgbR($value[36] ? gettype($value[36]) !== 'integer' ? intval($value[36]) : $value[36] : null);
-                    $color->setRgbG($value[37] ? gettype($value[37]) !== 'integer' ? intval($value[37]) : $value[37] : null);
-                    $color->setRgbB($value[38] ? gettype($value[38]) !== 'integer' ? intval($value[38]) : $value[38] : null);
+                    $color->setCielabL($value[32] ? gettype($value[32]) !== 'integer' ? intval($value[32])  : $value[32] : 0);
+                    $color->setCielabA($value[33] ? gettype($value[33]) !== 'integer' ? intval($value[33])  : $value[33] : 0);
+                    $color->setCielabB($value[34] ? gettype($value[34]) !== 'integer' ? intval($value[34])  : $value[34] : 0);
+
+                    //RGB esto lo comento pq evalua integer 0 como null.
+                    $color->setRgbR($value[36] ? gettype($value[36]) !== 'integer' ? intval($value[36]) : $value[36] : 0);
+                    $color->setRgbG($value[37] ? gettype($value[37]) !== 'integer' ? intval($value[37]) : $value[37] : 0);
+                    $color->setRgbB($value[38] ? gettype($value[38]) !== 'integer' ? intval($value[38]) : $value[38] : 0);
+
                     //CMYK
-                    $color->setCmykC($value[39] ? gettype($value[39]) !== 'integer' ? intval($value[39])  : $value[39] : null);
-                    $color->setCmykM($value[40] ? gettype($value[40]) !== 'integer' ? intval($value[40])  : $value[40] : null);
-                    $color->setCmykY($value[41] ? gettype($value[41]) !== 'integer' ? intval($value[41])  : $value[41] : null);
-                    $color->setCmykK($value[42] ? gettype($value[42]) !== 'integer' ? intval($value[42])  : $value[42] : null);
+                    $color->setCmykC($value[39] ? gettype($value[39]) !== 'integer' ? intval($value[39])  : $value[39] : 0);
+                    $color->setCmykM($value[40] ? gettype($value[40]) !== 'integer' ? intval($value[40])  : $value[40] : 0);
+                    $color->setCmykY($value[41] ? gettype($value[41]) !== 'integer' ? intval($value[41])  : $value[41] : 0);
+                    $color->setCmykK($value[42] ? gettype($value[42]) !== 'integer' ? intval($value[42])  : $value[42] : 0);
+
                     //FILTRO POR NOMBRE DE COLOR
                     $color->setCategoryName(isset($value[46]) ? $value[46] : null);
 
@@ -102,18 +105,21 @@ class ColorController extends AbstractController
                     $get_color->setMunsellChroma($value[30] ? $value[30] : null);
                     $get_color->setMunsellName($value[31] ? $value[31] : null);
                     //CIELAB
-                    $get_color->setCielabL($value[32] ? gettype($value[32]) !== 'integer' ? intval($value[32])  : $value[32] : null);
-                    $get_color->setCielabA($value[33] ? gettype($value[33]) !== 'integer' ? intval($value[33])  : $value[33] : null);
-                    $get_color->setCielabB($value[34] ? gettype($value[34]) !== 'integer' ? intval($value[34])  : $value[34] : null);
+                    $get_color->setCielabL($value[32] ? gettype($value[32]) !== 'integer' ? intval($value[32])  : $value[32] : 0);
+                    $get_color->setCielabA($value[33] ? gettype($value[33]) !== 'integer' ? intval($value[33])  : $value[33] : 0);
+                    $get_color->setCielabB($value[34] ? gettype($value[34]) !== 'integer' ? intval($value[34])  : $value[34] : 0);
+
                     //RGB
-                    $get_color->setRgbR($value[36] ? gettype($value[36]) !== 'integer' ? intval($value[36]) : $value[36] : null);
-                    $get_color->setRgbG($value[37] ? gettype($value[37]) !== 'integer' ? intval($value[37]) : $value[37] : null);
-                    $get_color->setRgbB($value[38] ? gettype($value[38]) !== 'integer' ? intval($value[38]) : $value[38] : null);
+                    $get_color->setRgbR($value[36] ? gettype($value[36]) !== 'integer' ? intval($value[36]) : $value[36] : 0);
+                    $get_color->setRgbG($value[37] ? gettype($value[37]) !== 'integer' ? intval($value[37]) : $value[37] : 0);
+                    $get_color->setRgbB($value[38] ? gettype($value[38]) !== 'integer' ? intval($value[38]) : $value[38] : 0);
+
                     //CMYK
-                    $get_color->setCmykC($value[39] ? gettype($value[39]) !== 'integer' ? intval($value[39])  : $value[39] : null);
-                    $get_color->setCmykM($value[40] ? gettype($value[40]) !== 'integer' ? intval($value[40])  : $value[40] : null);
-                    $get_color->setCmykY($value[41] ? gettype($value[41]) !== 'integer' ? intval($value[41])  : $value[41] : null);
-                    $get_color->setCmykK($value[42] ? gettype($value[42]) !== 'integer' ? intval($value[42])  : $value[42] : null);
+                    $get_color->setCmykC($value[39] ? gettype($value[39]) !== 'integer' ? intval($value[39])  : $value[39] : 0);
+                    $get_color->setCmykM($value[40] ? gettype($value[40]) !== 'integer' ? intval($value[40])  : $value[40] : 0);
+                    $get_color->setCmykY($value[41] ? gettype($value[41]) !== 'integer' ? intval($value[41])  : $value[41] : 0);
+                    $get_color->setCmykK($value[42] ? gettype($value[42]) !== 'integer' ? intval($value[42])  : $value[42] : 0);
+
                     //FILTRO POR NOMBRE DE COLOR
                     $get_color->setCategoryName($value[46] ? $value[46] : null);
                 }

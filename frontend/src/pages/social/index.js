@@ -31,7 +31,6 @@ const Social = () => {
         if (response.ok) {
           const data = await response.json();
           setPalettes(data);
-          console.log(data);
         } else {
           setErrorPalettes(true);
         }

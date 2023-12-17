@@ -16,7 +16,6 @@ export const AuthContext = ({ children }) => {
     if (Object.keys(user).length > 0) {
       // Si el usuario tiene datos, entonces ya está logueado
       // Revisamos la integridad de del token (si expiró): "exp"
-      console.log(user);
       if (user.exp < Date.now() / 1000) {
         // El token expiró
         console.log("El token expiró");
@@ -31,7 +30,6 @@ export const AuthContext = ({ children }) => {
     localStorage.setItem("token", token);
     // Obtener los datos del usuario desde el servidor o bien desencriptar acá
     const decodedToken = decodeToken(token);
-    console.log(decodedToken);
     setUser(decodedToken);
   };
 

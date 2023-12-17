@@ -15,7 +15,6 @@ const useSideBar = () => {
     } else {
       setClassNameObject({ ...classNameObject, colorDetail: { detailTransition: "detail-inactive" } });
       setWidthColors("colors-inactive");
-      console.log("CURRENT_COLOR: Color cerrado");
     }
   }, [currentColor]);
 
@@ -35,7 +34,6 @@ const useSideBar = () => {
     } else {
       setWidthColors("colors-inactive");
       setClassNameObject({ ...classNameObject, filtersDrawer: { detailTransition: "detail-inactive" } });
-      console.log("OPEN_FILTERS: Color cerrado");
     }
   }, [openFilters]);
 

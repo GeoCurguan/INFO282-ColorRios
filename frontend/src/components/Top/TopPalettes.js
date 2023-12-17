@@ -14,7 +14,6 @@ const TopPalettes = ({ setSelectedColor }) => {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         });
-        console.log(response);
         if (!response.ok) {
           throw new Error("Error al obtener las paletas mas populares.");
         }
@@ -51,14 +50,6 @@ const TopPalettes = ({ setSelectedColor }) => {
     // }
   }, []);
 
-  function likePalette(paletteId) {
-    console.log("Intentaste darle like a la paleta con la ID: " + paletteId);
-  }
-
-  function downloadPalette(paletteId) {
-    console.log("Intentaste descargar la paleta con la ID: " + paletteId);
-  }
-
   return (
     <div className="rounded-xl bg-gray-300 shadow-md">
       <div className="w-full h-12 rounded-t-xl bg-gray-100 shadow-md flex items-center justify-center text-center text-2xl font-bold">
@@ -82,7 +73,7 @@ const ShowPalettes = ({ setSelectedColor, palettes }) => {
           <div className="flex items-center space-x-1">
             <ShowColors setSelectedColor={setSelectedColor} colors={palette["colors"]} />
           </div>
-          <div className="mt-2 flex items-center space-x-1">
+          {/* <div className="mt-2 flex items-center space-x-1">
             <button
               className="h-8 w-24 rounded-xl bg-pink-400 font-bold text-white"
               onClick={() => likePalette(palette["id"])}
@@ -97,7 +88,7 @@ const ShowPalettes = ({ setSelectedColor, palettes }) => {
               {" "}
               Descargar{" "}
             </button>
-          </div>
+          </div> */}
         </div>
       ))}
     </div>

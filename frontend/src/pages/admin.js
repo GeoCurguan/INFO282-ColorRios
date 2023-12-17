@@ -33,6 +33,28 @@ const Admin = ({ data }) => {
   const [palettes, setPalettes] = useState([]);
   const [palettesLR, setPalettesLR] = useState([]);
 
+  const fetchColorsGoogleSheet = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const response = await fetch("/api/postInsertarColores", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) {
+        console.log(response);
+        throw new Error("Error al insertar colores");
+      }
+      console.log("Colores insertados correctamente");
+      alert("Colores insertados correctamente");
+    } catch (error) {
+      console.error("Error al insertar colores:", error.message);
+      toast.error("Error al insertar colores");
+    }
+  };
+
   const fetchUsers = async () => {
     try {
       //Obtenemos el token del localStorage
@@ -61,7 +83,6 @@ const Admin = ({ data }) => {
     try {
       //Obtenemos el token del localStorage
       const token = localStorage.getItem("token");
-      console.log(token);
 
       const response = await fetch("/api/getColors", {
         headers: {
@@ -197,6 +218,7 @@ const Admin = ({ data }) => {
     fetchVisits();
     fetchPalettes();
     fetchPalettesLR();
+    fetchColorsGoogleSheet();
   };
 
   return (

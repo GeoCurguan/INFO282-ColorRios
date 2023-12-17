@@ -14,6 +14,8 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   }
 
   function category(color) {
+    if (color[COLORINFO.category] === null || color[COLORINFO.category] === undefined) return <></>;
+
     if (["roca", "suelo", "planta"].includes(color[COLORINFO.category].toLowerCase())) {
       return (
         <div>
@@ -47,7 +49,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
       return (
         <div>
           <p className="text-sm font-bold">Estación:</p>
-          <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.season]}</p>
+          <p className="capitalize text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.season]}</p>
         </div>
       );
     }
@@ -96,11 +98,12 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
 
   function munsell(color) {
     if (
-      color[COLORINFO.munsellPage] &&
-      color[COLORINFO.munsellHue] &&
-      color[COLORINFO.munsellValue] &&
-      color[COLORINFO.munsellChroma] &&
-      color[COLORINFO.munsellName]
+      typeof color[COLORINFO.munsellHue] !== "undefined" ||
+      (color[COLORINFO.munsellHue] !== null && typeof color[COLORINFO.munsellValue] !== "undefined") ||
+      (color[COLORINFO.munsellValue] !== null && typeof color[COLORINFO.munsellChroma] !== "undefined") ||
+      (color[COLORINFO.munsellChroma] !== null && typeof color[COLORINFO.munsellName] !== "undefined") ||
+      (color[COLORINFO.munsellName] !== null && typeof color[COLORINFO.munsellHue] !== "undefined") ||
+      color[COLORINFO.munsellHue] !== null
     ) {
       return (
         <div>
@@ -115,7 +118,12 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   }
 
   function cielab(color) {
-    if (color[COLORINFO.cielabL] && color[COLORINFO.cielabA] && color[COLORINFO.cielabB]) {
+    if (
+      typeof color[COLORINFO.cielabL] !== "undefined" ||
+      (color[COLORINFO.cielabL] !== null && typeof color[COLORINFO.cielabA] !== "undefined") ||
+      (color[COLORINFO.cielabA] !== null && typeof color[COLORINFO.cielabB] !== "undefined") ||
+      color[COLORINFO.cielabB] !== null
+    ) {
       return (
         <div>
           <p className="text-sm font-bold">CIELab:</p>
@@ -128,7 +136,12 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   }
 
   function rgb(color) {
-    if (color[COLORINFO.rgbR] && color[COLORINFO.rgbG] && color[COLORINFO.rgbB]) {
+    if (
+      typeof color[COLORINFO.rgbR] !== "undefined" ||
+      (color[COLORINFO.rgbR] !== null && typeof color[COLORINFO.rgbG] !== "undefined") ||
+      (color[COLORINFO.rgbG] !== null && typeof color[COLORINFO.rgbB] !== "undefined") ||
+      color[COLORINFO.rgbB] !== null
+    ) {
       return (
         <div>
           <p className="text-sm font-bold">RGB:</p>
@@ -141,7 +154,13 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   }
 
   function cmyk(color) {
-    if (color[COLORINFO.cmykC] && color[COLORINFO.cmykM] && color[COLORINFO.cmykY] && color[COLORINFO.cmykK]) {
+    if (
+      typeof color[COLORINFO.cmykC] !== "undefined" ||
+      (color[COLORINFO.cmykC] !== null && typeof color[COLORINFO.cmykM] !== "undefined") ||
+      (color[COLORINFO.cmykM] !== null && typeof color[COLORINFO.cmykY] !== "undefined") ||
+      (color[COLORINFO.cmykY] !== null && typeof color[COLORINFO.cmykK] !== "undefined") ||
+      color[COLORINFO.cmykK] !== null
+    ) {
       return (
         <div>
           <p className="text-sm font-bold">CMYK:</p>

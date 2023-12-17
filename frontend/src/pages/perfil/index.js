@@ -48,8 +48,6 @@ const Page = () => {
     getPalettesColor();
   }, []);
 
-  console.log(palettesColors);
-
   return (
     <ProtectedLogged>
       <div className="custom-bg min-h-screen">
