@@ -1,0 +1,4 @@
+/var/
+/vendor/
+.gitignore
+README.md

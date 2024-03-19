@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+  colors-php:
+    build:
+      context: ./backend
+      dockerfile: docker/php/Dockerfile
+    volumes:
+      - ./backend:/var/www/symfony
+    restart: always
+    expose:
+      - "9003"
+    ports:
+      - 5003:8000
+    networks:
+      - chromos
+    depends_on:
+      - colors-mysql
+
+  colors-mysql:
+    build:
+      context: ./backend
+      dockerfile: docker/mysql/Dockerfile
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3311:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: chromosV2
+    volumes:
+      - mysql-db-data:/var/lib/mysql
+    restart: always
+    networks:
+      - chromos
+
+  colors-front:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: colors-front
+    restart: always
+    ports:
+      - 4002:3000
+
+    networks:
+      - chromos
+
+networks:
+  chromos:
+
+volumes:
+  mysql-db-data:
