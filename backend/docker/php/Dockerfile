@@ -1,4 +1,5 @@
-FROM php:fpm
+### DOCKER PHP
+FROM php:8.2.4-fpm
 
 RUN apt update && apt-get install -y
 
@@ -39,7 +40,11 @@ RUN echo 'deb [trusted=yes] https://repo.symfony.com/apt/ /' | tee /etc/apt/sour
 RUN apt update
 RUN apt install symfony-cli
 
-RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
+# RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
+# Instalar Composer en una versión específica
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=2.6.5
+
+
 COPY ./docker/xdebug/xdebug.ini $PHP_INI_DIR/conf.d/docker-php-ext-xdebug.ini
 COPY ./docker/opcache/opcache.ini $PHP_INI_DIR/conf.d/ddocker-php-ext-opcache.ini
 RUN git config --global user.email "alex.garnica@alumnos.uach.cl" \ 
