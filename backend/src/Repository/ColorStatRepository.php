@@ -30,7 +30,7 @@ class ColorStatRepository extends ServiceEntityRepository
         // ORDER BY cs.clicks DESC;
 
         return $this->createQueryBuilder('cs')
-            ->select('c.id AS colorId, c.category, c.commune, c.season, c.colorName, c.image, c.ncsNuance, c.ncsHue, c.munsellPage, c.munsellHue, c.munsellValue, c.munsellChroma, c.munsellName, c.cielabL, c.cielabA, c.cielabB, c.rgbR, c.rgbG, c.rgbB, c.cmykC, c.cmykM, c.cmykY, c.cmykK, c.ceresitaName, c.categoryName, c.rowID, cs.clicks')
+            ->select('c.id AS colorId, c.category, c.commune, c.season, c.colorName, c.scientificName, c.image, c.ncsNuance, c.ncsHue, c.munsellPage, c.munsellHue, c.munsellValue, c.munsellChroma, c.munsellName, c.cielabL, c.cielabA, c.cielabB, c.rgbR, c.rgbG, c.rgbB, c.cmykC, c.cmykM, c.cmykY, c.cmykK, c.ceresitaName, c.categoryName, c.rowID, cs.clicks')
             ->innerJoin('cs.color', 'c')
             ->orderBy('cs.clicks', 'DESC')
             ->setMaxResults(3)
