@@ -7,9 +7,17 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   //Estados de la barra
   function name(color) {
     if (color[COLORINFO.colorName]) {
-      return <h1 className="truncate text-center text-3xl font-bold">{color[COLORINFO.colorName]}</h1>;
+      return (
+        <h1 className="text-center text-3xl font-bold" style={{ textWrap: "balance" }}>
+          {color[COLORINFO.colorName]}
+        </h1>
+      );
     } else {
-      return <h1 className="truncate text-gray-300 text-center text-3xl font-bold">Sin Nombre</h1>;
+      return (
+        <h1 className="text-gray-300 text-center text-3xl font-bold" style={{ textWrap: "balance" }}>
+          Sin Nombre
+        </h1>
+      );
     }
   }
 
@@ -56,11 +64,11 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   }
 
   function sample(color) {
-    if (color[COLORINFO.colorName]) {
+    if (color[COLORINFO.scientificName]) {
       return (
         <div>
           <p className="text-sm font-bold">Muestra:</p>
-          <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.colorName]}</p>
+          <p className="text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.scientificName]}</p>
         </div>
       );
     }

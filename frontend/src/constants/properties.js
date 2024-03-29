@@ -35,7 +35,7 @@ const COLORINFO = {
   placeNumber: 8, // Numero de Zona
   object: 9, //
   commonName: 10, // Si es una planta, este es el nombre comun.
-  scientificName: 11, // Si es una planta, este es el nombre cientifico.
+  scientificName: "scientificName", // Si es una planta, este es el nombre cientifico.
   soilType: 12, // Si es un suelo, este es el nombre cientifico.
   latitude: 13, // Grados +
   longitude: 14,
@@ -68,7 +68,7 @@ const COLORINFO = {
   cmykK: "K",
   ceresitaName: "Ceresita",
   hex: 43,
-  colorName: "category", // CAMBIAR ESTO CUANDO ESTE EL NOMBRE DEL COLOR
+  colorName: "colorName", // CAMBIAR ESTO CUANDO ESTE EL NOMBRE DEL COLOR
   colorFilter: "categoryName",
 };
 

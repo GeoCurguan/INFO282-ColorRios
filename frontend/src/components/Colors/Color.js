@@ -14,7 +14,6 @@ const Color = ({ color, setCurrentColor, isSelected }) => {
     try {
       const colorId = color.id;
       const response = await fetch(`/api/getClickColorId/${colorId}`);
-      console.log(response);
     } catch (error) {
       console.log(error);
     }
@@ -22,7 +21,7 @@ const Color = ({ color, setCurrentColor, isSelected }) => {
 
   const handleCurrentColor = () => {
     setCurrentColor(color);
-    console.log(color);
+    // console.log(color);
     sendData();
   };
 
