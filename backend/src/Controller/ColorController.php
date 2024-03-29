@@ -88,6 +88,10 @@ class ColorController extends AbstractController
                     $color->setCmykY($value[41] ? gettype($value[41]) !== 'integer' ? intval($value[41])  : $value[41] : 0);
                     $color->setCmykK($value[42] ? gettype($value[42]) !== 'integer' ? intval($value[42])  : $value[42] : 0);
 
+                    // NOMBRE FANTASIA
+                    $color->setColorName(isset($value[45]) ? $value[45] : null);
+                    // NOMBRE CIENTIFICO
+                    $color->setScientificName(isset($value[12]) ? $value[12] : null);
                     //FILTRO POR NOMBRE DE COLOR
                     $color->setCategoryName(isset($value[46]) ? $value[46] : null);
 
@@ -120,6 +124,10 @@ class ColorController extends AbstractController
                     $get_color->setCmykY($value[41] ? gettype($value[41]) !== 'integer' ? intval($value[41])  : $value[41] : 0);
                     $get_color->setCmykK($value[42] ? gettype($value[42]) !== 'integer' ? intval($value[42])  : $value[42] : 0);
 
+                    // NOMBRE FANTASIA
+                    $get_color->setColorName(($value[45]) ? $value[45] : null);
+                    // NOMBRE CIENTIFICO
+                    $get_color->setScientificName(($value[12]) ? $value[12] : null);
                     //FILTRO POR NOMBRE DE COLOR
                     $get_color->setCategoryName($value[46] ? $value[46] : null);
                 }
@@ -143,6 +151,8 @@ class ColorController extends AbstractController
                 'id' => $color->getId(),
                 'category' => $color->getCategory(),
                 'categoryName' => $color->getCategoryName(),
+                'colorName' => $color->getColorName(),
+                'scientificName' => $color->getScientificName(),
                 'commune' => $color->getCommune(),
                 'season' => $color->getSeason(),
                 'NcsNuance' => $color->getNcsNuance(),

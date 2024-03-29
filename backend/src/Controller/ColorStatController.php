@@ -207,6 +207,7 @@ class ColorStatController extends AbstractController
                 'commune' => $row['commune'],
                 'season' => $row['season'],
                 'colorName' => $row['colorName'],
+                'scientificName' => $row['scientificName'],
                 'image' => $row['image'],
                 'ncsNuance' => $row['ncsNuance'],   
                 'ncsHue' => $row['ncsHue'],

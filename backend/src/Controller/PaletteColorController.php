@@ -107,6 +107,7 @@ class PaletteColorController extends AbstractController
                         'commune' => $color->getCommune(),
                         'season' => $color->getSeason(),
                         'colorName' => $color->getColorName(),
+                        'scientificName' => $color->getScientificName(),
                         'image' => $color->getImage(),
                         'ncsNuance' => $color->getNcsNuance(),
                         'ncsHue' => $color->getNcsHue(),

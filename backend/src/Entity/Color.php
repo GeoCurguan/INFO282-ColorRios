@@ -27,6 +27,9 @@ class Color
     #[ORM\Column(name: "colorName", length: 255, nullable: true)]
     private ?string $colorName = null;
 
+    #[ORM\Column(name: "scientificName", length: 255, nullable: true)]
+    private ?string $scientificName = null;
+
     #[ORM\Column(name: "image", length: 255, nullable: true)]
     private ?string $image = null;
 
@@ -147,6 +150,18 @@ class Color
     public function setColorName(?string $colorName): static
     {
         $this->colorName = $colorName;
+
+        return $this;
+    }
+
+    public function getScientificName(): ?string
+    {
+        return $this->scientificName;
+    }
+
+    public function setScientificName(?string $scientificName): static
+    {
+        $this->scientificName = $scientificName;
 
         return $this;
     }

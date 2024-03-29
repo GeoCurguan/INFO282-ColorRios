@@ -175,6 +175,7 @@ class PaletteController extends AbstractController
                     'commune' => $paletteColor->getColor()->getCommune(),
                     'season' => $paletteColor->getColor()->getSeason(),
                     'colorName' => $paletteColor->getColor()->getColorName(),
+                    'scientificName' => $paletteColor->getColor()->getScientificName(),                  
                     'image' => $paletteColor->getColor()->getImage(),
                     'ncsNuance' => $paletteColor->getColor()->getNcsNuance(),
                     'ncsHue' => $paletteColor->getColor()->getNcsHue(),

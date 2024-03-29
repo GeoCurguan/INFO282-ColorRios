@@ -23,6 +23,7 @@ CREATE TABLE `color` (
 `commune` varchar(255) DEFAULT NULL,
 `seasons` varchar(255) DEFAULT NULL,
 `colorName` varchar(255) DEFAULT NULL,
+`scientificName` varchar(255) DEFAULT NULL,
 `image` varchar(255) DEFAULT NULL,
 `ncsNuance` varchar(255) DEFAULT NULL,
 `ncsHue` varchar(255) DEFAULT NULL,
