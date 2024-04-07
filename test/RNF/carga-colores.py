@@ -7,8 +7,10 @@ from utils import format_decimal
 from constants import *
 import os
 
+# assert (condition, message) -> Si la condición es falsa, se lanza un AssertionError con el mensaje proporcionado.
+
 # CONFIGURAR Y EJECUTAR EL NAVEGADOR
-def get_driver(browser="chrome", network_conditions=None):
+def get_driver(browser="chrome"):
     """
     Obtiene el controlador del navegador según el navegador especificado.
 
@@ -26,9 +28,9 @@ def get_driver(browser="chrome", network_conditions=None):
         driver = BROWSERS_DRIVERS[browser]()
     except KeyError:
         raise KeyError(f"El navegador '{browser}' no es válido. Debe ser uno de: {', '.join(BROWSERS_DRIVERS.keys())}")
-    if network_conditions:
+    #if network_conditions:
         # **network_conditions: Desempaqueta el diccionario y lo pasa como argumentos.
-        driver.set_network_conditions(**network_conditions)
+        #driver.set_network_conditions(**network_conditions)
 
     return driver
 
@@ -83,7 +85,7 @@ def wait_time_iteration(driver, wait_time, start_time):
     if not isinstance(wait_time, (int, float)):
         raise TypeError(f"El tiempo de espera debe ser un int o float. Se recibió {type(wait_time)}")
 
-    # --- ACCEDER A LA PAGINA Y COMPARAR ---
+    # --- COMPROBAR GALERIA ---
     try:
         gallery = WebDriverWait(driver, wait_time).until(
             EC.presence_of_element_located((By.XPATH, "//div[@data-testid='colors']"))  # Esperar a la presencia de la galeria.
@@ -92,31 +94,41 @@ def wait_time_iteration(driver, wait_time, start_time):
     except TimeoutException as e:
         print(f"No se encontró GALERIA después de {wait_time} segundos.")
         screenshot(driver, f"{PATH_SCREENSHOTS}/test-{iteration}/{inner_iteration}-{driver.capabilities['browserName']}-{wait_time}-ERROR_GALLERY.png")
-
         raise e
+    
     screenshot(driver, f"{PATH_SCREENSHOTS}/test-{iteration}/{inner_iteration}-{driver.capabilities['browserName']}-{wait_time}-GALLERY.png")
-            
+    assert gallery is not None, "No se encontró la galería de colores."
+
     # --- COMPROBAR COLORES ---
     try:
-        colors = WebDriverWait(gallery, wait_time).until(
+        colors_wrapper = WebDriverWait(gallery, wait_time).until(
                 EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.hover\\:z-\\[1\\].w-1\\/5")) # Esperar a la presencia de al menos un color, y selecciona todos los que haya.
             )
     except TimeoutException as e:
         print(f"No se encontró GALERIA después de {wait_time} segundos.")
         screenshot(driver, f"{PATH_SCREENSHOTS}/test-{iteration}/{inner_iteration}-{driver.capabilities['browserName']}-{wait_time}-ERROR_COLORS.png")
         raise e
+    
     screenshot(driver, f"{PATH_SCREENSHOTS}/test-{iteration}/{inner_iteration}-{driver.capabilities['browserName']}-{wait_time}-COLORS.png")
+   
     # Scroll al final de la página
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")    
 
-    colors_count = len(colors)
     color_time = time.time()
 
-    screenshot(driver, f"{PATH_SCREENSHOTS}/test-{iteration}/{inner_iteration}-{driver.capabilities['browserName']}-COLORS_BOTTOM-{wait_time}.png")
+    # Buscar colores dentro del wrapper (div > div)
+    colors = [color.find_element(By.CSS_SELECTOR, "div") for color in colors_wrapper] # Busca los colores dentro de los wrappers.
 
-    # assert (condition, message) -> Si la condición es falsa, se lanza un AssertionError con el mensaje proporcionado.
+    colors_count = len(colors)
     assert colors_count >= 0, "No se encontraron colores."
 
+    # A pesar de ser un Requisto Funcional, debemos verificar la integridad de los colores, width > 0  y height > 0.
+    for color in colors:
+        assert color.size['width'] > 0, "Ancho del color es 0."
+        assert color.size['height'] > 0, "Alto del color es 0."
+    # Tiempo actual - Tiempo color
+
+    screenshot(driver, f"{PATH_SCREENSHOTS}/test-{iteration}/{inner_iteration}-{driver.capabilities['browserName']}-COLORS_BOTTOM-{wait_time}.png")
     # ENTREGAR RESULTADOS FINALES
     print(f"Galeria: {format_decimal(gallery_time - start_time)} segundos.")
     print(f"Colores: Se encontraron {colors_count} colores en {format_decimal(color_time-start_time)} segundos.")
