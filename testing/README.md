@@ -1,5 +1,22 @@
 <h1>Testing</h1>
 
+Caso de pruebas a automatizar:
+Requisito funcional: Generación de PDF con colores.
+
+Requisito funcional:
+-La plataforma debe generar una paleta de colores según los criterios definidos (no se puede repetir un color ya existente, no se pueden crear paletas de más de 10 colores, entre otros criterios)
+
+Requisito no funcional: 
+
+-La plataforma debe ser capaz de descargar el pdf de forma rápida..
+-La plataforma debe ser capaz de generar el pdf independiente de los datos ingresados.
+
+
+Tests realizados de forma manual
+[testing](https://docs.google.com/spreadsheets/d/1XC8g1Aa5CSMnLFsPoj1MagYu7DieEBkGx3Fy39hIiQg/edit#gid=0)
+(para algunas pruebas se realizaron modificaciones de código para forzar los errores del programa)
+
+
 Instrucciones de ejecución de tests
 
 Pasos previos:
