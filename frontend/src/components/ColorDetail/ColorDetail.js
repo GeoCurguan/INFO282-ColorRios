@@ -8,13 +8,13 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   function name(color) {
     if (color[COLORINFO.colorName]) {
       return (
-        <h1 className="text-center text-3xl font-bold" style={{ textWrap: "balance" }}>
+        <h1 data-testid="color-detail-title" className="text-3xl font-bold text-center" style={{ textWrap: "balance" }}>
           {color[COLORINFO.colorName]}
         </h1>
       );
     } else {
       return (
-        <h1 className="text-gray-300 text-center text-3xl font-bold" style={{ textWrap: "balance" }}>
+        <h1 className="text-3xl font-bold text-center text-gray-300" style={{ textWrap: "balance" }}>
           Sin Nombre
         </h1>
       );
@@ -57,7 +57,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
       return (
         <div>
           <p className="text-sm font-bold">Estación:</p>
-          <p className="capitalize text-sm">&nbsp;&nbsp;&nbsp;{color[COLORINFO.season]}</p>
+          <p className="text-sm capitalize">&nbsp;&nbsp;&nbsp;{color[COLORINFO.season]}</p>
         </div>
       );
     }
@@ -77,11 +77,11 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
   function image(color) {
     if (color[COLORINFO.image]) {
       return (
-        <div className="my-1/4 mx-auto h-32 w-32">
+        <div className="w-32 h-32 mx-auto my-1/4">
           <img
             src={color[COLORINFO.image]}
             alt={color[COLORINFO.colorName]}
-            className="object-cover h-32 w-32 translate-y-1/3 rounded-full border-4 border-blue-700 shadow-xl"
+            className="object-cover w-32 h-32 border-4 border-blue-700 rounded-full shadow-xl translate-y-1/3"
             style={{
               border: `4px solid ${colorStyle.color}`,
             }}
@@ -265,7 +265,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
     <>
       {color ? (
         <div className="z-10 w-[300px] overflow-y-scroll sm:overflow-y-hidden overflow-x-hidden align-center fixed top-0 bottom-0 right-0 flex min-h-screen flex-col overflow-hidden bg-gray-100 shadow-lg justify-between">
-          <div className=" w-full bg-gray-300 shadow-md">
+          <div className="w-full bg-gray-300 shadow-md ">
             <button className="float-right m-2" onClick={toggleDrawer}>
               <CloseIcon className="w-6 h-6 text-gray-900" />
             </button>
@@ -275,11 +275,11 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
             </div>
           </div>
 
-          <div className="text-gray-900 w-full pl-4 pr-2 flex-1 overflow-y-auto sm:max-h-full sm:pr-0 pt-4">
+          <div className="flex-1 w-full pt-4 pl-4 pr-2 overflow-y-auto text-gray-900 sm:max-h-full sm:pr-0">
             <div>{name(color)}</div>
             <div className="flex items-center justify-center">
               <div
-                className="rounded mt-4 mb-4"
+                className="mt-4 mb-4 rounded"
                 style={{
                   backgroundColor: `rgb(${color[COLORINFO.rgbR]},${color[COLORINFO.rgbG]}, ${color[COLORINFO.rgbB]})`,
                   width: "150px",
@@ -288,13 +288,13 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
               ></div>
             </div>
 
-            <div className="justify-left flex-1">
-              <p className="py-4 text-center text-xl font-semibold">Información</p>
+            <div className="flex-1 justify-left">
+              <p className="py-4 text-xl font-semibold text-center">Información</p>
               {category(color)}
               {comuna(color)}
               {season(color)}
               {sample(color)}
-              <p className="py-4 text-center text-xl font-semibold">Códigos</p>
+              <p className="py-4 text-xl font-semibold text-center">Códigos</p>
               {ncs(color)}
               {munsell(color)}
               {cielab(color)}
@@ -304,11 +304,10 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
             </div>
           </div>
 
-          <div className="w-full flex  justify-between p-4">
+          <div className="flex justify-between w-full p-4">
             {setColorToPalette && (
               <button
-                className="flex items-center rounded-md transition-colors duration-300 ease-in-out
-               bg-pink-500 px-2 py-2 text-white hover:bg-pink-600"
+                className="flex items-center px-2 py-2 text-white transition-colors duration-300 ease-in-out bg-pink-500 rounded-md hover:bg-pink-600"
                 onClick={() => addColorToPalette(color)}
               >
                 <HeartIcon className="w-6 h-6" fill="white" />
@@ -332,25 +331,25 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
                 <div className="flex justify-end p-2">
                   <CloseIcon className="w-8 h-8" onClick={toggleDrawer} data-testid="color-detail-close"></CloseIcon>
                 </div>
-                <section className="flex justify-center items-center h-10">
+                <section className="flex items-center justify-center h-10">
                   {name(color)}
                 </section>
 
                 <div className="h-32 rounded-xl" style={styleBG}></div>
                 <div className="relative">
-                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform h-32 w-32">
+                  <div className="absolute w-32 h-32 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
                     {image(color)}
                   </div>
                 </div>
-                <div className="justify-left h-16 mb-2"></div>
+                <div className="h-16 mb-2 justify-left"></div>
 
-                <div className="justify-left max-h-64 overflow-y-scroll" style={divStyle}>
-                  <p className="py-2 text-center text-xl font-bold">Detalles de la Muestra</p>
+                <div className="overflow-y-scroll justify-left max-h-64" style={divStyle}>
+                  <p className="py-2 text-xl font-bold text-center">Detalles de la Muestra</p>
                   {category(color)}
                   {comuna(color)}
                   {season(color)}
                   {sample(color)}
-                  <p className="py-2 text-center text-xl font-bold">Códigos del Color</p>
+                  <p className="py-2 text-xl font-bold text-center">Códigos del Color</p>
                   {ncs(color)}
                   {munsell(color)}
                   {cielab(color)}
@@ -361,7 +360,7 @@ const ColorDetail = ({ color, setCurrentColor, setColorToPalette }) => {
                   <p className="text-sm">&nbsp;&nbsp;&nbsp;{color.hex}</p>
                 </div>
 
-                <button className="w-full text-white font-bold text-lg p-2 rounded-lg mt-4" style={buttonStyle} onClick={() => addColorToPalette(rgbToHex(color[RGB.R], color[RGB.G], color[RGB.B]))}>
+                <button className="w-full p-2 mt-4 text-lg font-bold text-white rounded-lg" style={buttonStyle} onClick={() => addColorToPalette(rgbToHex(color[RGB.R], color[RGB.G], color[RGB.B]))}>
                   Añadir a mi paleta
                 </button>
               </div>
