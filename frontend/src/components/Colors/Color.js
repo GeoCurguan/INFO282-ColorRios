@@ -4,7 +4,7 @@ import { colorRGB, colorRGBExist } from "@/utils";
 import styles from "./styles/Color.module.css";
 
 const Color = ({ color, setCurrentColor, isSelected }) => {
-  // Comprueba si R, G o B son undefined y si es así, no renderiza el cuadrito
+  // Comprueba si R, G o B son undefined y si es asÃ­, no renderiza el cuadrito
   if (!colorRGBExist(color[COLORINFO.rgbR], color[COLORINFO.rgbG], color[COLORINFO.rgbB])) {
     return null;
   }
@@ -21,17 +21,17 @@ const Color = ({ color, setCurrentColor, isSelected }) => {
 
   const handleCurrentColor = () => {
     setCurrentColor(color);
-    // console.log(color);
+    console.log(color);
     sendData();
   };
 
   const styleBG = colorRGB(color[COLORINFO.rgbR], color[COLORINFO.rgbG], color[COLORINFO.rgbB]);
 
   return (
-    <div className={`hover:z-[1] w-1/5 ${isSelected ? styles["selected-color-border"] : ""}`}>
+    <div className={`hover:z-[1] w-1/5 ${isSelected ? styles["selected-color-border"] : ""}`} id={`color-${color.id}`}>
       {/*---Color---*/}
       <div
-        className="fade-in transition-all duration-1000 bg-white w-full shadow-lg  transform hover:scale-110 cursor-pointer aspect-square"
+        className="w-full transition-all duration-1000 transform bg-white shadow-lg cursor-pointer fade-in hover:scale-110 aspect-square"
         style={styleBG}
         onClick={handleCurrentColor}
       ></div>
