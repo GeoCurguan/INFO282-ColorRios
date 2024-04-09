@@ -35,4 +35,4 @@ De momento las pruebas apuntarán a un requisito funcional y un requisito no-fun
 1. Clona este repositorio en tu máquina local.
 2. Corre el programa siguiendo la [guía de despliegue](https://docs.google.com/document/d/1yK6ltc7X2nPYVArZnHLF808YQKL483dlPvmPe1h5N8M/edit#heading=h.f6i3lwev2g10).
 3. Instala las dependencias necesarias utilizando pip `pip install -r requirements.txt`
-4. Ejecuta las pruebas utilizando el comando: `INSERTAR_COMANDO`
+4. Para ejecutar las pruebas entrar a la carpeta según el tipo de Requisito y revisar el comando en cada README.md
